@@ -1,0 +1,345 @@
+GEO_political_decisions = {
+	conscript_women = {
+		cost = 50
+		complete_effect = {
+			add_ideas = GEO_conscripted_women
+		}
+		fire_only_once = yes
+	}
+}
+GEO_trans_decisions = {
+	invite_north_caucasia = {
+		cost = 50
+		available = { 
+			AND = {
+				GOR = { is_puppet = no }
+				NOT = {
+					GOR = { has_autonomy_state = autonomy_dominion }
+				}
+			}
+		}
+		complete_effect = {
+			GOR = { country_event = { id = ge.195 } }
+		}
+		fire_only_once = yes
+	}
+	integrate_north_caucasia = {
+		cost = 50
+		available = {
+			OR = {
+				AND = {
+					859 = { is_owned_by = GEO }
+					233 = { is_owned_by = GEO }
+					860 = { is_owned_by = GEO }
+					857 = { is_owned_by = GEO }
+				}
+				232 = { is_owned_by = GEO }
+			}
+		}
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = GOR
+						is_core_of = DAG
+					}
+				}
+				add_core_of = GEO
+			}
+			GEO = { set_country_flag = GEO_caucasia_formed }
+			if = {
+				limit = {
+					GEO = { has_country_flag = GEO_monarchy }
+				}
+				GEO = { set_cosmetic_tag = GEO_CAU_MON }
+				else = {
+					GEO = { set_cosmetic_tag = GEO_CAU }
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = GEO_united_menshevik_party
+				}
+				set_party_name = { ideology = libertarian_socialist long_name = GEO_CAU_menshevik_party_long name = GEO_CAU_menshevik_party}
+				set_party_name = { ideology = social_democrat long_name = GEO_CAU_menshevik_party_long name = GEO_CAU_menshevik_party}
+				else = {
+					set_party_name = { ideology = libertarian_socialist long_name = GEO_CAU_libertarian_socialist_party_long name = GEO_CAU_libertarian_socialist_party}
+					set_party_name = { ideology = social_democrat long_name = GEO_CAU_social_democrat_party_long name = GEO_CAU_social_democrat_party}
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+}
+GEO_fortify_border = {
+	fort_soviet = {
+		modifier = {
+			civilian_factory_use = 5
+		}
+		remove_effect = {
+			set_country_flag = fortified_soviet
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = fortified_azerbaijan
+					}
+				}
+				904 = {
+					add_building_construction = { type = bunker province = 6763 level = 3 instant_build = yes }
+				}
+			}
+			231 = {
+				add_building_construction = { type = bunker province = 6436 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 4534 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 1530 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 9626 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 654 level = 3 instant_build = yes }
+			}
+			858 = {
+				add_building_construction = { type = bunker province = 672 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 11617 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 11647 level = 3 instant_build = yes }
+			}
+			905 = {
+				add_building_construction = { type = bunker province = 9663 level = 3 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			factor = 160
+		}
+		days_remove = 100
+		fire_only_once = yes
+	}
+	fort_azerbaijan = {
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			set_country_flag = fortified_azerbaijan
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = fortified_soviet
+					}
+				}
+				904 = {
+					add_building_construction = { type = bunker province = 6763 level = 3 instant_build = yes }
+				}
+			}
+			231 = {
+				add_building_construction = { type = bunker province = 4605 level = 3 instant_build = yes }
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = fortified_armenia
+					}
+				}
+				231 = {
+					add_building_construction = { type = bunker province = 12309 level = 3 instant_build = yes }
+				}				
+			}
+		}
+		ai_will_do = {
+			factor = 160
+		}
+		days_remove = 40
+		fire_only_once = yes		
+	}
+	fort_armenia = {
+		modifier = {
+			civilian_factory_use = 4
+		}
+		remove_effect = {
+			set_country_flag = fortified_armenia
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = fortified_azerbaijan
+					}
+				}
+				231 = {
+					add_building_construction = { type = bunker province = 12309 level = 3 instant_build = yes }
+				}
+			}
+			903 = {
+				add_building_construction = { type = bunker province = 13217 level = 3 instant_build = yes }
+			}
+			231 = {
+				add_building_construction = { type = bunker province = 9702 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 6669 level = 3 instant_build = yes }
+			}
+			902 = {
+				add_building_construction = { type = bunker province = 10403 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 13216 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 7454 level = 3 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			factor = 160
+		}
+		fire_only_once = yes
+		days_remove = 80
+	}
+}
+GEO_new_companies = {
+	rustavi_steel = {
+		modifier = {
+			civilian_factory_use = 3
+			consumer_goods_factor = 0.05
+		}
+		remove_effect = {
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 231
+			}
+		}
+		days_remove = 60
+		fire_only_once = yes
+	}
+	tbilisi_aircraft = {
+		modifier = {
+			consumer_goods_factor = 0.15
+		}
+		remove_effect = {
+			231 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = tbilisi_aircraft_open
+		}
+		days_remove = 90
+		fire_only_once = yes
+	}
+	kutaisi_auto_plant = {
+		modifier = {
+			consumer_goods_factor = 0.1
+			civilian_factory_use = 5
+		}
+		remove_effect = {
+			231 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = kutaisi_auto_plant_open
+		}
+		days_remove = 180
+		fire_only_once = yes
+	}
+}
+
+GEO_invite_alliance = {
+	invite_armenia = {
+		visible = { country_exists = ARM }
+		cost = 30
+		complete_effect = {
+			ARM = { country_event = { id = ge.950 } }
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	invite_azerbaijan = {
+		visible = { country_exists = AZR }
+		cost = 30
+		complete_effect = {
+			AZR = { country_event = { id = ge.950 } }
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	invite_kurdistan = {
+		visible = { country_exists = KUR }
+		cost = 30
+		complete_effect = {
+			KUR = { country_event = { id = ge.950 } }
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		
+	}
+	invite_ottomans = {
+		visible = { country_exists = TUR }
+		cost = 30
+		complete_effect = {
+			TUR = { country_event = { id = ge.950 } }
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	invite_turkey = {
+		visible = { country_exists = TRT }
+		cost = 30
+		complete_effect = {
+			TRT = { country_event = { id = ge.950 } }
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	invite_mountain_republic = {
+		visible = { 
+			AND = {
+				GOR = { is_puppet = no }
+				NOT = {
+					GOR = { has_autonomy_state = autonomy_dominion }
+				}
+			}
+		}
+		cost = 30
+		complete_effect = {
+			GOR = { country_event = { id = ge.950 } }
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+GEO_join_alliance = {
+	GEO_join_entente = {
+		visible = { FRA = { has_guaranteed = GEO } }
+		available = { 
+			FRA = { has_war = yes } 
+			FRA = { is_faction_leader = yes	}
+		}
+		complete_effect = {
+			FRA = { country_event = { id = ge.910 } }
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	GEO_join_IPA = {
+		visible = { ENG = { has_guaranteed = GEO } }
+		available = { 
+			ENG = { has_war = yes } 
+			ENG = { is_faction_leader = yes	}
+		}
+		complete_effect = {
+			ENG = { country_event = { id = ge.920 } }
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 20
+		}
+	}
+}

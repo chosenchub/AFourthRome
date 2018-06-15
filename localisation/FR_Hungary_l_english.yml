@@ -1,0 +1,1368 @@
+﻿l_english:
+
+################
+### BOOKMARK ###
+################
+
+HUN_FUHRERREICH_DESC:0 "Hungary is in a precarious position in 1936. With a stagnating economy and open revolt from both Communist and Horthyist supporters, the future seems grim for this East European nation. But if the national crisis is resolved, and the economy revitalized, Hungary has the chance to become to dominant power in Eastern Europe, rivaling that of Greece and Poland. The path lies wide open for Hungary, all it needs is a competant leader at the helm..."
+
+################
+### POLITICS ###
+################
+
+HUN_vanguardist_party:0 "MST"
+HUN_vanguardist_party_long:0 "Magyar Szovjet Tanács"
+HUN_collectivist_party:0 "MSM"
+HUN_collectivist_party_long:0 "Magyarországi Szocialista Munkáspárt"
+HUN_libertarian_socialist_party:0 "Balközép"
+HUN_libertarian_socialist_party_long:0 "Balközép"
+HUN_social_democrat_party:0 "Szociáldemokrata párt"
+HUN_social_democrat_party_long:0 "Szociáldemokrata párt Magyarország számára"
+HUN_social_liberal_party:0 "LE"
+HUN_social_liberal_party_long:0 "Liberális Ellenzék"
+HUN_market_liberal_party:0 "Szabadelvű Párt"
+HUN_market_liberal_party_long:0 "Szabadelvű Párt"
+HUN_social_conservative_party:0 "Polgári Szabadságpárt"
+HUN_social_conservative_party_long:0 "Polgári Szabadságpárt"
+HUN_authoritarian_democrat_party:0 "MEP"
+HUN_authoritarian_democrat_party_long:0 "Magyarország egyes pártja"
+HUN_paternal_autocrat_party:0 "Horthyist Loyalists"
+HUN_paternal_autocrat_party_long:0 "Horthyist Loyalists"
+HUN_national_populist_party:0 "EP"
+HUN_national_populist_party_long:0 "Egységes Párt"
+HUN_valkist_party:0 "MVP"
+HUN_valkist_party_long:0 "Magyar Valkista Párt"
+
+###############
+#### FOCUS ####
+###############
+
+hun_bw_initial:0 "The London Stock Market Crash"
+hun_bw_initial_desc:0 "Despite our relative economic seclusion from the Entente, we have still been struck by the London sotck market crash and our economy is in the gutter. Drastic measures may have to be taken if are to restore our economic prosperity."
+###
+hun_bw_high_tax:0 "Raised Taxes"
+hun_bw_high_tax_desc:0 "There simply is not enough money in our coffers. If we are to fund our future projects, we must extract every penny possible from the people."
+###
+hun_bw_austerity:0 "Austerity"
+hun_bw_austerity_desc:0 "Sometimes, the best thing to do is to batten down the hatches and weather the storm. Time heals all wounds, and if we just hold out for a little while things may get better."
+###
+hun_bw_intervention:0 "Economic Intervention"
+hun_bw_intervention_desc:0 "Letting the economy flail around and try to heal itself is not going to work. If are to control this, we must take the reins and ride this horse ourselves. It may displease the people, but they will simply have to accept the reality that faces them."
+###
+hun_bw_subsidize:0 "Industrial subsidies"
+hun_bw_subsidize_desc:0 "Although a popular practice in the 19th century, heavily industrial subsidies have fallen out of favour with the new liberal governments taking power across Europe. It may be time to pump some stimulus back into our industry in an effort to relieve the economic stress. Let's just remember to turn the slider down when we're at war."
+###
+hun_bw_nationalizing:0 "Nationalizing Foreign Industry"
+hun_bw_nationalizing_desc:0 "While this is sure to make foreign powers upset, we are in desperate need of new industry and new jobs. Taking over temporary control of factories owned by other nations is sure to give a large boost to our economy. We must be sure to return the factories after the worst has passed, or face economic sanctions in the years to come."
+###
+hun_nep:0 "New Economic Policy"
+hun_nep_desc:0 "The London Market Crash is over, but the memory will linger forever. We must prepare the economy and make sure this never happens again."
+###
+hun_tax_reform:0 "Reformed Tax"
+hun_tax_reform_desc:0 "Our antiquated tax system has proven itself unable to withstand the pressures of economic criris, this reform will allow for both more money to flow to the state and for the people to have more spending power."
+###
+hun_foreign_investment:0 "Foreign Investment Encouragement"
+hun_foreign_investment_desc:0 "The London Crash forced us to sieze foregin assets within our nation, it's time to enourage more foreign investment while also returning the factories we took."
+###
+hun_city_infrastructure:0 "Infrastructure for the cities"
+hun_city_infrastructure_desc:0 "The ability for people to move around around cities and across the nation is a staple of civilized society. If we are to truly present outselves as civilized people, we must improve the roads and trains throughout our nation."
+###
+hun_attacking_inflation:0 "Inflation Reduction Program"
+hun_attacking_inflation_desc:0 "The 'Inflációcsökkentő program' is our new plan to lower inflation after the effects of the London Market Crash. It's implimentation will further boost the economy and put more money into the system."
+###
+hun_encourage_school:0 "Encourage schools"
+hun_encourage_school_desc:0 "The time has come to stop teaching our youth the lessons of yesterday, and begin lessons on the promises of the future."
+###
+hun_reform_military_funding:0 "Reform military funding"
+hun_reform_military_funding_desc:0 "It goes without saying that pumping thousands of forint into new cavalry saddle tech is not the most optimal use of our funds. By reallocating and reviewing where our military spending goes, we can gain military advancements at a much greater rate."
+###
+hun_outer_infrastructure:0 "Expanded infrastructure"
+hun_outer_infrastructure_desc:0 "With the infrastructure in the core territory up to snuff, we can turn our focus outwards and improve the frontier and countryside. Aside from making the peoples lives better, this will also allow for greater supply limits and movement speed for our armies."
+###
+hun_prepare_war_bonds:0 "Prepare War Bonds"
+hun_prepare_war_bonds_desc:0 "We do not have enough money to fight a large-scale war without allies. We must be ready to rely on the people and their generosity to achieve victory in the conflicts to come."
+###
+hun_reopen_markets:0 "Reopen national Markets"
+hun_reopen_markets_desc:0 "With the national economy back in full swing, we are ready to step back out into the world and contribute to the global market once more."
+###
+hun_socred:0 "Social Credit Programs"
+hun_socred_desc:0 "The implimentation of Social Credit Programs will provide a security net for the populace, and reduce unemployment rates throughout the country."
+###
+hun_rapprochement:0 "The Pen"
+hun_rapprochement_desc:0 "The French and our neighbors stabbed us in the back in our moment of weakness during the aftermath of the Great War. This stain on our legacy has galvanized us against the French and all diplomacy regarding them. However, we must be willing to look past the mistakes of old, and use the French to our advantage in retaking the land stolen from us two decades ago."
+###
+hun_discuss_trans:0 "Discuss the Transylvanian Issue"
+hun_discuss_trans_desc:0 "The Romanians stole Transylvania from us when they invaded alongside the French in 1920, and ever since then our highest priority has been retaking the Carpathian lands wrongfully ripped from our grasp. Perhaps we can solve this issue with words, rather than bullets."
+###
+hun_discuss_slovakia:0 "Discuss the fate of Slovakia"
+hun_discuss_slovakia_desc:0 "It is becoming evermore clear by the day that Zapadoslavia is a failed state, doomed to fall apart and be partitioned. We must ensure that the French support our claim to Slovakia, to prevent it from falling into the hands of the Germans."
+###
+hun_discuss_croatia:0 "Discuss Croatian Sovereignty"
+hun_discuss_croatia_desc:0 "The status of Croatia has been disputed ever since the Serbian intervention in Bosnia in the aftermath of the Great War, with multiple nations claiming the lands as their own. With support from the Entente, we can press our claim with force, and put the land firmly back under our control."
+###
+hun_agressive_policy:0 "The Sword"
+hun_agressive_policy_desc:0 "We cannot count on the major powers of Europe to help us in reclaiming the Transleithanian lands we once held, we must take matters into our own hands if we are to restore our nation to its former glory."
+###
+hun_demand_trans:0 "Demand Transylvania"
+hun_demand_trans_desc:0 "The Transylvanian lands cry out for reunification with Hungary, we must free them from Romanian opression by any means."
+###
+hun_demand_slovakia:0 "Demand Slovakia"
+hun_demand_slovakia_desc:0 "While not ethnically Hungarian, the lands of Slovakia have been under Hungarian rule for hundreds upon hundreds of years, we must restore order to the region and save them from the German invaders."
+###
+hun_demand_croatia:0 "Demand Croatia-Slavonia"
+hun_demand_croatia_desc:0 "The lands of Croatia were joined with Hungary in personal union since 1102, and only after the Great War were they forcefully seperated us and brought under the Serbian boot. We must be stern if we are to save our Croatian brothers from a life of eternal servitude."
+###
+hun_national_crisis:0 "The National Crisis"
+hun_national_crisis_desc:0 "With the London Stock Market Crash behind us, the time has come to deal with the dissent in our nation once and for all. We will root out Horthy and Kun from our nation, and secure our future."
+###
+hun_demand_truce:0 "Drastic Measures"
+hun_demand_truce_desc:0 "Negotiating with these madmen is a waste of time, we must act swiftly and with great force if we are to restore peace to our lands."
+###
+hun_root_out_commies:0 "Root out Communists"
+hun_root_out_commies_desc:0 "Bela Kun has, for too long now, caused havoc in our nation. The national guard must be sent out, and this animal must be caught and slain."
+###
+hun_hunt_blackshirts:0 "Hunt the Blackshirts"
+hun_hunt_blackshirts_desc:0 "It's a shame that a military genius such as Miklos Horthy would turn against his own nation, but we must do what is needed to ensure stability for the future."
+###
+hun_national_unification:0 "A unified nation"
+hun_national_unification_desc:0 "With the stains of dishonour ridden from our nation, we can finally look outwards with pride and strength."
+###
+hun_concessions_for_peace:0 "Concessions for Peace"
+hun_concessions_for_peace_desc:0 "Perhaps violence and bloodshed aren't the best methods for defeating our enemy. The door of diplomacy is always open, and should be looked at"
+###
+hun_social_autonomy_towns:0 "Autonomous Socialist Towns"
+hun_social_autonomy_towns_desc:0 "Certain towns have had their socialist tendencies supressed for decades now. If we grant these towns their privilages then we may be able to coax the Communists into opening diplomacy."
+###
+hun_blackshirt_amnesty:0 "Amnesty for the Blackshirts"
+hun_blackshirt_amnesty_desc:0 "The Blackshirts may be terrorists, but they will never agree to talks so long as they are branded as such. As much as it pains us, we must forigve our enemies past actions in hopes for a better future."
+###
+hun_budapest_conference:0 "The Budapest Conference"
+hun_budapest_conference_desc:0 "Our enemies are ready to speak, and it is time we sit down and have a civil discussion about the direction this nation is heading in. Hopefully we will be able to reach a peaceful solution."
+###
+hun_a_nation_reborn:0 "A Nation Reborn"
+hun_a_nation_reborn_desc:0 "The Hungarian nation has triumphed through the crisis, and we have become hardended by the experiences."
+###
+hun_general_election:0 "Restore the General Elections"
+hun_general_election_desc:0 "Originally scheduled for 1932, but suspended due to the actions of the Red Militia and the Blackshirts threatening to tear the nation apart. The time has come to restore the elections, and continue the democratic process."
+###
+hun_keep_elections_suspended:0 "Keep the election suspended"
+hun_keep_elections_suspended_desc:0 "We've been in power far to long to risk losing it in an election, and the damned socialists must not be allowed to gain a foothold in our nation. We've kept the elctions suspended for this long, what's the harm in keeping them suspended just a little longer?"
+###
+hun_arrow_cross_paramilitary:0 "Form the Arrow Cross Paramilitary"
+hun_arrow_cross_paramilitary_desc:0 "We will not go quietly into the dark, we must form a paramilitary force to keep our positions secured for time time being. Surely we will disband them when they are no longer needed, right?"
+###
+hun_harass_opponents:0 "Harass political opponents"
+hun_harass_opponents_desc:0 "The Arrow Cross is at our beck and call, it's time we put plans into motion. We must save this broken nation from itself."
+###
+hun_formalize_paramilitary:0 "Formalize the Arrow Cross"
+hun_formalize_paramilitary_desc:0 "It's time we brought these men out of the shadows and onto the streets. The Arrow Cross must be our sword and our shield against all dissent."
+###
+hun_outlaw_leftist_parties:0 "Outlaw leftist parties"
+hun_outlaw_leftist_parties_desc:0 "The socialists are watching us from every corner, we must ban our enemy from entering the political sphere if we are to ever hope of keeping this nation safe from the claws of the Vanguardists."
+###
+hun_declare_the_junta:0 "Declare the Junta!"
+hun_declare_the_junta_desc:0 "The time has finally come, the false viel of democracy will be thrown off on this glorious day. This will surely garner international attention, but we don't expect any major powers to act against us. We will break the chains of the Entente, and set out on a new course of history."
+###
+hun_martial_law:0 "Declare Martial Law"
+hun_martial_law_desc:0 "Protests and riots are breaking out across the nation, we must declare martial law to ensure that our rule isn't overthrown by a popular uprising and a collectivist government is put in power."
+###
+hun_state_industry:0 "State-Run Industry"
+hun_state_industry_desc:0 "We need to take full control over the industrial capacity of our nation if we are to operate at full efficiency."
+###
+hun_dismantle_unions:0 "Dismantle Unions"
+hun_dismantle_unions_desc:0 "Unions are the path to Collectivism, we must stamp out all remaining pockets of socialism in our nation to ensure everlasting stability."
+###
+hun_secret_police:0 "Expand the Secret Police"
+hun_secret_police_desc:0 "We need to root out dissent where ever it shows up, and the secret police will assist us greatly in doing exactly that."
+###
+hun_militarized_police:0 "Militarize the Police"
+hun_militarized_police_desc:0 "Repression is the path to safety. The people must be put in their place if we are to stay in power for the centuries to come."
+###
+hun_abolish_parliment:0 "Suspend Parliament Forever"
+hun_abolish_parliment_desc:0 "The Hungarian Parliament is an old relic of our democratic past, we must remove this dead weight from our shoulders if we are to progress with our plans."
+###
+hun_army_purge:0 "Purge the Army"
+hun_army_purge_desc:0 "We have heard rumors of a faction within the military preparing a resistance movement against our country, we must ensure that this plan never sees the light of day."
+###
+hun_army_loyalty:0 "Ensure Army Loyalty"
+hun_army_loyalty_desc:0 "The purge is complete, and we must ensure that the remaining elements of the army are completely loyal to our government and our cause."
+###
+hun_officer_loyalty:0 "Ensure Officer Loyalty"
+hun_officer_loyalty_desc:0 "The Officer Corps suffered heavily in the purge, we must rehabilitate and retrain the officers we have under our guidance to ensure that no revolts will occur."
+###
+hun_burn_books:0 "Book Burning"
+hun_burn_books_desc:0 "Books are a way for hostile propaganda to spread and fester in the minds of our citizens, we must ensure that these hateful books are destroyed so that they cannot be read and their ideas cannot be copied."
+###
+hun_propaganda:0 "The Ministry of Truth"
+hun_propaganda_desc:0 "The people need to be told the truth, the complete truth, and nothing but the truth. We will feed the people facts on a weekly basis to make sure their spirits are kept as high as possible."
+###
+hun_restore_order:0 "Restore the Social Order"
+hun_restore_order_desc:0 "War is peace.\n\nFreedom is slavery.\n\nIgnorance is strength."
+###
+hun_the_presidents_policy:0 "The Presidents Policy"
+hun_the_presidents_policy_desc:0 "With the revolution finally crushed, we can continue the democratic process."
+###
+hun_truce_with_transylvania:0 "Truce with Transylvania"
+hun_truce_with_transylvania_desc:0 "The Romanians are blocking us from annexing Transylvania at every oppertunity, we should look for a political alliance with our Transylvanian neighbors in an attempt to draw closer to them."
+###
+hun_rapport_with_romania:0 "Rapport with Romania"
+hun_rapport_with_romania_desc:0 "Relations with Romania have been damaged almost beyond repair, but they can still be saved. Through extensive diplomatic talks, we may begin to foster a friendship between our two mutilated states."
+###
+hun_sooth_the_serbs:0 "Sooth the Serbs"
+hun_sooth_the_serbs_desc:0 "The wild Serbian state is a loose cannon, and they could lash out at any moment. We must make sure we are not on the recieving end of their rifles."
+###
+hun_trans_danube_alliance:0 "Trans-Danube Alliance"
+hun_trans_danube_alliance_desc:0 "The world is growing evermore dangerous. We must band together if we are to hope to survive these troublesome years. As Europe becomes engulfed in flames, we will be a beacon of light and sanctity."
+###
+hun_danube_research_bloc:0 "Danube Research Bloc"
+hun_danube_research_bloc_desc:0 "Combining our research efforts will allow us to unlock technological advcancements at a far quicker rate than we would be able to alone. We will propose this idea to the other faction members, and see who else is interested in the prospect."
+###
+hun_integrated_officer_corps:0 "Integrated Officer Corps Plan"
+hun_integrated_officer_corps_desc:0 "We will propose an idea to our fellow faction members about uniting our officers into once central command. This will promote unity between our nations and allow our militaries to work in tandem with each other at much greater efficiancy."
+###
+hun_transnational_rail_lines:0 "Transnational rail lines"
+hun_transnational_rail_lines_desc:0 "The Carpathian Mountains make travel through the region quite difficult. However, we are now able to construct a large and sophisticated rail system around Banat, where all of the faction members share a common border."
+###
+hun_joint_banat_military_test:0 "Banat Joint Military Exercises"
+hun_joint_banat_military_test_desc:0 "With our officers finally cooperating with each other, we can test out our combined militaries with an exercise in the Banat region. This will provide us with great experience and insight into how the army will function if the faction ever centralizes into a union."
+###
+hun_a_formal_union:0 "A Union, Not Just In Name."
+hun_a_formal_union_desc:0 "The time has come to fully unite our faction into a political union. The world around us is growing evermore dangerous by the day, and we must band together if we are to remain strong and stand the test of time."
+###
+hun_trianon_treaty:0 "The Treaty of Trianon"
+hun_trianon_treaty_desc:0 "With our relations improved, we may be able to ask the French to revise the treaty of Trianon, and allow us to expand our military to a greater degree."
+###
+hun_purchase_french_arty:0 "Offer to buy French Artillery"
+hun_purchase_french_arty_desc:0 "The old guns of the Great War might not be the most sophisticated pieces of technology on the planet, but the French have them in excess, and we are in desperate need of larger field guns. Perhaps we can strike a deal?"
+###
+hun_french_industrial_methods:0 "French Industrial Methods"
+hun_french_industrial_methods_desc:0 "We will send overseers to France with the purpose of studying and observing how the French industry operates. Hopefully, we will be able to learn something new, and improve our own industry."
+###
+hun_french_officers:0 "French Officers in Hungary"
+hun_french_officers_desc:0 "We can request the French to send some officers in an attempt to improve our army in any way possible, hopefully this will put us at the cutting edge of military theory and structure."
+###
+hun_lease_french_ports:0 "Lease French Ports"
+hun_lease_french_ports_desc:0 "We lost our access to the sea with the Treaty of Annecy, and our hopes of a powerful navy were gone with it. With our newly improved relations with the French, we can lease some French ports in an attempt to improving our naval technology."
+###
+hun_french_air_training:0 "French Air Training"
+hun_french_air_training_desc:0 "While the French did not have the greatest track record in The Great War, they still have many competant pilots and officers who may be willing to teach us the ways of the skies. Mastery over air doctrine will give us a distinct advantage over our opponents, and we should take this oppertunity while we have it."
+###
+hun_join_entente:0 "Join the Continental Entente."
+hun_join_entente_desc:0 "We have sufficiantly repaired relations with France, and we are now able to send an official invitation to join the Continental Entente."
+###
+hun_british_imports:0 "British Imports"
+hun_british_imports_desc:0 "We have chosen to allign ourselves with Britain, and the first order of buisness is bolstering our trade with the Empire."
+###
+hun_oxford_budapest_uni_joint:0 "Oxford-Budapest joint research"
+hun_oxford_budapest_uni_joint_desc:0 "Oxford University is renowned across the globe for its high academic standards, and the Budapest University is becoming more well-known across Europe. We must propose some joint research between our nations in an attempt to bring us closer together."
+###
+hun_the_london_pact:0 "The London Pact"
+hun_the_london_pact_desc:0 "We are being crippled militarily by the treaty of Annecy, and we will not survive the coming years without help from the outside. We will ask the British to draft a new treaty, one that will help rather than hinder us."
+###
+hun_revise_annecy:0 "Revise Annecy"
+hun_revise_annecy_desc:0 "Our relations with the British have improved to the point where we can ask the British if they would be willing to take another look at the Treaty of Annecy, and perhaps if they could remove or at least modify the treaty to be less crippling to our military."
+###
+hun_british_aircraft_templates:0 "British Aircraft Licenses"
+hun_british_aircraft_templates_desc:0 "The British are not only paragons of the oceans, but the skies as well. We must ask for a license of their aircraft if we are to take control of the sky over Carpathia."
+###
+hun_british_resource_imports:0 "British Resource Imports"
+hun_british_resource_imports_desc:0 "The British Empire is vast, and full of resources that are not being put to good use. We can offer to take some of the excess off their hands and use it for our own benifit."
+###
+hun_join_ipa:0 "Apply to join the IPA"
+hun_join_ipa_desc:0 "Joining the Imperial Protection Alliance is the final step to solidifying relations with the British Empire, and will allow us to freely expand our borders with the international backing of the British Empire."
+###
+hun_horthys_plan:0 "Horthys Grand Plan"
+hun_horthys_plan_desc:0 "Horthy has been established as the regent of Hungary, holding a vacant throne with no successors. We must choose a path for our nation to take in order to continue our survival."
+###
+hun_end_the_regency:0 "End the Regency"
+hun_end_the_regency_desc:0 "Horthy is the Regent for a throne with no claimants, essentially making him regent for life. This is seen in the eyes of most monarchies as extremely illegitamite, and to prevent intervention we must choose someone to take up the throne."
+###
+hun_crown_horthy_king:0 "Crown Horthy King"
+hun_crown_horthy_king_desc:0 "Foreigners have been sitting upon our throne for hundreds of years, and it was not since the fall of Constantinople that a true Hungarian held our crown. While Horthy may have no claim to the monarchy, he is a Hungarian through and through, and that might just be enough to get the people to accept him."
+###
+hun_invite_charles_habsburg:0 "Invite Karl I von Habsburg-Lorraine"
+hun_invite_charles_habsburg_desc:0 "Karl I is the undisputed claimant to the Hungarian throne, and many in Hungary wish to see him return from his exile in Switzerland. While our neighbors certainly won't be fond of this move, we may be able to get the help of some European monarchs in securing our rule."
+###
+hun_memories_of_the_empire:0 "Memories of the Empire"
+hun_memories_of_the_empire_desc:0 "The Austro-Hungarian Empire saw Hungary reach its largest territorial extent since the age of the nomadic tribe. We must restore nationalistic ferver within the people, and reclaim the lands wrongfully stolen from us."
+###
+hun_the_galician_legacy:0 "The Galician Legacy"
+hun_the_galician_legacy_desc:0 "While Galicia was historically part of Cislethanian Austria, it was far closer to Budapest than Vienna. Laying claim to the lands may allow us to aquire it if war ever breaks out in the region."
+###
+hun_save_the_bosnians:0 "Liberate Bosnia"
+hun_save_the_bosnians_desc:0 "The Serbs took control over Bosnia in the aftermath of the first Great War, with hopes of uniting all South Slavs under their tyrannical rule. We must put the Serbs back in their place, and assert hegemony over the South Slavic lands."
+###
+hun_ties_to_germany:0 "Ties to Germany"
+hun_ties_to_germany_desc:0 "The new German Empire is quickly becoming the dominant force in Europe, and we must ensure that we are on the right side of history if and when they decide to shoot for supremacy of the continent. Fostering a lasting friendship between our two nations is the key to our survival."
+###
+hun_german_officers:0 "German Officers in Hungary"
+hun_german_officers_desc:0 "The wehrmacht is an extremely professional and experienced army, and we could learn many great things from the experienced officers of the former German Empire. Inviting German officers to overlook our military will surely give us an advantage in the field."
+###
+hun_suggest_centroslav_partition:0 "Offer to partition Zapadoslavia" #I spent a solid 15 minutes trying to decide how to spell Zap.
+hun_suggest_centroslav_partition_desc:0 "Slovakia is an integral part of the Hungarian kingdom, and it is unlikely we will be able to recover it on our own. If we approach Germany, they may be willing to grant us our stolen lands so long as they are able to take a chunk out of Bohemia and Silesia."
+###
+hun_german_minority_rights:0 "German minority rights"
+hun_german_minority_rights_desc:0 "German immigration through the past centuries has created a siazble German minority within Hungary. Giving these Germans more rights in-line with that of trueborn Magyars will show our dedication and loyalty to the Germans and their evergrowing Empire."
+###
+hun_join_stahlpakt:0 "Join the Stahlpakt"
+hun_join_stahlpakt_desc:0 "Relations with Germany have improved dramatically to the point where we can now consider formalizing an alliance and joining the Stahlpakt. Should they accept, our power will dramatically increase indirectly, and our nation will prosper."
+###
+hun_request_slovakia:0 "Request Slovak Overlordship"
+hun_request_slovakia_desc:0 "The Slovak nation has fallen under the German boot, and we have claimed the territory as ours. The Germans have little interest in Slovakia due to its cultural differences and lack of industrialization, meaning they should be willing to give it up should we ask for it."
+###
+hun_dont_need_nobody:0 "Our own path"
+hun_dont_need_nobody_desc:0 "For too long has Hungary been under the yoke of a foreign power, having her future dictated by some king a thousand miles away in a castle. Today that changes, today the age of the Magyar truly begins."
+###
+hun_support_centroslav_partisans:0 "Support Hungarian Seperatists"
+hun_support_centroslav_partisans_desc:0 "South Nitra is ethnically Hungarian, and nearly the entire population wishes to rejoin our nation. We must foster this dream and push them to demand a referendum."
+###
+hun_support_transylvanian_hungarians:0 "Arm Transylvanian Hungarians."
+hun_support_transylvanian_hungarians_desc:0 "We have an excess of old rifles from the Great War, and we need to put them to good use. If we smuggle arms into Transylvania, the ethnic Hungarian population may be able to help us in conquering the nation."
+###
+hun_hungary_first:0 "Hungary First!"
+hun_hungary_first_desc:0 "With Horthy acting as King of Hungary, we are able to fill the Hungarian people with nationalistic pride and ferver. With popular support, we can begin a crusade to recover our territories lost 30 years ago."
+###
+hun_full_irredentism:0 "Hungarian War Industry"
+hun_full_irredentism_desc:0 "Our military industry has been crippled by the Treaty of Annecy and the pressure of our neighbors. If we ever hope to win on the field of battle our factories must be able to keep producing weapons and machines of war."
+###
+hun_pact_with_bulgaria:0 "Alliance with Bulgaria"
+hun_pact_with_bulgaria_desc:0 "The Bulgarians suffered greatly at the end of the First Great War, losing much land they had gained in the First Balkan War. The lands of Dobrudja should be in Bulgarian hands, and if we offer it, they may be willing to help us in war against Romania."
+###
+hun_transylvanian_ultimatum:0 "Ultimatum to Transylvania"
+hun_transylvanian_ultimatum_desc:0 "The Transylvanian nation has been a stain on world maps ever since its inception, and it's time we took matters into our own hands. With a large enough army, we can ensure the Transylvanians will accept our demands, and be brought back under control."
+###
+hun_attack_serbia:0 "Demand West Banat"
+hun_attack_serbia_dec:0 "West Banat is a highly defensible area, full of forests and rivers. To secure our Southern border we must take control of the region from the Serbian government. The likelyhood of them accepting is very low, but we must try."
+###
+hun_demand_slovakia:0 "Demand Slovakia"
+hun_demand_slovakia_desc:0 "Slovakia has been under Hungarian rule for hundreds of years, and it was wrongfully taken from us after the Great War. We must demand that the region be given back to its rightful owners, and save Slovakia from the crumbling federation it is shackled to."
+###
+hun_demand_ljubljana:0 "Demand Ljubljana"
+hun_demand_ljubljana_desc:0 "The Italian government has been in shambles for months now, perhaps if we send a list of demands including the transfer of Ljubljana they will be willing to cave in."
+###
+hun_invite_a_transylvanian_noble:0 "Invite a Transylvanian noble"
+hun_invite_a_transylvanian_noble_desc:0 "Transylvania is an integral part of Hungary, and recovering it must be the highest of our priorities. Inviting a Transylvanian noble to our throne may throw out any notion of legitemacy, but it will undoubtably draw us closer to them and open up the possibility of peaceful integration."
+###
+hun_open_transylvanian_diplomacy:0 "Open Transylvanian diplomacy"
+hun_open_transylvanian_diplomacy_desc:0 "There has been no read diplomatic ties with Transylvania ever since their inception due to the resentfullness of our government regarding their independance. Now that we have a Transylvanian on our throne, we can attempt to build relations and work towards integration."
+###
+hun_guaruntee_transylvania:0 "Secure Transylvanian Independance"
+hun_guaruntee_transylvania_desc:0 "We must safeguard Transylvania from the Romanians who wish to annex the land, and pillage it for all it's worth. This will draw us closer together, one step closer to integration."
+###
+hun_suggest_transylvanian_union:0 "Offer Transylvania Protection"
+hun_suggest_transylvanian_union_desc:0 "The Romanians are clawing to annex Transylvania before we are able to. We must send an urgent offer of Protection to Brasov."
+###
+hun_reintegrating_transylvania:0 "Reintegrating Transylvania"
+hun_reintegrating_transylvania_desc:0 "We must begin the long, boring process of administering the Transylvanian region and bringing them back into the fold."
+###
+hun_deporting_the_romanians:0 "Deporting the Romanians"
+hun_deporting_the_romanians_desc:0 "he Romanian people are a stain on our nation, and the reason we lost Transylvania during the last Great War. We must double all efforts to relocate the Romanian people out of Transylvania, and assert ourselves as the undisputed hegemon of the region."
+###
+hun_transylvanian_railroads:0 "Transylvanian Railroads"
+hun_transylvanian_railroads_desc:0 "The Transylvanian government did a poor job of maintaining their railway system, and now we must pour money into the region in an attempt to restore the infrastructure to match the conditions of the rest of the nation."
+###
+hun_restore_transylvanian_forts:0 "Restore Transylvanian Fort System"
+hun_restore_trasnylvanian_forts_desc:0 "the Romanians could attack at any moment, we must be ready for them. Restoring the old pre-war forts to modern standards will buy us valueable time should the Romanians come knocking."
+###
+hun_anti_romania:0 "Anti-Romanian rhetoric"
+hun_anti_romania_desc:0 "The Romanians are our true enemy, and we must make sure that all our citizens will be ready for the great struggle when it comes. Radio broadcasts and propagands posters will spread the word."
+###
+hun_demand_banat:0 "Demand West Banat"
+hun_demand_banat_desc:0 "West Banat is an extremely valuable piece of land, and with it in our posetion we would be able to safeguard our southern front for the forseable future. The Serbs are unlikely to give it up, but perhaps some military demonstrations will coerce them."
+###
+hun_march_onto_brasov:0 "The March to Brasov"
+hun_march_onto_brasov_desc:0 "Political pussyfooting has gotten us nowhere, the time has come to stop playing games and let history be decided by the victor. We will take Brasov by force, and force Transylvania to kneel before us."
+###
+hun_the_regency_forever:0 "The Regency Forever"
+hun_the_regency_forever_desc: "Monarchies are unstable, and monarchs are unpredictable. A regency is stable and controllable, and as such our political path is obvious. Horthy will be regent for life."
+###
+hun_centralize_the_regency:0 "Centralize The Regency"
+hun_centralize_the_Regency_desc:0 "Delegating power can be dangerous, and ambitious people with too much power can quickly lead to revolt or revolution. We must ensure that the regent has absolute power over the government."
+###
+hun_decentralize_the_regency:0 "Decentralize The Regency"
+hun_decentralize_the_regency_desc:0 "Too much pressure on one man can allow problems to slip through the cracks. We must allow multiple people to bear the load of governance."
+###
+hun_soclib:0 "Social Liberal Victory"
+hun_soclib_desc:0 "The Social Liberal party has won the election."
+###
+hun_civil_rights:0 "Extend Civil Rights"
+hun_civil_rights_desc:0 "A Socially Liberal government must live up to its name, and we must extend the rights of the people to ensure civil stability and happiness among the people."
+###
+hun_soccon:0 "Social Conservative Victory"
+hun_soccon_desc:0 "The Social Conservative party has won the election."
+###
+hun_tariff_increase:0 "Tariff Increase"
+hun_tariff_increase_desc:0 "The conservatives have won the election, and we are going to start implimenting their policies, tariff increases are the first of which."
+###
+hun_marklib:0 "Market Liberal Victory"
+hun_marklib_desc:0 "The Market Liberal party has won the election."
+###
+hun_open_market:0 "Contribute to the free market"
+hun_open_market_desc:0 "The Market Liberal government has decided that our first order of buisness is to pump more resources into the global economy to compensate for the markets being completely closed during the London Stock Market Crash."
+###
+hun_socdem:0 "Social Democrat Victory"
+hun_socdem_desc:0 "The Social Democrat party has won the election."
+###
+hun_phase_1_plan:0 "Szociális Terv Phase One"
+hun_phase_1_plan_desc:0 "The newly formed government has a cunning plan to vastly improve the conditions of the worker and the citizen alike. This plan may not yield much in the way or results yet, but it will pay dividends down the road."
+###
+hun_bela_kun:0 "The New Manifesto"
+hun_bela_kun_desc:0 "Bela Kun has seized power, and we must now begin the process of turning Hungary into a strong socialist state, able to withstand the pressures of those who would wish to see us overthrown."
+###
+hun_vang_start:0 "Vanguardists, A Strong State"
+hun_vang_start_desc:0 "The Vanguardists are the most militant and agressive of the socailist branches in our country. Strong leadership is required for the state to survive, and a firm hand must guide the people from above."
+###
+hun_vang_purge:0 "Purge Horthy Loyalists"
+hun_vang_purge_desc:0 "While Horthy himself may be dead, many still cling to his cause in vain hope of carrying on his dream. We must take extensive measures to purge these loyalists from our government and our society."
+###
+hun_vang_council:0 "Establish the People's Council"
+hun_vang_council_desc:0 "Mátyás Rákosi cannot run the nation by himself, we must establish an advisory council to help him govern our socialist state."
+###
+hun_vang_council_power:0 "Extend the Council's Power"
+hun_vang_council_power_desc:0 "The People's Council has had a profoundly positive effect on our government. Extending their duties and powers will only make governence easier and allow our state to flourish."
+###
+hun_vang_council_militia:0 "Establish the People's Council Militia"
+hun_vang_council_militia_desc:0 "Giving the People's Council their own personal army will allow them to attack what remaining political opponents we have. Our absolute control over the state will soon be complete, it will not be long now before the socialist dream is realized in full!"
+###
+hun_vang_council_seize_power:0 "Special meeting of the People's Council"
+hun_vang_council_seize_power_desc:0 "The People's Council has requested our urgent presence at a special meeting commissioned by them. The Council says it is of the utmost urgency, and that our attendance is paramount to the safety and security of the state. We'd best attend."
+###
+hun_collie_start:0 "Collectivists, a Thriving Society."
+hun_collie_start_desc:0 "Collectivism is the most traditional and stable of the three socialist branches, striving for a strong society that is intertwined and interlinked. Traditional government makes the people happy, and will lead the way for a stable future."
+###
+hun_libsoc_start:0 "Libertarian Socialists, Autonomy for All."
+hun_libsoc_start_desc:0 "Libertarian Socialism is an extremely autonomous branch of Socialism, and some members call for the complete dissolusion of the state entirely. This government will focus on improving the rights of the worker and creating a safe haven for the opressed proletariet around the world."
+###
+hun_vang_indoctrination:0 "Social Indoctrination"
+hun_vang_indoctrination_desc:0 "We must present our new government as one of peace, safety, and propserity, otherwise the people will not accept us and instead revolt against our rule. We must safeguard our socialist state."
+###
+hun_vang_destroy_croatian_unrest:0 "Crush Croatian Unrest"
+hun_vang_destroy_croatian_unrest_desc:0 "For too long the Croatians have resisted our rule, it is time to bring the revolution to the region, and secure our southern border against the Serbs and Italians."
+###
+hun_vang_army:0 "A Socialist Army"
+hun_vang_army_desc:0 "We must rejuvinate our army in preperation for the wars we must wage against our capitalist foes."
+###
+hun_new_model_rifle:0 "New Model Rifle"
+hun_new_model_rifle_desc:0 "Our army is still vastly under-equipped and outfitted with poor weapons. We must focus our research efforts on a new, modern rifle that will serve us well in the wars to come."
+###
+hun_soviet_army_cooperation:0 "Soviet Army Cooperation"
+hun_soviet_army_cooperation_desc:0 "The Soviet army is large and experienced, we must seek cooperation with the Red Army in an effort to gain experience, and create our own proffesional red army."
+###
+hun_vang_collie_research_cities:0 "Designated Research Cities"
+hun_vang_collie_research_cities_desc:0 "The Soviet goernment in Russia has been experimenting with an idea of designating specific cities to focus research on a specific area, and the tests so far have proven very successful. We must use this to our advantage, and set up our own 'research cities'."
+###
+hun_vang_collie_research_soviets:0 "Soviet Research cooperation"
+hun_vang_collie_research_soviets_desc:0 "The Soviets are far more advanced than us technologically, using modern aircraft and weapons. If are to stand by our socialist brothers, we must bring ourselves up to their standards."
+###
+hun_vang_collie_socialist_breakthroughs:0 "Socialist Breakthroughs"
+hun_vang_collie_socialist_breakthroughs_desc:0 "Our research cities are working at full capacity, and the benifits are enormous. New discoveries are being made every day, and research is progressing faster than ever before."
+###
+hun_collie_org_society:0 "Reorganize Society"
+hun_collie_org_society_desc:0 "The old heirarchy is inefficiant and decrepid, and will only drag us down in the years to come. We must reform our society into a new, modern, socialist society."
+###
+hun_collie_combat_homeless:0 "Combat Homelessness"
+hun_collie_combat_homeless_desc:0 "The old democratic government turned a blind eye to the rampant unemployment in our nation, and if it is not resolved soon, it may become uncontrollable and irreversable."
+###
+hun_collie_combat_unemployment:0 "Combat Unemployment"
+hun_collie_combat_unemployment_desc:0 "A citizen who is not employed is a useless citizen. We must ensure that everyone has a place in this nation, and that everyone has a job."
+###
+hun_collie_no_class_divide:0 "Destroy Class Divides"
+hun_collie_no_class_divide_desc:0 "Segregating people based on their social standing will only breed resentment and unrest, we must equalize the playing field for all our citizens, and give everyone a fair chance."
+###
+hun_collie_every_man_an_equal:0 "Every Man an Equal"
+hun_collie_every_man_an_equal_desc:0 "Now that we have dismantled the class system, it's time to target gender discrimation. Men and women will stand side by side for the revoltuion."
+###
+hun_collie_socialist_education:0 "Socialist Education"
+hun_collie_socialist_education_desc:0 "We must make sure that the next generation is being taught from a socialist standpoint, so that when the time comes to pass the torch, they will be ready to spread the revolution."
+###
+hun_libsoc_decentral:0 "Decentralization"
+hun_libsoc_decentral_desc:0 "A heavy hand will only serve to opress the people and incite revolt. We must allow everyone to flourish in their own way, with no interferance from the government."
+###
+hun_libsoc_local_rulers:0 "Local governers"
+hun_libsoc_local_rulers_desc:0 "We should appoint local rulers to watch over and administer regions on their own, while we focus on the affairs of the nation as a whole."
+###
+hun_libsoc_local_reps:0 "Regional Representitives"
+hun_libsoc_local_reps_desc:0 "Allowing representitives from each region of our nation to have a voice will allow us to address the people's concerns directly."
+###
+hun_libsoc_socialist_elections:0 "Socialist Elections"
+hun_libsoc_socialist_elections_desc:0 "The people deserve a voice, and we have an obligation to give them one. Free socialist elections will redude unrest and allow the further progress of our society."
+###
+hun_libsoc_life_insurance:0 "Life Insurance Policy"
+hun_libsoc_life_insurance_desc:0 "We must look after the wellbeing of our citizens, and help those in need. A chain is only as strong as its weakest link."
+###
+hun_libsoc_healthcare:0 "Healthcare Policy"
+hun_libsoc_healthcare_desc:0 "Sickness is rampant in the countryside, claiming thousands of lives every year. We must wipe out this plague once and for all."
+###
+hun_libsoc_pension:0 "Pension Policy"
+hun_libsoc_pension_desc:0 "Unemployment due to age can be crippling from a financial standpoint. We must ensure that everyone has access to a fund that will allow them to live out the last years of their life in peace and comfort."
+###
+hun_libsoc_collie_reform_shift_work:0 "Reformed Shift Work"
+hun_libsoc_collie_reform_shift_work_desc:0 "Working in a swelteringly hot factory for 18 hours a day is damaging to productivity and the health of the employee, we must ensure that the rules are updates."
+###
+hun_libsoc_collie_employee_rights:0 "Improved Workers Rights"
+hun_libsoc_collie_employee_rights_desc:0 "We have remained far behind the times in terms of workers rights, and the policies are long overdue for an update."
+###
+hun_libsoc_collie_dismantle_corps:0 "Dismantle Corperations"
+hun_libsoc_collie_dismantle_corps_desc:0 "Corperations create an uncompetitive atmosphere in the economy. Dismantling these large corperations inside our nation will allow our economy to flourish, no longer shackled by tariffs."
+###
+hun_libsoc_workers_haven:0 "Workers Haven"
+hun_libsoc_workers_haven_desc:0 "We will create a haven for the worker, a place where all can be free under the government, where none have to fear the perils of factory working."
+###
+hun_libsoc_socialist_industry:0 "Socialist Industry"
+hun_libsoc_socialist_industry_desc:0 "Our united society is like a well-oiled machine, running at peak efficiancy. We will be able to outproduce all of our enemies on the battlefield."
+###
+hun_libsoc_invite_foreign_workers:0 "Invite Foreign Workers"
+hun_libsoc_invite_foreign_workers_desc:0 "We must free the opressed workers of Europe. Romanians, Germans, Frenchmen, Spanish, come to Hungary, and free yourself from the shackles of opression!"
+###
+hun_socialist_dip:0 "Socialist Diplomacy"
+hun_socialist_dip_desc:0 "Now that we have stabalized our rule, we must look outwards and interact with the other nations of the world. The socialist dream cannot be achieved by ourselves, and we will need all the help we can get."
+###
+hun_ussr_ties:0 "Ties to the Soviets"
+hun_ussr_ties_desc:0 "We cannot withstand the democratic pressures that surround us, and we need to bind ourselves to the Soviets if we are to survive the next years to come."
+###
+hun_ussr_industry:0 "Soviet Industry Cooperation"
+hun_ussr_industry_desc:0 "The Soviet war machine is an extremely intracate and complex being, and allows the Soviets to output massive ammounts of equipment and vehicles. We must study their industry and harness the power for ourselves."
+###
+hun_ussr_infra:0 "Soviet Infrastructure Methods"
+hun_ussr_infra_desc:0 "The Soviet Union is vast, and so is its network of roads and railways. We must study Soviet infrastructure and replicate it in Hungary if we are to bring ourselves up to their standards."
+###
+hun_expand_red_army:0 "Expand the Red Army"
+hun_expand_red_army_desc:0 "The Hungarian Red Army is still quite small, especially in comparison to our Soviet neighbors. We must strive to create a larger army in an effort to overwhelm our enemies."
+###
+hun_soviet_doctrine:0 "Soviet Army Doctrine Research"
+hun_soviet_doctrine_desc:0 "The Soviets follow a very unorthodox military doctrine, one so crazy that it just might be what we need to succeed in our own wars. We must research and adapt our army to follow this doctrine."
+###
+hun_join_soviets:0 "Join the Third International"
+hun_join_soviets_desc:0 "To complete the revolution we must join our Socialist brothers in Moscow, and cut down the old regimes of Europe as allies rather than enemies."
+###
+hun_homemade_socialism:0 "Hungarian Socialism"
+hun_homemade_socialism_desc:0 "We must be careful not to fall into the grip of the Soviets in Russia, or we may find ourselves a mere puppet government under the boot of Moscow. We will create our own brand of Hungarian Socialism, and spread it throughout Europe."
+###
+hun_bulgar_commies:0 "Support Bulgarian Opposition"
+hun_bulgar_commies_desc:0 "The Bulgarian government is highly unstable, and could topple at any moment to the slightest resistance. There are collectivist movements preparing to take the nation by force, but if we intervene we may be able o use them to execute a coup that will align the Bulgarian government towards us, should the coup succeed."
+###
+hun_strong_bulgar:0 "Strengthen Bulgarian Ties"
+hun_strong_bulgar_desc:0 "The Bulgarian socialists are facing stern opposition in their nation. We must strengthen our position with them to ensure that the party does not lose their place at the top of Bulgarian politics."
+###
+hun_invade_trans:0 "Bring the revolution to Transylvania"
+hun_invade_trans_desc:0 "The workers of Transylvania have suffered untold horrors under the corrupt and ineffective government. Their liberation is long overdue, and we must be the ones to break the chains."
+###
+hun_budapest_award:0 "Return of Dobrudja"
+hun_budapest_award_desc:0 "The state of Dobrudja was wrongfully taken from Bulgaria after the First World War. Now that we are in control of Transylvania, the Romanians may be willing to cede the land back to our Bulgarian allies."
+###
+hun_red_bloc:0 "Create the Balkan Socialist Pact"
+hun_red_bloc_desc:0 "The time has come for us to formalize this alliance of ours with Bulgaria. We must create a faction not only to survive the tides of Valkism and Democracy, but to spread the revolution to our neighbors as well."
+###
+hun_air_innovate:0 "Air Rearmament"
+hun_air_innovate_desc:0 "The Treaty of Annecy has crippled our army and robbed us of our navy, so we must develop our air force in hopes of fending off our enemies."
+###
+hun_air_fighter_choice:0 "The Choice of Fighters"
+hun_air_fighter_choice_desc:0 "Fighters are the main component of any air force, and we must be sure to stay up-to-date on the latest technologies and doctrines. We cannot do this without focusing on either light or heavy fighters, and as such we must choose."
+###
+hun_air_fighter_1:0 "Light Fighter Focus 1"
+hun_air_fighter_1_desc:0 "Researchers across the nation are focused on developing new aircraft models that will prove useful in the wars to come."
+###
+hun_air_fighter_2:0 "Light Fighter Fcous 2"
+hun_air_fighter_2_desc:0 "Test aircraft are being flown to see what works and what doesn't, providing us with valuable experience."
+###
+hun_air_heavy_1:0 "Heavy Fighter Focus 1"
+hun_air_heavy_1_desc:0 "Without protection our bombers will be swatted out of the sky like bees, we must ensure they are protection all the way to their destination and back."
+###
+hun_air_heavy_2:0 "Heavy Fighter Focus 2"
+hun_air_heavy_2_desc:0 "New models of heavy fighters are able to travel longer distances and stay in the air for longer durations, this will allow our bombers to reach their target and come back safely."
+###
+hun_air_doctrine_1:0 "Battlefield Support Research"
+hun_air_doctrine_1_desc:0 "Supporting ground troops is an art, and we must be sure to master this art if we are to win the battles we fight."
+###
+hun_air_bomber_choice:0 "The Choice of Bombers"
+hun_air_bomber_choice_desc:0 "The destruction of our enemies industry and infrastructure is key to a swift victory, but there are several ways to go about it. Tactical bombers are faster and more agile, but they cannot travel as far as strategic bombers."
+###
+hun_air_tac_1:0 "Tactical Bomber Focus 1"
+hun_air_tac_1_desc:0 "Quick and effective strikes in enemy territory are the key to success on the battlefield, and we must persue this theory further if we are to create a professional army."
+###
+hun_air_tac_2:0 "Tactical Bomber Focus 2"
+hun_air_tac_2_desc:0 "New models of tactical bombers are rolling out of the hangers at a blistering pace, and we are at the forefront of bomber technology in the Balkans."
+###
+hun_air_strat_1:0 "Strategic Bomber Focus 1"
+hun_air_strat_1_desc:0 "Levelling infrastructure and destroying supply lines will starve our enemies of their much needed resources, allowing us to wipe them out on the field of battle. Only strategic bombers arr capable of this task, as such we must focus our efforts."
+###
+hun_air_strat_2:0 "Strategic Bomber Focus 2"
+hun_air_strat_2_desc:0 "Our bombers will block out the sky wherever we go, and our army will fight in the shade. The roar of our engines will terrify the enemy populace into submission, or the bombs will."
+###
+hun_air_doctrine_2:0 "Strategic Destruction Research"
+hun_air_doctrine_2_desc:0 "New doctrines are being developed and discovered, we must capitalize on these developments if we are to maintain arial hegemony."
+###
+hun_air_support_choice:0 "The Choice of Support"
+hun_air_support_choice_desc:0 "Both CAS and naval bombers are designed to support ground and navy forces respectivly, and we must focus our developments on one of them if we are to win on land and sea."
+###
+hun_air_cas_1:0 "Close Air Support Focus 1"
+hun_air_cas_1_desc:0 "Being able to destroy targets on the ground that threaten our soldiers is a key point in victory on the battlefield, and we must embrace this school of thought."
+###
+hun_air_cas_2:0 "Close Air Support Focus 2"
+hun_air_cas_2_desc:0 "Flying faster, lower, and with a bigger payload allows us to support our soldiers with more effectiveness than ever before, and our aircraft will watch over the army like a guardian angel."
+###
+hun_air_nav_1:0 "Naval Bomber Focus 1"
+hun_air_nav_1_desc:0 "Denying the enemy fleet a chance to get out into sea will cripple their economy and military, and we must take full advantage of this weakness."
+###
+hun_air_nav_2:0 "Naval Bomber Focus 2"
+hun_air_nav_2_desc:0 "Starving the enemy out with an arial blockade is an ingenious strategy, and one that will catch our enemies off guard. We must persue this further to gain the upper hand in battle."
+###
+hun_air_doctrine_3:0 "Operational Integraty Research"
+hun_air_doctrine_3_desc:0 "Organization and planning are the cornerstone of any successful campaign, and being able to maintain a cohesive plan during combat can make the difference between defeat and victory."
+
+
+
+
+################
+#### EVENTS ####
+################
+
+### AI focus path determiner ###
+hunai.1.t:0 "Uh-oh, you're not supposed to see this."
+hunai.1.d:0 "If you can see this event, please contact the Hungary developer, darknight1342, immedietly. This event is meant to determine which focus path the AI takes, and should never be seen by the player under any circumstance."
+hunai.1.a:0 "Democratic Path"
+hunai.1.b:0 "Horthy Path"
+hunai.1.c:0 "Commie path"
+
+
+### General ###
+hungary.1.t:0 "The Status of Hungary"
+hungary.1.d:0 "At the dawn of the Great War, Hungary made up the transleithanian half of the Austro-Hungarian Empire, and enjoyed significant autonomy within the Empire. While the Austrian army was constantly fighting in Galicia and Italy on the front lines, the Hungarian army was relegated to border defense and garrison duties. When the Austo-Hungarian Empire's demise was near, the Hungarian parliment voted in vast majority to secede from Austria and align itself with the Entente under the promise that its territorial integrety would not be breached. The Austrian Empire collapsed three days later, and Hungarys future seemed secure. \n\nBut the Hungarian army was in shambles, and in a moment of weakness the Soviet-backed collectivist Béla Kun stormed Budapest with his red militia and proclaimed the Hungarian Soviet Republic. Franco-Serbian soldiers, along with Romanians and Czechoslovaks quickly invaded and exiled Béla Kun to Russia. When the Prime Minister of Hungary, Mihály Károlyi, asked the Entente to recall its armies, he was instead declared an enemy of the Entente and forced to sign a humiliating treaty that would see the Hungarian nation carved up between Serbia, Romania, and Czechoslovakia through a series of secret deals that were made between 1914 and 1916. The Hungarian people have not forgotten this betrayal to this day, and some groups are actively seeking to reclaim the lands ripped from them fifteen years ago. \n\nThe future of Hungary is uncertian, and their fate is unknown. What is known is that the events which unfold in Carpathia may determine the fate of the entire Balkan peninsula..."
+hungary.1.a:0 "Exciting stuff!"
+
+### Black Wednesday ###
+
+hungary.2.t:0 "The London Crash hits Hungary!"
+hungary.2.d:0 "We all knew this fateful day would come. The crippling worldwide effects of The London Crash have finally slammed into Hungary. All across the nation, prices are increasing at an alarming rate and even bread costs upwards of 6,000 forints. It seems things are going to get a lot worse before they get better, and the Hungary that emerges on the other side of this catastrophe will certainly be drastically different from the one that stands today. Thankfully, several economic paths were pre-planned for a market crash, just not of this scale. We must pour all our available resources into solving this economic crisis, lest our neighbors take advantage of our weakened state."
+hungary.2.a:0 "We must get to work immediately!"
+
+### Demanding a Truce ###
+
+hungary.3.t:0 "Opposition denies truce!"
+hungary.3.d:0 "As we had expected, both Bela Kun and Horthy have denied our request to peacefully resove the crisis in our nation. We have no other choice but to take drastic measures to ensire stability for the future."
+hungary.3.a:0 "Man the guns..."
+
+### purging kun 1 ###
+
+hungary.4.t:0 "Red Militia attacks civilian factories!"
+hungary.4.d:0 " we have been met with fierce resistance in our efforts to purge Bela Kun and his Red Militia. Several civilian factories across the nation have been heavily damaged and will require extensive repairs."
+hungary.4.a:0 "Double our efforts!"
+
+### purging kun 2 ###
+
+hungary.5.t:0 "Red Militia strikes military factories!"
+hungary.5.d:0 "As our efforts increase, so do the ferocity of Bela Kun's attacks. He is using every resource available to him in hopes of dissuading us from persuing him further. We have no choice but to keep up the attack, and corner the rat."
+hungary.5.a:0 "We almost have the bastard"
+
+### purging kun 3 ###
+
+hungary.6.t:0 "Red Militia destroys infrastructure"
+hungary.6.d:0 "In a last ditch effort to save themselves from total destruction, the Red Militia has destoryed vast ammounts of infrastructure throughout our nation. Perhaps this was an act of spite, or an act of hate. Either way, we doubt that the Red Militia have any more tricks up their sleeves, and we will soon have Bela Kun in our custody."
+hungary.6.a:0 "Like cornered rats..."
+
+### Budapest conference 1 ###
+
+hungary.7.t:0 "The Budapest Conference"
+hungary.7.d:0 "With the concessions we've handed out to our enemies, they've agreed to meet in Budapest to discuss how to end this national crisis. The Red Militia is camped just outside the city limits, and the Blackshirts are ready to attack the city at the slightest hint of danger"
+hungary.7.a:0 "Shall we begin?"
+
+### Budapest conference 2 ###
+
+hungary.8.t:0 "The Conference Begins"
+hungary.8.d:0 "There is great tension throughout the entire city. Citizens breath softly, knowing the thousands of terrorists sitting outside the city limits are itching to get in and sieze power. Blackshirts and Red Militamen stare eachother down, waiting for the other to make the first move. Yet depsite all this, there is an oddly calm atmosphere in the conference room. Karolyi, Kun, and Horthy all sit at a round table, making small talk, cracking jokes, and drinking fine wine. As the night drags on, little progress is made, until Karolyi speaks up. 'gentlemen, as much as we all enjoy this meeting, we must get down to buisness.' Both Kun and Horthy agree, this crisis cannot wait any longer. Both Kun and Horthy present their demands, each effectivly wanting control of the nation.\n\nAfter further hours of discussions and negotiations, Karolyi has finally come to a conclusion..."
+hungary.8.a:0 "A left coalition government will be formed (this will displease Horthy)"
+hungary.8.b:0 "A right coalition government will be formed (this will displease Kun)"
+hungary.8.c:0 "Guards, arrest these traitors!"
+
+### General election 1 ###
+
+hungary.9.t:0 "The General election"
+hungary.9.d:0 "Originally scheduled for 1932, but suspended due to the actions of the Red Militia and the Blackshirts threatening to tear the nation apart. The time has come to restore the elections, and continue the democratic process."
+hungary.9.a:0 "The Social Conservatives win!"
+hungary.9.b:0 "The Social Democrats win!"
+hungary.9.c:0 "The Social Liberals win!"
+hungary.9.e:0 "The Market Liberals win!"
+
+### Transylvania accepts truce ###
+
+hungary.10.t:0 "Transylvania accepts our proposal!"
+hungary.10.d:0 "We have received a letter from Brasov today, the Transylvanian government has decided to accept our offer of a non-agression pact! There will be no further hostilities between our two nations, and we can look to the future as friends, rather than enemies."
+hungary.10.a:0 "Now for the next phase of our plan..."
+
+### Crisis prelude 1 ###
+
+hungary.11.t:0 "Red Militia rallies in Kosice!"
+hungary.11.d:0 "The Red Milita has been dispersed across Hungary ever since their creation. However, our scouts are reporting a large concentration of Red Army forces around the city of Kosice in South Slovakia. The men have set up camp only a few miles out of the city, and the garrison fears an attack on the city at any moment. It would appear that Bela Kun is consolidating his power, and if he isn't stopped soon he may attempt to take control of the nation."
+hungary.11.a:0 "Perhaps inaction is not the solution..."
+
+### Crisis prelude 2 ###
+
+hungary.12.t:0 "Blackshirts kidnap government official!"
+hungary.12.d:0 "In the early hours of the day, a group of men loyal to the Horthyiest cause managed to break into the home of a government official and take him hostage. This dreadful news leaves us with a most awful choice to make. We can accept the ransom demands and concede to these terrorists, or remade resolute and stoic in the face of pressure. Neither of these options are particularly good, but what other choice do we have?"
+hungary.12.a:0 "We do not negotiate with terrorists..."
+hungary.12.b:0 "We will accept the reasonable demands..."
+
+### Crisis prelude 3 ###
+
+hungary.13.t:0 "Red Militia parades in Kosice"
+hungary.13.d:0 "The Red Militia has been entrenched outside of Kosice for exactly a full year, and yesterday they decided to finally enter the city in a so-called 'peaceful demonstration'. The city seemed to accept the militia with open arms, despite what we had expected. Even the garrison layed down their arms in the presence of the red flag. For a while it seemed that the city would be the birthplace of the Second Hungarian Soviet Republic, but late in the day, the militia left the city without leaving as much as a trace, and we have lost their whereabouts for the time being."
+hungary.13.a:0 "It's a mob of angry socialists, how could we lose track of them?"
+
+### Crisis prelude 4 ###
+
+hungary.14.t:0 "Blackshirts and Red Militia clash in Pecs"
+hungary.14.d:0 "Citizens of the city of Pecs were awoken earlier today to thunderous shocks coming from outside the city. The local garrison reported two large groups of people shooting at each other in a field just outside the city. As the day progressed, the fighting grew in magnitide and size, until the Blackshirts took the initiative and stormed the western outskirts of the city. While the fighting continued long into the evening, it ended in a stalemate with both sides claiming victory over the other. Many civilians were harmed and killed, and the fighting damaged several roads and buildings. These actions cannot be allowed to continue, and these two madmen must be brought to justice."
+hungary.14.a:0 "We have stalled long enough..."
+
+### Buying French Artillery ###
+
+hungary.15.t:0 "Offer to purchase French guns"
+hungary.15.d:0 "The Treaty of Annecy may have banned us from holding more than 5,000 artillery pieces, but perhaps we can cirvumvent this buy offering to buy French guns for a lump sum. Granted, our neighbors will not be pleased by this, and it may sour relations past the breaking point."
+hungary.15.a:0 "Send the offer!"
+
+### France accepts artillery offer ###
+
+hungary.16.t:0 "France accepts our offer!"
+hungary.16.d:0 "The French have agreed to sell us their artillery, in direct defiance of the Treaty of Annecy which they themselves dictated upon us. Perhaps this is a sign that the Treaty can be disregarded, or at the very least taken with less authority."
+hungary.16.a:0 "Let us hope we never have to use their own guns against them..."
+
+### France declines artillery offer ###
+
+hungary.17.t:0 "France declines our offer."
+hungary.17.d:0 "Sadly, the French have declined our offer to purchase their old guns, and have followed up with a stern warning that a continued policy of rearmament will be met with harsh consiquences. We must tread careully if we are to avoid a repeat of the Great War."
+hungary.17.a:0 "Maybe we can buy some Mongol rifles with the money instead..."
+
+### France let's us into the Continential Entente ###
+
+hungary.18.t:0 "We have been allowed into the Continential Entente"
+hungary.18.d:0 "The French delegation has arrived, and has informed us that the French have accepted our request to be allowed into the Continential Entente! This is a momentous occasion for all of Hungary, and we have surely secured our future. The French will now come to our aid in any conflicts we find ourselves in, but we must also beware that we must partake in all French conflicts that they find themselves caught up in."
+hungary.18.a:0 "Can we import baguettes now?"
+
+### France declines CE request ###
+
+hungary.19.t:0 "France has not let us into the Continental Entente."
+hungary.19.d:0 "In a surprising turn of events, the French have formally declined our request to join the Continental Entente. Despite the growing tensions across Europe, the French have apperently found it in their best interests to seclude us, and bar us from their alliance. This is a dark day for our nation, and we have been left in a most vunerable position."
+hungary.19.a:0 "Perhaps the British will be kinder..."
+
+### Hungary proposes joint research ###
+
+enghun.1.t:0 "Hungary proposes joint research project"
+enghun.1.d:0 "Diplomats from Hungary have approached us today with a proposal. They wish to combine the efforts of Oxford University with that of their own university in Budapest. While Oxford is leagues above Budapest in terms of acedamia, this may serve as a prime oppertunity to bring Hungary into our sphere of influence. Having an ally on the continent would prove useful the Germans or French ever decide to act up, but it may also only serve to hinder us and act as a burden. How shall we respond?"
+enghun.1.a:0 "An exellant proposal!"
+enghun.1.b:0 "We will make no deal with the Magyars."
+
+### England acceps ###
+
+hungary.19.t:0 "Oxford accepts our proposal!"
+hungary.19.d:0 "In an official letter from Oxford Univeristy, our proposal for a joint-research project has been accepted! We will send students over to England at once to jump-start this project, and we will be reaping the benifits within weeks."
+hungary.19.a:0 "This will draw us closer to Britain."
+
+### England declines ###
+
+hungary.20.t:0 "Oxford declines our proposal."
+hungary.20.d:0 "Unfortunitly, Oxford University sent us a letter earlier today stating that they do not wish for us to partake in their research. This has harmed our relations with the British, and our chances of joining the Imperial Protection Alliance have dwindled greatly because of it."
+hungary.20.a:0 "This is most unfortunate."
+
+### England gives CAS/fighter/tac bomber ###
+
+hungary.21.t:0 "The UK grants us a CAS license!"
+hungary.21.d:0 "The UK has given us permission to create our own varients of one of their Close Air Support models! While this is not as much as we asked for, we should be thankful and put the license to great use."
+hungary.21.a:0 "Finally, the skies will be ours..."
+###
+hungary.22.t:0 "The UK grants us a fighter license!"
+hungary.22.d:0 "The UK has given us permission to create our own varients of one of their fighter models! While this is not as much as we asked for, we should be thankful and put the license to great use."
+hungary.22.a:0 "Finally, the skies will be ours..."
+###
+hungary.23.t:0 "The UK grants us a tactical bomber license!"
+hungary.23.d:0 "The UK has given us permission to create our own varients of one of their tactical bomber models! While this is not as much as we asked for, we should be thankful and put the license to great use."
+hungary.23.a:0 "Finally, the skies will be ours..."
+
+### England declines license request ###
+
+hungary.24.t:0 "The UK has declined our request."
+hungary.24.d:0 "Sadly, the UK has decided not to grant us a production license of their aircraft. We will have to use our own models if we wish to tame the skies."
+hungary.24.a:0 "The Spitfire is an inferior aircraft anyway..."
+
+### England accepts IPA request ###
+
+hungary.25.t:0 "The United Kingdom allows us into the IPA!"
+hungary.25.d:0 "Wonderful knews from London. The government of the United Kingdom has allowed us into the Imperial Protection Alliance! This has grreatly increased our chances of survival and our authority over the Balkans has increased greatly as well. This is a very important moment in our history, and we must make good use of our new found allies."
+hungary.25.a:0 "God save the King!"
+
+### England declines IPA request ###
+
+hungary.26.t:0 "The United Kingdom has barred us from the IPA."
+hungary.26.d:0 "In a statement directly from Buckingham Palace, the United Kingdom has declined our request to join the IPA. We must look elsewhere for allies, and watch our backs for enemies who may wish to carve us up in our moment of weakness."
+hungary.26.a:0 "They've made a grave mistake."
+
+### Horthy seizes power ###
+
+hungary.27.t:0 "Horthy storms the capital!"
+hungary.27.d:0 "After weeks of silence, many thought the Blackshirts had faded back into obscurity, but today that has been proven wrong. In the early hours of the morning, several blocks within Budapest lit up with gunfire as Blackshirts poured onto the street and pushed the local garrison back into the town center. The fighting was savage, as men fought for individual buildings and rooms, but eventually the Blackshirts managed to overwhelm the garrison and seize complete control over the city. Mihaly karolyi was personally dragged out onto the street where he was confronted by Horthy himself. After a long and empowering speech, Karolyi was executed and his body hung for all of Budapest to see. Horthy is in control of Hungary now, and many are watching closely to see what the madman does next..."
+hungary.27.a:0 "Magyarország örökké szabad!" #Hungarian is a very strange language indeed.
+
+### Serbia doesn't cede Bosnia ###
+
+hungary.28.t:0 "Serbia refuses our demands!"
+hungary.28.d:0 "Mirroring the events of 1914, the stubborn Serbians have declined our demands for the Bosnian lands and have doubled down on their stance. We will have to take Bosnia by force if we wish to reincorperate the lands back into the Hungarian crown."
+hungary.28.a:0 "We will take Bosnia by force!"
+hungary.28.b:0 "Bosnia is not worth the effort."
+
+### Serbia surrenders Bosnia during war ###
+
+hungary.29.t:0 "Serbia offers Bosnia for peace."
+hungary.29.d:0 "Our Serbian foe has been utterly vanquished, and they are unable to defend against our superior army. We have recieved a diplomatic offer from Serbia, offering to cede Bosnia and Herzogovina in return for peace. We will accept this treaty, lest our neighbors become concerned with our warmongering."
+hungary.29.a:0 "One step closer to reunification..."
+
+### Croatian Revolt begins ###
+
+hungary.30.t:0 "Croatia declares independance!"
+hungary.30.d:0 "Deadful news sire, several regions in the south of our nation have declared unilateral independance from Hungary and have formed a 'Croatian Provisional Government' centered in Zagreb. The local garrison has been overrun and the Croatian government has stated that a state of war exists between our two nations. The Croatians are going to fight to the bitter end for their independance, and we must crush this revolt before it spreads."
+hungary.30.a:0 "These Slavs never quit, do they?"
+
+### Croatia wins their independance ###
+
+hungary.31.t:0 "Croatia wins their independance."
+hungary.31.d:0 "The fighting has dragged on for many long months now, and we are unable to make a significant dent in our enemies defenses. A delegation has been sent by both of our allies, asking for peace, and we must now follow suit. We cannot defeat the Croatians together, let alone by ourselves. Croatia will have their state, until the next major war allows us to reclaim our rightful territories."
+hungary.31.a:0 "This is a day which will live in infamy..."
+
+### Germany let's Hungary into Stahlpakt ###
+
+hungary.32.t:0 "Germany let's us into the Stahlpakt!"
+hungary.32.d:0 "The German emmisary has informed us today that we are now official members of the Stahlpakt alliance! With the Germans at our back we will be able to enforce our rule over the Balkans with far more authority than before, and our future has been safeguarded by the Germans."
+hungary.32.a:0 "A new era for our nation has begun."
+
+### Germany declines Stahlpakt application ###
+
+hungary.33.t:0 "Germany will not let us join the Stahlpakt."
+hungary.33.d:0 "Sadly, it would appear that the Germans have decided not to allow us into the Stahlpakt. Perhaps they percieved us as weak, or were simply misinformed. but whatever the reason, we must now forge our own destiny, alone."
+
+### Transylvania declines anchluss ###
+
+hungary.34.t:0 "Transylvania defies us!"
+hungary.34.d:0 "It would appear that the Transylvanian government did not take our demands seriously. They have rebuffed us and practically dared us to come get them. We can let these claims go, and back down from our inferior foe, or we can refuse to relinquish the claims."
+hungary.34.a:0 "Transylvania is not worth it."
+hungary.34.b:0 "We will never relinquish our claims!"
+
+### Serbia doesn't cede West Banat ###
+
+hungary.35.t:0 "Serbia refuses our demands!"
+hungary.35.d:0 "In a most foolish move, the Serbian government has refused our demands for the transfer of West Banat, and has armed the region heavily. We now must choose, will we escalate the situation, or back down in the face of pressure?"
+hungary.35.a:0 "We will back down."
+hungary.35.b:0 "We are not afraid of the Serbs."
+
+### Zap keeps Slovakia ###
+
+hungary.36.t:0 "Zapadoslavia refuses our demands!"
+hungary.36.d:0 "It would seem that our efforts to rescue Slovakia have been in vain, as Zapadoslavia has firmly denied our demands. We are now forced to sit and watch as the federation crumbles, and Slovakia with it."
+hungary.36.a:0 "Slovakia is worthless anyway."
+hungary.36.b:0 "We cannot abandon the Slovaks!"
+
+### Italy doesn't cede Ljubljana ###
+
+hungary.37.t:0 "Italy refuses to cede Ljubljana!"
+hungary.37.d:0 "In a move that we can't say was entirely unexpected, the Italian government has refused to transfer the state of Ljubljana to us. The Italian military is quite large, and their industry is far more advanced than ours. A war against them would be most unwise, but there's a chance we may be able to widdle them down to the point of negotiating if we are lucky."
+hungary.37.a:0 "Ljubljana is not worth the cost"
+hungary.37.b:0 "Ljubljana is rightfully ours!"
+
+### Bela Kun siezes power ###
+
+hungary.38.t:0 "Bela Kun storms Budapest!"
+hungary.38.d:0 ""
+hungary.38.a:0 "A new age of socialism has taken over our nation."
+
+### Kun vs Horthy showdown battle ###
+
+hungary.39.t:0 "The Battle for Budapest!"
+hungary.39.d:0 "Citizens of Budapest were awoken today to the sound of explosions and cackling gunfire. The Red Militia and the Blackshirts have mustered all the force they have, and have decided to clash right outside the city limits. Several small town have already been leveled and massive damage has been caused to the fields around the city. The garrison is on high alert and several stray shells have already landed inside the city, damaging several buildings and killing civilians. Still, the president has given explicit orders not to engage the enemy, and let them destroy each other rather than antagonize them. \n\nmany believe this will be a decisive battle, and the loser will likely suffer and unrecoverable defeat."
+hungary.39.a:0 "The Blackshirts are victorious"
+hungary.39.b:0 "The Red Militia is victorious"
+
+### Socialist Elections ###
+
+hungary.40.t:0 "The First Hungarian Socialist Elections"
+hungary.40.d:0 "The government has decided to allow for free elections, as long as the parties fill certain criteria. The election has been scheduled for today, and ballots are being counted across the nation. We expect the results to be in by the end of the day."
+hungary.40.a:0 "The sitting government wins!"
+hungary.40.b:0 "The Collectivists win!"
+
+### fighters or heavy fighters? ###
+
+hungary.41.t:0 "The choice of fighters"
+hungary.41.d:0 "We have decided to focus on small fighter aircraft, but we must choose which varient we would like to focus our efforts on. Smaller aircraft can control the skies better than their heavier cousins, but they will leave our bombers undefended. Which shall we choose?"
+hungary.41.a:0 "Regular fighters serve our interests best."
+hungary.41.b:0 "Heavy fighters serve our interests best."
+
+### tac or strat bombers? ###
+
+hungary.42.t:0 "The Choice of Bombers"
+hungary.42.d:0 "We must choose which type of bomber we would like to focus our efforts on. Both types of bomber have their benifits and downsides, and this choice could influence our victory or defeat on the field of battle."
+hungary.42.a:0 "Tactical Bombers suit our needs best."
+hungary.42.b:0 "Strategic Bombers suit our needs best."
+
+### CAS or naval bombers? ###
+
+hungary.43.t:0 "The Choice of Support"
+hungary.43.d:0 "Infantry cannot win a war on their own, and support from the air is a vital aspect of victory on the ground. We must choose direct support with CAS, or indirect support with Naval Bombers."
+hungary.43.a:0 "CAS will pave the way to victory"
+hungary.43.b:0 "We will rule the seas with naval bombers."
+
+### Hungary asks for Slovakia ###
+
+hungary.44.t:0 "Hungary requests transfer of Slovak guardianship"
+hungary.44.d:0 "The Hungarian nation has been on a heavily irredentist path, attempting to retake the land they lost to the Entente 20 years ago. We have become the overlord of Slovakia in the wake of the collapse of Zapadoslavia, and the lands are quickly turning out to be more of a burden than an advantage. The land is ethnically very different from German, and there is little industry to be found in the Carpathian Mountains. giving the lands to Hungary will increase our relations, and increase the power of our ally in the South."
+hungary.44.a:0 "This agreement benifits us both."
+hungary.44.b:0 "We will not feed our future enemies!"
+
+### Zap surrenders South Nitra ###
+
+hungary.45.t:0 "Zapadoslavia cedes South Nitra."
+hungary.45.d:0 "The Hungarian population has succesfully passed a referendum in South Nitra voting to join Hungary! Citizens across the nation are rejoicing today as families seperated for over two decades are finally being reunited with eachother once more. Tens of thousands of Hungarians have been returned to their rightful nation, and we are one step closer to uniting all Hungarian peoples under a single banner."
+hungary.45.a:0 "Now we must look Eastward..."
+
+### Zap doesn't surrender South Nitra ###
+
+hungary.46.t:0 "Zapadoslavia vetos South Nitran referendum!"
+hungary.46.d:0 "The Zapadoslav government has decided to veto the referendum in South Nitra regarding unification with Hungary. This is an outrageous act that cannot be tolerated, and we must take action to liberate our people."
+hungary.46.a:0 "To arms!"
+hungary.46.b:0 "We cannot afford a war at this time."
+
+### Zap offers peace ###
+
+hungary.47.t:0 "Zapadoslav government offers concessions for peace."
+hungary.47.d:0 "Our armies are progressing very quickly through Zapadoslavia, but we are slowly being halted in the tall mountains and deep fortifications. The Zapadoslav government has offered to surrender South Nitra as a peace offering, hoping that it will be enough to end the war."
+hungary.47.a:0 "The terms are reasonable, we accept."
+hungary.47.b:0 "Unacceptable terms, Zapadoslavia will bleed!"
+
+### offer peace to Zap ###
+
+hungary.48.t:0 "Offer peace to Zapadoslavia?"
+hungary.48.d:0 "We made a gross miscalculation when comparing the multiethnic army of our Northern enemy to our own, and we are losing ground on all fronts. We must offer a white peace if we are to retain our independance."
+hungary.48.a:0 "Offer them peace terms."
+hungary.48.b:0 "Death is a preferable alternative to surrender."
+
+### Zap declines ###
+
+hungary.49.t:0 "Zapadoslavia declines our peace request"
+hungary.49.d:0 "It would appear the Northern Slavs are hell-bent on getting their revenge, and they have pushed aside all notions of peace occuring between our two nations. We must prepare a desperate defense, and make a last stand."
+hungary.49.a:0 "Dark days are ahead."
+
+### Hungary asks soviets to join 3rd int. ###
+
+hungary.50.t:0 "Hungary applies to join the Third International"
+hungary.50.d:0 "The workers revolution in Hungary has been a complete success, and now our socialist brothers have officially requested that they join the Third International. This will give us a strategic jumping-off point in Europe, and will allow us to pierce into the rotten core of Germany and bring the revolution to all of Europe."
+hungary.50.a:0 "Welcome, our socialist brothers!"
+hungary.50.b:0 "We do not need the Magyars to weigh us down."
+
+### Soviets accept offer ###
+
+hungary.51.t:0 "The Soviets let us into the Third International!"
+hungary.51.d:0 "We have recieved an official response from Moscow, they have decided to accept our request to join their all-powerful faction. We will now have the full support of the Soviets in any conflicts we find ourselves in."
+hungary.51.a:0 "Workers of Europe, your day of liberation is near!"
+
+### Soviets decline offer ###
+
+hungary.52.t:0 "The Soviets have not let us into the Third International"
+hungary.52.d:0 "In an official statement from Moscow, the Soviet government has sternly declined our request to join them in the liberation of Europe. We must now stand on our own, and free the workers of Europe by ourselves."
+hungary.52.a:0 "The Russians will regret this mistake."
+
+### Bulgarian coup win ###
+
+hungary.53.t:0 "Bulgarian Coup successful!"
+hungary.53.d:0 "Bulgarian militia elements stormed Sofia earlier today, and quickly overran the capital buildings. The Bulgarian People's Republic has been proclaimed in Sofia, and they have agreed to sign a non-agression pact with us. soon we will be able to turn this into a formal alliance."
+hungary.53.a:0 "The revolution grows stronger."
+
+### Demand the return of Dobrudja from Romania ###
+
+hungary.54.t:0 "Bulgaria demands Dobrudja"
+hungary.54.d:0 "The new collectivist government in Bulgaria, backed by Hungary, has demanded the immediete return of Dobrudja. We fought and lost many soldiers for the lands of Dobrudja, but the Hungarian aquisition of Transylvania means that we could be faced with an invasion from all sides if we are to decline. What shall we do?"
+hungary.54.a:0 "Dobrudja is not worth the cost of blood."
+hungary.54.b:0 "We will not give a single inch of ground!"
+
+### Horthy Revokes the Treaty of Annecy ###
+
+hungary.55.t:0 "Horthy Revokes the Treaty of Annecy"
+hungary.55.d:0 "Horthy has taken control of the government, and has begun to overhaul the political system of our nation. One of the most pressing issues is the Treaty of Annecy which has been crippling our nation ever since it was signed in 1921. Horthy has declared today in Budapest that the Treaty of Annecy is null and void, and the stipulations are no longer in effect. We expect to face stern political resistance, but the chances of any nation taking military action is practically 0."
+hungary.55.a:0 "A new era for Hungary begins."
+
+### Kun Revokes the Treaty of Annecy ###
+
+hungary.56.t:0 "Kun Revokes the Treaty of Annecy"
+hungary.56.d:0 "Kun has taken control of the government, and has begun to overhaul the political system of our nation. One of the most pressing issues is the Treaty of Annecy which has been crippling our nation ever since it was signed in 1921. Kun has declared today in Budapest that the Treaty of Annecy is null and void, and the stipulations are no longer in effect. We expect to face stern political resistance, but the chances of any nation taking military action is practically 0."
+hungary.56.a:0 "A new era for Hungary begins."
+
+### Flavour event 1 ###
+
+hungary.57.t:0 "Coal miner strike in Zobak!"
+hungary.57.d:0 "A large group of coal miners in the Zobak Coal mine have officially gone on strike today, and are refusing to step back into the mine without having their demands met. The local mine owner has assured us that the issue will be resolved locally, and that we don't need to worry about the situation. \n\nStill, it is clear that the people under our rule are growing ever more discontent, and people may soon flock to either the Red Militia or the Blackshirts if we are not able to improve their conditions."
+hungary.57.a:0 "Drat!"
+
+### Flavour event 2 ###
+
+hungary.58.t:0 "The death of Dezső Kosztolányi"
+hungary.58.d:0 "The legendary Hungarian poet Dezső Kosztolányi has tragically died today in his home. He was known best for his invaluable role in the revitalization of Hungarian literature, as well as as his translations of great works such as Shakespeare's 'Romeo and Juliet' and Lewis Carroll's 'Alice in Wonderland'. Kosztolányi had been battling with cancer for several years, and many knew that his time left was short. In his final years, he recounted stories of his childhood and wrote many short stories, both fictional and real. \n\nHungary has lost a great member of its society, and the nation mourns his passing as though he was a family member of the entire nation."
+hungary.58.a:0 "He will be missed."
+
+### Horthy crowns himself king, selfish bastard ###
+
+hungary.500.t:0 "Horthy crowns himself king of Hungary."
+hungary.500.d:0 "In a shocking move, the Regent of Hungary has decided that rather than let a foreigner sit on the Hungarian throne again, he would take up the mantle himself and 'restore the Hungarian crown to its former glory'. Horthys monarchy has already been denounced by the other kings across Europe, and the Hungarian populace is not pleased with this result; but for the time being it seems that Horthy will be the king of Hungary, however long it lasts."
+hungary.500.a:0 "Long live King Horthy!"
+
+### Horthy crowns Karl I king ###
+
+hungary.600.t:0 "Horthy restores Karl I to the Hungarian throne."
+hungary.600.d:0 "Miklos Horthy announced today in Budapest that Karl I von Habsburg-Lorraine was to take the Hungarian throne, and end the shortlived regency at once. This will increase the stability of the Hungarian government, but many are wary that Horthy may simply be using Karl as a puppet to rule Hungary from the shadows. Regardless, the Habsburgs have been returned to Hungary after being exiled almost exactly 20 years prior. Karl is reportedly on his way to Budapest from his exile in Switzerland, and will have taken the throne within the next few days."
+hungary.600.a:0 "Long live King Karl!"
+
+### Horthy invites Transylvanian noble ###
+
+hungary.700.t:0 "Horthy invites Jenő Barcsay to take the Hungarian throne."
+hungary.700.d:0 "In a surprising move, Miklos Horthy has decided to invite the Transylvanian noble, Jenő Barcsay, to take the Hungarian throne and assume power. While many are skepcical about the legitemacy of the new king, many are relieved to finally have someone who isn't a Habsburg sitting on their throne. Many believe that this will bring us closer to Transylvania, and allow for peaceful reunification of the two historic regions."
+hungary.700.a:0 "Love live King Barcsay!"
+
+#### CENTROSLAV-HUNGARIAN EVENTS ####
+
+cenhun.1.t:0 "Slovakia revolts!"
+cenhun.1.d:0 "Bratislava has informed us today the union of Czechia and Slovakia is null and void, and that the Slovaks have forged their own independant state. This is dreadful news, and we can't let them simply walk away. However, many believe they have the support of the Hungarians, and it is unlikely we will be able to fend of both the Hungarians and Slovaks at the same time. What shall we do?"
+cenhun.1.a:0 "The Slovaks will rejoin us, whether they like it or not."
+cenhun.1.b:0 "Slovakia is not worth the men it will cost."
+
+#### Slovak-Hungarian Events ####
+
+slohun.1.t:0 "Puppeting Slovakia"
+slohun.1.d:0 "Slovakia is unable to win their independance on their own, and we have ambitions to conquer Slovakia. Our troops on the Slovak border should be enough to coerce them into subjigation."
+slohun.1.a:0 "Send the demands."
+slohun.1.b:0 "Carpathian Ruthenia will be seized as well."
+
+#### anglo-Hungarian events ###
+
+enghun.2.t:0 "Hungary wants aircraft licenses"
+enghun.2.d:0 "Hungary has approached us with a large sum of money and a request to purchase some models of aircraft for their own production. The Hungarians are clearly moving closer towards our faction, and accepting this deal will bring them ever closer to us."
+enghun.2.a:0 "We will grant them the licenses."
+enghun.2.b:0 "We cannot give our aircraft away so recklessly!"
+
+###############
+### SPIRITS ###
+###############
+
+hun_annecy_treaty:0 "The Treaty of Annecy"
+hun_annecy_treaty_desc:0 "Despite our attempts to escape the wrath of the Entente, they still dictated a harsh treaty that would be imposed on our nation. This treaty was signed in the city of Annecy on the Franco-Italian border, and all attempts to revise or revoke it have been blocked by the democratic Hungarian government, which still wishes to maintain a pro-Entente policy despite public outcry."
+###
+hun_bw_1:0 "Effects of the London Market Crash"
+hun_bw_1_desc:0 "The economy is in ruins from the global economic crash, we must take measures to reverse the devestation, or face the consiquences."
+###
+hun_bw_2:0 "Effects of the London Market Crash"
+hun_bw_2_desc:0 "The initial shock of the crash has passed, and left a trail of devestation in its wake. Unemployment is rising, currency value is dropping, and the people are getting rowdy. The time has come for drastic measures."
+###
+hun_bw_3:0 "Effects of the London Market Crash"
+hun_bw_3_desc:0 "The initial shock of the crash has passed, and left a trail of devestation in its wake. Unemployment is rising, currency value is dropping, and the people are getting rowdy. The time has come for drastic measures."
+###
+hun_bw_4:0 "Effects of the London Market Crash"
+hun_bw_4_desc:0 "The initial shock of the crash has passed, and left a trail of devestation in its wake. Unemployment is rising, currency value is dropping, and the people are getting rowdy. The time has come for drastic measures."
+###
+hun_bw_5:0 "Effects of the London Market Crash"
+hun_bw_5_desc:0 "The initial shock of the crash has passed, and left a trail of devestation in its wake. Unemployment is rising, currency value is dropping, and the people are getting rowdy. The time has come for drastic measures."
+###
+hun_nep:0 "New Economic Policy"
+hun_nep_desc:0 "The New Economic Policy that has been introduced will revitalize the nations economy and put us back on the world stage."
+###
+hun_tax_reform:0 "Reformed Tax"
+hun_tax_reform_desc:0 "Our antiquated tax system has proven itself unable to withstand the pressures of economic criris, this reform will allow for both more money to flow to the state and for the people to have more spending power."
+###
+hun_attack_inflation:0 "Inflációcsökkentő program"
+hun_attack_inflation_desc:0 "The implimentation of the Inflációcsökkentő program is working its magic at reducing the national inflation."
+###
+hun_mandatory_school:0 "Encourage schools"
+hun_mandatory_school_desc:0 "Increased focus on our nations education system has led to a greater sense of national unity."
+###
+hun_closed_markets:0 "Closed Markets"
+hun_closed_markets_desc:0 "The economic collapse has not only destroyed our economy, but also our ability to export goods to the global market. While this does mean we will be able to keep all our resources at home, the economic and political backlash far outweighs that small consolation."
+###
+hun_war_bonds_ready:0 "War Bonds Ready"
+hun_war_bonds_ready_desc:0 "We are ready to give out war bonds to our population, should this country be faced with a war."
+###
+hun_reformed_mil_spending:0 "Reformed Military Spending"
+hun_reformed_mil_spending_desc:0 "Reforms in how we allocate funds to our military have not only allowed for more efficiant supply, but also technological boosts in fields we did not expect to benifit."
+###
+hun_social_credit:0 "Social Credit"
+hun_social_credit_desc:0 "The implimentation of our Social Credit Programs is improving the quality of life of all our citizens."
+###
+hun_horthy_resistance:0 "Miklos Horthy's Resistance"
+hun_horthy_resistance_desc:0 "in 1929, Miklos Horthy founded the anti-Entente terrorist organization known as the 'Blackshirts', these men want to see the Entente thrown out of Hungary, and the nations borders restored to their former glory before the Treaty of Annecy. We must strike this sea dog down before he causes any more trouble."
+###
+hun_kun_resistance:0 "Bela Kun's Red Militia"
+hun_kun_resistance_desc:0 "Ever since the fall of the Hungarian Soviet Republic in 1921, the socialist Bela Kun has plagued the countryside, attemping to gather support to bring himself back into power. This red menace is a stain on our national pride, and it's time we rid ourselves of him."
+###
+hun_unified_people:0 "Unified people"
+hun_unified_people_desc:0 "With Bela Kun and Miklos Horthy both purged, we can finally call our nation unified, and throw off the shackles of The Great War. It is our time to step out into the world and show our true colors. The age of the Magyar is soon upon is."
+###
+hun_unified_nation:0 "Unified nation"
+hun_unified_nation_desc:0 "The people and the state are both unified and safe from danger. The age of the Magyar is soon to be upon the world, and it is now time to step out into the world."
+###
+hun_arrow_cross:0 "Arrow Cross Paramilitary"
+hun_arrow_cross_desc:0 "We have formed the Arrow Cross paramilitary force. These men will be the police of the new regime, and will ensure our reign will not be threatened from the inside."
+###
+hun_arrow_cross_but_better:0 "Arrow Cross Paramilitary"
+hun_arrow_cross_but_better_desc:0 "We have formed the Arrow Cross paramilitary force. These men will be the police of the new regime, and will ensure our reign will not be threatened from the inside."
+###
+hun_democratic_bastion:0 "Democratic Bastion"
+hun_democratic_bastion_desc:0 "The fires of revolution have been snuffed out, and we have become a shining beacon of democracy in a sea of totalitarianism. We must uphold these values, lest we fall to our enemies."
+###
+hun_danube_research:0 "Danube Research Bloc"
+hun_danube_research_desc:0 "Our faction members have been invited to join a research bloc, where we will all share information with each other and hopefully gain an advantage over our neighbors."
+###
+hun_integrated_officers:0 "Integrated Officer Corps"
+hun_integrated_officers_desc:0 "Attempts to draw our nations closer militarily have led to the formation of a transnational officer corps consisting of generals from all members of the faction. While the cultural and language divide is being progress difficult, with time this will prove to be one of our greatest strenghs."
+###
+hun_interlaced_economy:0 "Interlaced Economy"
+hun_interlaced_economy_desc:0 "We have made extensive efforts to connect our economy with our fellow faction members. This has allowed us to better allocate resources towards construction and military production."
+###
+hun_gun_buy:0 "French Artillery Purchase"
+hun_gun_buy_desc:0 "We have purchases a large amount of artillery from the French, and as such we must pay them back for what they have granted us."
+###
+hun_fra_officers:0 "French Officers in Hungary"
+hun_fra_officers_desc:0 "The French have, as per our request, sent officers to insepct and update our army. Both our nations will gain experience from this"
+###
+hun_trianon:0 "The Treaty of Trianon"
+hun_trianon_desc:0 "Through extensive diplomatic negotations, we have managed to revise the treaty of Annecy, and the new treaty has been signed in Trianon palace. While still imposing restrictions on our military, it is far more lenient than before, and marks a turning point for Franco-Hungarian relations."
+###
+hun_french_industry:0 "French Industrial Methods"
+hun_french_industry_desc:0 "We have sent industrial observers to France to study their industrial methods, and bring their findings back to Hungary so we may use them ourselves."
+###
+hun_tea_time:0 "British Imports"
+hun_tea_time_desc:0 "The British Empire is known globally for their production of many high quality items which are sold across the world. We must aquire some of these goods to appease the people."
+###
+hun_oxford_budapest:0 "Oxford-Budapest joint research"
+hun_oxford_budapest_desc:0 "Teams at Oxford University have joined with Budapest University in an attempt to increase the research rate of both our countries. This will draw us closer to Britain and may allow us to join their faction at some point."
+hun_annecy_revise:0 "Revised Treaty of Annecy"
+hun_annecy_revise_desc:0 "Diplomacy with Britain has allowed us to revise the treaty of Annecy to a degree where it is no longer crippling to our military."
+###
+hun_british_resources:0 "British Resource Imports"
+hun_british_resources_desc:0 "The British Empire is vast, and full of resources that are not being put to good use. We can offer to take some of the excess off their hands and use it for our own benifit."
+###
+hun_dead_regency:0 "Dead regency"
+hun_dead_regency_desc:0 "Horthy has proclaimed an end of the regency, yet still nobody sits upon our throne. We must choose a king quickly to avoid political instability."
+###
+hun_german_officers_idea:0 "German Officers in Hungary"
+hun_german_officers_idea_desc:0 "German officers have been invited to observe and train the Hungarian military, giving us an edge over our opponents."
+###
+hun_german_rights:0 "German minority rights"
+hun_german_rights_desc:0 "German immigration through the past centuries has created a siazble German minority within Hungary. Giving these Germans more rights in-line with that of trueborn Magyars will show our dedication and loyalty to the Germans and their evergrowing Empire."
+###
+hun_croat_unrest:0 "Croatian Unrest"
+hun_croat_unrest_desc:0 "The Croatian people have been split between Hungary, Serbia, and Italy. This has caused a large degree of nationalism and unrest in the Croatian lands, and if we do not end this nationalism we may have a revolt on our hands."
+###
+hun_stoked_nationalism:0 "Stoked nationalism"
+hun_stoked_nationalism_desc:0 "We finally have a true Hungarian on our throne, and Horthy has gone to very quick work rallying the people for war. Our people and our army stand behind our king, we are a united nation."
+###
+hun_war_machine:0 "Wartime Industrial Methods"
+hun_war_machine_desc:0 "War is on the horizon, and our industry must be ready to take the full brunt of supplying our troops in combat. New policies will allow us to produce equipment faster and with more reliability in the field."
+###
+hun_romania_bad:0 "Anti-Romanian rhetoric"
+hun_romania_bad_desc:0 "We have focused our efforts on spreading anti-Romanian propaganda throughout our nation, and our people are already calling for war openly in the streets."
+###
+hun_infinite_regency:0 "The Unending Regency"
+hun_infinite_regency_desc:0 "The Hungarian regency has no end in sight, which is providing the people with a stable future."
+###
+hun_tariff_increase_idea:0 "Increase tariffs"
+hun_tariff_increase_idea_desc:0 "Freely giving our resources to the global market is foolish, there should be a price for buying Hungarian resources. Higher tariffs will allow us to better allocate our funds and factories."
+###
+hun_peoples_rights:0 "Extended Peoples Rights"
+hun_peoples_rights_desc:0 "The people deserve freedom, and that is exactly what we intend on giving them."
+###
+hun_free_market:0 "Free Market"
+hun_free_market_desc:0 "The global economy keeps the world running, we would be foolish to shut ourselves off from it and refuse to reap its benifits."
+###
+hun_social_plan_1:0 "Szociális Terv Phase One"
+hun_social_plan_1_desc:0 "The government has begun to impliment the 'Szociális Terv' social plan. This initial phase may not be groundbreaking, but it will pave the way for the next phases of the plan."
+###
+hun_authoritarian_traditions:0 "Authoritarian Traditions"
+hun_authoritarian_traditions_desc:0 "This nation has a tradition of authoritarian regimes, and democracy has never been particularly popular. We must defend our people against the corrupt democratic regimes of the West."
+###
+hun_socialist_diplomacy:0 "Socialist diplomacy"
+hun_socialist_diplomacy_desc:0 "Socialism is the only way to save our nation from complete collapse, and we must cooperate with other socialist nations if we are to achieve the dream of complete European liberation."
+###
+hun_peoples_council:0 "The People's Council"
+hun_peoples_council_desc:0 "Mátyás Rákosi cannot run the country on his own, and we have elected to set up a 'High Council of the Hungarian People's Commission' or 'People's Council' for short."
+###
+hun_peoples_council2:0 "The People's Council"
+hun_peoples_council2_desc:0 "Mátyás Rákosi cannot run the country on his own, and we have elected to set up a 'High Council of the Hungarian People's Commission' or 'People's Council' for short."
+###
+hun_peoples_council3:0 "The People's Council"
+hun_peoples_council3_desc:0 "Mátyás Rákosi cannot run the country on his own, and we have elected to set up a 'High Council of the Hungarian People's Commission' or 'People's Council' for short."
+###
+hun_soviet_coop:0 "Soviet Army Cooperation"
+hun_soviet_coop_desc:0 "We have established relations with the Soviets, and they have agreed to assist us in the modernization of our army."
+###
+hun_research_cities:0 "Research Cities"
+hun_research_cities_desc:0 "Cities all across Hungary have been designated as 'research centers' with the purpose of specializing in certain areas of technology, giving us a large boost to our research."
+###
+hun_research_cities2:0 "Research Cities"
+hun_research_cities2_desc:0 "Cities all across Hungary have been designated as 'research centers' with the purpose of specializing in certain areas of technology, giving us a large boost to our research."
+###
+hun_research_cities3:0 "Research Cities"
+hun_research_cities3_desc:0 "Cities all across Hungary have been designated as 'research centers' with the purpose of specializing in certain areas of technology, giving us a large boost to our research."
+###
+hun_reorg_society:0 "Reorganization of Society"
+hun_reorg_society_desc:0 "We must shake up the very foundation of society if we are to achieve the socialist dream. Out with the old, and in with the new."
+###
+hun_reorg_society2:0 "Reorganization of Society"
+hun_reorg_society2_desc:0 "We must shake up the very foundation of society if we are to achieve the socialist dream. Out with the old, and in with the new."
+###
+hun_reorg_society3:0 "Reorganization of Society"
+hun_reorg_society3_desc:0 "We must shake up the very foundation of society if we are to achieve the socialist dream. Out with the old, and in with the new."
+###
+hun_no_class_divide:0 "Destroy Class Divides"
+hun_no_class_divide_desc:0 "Segregating people based on their social standing will only breed resentment and unrest, we must equalize the playing field for all our citizens, and give everyone a fair chance."
+###
+hun_no_class_divide2:0 "Destroy Class Divides"
+hun_no_class_divide2_desc:0 "Segregating people based on their social standing will only breed resentment and unrest, we must equalize the playing field for all our citizens, and give everyone a fair chance."
+###
+hun_no_class_divide3:0 "Destroy Class Divides"
+hun_no_class_divide3_desc:0 "Segregating people based on their social standing will only breed resentment and unrest, we must equalize the playing field for all our citizens, and give everyone a fair chance."
+###
+hun_decentralize:0 "Government Decentralization"
+hun_decentralize_desc:0 "We must allow autonomy and freedom for our people. Strong local governments will ensure long-germ stability."
+###
+hun_decentralize2:0 "Government Decentralization"
+hun_decentralize2_desc:0 "We must allow autonomy and freedom for our people. Strong local governments will ensure long-germ stability."
+###
+hun_decentralize3:0 "Government Decentralization"
+hun_decentralize3_desc:0 "We must allow autonomy and freedom for our people. Strong local governments will ensure long-germ stability."
+###
+hun_healthcare:0 "Socialist Healthcare"
+hun_healthcare_desc:0 "We must look after our people, make sure they are not sick, make sure they are warm, make sure they are fed. This is the foundations of a strong society, one that will prosper for a thousand years more."
+###
+hun_healthcare2:0 "Socialist Healthcare"
+hun_healthcare2_desc:0 "We must look after our people, make sure they are not sick, make sure they are warm, make sure they are fed. This is the foundations of a strong society, one that will prosper for a thousand years more."
+###
+hun_healthcare3:0 "Socialist Healthcare"
+hun_healthcare3_desc:0 "We must look after our people, make sure they are not sick, make sure they are warm, make sure they are fed. This is the foundations of a strong society, one that will prosper for a thousand years more."
+###
+hun_employee_rights:0 "Improved Employee Rights"
+hun_employee_rights_desc:0 "No worker should have to suffer dangerous enviroments or harsh treatment, we must ensure that ethical standards are met and kept up."
+###
+hun_employee_rights2:0 "Improved Employee Rights"
+hun_employee_rights2_desc:0 "No worker should have to suffer dangerous enviroments or harsh treatment, we must ensure that ethical standards are met and kept up."
+###
+hun_employee_rights3:0 "Improved Employee Rights"
+hun_employee_rights3_desc:0 "No worker should have to suffer dangerous enviroments or harsh treatment, we must ensure that ethical standards are met and kept up."
+###
+hun_workers_haven:0 "Workers Haven"
+hun_workers_haven_desc:0 "Hungary has become a haven for workers everywhere, and we are the champions of safety and rights for the employed."
+###
+hun_workers_haven2:0 "Workers Haven"
+hun_workers_haven2_desc:0 "Hungary has become a haven for workers everywhere, and we are the champions of safety and rights for the employed."
+###
+hun_workers_haven3:0 "Workers Haven"
+hun_workers_haven3_desc:0 "Hungary has become a haven for workers everywhere, and we are the champions of safety and rights for the employed."
+###
+hun_airforce:0 "Sponsor the Air Force"
+hun_airforce_desc:0 "The Hungarian Air Force has never been particularly large or spectacular. Siphoning funds into our air force will allow us to expand and develop new technologies and doctrines."
+###
+hun_socialism:0 "Hungarian Socialism"
+hun_socialism_desc:0 "We have created our own unique version of socialism in Hungary, superior to the corrupt Soviets in Russia or the Chinese barbarians."
+###
+hun_soviet_industry:0 "Soviet Industry"
+hun_soviet_industry_desc:0 "We have studied the Soviet industrial machine, and have learned many valuable lessons from it."
+###
+hun_expanded_red_army:0 "Red Army Expansion"
+hun_expanded_red_army_desc:0 "Recruitment drives across Hungary have led to an expansion of the Red Army, and a direct increase in the size of our army."
+###
+hun_truth:0 "The Ministry of Truth"
+hun_truth_desc:0 ""
+###
+hun_parliament_opposition:0 "Parliament Opposition"
+hun_parliament_opposition_desc:0 "We still need the parliament to run our nations day-to-day buisness, but they are dragging their feet at every oppertunity. We will have to be rid of them eventually if we are to move forward politically."
+###
+hun_purge_army:0 "Purging the Army"
+hun_purge_army_desc:0 "The army is full of traitors and dissidents, we must create a loyal and pure army that will do our bidding."
+###
+hun_industry_control:0 "Industrial Control"
+hun_industrial_control_desc:0 ""
+###
+hun_loyal_officers:0 "Officer Loyalty"
+hun_loyal_officers_desc:0 ""
+###
+hun_loyal_army:0 "Army Loyalty"
+hun_loyal_army_desc:0 ""
+###
+hun_secret_police_idea:0 "Expanded Secret Police"
+hun_secret_police_idea_desc:0 ""
+###
+hun_militarized_police_idea:0 "Militarized Police Force"
+hun_militarized_police_idea_desc:0 ""
+
+
+#############################
+### COMPANIES & MINISTERS ###
+#############################
+
+manfred_weiss_steel:0 "Manfréd Weiss Steel and Metal Works"
+
+#############
+### FLAGS ###
+#############
+
+soccon_win:0 "The Social Conservtives win the election!"
+socdem_win:0 "The Social Democrats win the election!"
+soclib_win:0 "The Social Liberals win the election!"
+marklib_win:0 "The Market Liberals win the election!"
+vanguardist_acceptance:0 "Acceptance of Vanguardist diplomacy"
+collectivist_acceptance:0 "Acceptance of Collectivist diplomacy"
+libertarian_socialist_acceptance:0 "Acceptance of Libertarian Socialist diplomacy"
+authoritarian_democrat_acceptance:0 "Acceptance of Authoritarian Democrat diplomacy"
+paternal_autocrat_acceptance:0 "Acceptance of Paternal Autocrat diplomacy"
+national_populist_acceptance:0 "Acceptance of National Populist diplomacy"
+valkist_acceptance:0 "Acceptance of Valkist diplomacy"
+social_democrat_acceptance:0 "Accpetance of Social Democrat Diplomacy"
+social_liberal_acceptance:0 "Acceptance of Social Liberal Diplomacy"
+market_liberal_acceptance:0 "Acceptance of Market Liberal Diplomacy"
+social_conservative_acceptance:0 "Acceptance of Social Conservative Diplomacy"
+hun_weewoo:0 "The President has decided to take action"
+hun_bw:0 "Our economy is in shambles."
+hun_crisis_active:0 "The President has declared a state of emergency."
+hun_crisis_over:0 "The political crisis in our nation has been resolved."
+hun_horthys_back:0 "Horthy has taken control of the government"
+hun_london_pact:0 "Should the British accept, all territories taken from us by the Treaty of Annecy will be returned rightfully to us. That is of course assuming that both we and the British are victorious."
+hun_cen_revolt:0 "Nationalism will be stirred in South Nitra until the region demands the right to rejoin Hungary. Should they be denied we may find ourselves caught up in a war against our northern neighbors."
+hun_trans_hun:0 "Should we choose to invade Transylvania, the local Hungarian population will be more willing to assist us."
+hun_trans_forts:0 "Forts along the Romanian border will be built and restored in preperation for a surprise attack."
+hun_kuns_back:0 "Bela Kun has seized power."
+hun_vang_council_coup:0 "CLASSIFIED"
+hun_council_requests_power:0 "We can now grant the People's Council more legal power through the focus tree."
+hun_council_requests_army:0 "We can now grant the People's Council a personal militia through the focus tree."
+hun_council_classified:0 "The People's Council has requested our attendance at a special committee meeting."
+hun_air_fighter:0 "We have chosen to focus our efforts on light fighters."
+hun_air_heavy:0 "We have chosen to focus our efforts on heavy fighters."
+hun_air_tact:0 "We have chosen to focus our efforts on tactical bombers."
+hun_air_strat:0 "We have chosen to focus our efforts on strategic bombers."
+hun_air_cas:0 "We have chosen to focus our efforts on Close Air Support."
+hun_air_nav:0 "We have chosen to focus our efforts on naval bombers"
+bul_civil_war:0 "Bulgaria is engulfed in civil war!"
+hun_bul_help:0 "If the Bulgarians accept our alliance and we defeat the Romanians in a war, we will be able to demand the return of Dobrudja."
+hun_taxes_high:0 "Taxes have been raised via focus."
+
+#########################
+### OPINION MODIFIERS ###
+#########################
+
+HUN_rapport:0 "Building Rapport"
+HUN_nice:0 "Diplomatic ties"
+HUN_recent_seperate:0 "Hostile seperation"
+HUN_hostile_rhetoric:0 "Hostile rhetoric"
+
+################
+### FACTIONS ###
+################
+
+transdanubia:0 "Transdanube Alliance"
+Hungarian_supremacy:0 "Magyar felség"
+balkan_reds:0 "Balkan Socialist Pact"
+
+############################
+### COSMETIC PARTY NAMES ###
+############################
+
+hun_team_karl:0 "Karlist Loyalists"
+hun_team_karl_long:0 "Karlist Loyalists"

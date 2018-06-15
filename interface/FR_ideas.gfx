@@ -1,0 +1,121 @@
+spriteTypes = {
+
+	############
+	# Generic Companies
+	############
+
+	spriteType = {
+		name = "GFX_generic_collectivism_rising"
+		texturefile = "gfx/interface/ideas/ideas/generic_collectivism_rising.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_valkist_nut"
+		texturefile = "gfx/interface/ideas/ideas/idea_valkist_nut.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_valkist_support"
+		texturefile = "gfx/interface/ideas/ideas/generic_valkist_support.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_valkist_funding"
+		texturefile = "gfx/interface/ideas/ideas/generic_valkist_funding.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_valkist_repression"
+		texturefile = "gfx/interface/ideas/ideas/generic_valkist_repression.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GER_secret_rearmament"
+		texturefile = "gfx/interface/ideas/ideas/GER_secret_rearmament.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_GER_naval_restrictions"
+		texturefile = "gfx/interface/ideas/ideas/GER_naval_restrictions.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_FER_tribal_tensions"
+		texturefile = "gfx/interface/ideas/FER/FER_Tribal_Tensions.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_generic_collectivism_banned"
+		texturefile = "gfx/interface/ideas/ideas/generic_collectivism_banned.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_generic_anarchism_rising"
+		texturefile = "gfx/interface/ideas/ideas/generic_anarchism_rising.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_generic_vanguardism_rising"
+		texturefile = "gfx/interface/ideas/ideas/generic_vanguardism_rising.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_generic_populism_banned"
+		texturefile = "gfx/interface/ideas/ideas/generic_populism_banned.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_generic_colombia_revanchism"
+		texturefile = "gfx/interface/ideas/ideas/generic_colombia_revanchism.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_RHI_einstein"
+		texturefile = "gfx/interface/ideas/ideas/RHI_einstein.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_beiyang_council"
+		texturefile = "gfx/interface/ideas/ideas/idea_beiyang_council.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_japanese_monopolies"
+		texturefile = "gfx/interface/ideas/ideas/idea_japanese_monopolies.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_generic_officer_cap"
+		texturefile = "gfx/interface/ideas/ideas/idea_generic_officer_cap.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOV_bread"
+		texturefile = "gfx/interface/ideas/ideas/SOV_bread.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOV_peace"
+		texturefile = "gfx/interface/ideas/ideas/SOV_peace.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOV_labour"
+		texturefile = "gfx/interface/ideas/ideas/SOV_labour.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_HAI_demoralized_people"
+		texturefile = "gfx/interface/ideas/ideas/HAI_demoralized_people.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_HAI_american_occupation"
+		texturefile = "gfx/interface/ideas/ideas/HAI_american_occupation.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_HAI_infrastructure_planning"
+		texturefile = "gfx/interface/ideas/ideas/HAI_infrastructure_planning.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_ENG_bentley"
+		texturefile = "gfx/interface/ideas/ENG/companies/bentley.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ENG_pbritannica"
+		texturefile = "gfx/interface/ideas/ideas/ENG_britannica.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_POL_polskaib"
+		texturefile = "gfx/interface/ideas/ideas/POL_polskaib.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_POL_advisorbois"
+		texturefile = "gfx/interface/ideas/ideas/POL_advisorbois.dds"
+	}
+	#SpriteType = {
+		#name = "GFX_idea_POL_polskaib"
+		#texturefile = "gfx/interface/goals/focus_POL_polskaib.dds"
+	#}
+}

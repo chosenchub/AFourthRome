@@ -1,0 +1,53 @@
+﻿##################
+# Russian Events #
+########################
+# Made by Darknight1342#
+########################
+
+add_namespace = russia
+
+country_event = { #declare war on the soviets
+	id = russia.1
+	title = russia.1.t
+	desc = russia.1.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = russia.1.a
+		declare_war_on = { target = SOV type = annex_everything }
+	}
+}
+country_event = { #victory in the 2RCW
+	id = russia.2
+	title = russia.2.t
+	desc = russia.2.d
+	picture = news_event_generic_rally2
+
+	trigger = {
+		tag = RUS
+		RUS = {
+			exists = yes
+			has_capitulated = no
+		}
+		SOV = {
+			exists = no
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = russia.2.a
+		drop_cosmetic_tag = yes
+		remove_ideas = RUS_civil_war
+		add_ideas = RUS_strife
+	}
+}

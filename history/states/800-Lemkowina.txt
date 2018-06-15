@@ -1,0 +1,25 @@
+state={
+	id=800
+	name="STATE_800"
+
+	history={
+		owner = CEN
+		victory_points = {
+			417 10
+		}
+		buildings = {
+			infrastructure = 5
+
+		}
+		add_core_of = CEN
+		add_core_of = POL
+
+	}
+	
+	provinces={
+		417 442 3410 9412 11398 11413 
+	}
+	manpower=1252800
+	buildings_max_level_factor=1.000
+	state_category=town
+}

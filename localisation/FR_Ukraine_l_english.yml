@@ -1,0 +1,27 @@
+﻿l_english:
+
+UKR_FUHRERREICH_DESC:0 "After being under the Russian boot for hundreds of years, Ukraine was finally given a taste of independance at the end of the Great War with the Treaty of Brest-Litovsk. This independance streak was short, and dominated by German occupation. When Germany capitulated to the Entente, the status of Ukraine was left up for debate. Eventually the lands were split between Poland and the Soviet Union, and the Ukrainian people were once more put under servitude from their neighbors. With the success of the Kronstadt Rebellion, the Ukrainian SSR was given a large degree of autonomy within the Soviet Union, and became a nearly-independant state once again. The future of Ukraine is uncertain; with an increasingly unstable Soviet Union attempting to hold onto its territories at all costs, and growing nationalism from far-right elements within Ukraine. One thing is certain, the status quo will change."
+
+
+#############
+### FOCUS ###
+#############
+
+##############
+### EVENTS ###
+##############
+
+### SOVIETS GRANT INDEPENDANCE ###
+ukraine.1.t:0 "The Soviet Union signs the Treaty of Kiev"
+ukraine.1.d:0 "The General Secretary of the Russian SSR, Sergey Kirov, arrived in Kiev earlier today to sign a formal treaty, acknowledging the independance of Ukraine from both the Soviet Union and the Third Internationale. The treaty was signed in front of delegates from all of the SSR's, and Kirov was visibly uncomfortable signing his name on the bottom of the treaty. \n\nMany questions remain regarding the future of our Ukrainian state, and the next few months will be filled with hardships. One thing must remain certain, we will no longer be subdued by our neighbors, and no longer will we bend to the call of the Russian."
+ukraine.1.a:0 "Glory to Ukraine! Glory to the heroes!"
+
+###############
+### SPIRITS ###
+###############
+
+UKR_corn:0 "Corn Subsidies"
+UKR_corn_desc:0 "The Russian government is monetarily subsidizing our corn production, increasing the yield of crops across the nation."
+#############
+### MISC. ###
+#############

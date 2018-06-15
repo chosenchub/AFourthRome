@@ -1,0 +1,2759 @@
+﻿#########################
+# French Foreign Events #
+########################################
+# Made by jespertjee, SuperMarks & CIA #
+########################################
+
+add_namespace = frafor
+
+country_event = {
+	id = frafor.1
+	title = "The Entente Army Modernization Plan"
+	desc = frafor.1.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Well, go on! Let's send the offers out!"
+		ai_chance = { factor = 90 }
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = FRA
+					NOT = { tag = FRA }
+					NOT = { has_country_flag = FRA_BAD_BOYE }
+				}
+				country_event = { days = 1 id = frafor.2 }
+			}
+			set_global_flag = FRA_EAMP_active
+		}
+	}
+	option = {
+		name = "On second thought, we can use the funds better in other sectors."
+		ai_chance = { factor = 10 }
+		add_political_power = -75
+		#add_stability = 0.05
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	}
+}
+country_event = {
+	id = frafor.2
+	title = "The Entente Army Modernization Plan"
+	desc = frafor.2.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Our Army could use some improving, let's accept."
+		ai_chance = { factor = 75 }
+		add_ideas = FRA_EAMP_idea
+		FRA = {
+			country_event = { days = 1 id = frafor.3 }
+		}
+		reverse_add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Accepted_Assistance
+		}
+	}
+	option = {
+		name = "Our Army is in a good state, we must politely decline." #Pfah! Are they implying our current Military isn't up to standards?
+		ai_chance = { factor = 20 }
+		reverse_add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Refused_Assistance
+		}
+		add_stability = 0.025
+		add_political_power = 25
+	}
+	option = {
+		name = "Accept, but use the funding for other projects instead."
+		ai_chance = { factor = 5 }
+		reverse_add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Outraged
+		}
+		set_country_flag = FRA_BAD_BOYE #Won't get any future offers for military modernization plans from France.
+		increase_ruling_party_popularity_by_5 = yes
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+	}
+}
+country_event = {
+	id = frafor.3
+	title = "[From.GetName] has agreed to partake in the E.A.M.P."
+	desc = frafor.3.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Great news!"
+		army_experience = 10
+		add_political_power = 5
+		add_war_support = 0.01
+	}
+}
+country_event = {
+	id = frafor.4
+	title = "The Entente Pilot Training Plan"
+	desc = frafor.4.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Let's go forward with it."
+		ai_chance = { factor = 90 }
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = FRA
+					NOT = { tag = FRA }
+					NOT = { has_country_flag = FRA_BAD_BOYE }
+				}
+				country_event = { days = 1 id = frafor.5 }
+			}
+			set_global_flag = FRA_EPTP_active
+		}
+	}
+	option = {
+		name = "Why would we need that? French pilots are amongst the best in the world!"
+		ai_chance = { factor = 10 }
+		add_political_power = 75
+		}
+}
+country_event = {
+	id = frafor.5
+	title = "The Entente Pilot Training Plan"
+	desc = frafor.5.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "This can only strengthen us, we shall accept."
+		ai_chance = { factor = 70 }
+		add_ideas = FRA_EPTP_idea
+		FRA = {
+			country_event = { days = 1 id = frafor.6 }
+		}
+		reverse_add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Accepted_Assistance
+		}
+	}
+	option = {
+		name = "Our pilots are well-trained enough, we've no need for this."
+		ai_chance = { factor = 20 }
+		reverse_add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Refused_Assistance
+		}
+		add_political_power = 50
+	}
+	option = {
+		name = "Accept, but use the funding for other projects instead."
+		ai_chance = { factor = 10 }
+		reverse_add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Outraged
+		}
+		set_country_flag = FRA_BAD_BOYE #Won't get any future offers for military modernization plans from France.
+		increase_ruling_party_popularity_by_5 = yes
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+	}
+}
+country_event = {
+	id = frafor.6
+	title = "[From.GetName] has agreed to partake in the E.P.T.P." 
+	desc = frafor.6.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Only through Unity may Victory be achieved."
+		air_experience = 25
+		add_political_power = 5
+		add_war_support = 0.01
+	}
+}
+country_event = {
+	id = frafor.7
+	title = "The Entente Naval Exercising Plan"
+	desc = frafor.7.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "On with it!"
+		ai_chance = { factor = 90 }
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = FRA
+					NOT = { tag = FRA }
+					NOT = { has_country_flag = FRA_BAD_BOYE }
+				}
+				country_event = { days = 1 id = frafor.8 }
+			}
+			set_global_flag = FRA_ENEP_active
+		}
+	}
+	option = {
+		name = "It's absolutely unnessecary, let's stick with the status quo."
+		ai_chance = { factor = 10 }
+		add_stability = 0.1
+		add_war_support = -0.1
+	}
+}
+country_event = {
+	id = frafor.8
+	title = "The Entente Naval Exercising Plan"
+	desc = frafor.8.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Preparing our navy for future combat would certainly be prudent."
+		ai_chance = { factor = 70 }
+		add_ideas = FRA_ENEP_idea
+		FRA = {
+			country_event = { days = 1 id = frafor.9 }
+		}
+		reverse_add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Accepted_Assistance
+		}
+	}
+	option = {
+		name = "We're not risking any damages, sorry."
+		ai_chance = { factor = 25 }
+		reverse_add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Refused_Assistance
+		}
+		add_stability = 0.05
+	}
+	option = {
+		name = "Accept, but use the funding for other projects instead."
+		ai_chance = { factor = 5 }
+		reverse_add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Outraged
+		}
+		set_country_flag = FRA_BAD_BOYE #Won't get any future offers for military modernization plans from France.
+		increase_ruling_party_popularity_by_5 = yes
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+	}
+}
+country_event = {
+	id = frafor.9
+	title = "[From.GetName] has agreed to partake in the E.N.E.P." 
+	desc = frafor.9.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Great news!"
+		navy_experience = 25
+		add_political_power = 5
+		add_war_support = 0.01
+	}
+}
+
+country_event = { #For allowing Entente members to join the EIR
+	id = frafor.10
+	title = "Joining the Entente Institute of Research"
+	desc = frafor.10.d
+	picture = report_event_generic_conference
+
+	trigger = {
+		NOT = { 
+			tag = FRA
+			has_country_flag = Member_of_the_EIR 
+		}
+		is_in_faction_with = FRA
+		has_global_flag = FRA_EIR_Active
+	}
+
+	mean_time_to_happen = {	days = 0 }
+
+	option = {
+		name = "This can only strengthen us."
+		set_country_flag = Member_of_the_EIR
+		add_to_tech_sharing_group = continental_entente_research
+	}
+}
+country_event = { #For kicking out non-entente members from the EIR
+	id = frafor.11
+	title = "Exit from the EIR"
+	desc = frafor.11.d
+	picture = report_event_generic_conference
+
+	trigger = {
+		has_country_flag = Member_of_the_EIR
+		NOT = {
+			is_in_faction_with = FRA
+			tag = FRA
+		}
+	}
+
+	mean_time_to_happen = {	days = 0 }
+
+	option = {
+		name = "Sad!"
+		clr_country_flag = Member_of_the_EIR
+		remove_from_tech_sharing_group = continental_entente_research
+	}
+}
+
+country_event = {
+	id = frafor.12
+	title = "Franco-Italo Enterprises"
+	desc = frafor.12.d
+	picture = GFX_report_event_generic_factory
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We are lucky to have generous allies."
+		add_stability = 0.05
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Assisted_Development
+			}
+		}
+	}
+
+country_event = {
+	id = frafor.13
+	title = "Renewal of the Franco-Polish Entente?"
+	desc = frafor.13.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Let us join the Entente in the west!"
+		ai_chance = { 
+			factor = 50 
+			modifier = {
+				has_opinion = { target = FRA value > 89 }
+				add = 40
+			}
+		}
+		set_country_flag = POL_JOINED_ENTENTE
+		FRA = { add_to_faction = POL }
+		add_named_threat = { threat = 1 name = FRA_Joined_Entente }
+		FRA = { country_event = { days = 1 id = fra.14 } }
+		}
+	option = {
+		name = "Joining the Entente would only aggravate our neighbors."
+		ai_chance = { 
+			factor = 50 
+			modifier = {
+				has_opinion = { target = FRA value > 89 }
+				add = -40
+			}
+		}
+		add_political_power = 50
+		FRA = { country_event = { days = 1 id = fra.15 } }
+		}
+	}
+
+country_event = {
+	id = frafor.14
+	title = "Poland accepts our offer"
+	desc = frafor.14.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Splendid news!"
+		}
+	}
+
+country_event = {
+	id = frafor.15
+	title = "Poland rejects our offer"
+	desc = frafor.15.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "So be it."
+		ai_chance = { factor = 25 }
+		}
+	option = {
+		name = "Perhaps we could make a more profitable offer for them?"
+		ai_chance = { factor = 75 }
+		add_stability = -0.05
+		FRA = { country_event = { days = 1 id = fra.16 } }
+		}
+	}
+
+country_event = {
+	id = frafor.16
+	title = "French Negotiations: Round Two"
+	desc = frafor.16.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "How strange, we've reconsidered..."
+		ai_chance = { factor = 80 }
+		FRA = { add_to_faction = POL }
+		set_country_flag = POL_JOINED_ENTENTE
+		add_named_threat = { threat = 1 name = FRA_Joined_Entente }
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		FRA = { country_event = { days = 1 id = fra.17 } }
+		}
+	option = {
+		name = "We're standing firm, it's not happening."
+		ai_chance = { factor = 20 }
+		add_political_power = -25
+		FRA = { country_event = { days = 1 id = fra.18 } }
+		}
+	}
+
+country_event = {
+	id = frafor.17
+	title = "Poles accept our renegotiation"
+	desc = frafor.17.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Nothing that a bit of money can't fix!"
+		}
+	}
+
+country_event = {
+	id = frafor.18
+	title = "Poles reject our renegotiation"
+	desc = frafor.18.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Blasted Poles!"
+		}
+	}
+
+country_event = {
+	id = frafor.19
+	title = "French Military Support"
+	desc = frafor.19.d
+	picture = GFX_report_event_generic_factory
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Support is always welcome."
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Assisted_Development
+			}
+		}
+	}
+
+country_event = {
+	id = frafor.20
+	title = "French Domestic Support"
+	desc = frafor.20.d
+	picture = GFX_report_event_generic_factory
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "This will hopefully assist with our popularity."
+		increase_ruling_party_popularity_by_5 = yes
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Assisted_Development
+			}
+		}
+	}
+
+country_event = {
+	id = frafor.21
+	title = "The French offer to levy Dockyard construction"
+	desc = frafor.21.d
+	picture = GFX_report_event_generic_factory
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Yes, by all means!"
+		random_owned_state = {
+			limit = {
+				is_core_of = ROOT
+				is_owned_and_controlled_by = ROOT
+				is_coastal = yes
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			limit = {
+				is_core_of = ROOT
+				is_owned_and_controlled_by = ROOT
+				is_coastal = yes
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+		}
+	}
+
+country_event = {
+	id = frafor.22
+	title = "Condemn Italian Radicalism?"
+	desc = frafor.22.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Whether they like it or not, it needs to be done."
+		ai_chance = { factor = 75 }
+		ITA = { country_event = { days = 1 id = frafor.23 } }
+		reverse_add_opinion_modifier = {
+			target = ITA
+			modifier = FRA_Didnt_Respect_our_Sovereignty
+		}
+	}
+	option = {
+		name = "It's for the best that we leave Italian affairs to the Italians."
+		ai_chance = { factor = 25 }
+		reverse_add_opinion_modifier = {
+			target = ITA
+			modifier = FRA_Respected_our_Sovereignty 
+		}
+	}
+}
+
+country_event = {
+	id = frafor.23
+	title = "[FRA.GetLeader] condemns the Collectivists"
+	desc = frafor.23.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Why can't they mind their own business!?!"
+		add_political_power = -75
+		add_popularity = {
+			ideology = collectivist
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = libertarian_socialist
+			popularity = -0.025
+		}
+		add_popularity = {
+			ideology = vanguardist
+			popularity = -0.025
+		}
+	}
+}
+
+country_event = {
+	id = frafor.24
+	title = "France proposes Defence Scheme H"
+	desc = frafor.24.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "It might be nessecary, but they're shouldering all the payments."
+		ai_chance = { factor = 40 }
+		98 = { #Plock
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9316
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9290
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 6321
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 6347
+				instant_build = yes
+			}
+		}
+		87 = { #Lodz
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 6401
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 11515
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9439
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9546
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 584
+				instant_build = yes
+			}
+		}
+		87 = { #Kielce
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 506
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 3586
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 11430
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 3497
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 562
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 3458
+				instant_build = yes
+			}
+		}
+		98 = { #Warsaw
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 3521
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 402
+				instant_build = yes
+			}
+		}
+		889 = { #Lomza
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 11274
+				instant_build = yes
+			}
+		}
+		FRA = { country_event = { days = 1 id = frafor.25 } }
+	}
+
+	option = {
+		name = "It might be nessecary, we'll assist with the payments."
+		ai_chance = { factor = 50 }
+		add_timed_idea = {
+			idea = FRA_foreign_expenses_low
+			days = 120
+		}
+		98 = { #Plock
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9316
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9290
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 6321
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 6347
+				instant_build = yes
+			}
+		}
+		87 = { #Lodz
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 6401
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 11515
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9439
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9546
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 584
+				instant_build = yes
+			}
+		}
+		87 = { #Kielce
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 506
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 3586
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 11430
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 3497
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 562
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 3458
+				instant_build = yes
+			}
+		}
+		98 = { #Warsaw
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 3521
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 402
+				instant_build = yes
+			}
+		}
+		889 = { #Lomza
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 11274
+				instant_build = yes
+			}
+		}
+		FRA = { set_country_flag = FRA_POL_ASSISTANCE }
+		FRA = { country_event = { days = 1 id = frafor.25 } }
+	}
+
+	option = {
+		name = "Those costs will just weaken both of us. Turn France down."
+		ai_chance = { factor = 10 }
+		FRA = { country_event = { days = 1 id = frafor.26 } }
+		reverse_add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Refused_Assistance 
+		}
+	}
+}
+
+country_event = {
+	id = frafor.25
+	title = "Polish Greenlight"
+	desc = frafor.25.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Time to pay these costs off."
+		if = {
+			limit = {
+				has_country_flag = FRA_POL_ASSISTANCE
+			}
+			add_timed_idea = {
+				idea = FRA_foreign_expenses_medium
+				days = 90
+			}
+			else = {
+				add_timed_idea = {
+					idea = FRA_foreign_expenses_high
+					days = 90
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = frafor.26
+	title = "Poland rejects our proposal"
+	desc = frafor.26.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Oh..? Were they worried about our expenses?"
+	}
+}
+
+country_event = {
+	id = frafor.27
+	title = "France offers to fortify our Eastern Border"
+	desc = frafor.27.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "We'll allow it as long as they cover all payments."
+		ai_chance = { factor = 40 }
+		FRA = { country_event = { days = 1 id = frafor.28 } }
+		199 = { #Khmelnytski
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 3430
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 6429
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9533
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 3570
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 3470
+				instant_build = yes
+			}
+		}
+		93 = { #Wolyn
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 6520
+				instant_build = yes
+			}
+		}
+		94 = { #Polesie
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 535
+				instant_build = yes
+			}
+		}
+		199 = { #Nowogrodek
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 3556
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 11341
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9304
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9236
+				instant_build = yes
+			}
+		}
+		96 = { #Wilno
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 6340
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 406
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9341
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 233
+				instant_build = yes
+			}
+		}
+	}
+
+	option = {
+		name = "We'll allow it and use some of our own funding to assist."
+		ai_chance = { factor = 50 }
+		add_timed_idea = {
+				idea = FRA_foreign_expenses_low
+				days = 90
+			}
+		199 = { #Khmelnytski
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 3430
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 6429
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9533
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 3570
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 3470
+				instant_build = yes
+			}
+		}
+		93 = { #Wolyn
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 6520
+				instant_build = yes
+			}
+		}
+		94 = { #Polesie
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 535
+				instant_build = yes
+			}
+		}
+		199 = { #Nowogrodek
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 3556
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 11341
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9304
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9236
+				instant_build = yes
+			}
+		}
+		96 = { #Wilno
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 6340
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 406
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9341
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 233
+				instant_build = yes
+			}
+		}
+		FRA = { set_country_flag = FRA_POL_ASSISTANCE_E }
+		FRA = { country_event = { days = 1 id = frafor.28 } }
+	}
+
+	option = {
+		name = "Tell France they're wasting their money."
+		ai_chance = { factor = 10 }
+		FRA = { country_event = { days = 1 id = frafor.29 } }
+		reverse_add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Refused_Assistance 
+		}
+	}
+}
+
+country_event = {
+	id = frafor.28
+	title = "Poland agrees to fortification efforts"
+	desc = frafor.28.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Time to get to started..."
+		if = {
+			limit = {
+				has_country_flag = FRA_POL_ASSISTANCE_E
+			}
+			add_timed_idea = {
+				idea = FRA_foreign_expenses_medium
+				days = 90
+			}
+			else = {
+				add_timed_idea = {
+					idea = FRA_foreign_expenses_high
+					days = 90
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = frafor.29
+	title = "Poland claims we're wasting our money"
+	desc = frafor.29.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "It's only a waste because we're spending it on Poland."
+	}
+}
+
+country_event = {
+	id = frafor.30
+	title = "France and Belgium since the 20th Century"
+	desc = frafor.30.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "A neighbor and an opportunity."
+		ai_chance = { factor = 100 }
+		#set_country_flag = fra_bel_friendship
+	}
+	#option = {
+	#	name = "France has no Friends, only interests."
+	#	ai_chance = { factor = 20 }
+	#	set_country_flag = fra_no_bel_friend
+	#}
+}
+
+country_event = {
+	id = frafor.31
+	title = "France demands Military Access"
+	desc = frafor.31.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Grant them Military Access."
+		ai_chance = { factor = 75 }
+		FRA = { country_event = { days = 1 id = frafor.33 } }
+	}
+
+	option = {
+		name = "Refuse."
+		ai_chance = { factor = 25 }
+		FRA = { country_event = { days = 1 id = frafor.32 } }
+	}
+}
+
+country_event = {
+	id = frafor.32
+	title = "Belgium refuses"
+	desc = frafor.32.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Retaliate with trade sanctions."
+		add_political_power = 50
+		add_opinion_modifier = { target = BEL modifier = trade_sanctions }
+		every_country = {
+			limit = {
+				is_puppet_of = FRA
+			}
+			add_opinion_modifier = { target = BEL modifier = trade_sanctions }
+		}
+		ai_chance = { factor = 75 }
+	}
+	option = {
+		name = "The plan's already botched, no point in digging a deeper hole."
+		ai_chance = { factor = 25 }
+	}
+}
+
+country_event = {
+	id = frafor.33
+	title = "Belgium accepts"
+	desc = frafor.33.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Fortunate, for us both."
+		ai_chance = { factor = 100 }
+		set_country_flag = FRA_Belgium_accepts_mil_access
+	}
+}
+
+country_event = {
+	id = frafor.34
+	title = "Setting the stage for Occupation"
+	desc = frafor.34.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Elaborate and brimming with skullduggery; it's a perfect plan."
+		ai_chance = { factor = 100 }
+		BEL = { country_event = { days = 10 id = frafor.35 } }
+	}
+}
+
+country_event = {
+	id = frafor.35
+	title = "French Deforestation of the Ardennes"
+	desc = frafor.35.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Lodge a complaint."
+		ai_chance = { factor = 100 }
+		add_political_power = -25
+		hidden_effect = {
+			country_event = { days = 31 id = frafor.36 }
+		}
+	}
+}
+
+country_event = {
+	id = frafor.36
+	title = "Pacte National endorses resistence against French forces" #Front Anti-Français
+	desc = frafor.36.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Oh no, that's not good..."
+		add_popularity = { ideology = national_populist popularity = 0.1 }
+		FRA = { country_event = { days = 50 id = frafor.37 } }
+	}
+}
+
+country_event = {
+	id = frafor.37
+	title = "French Forces attacked by Belgian Paramilitaries!"
+	desc = frafor.37.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Surely a tragedy, but also an opportunity."
+		ai_chance = { factor = 100 }
+		set_country_flag = FRA_ANGERY_BELGIANS
+		add_political_power = -0.025
+		add_manpower = -1000
+	}
+}
+
+country_event = {
+	id = frafor.38
+	title = "Crisis in Wallonia"
+	desc = frafor.38.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Demand Military Control over Wallonia."
+		ai_chance = { factor = 100 }
+		BEL = { country_event = { days = 1 id = frafor.39 } }
+	}
+}
+
+country_event = {
+	id = frafor.39
+	title = "France Demands control over Wallonia"
+	desc = frafor.39.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Utterly outrageous! We refuse!"
+		ai_chance = { factor = 60 }
+		BEL = { country_event = { days = 1 id = frafor.40 } }
+	}
+	option = {
+		name = "We cannot hope to challenge France..."
+		ai_chance = { factor = 40 }
+		BEL = { country_event = { days = 1 id = frafor.42 } }
+	}
+}
+
+country_event = {
+	id = frafor.40
+	title = "Belgium refuses our terms"
+	desc = frafor.40.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Let us teach them how to War."
+		ai_chance = { factor = 25 }
+		declare_war_on = {
+			type = annex_everything
+			target = BEL
+		}
+	}
+	option = {
+		name = "Issue an embargo."
+		ai_chance = { factor = 75 }
+		add_opinion_modifier = { target = BEL modifier = embargo }
+		every_country = {
+			limit = {
+				is_puppet_of = FRA
+			}
+			add_opinion_modifier = { target = BEL modifier = embargo }
+		}
+		BEL = { country_event = { days = 1 id = frafor.41 } }
+	}
+}
+
+country_event = {
+	id = frafor.41
+	title = "France retaliates with an Embargo"
+	desc = frafor.41.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "So be it!"
+		ai_chance = { factor = 100 }
+		add_stability = -0.15
+	}
+}
+
+country_event = {
+	id = frafor.42
+	title = "Belgium cedes control over Wallonia"
+	desc = frafor.42.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Declare martial law in the region, crack down on Nationalists."
+		ai_chance = { factor = 25 }
+		add_political_power = 25
+		transfer_state = 802
+		transfer_state = 34
+	}
+	option = {
+		name = "Give them Citizenship, they're all Frenchmen now."
+		ai_chance = { factor = 75 }
+		add_political_power = -125
+		add_stability = -0.1
+		802 = { add_core_of = FRA }
+		transfer_state = 802
+		34 = { add_core_of = FRA }
+		transfer_state = 34
+	}
+}
+
+country_event = {
+	id = frafor.43
+	title = "The Luxembourgish Question"
+	desc = frafor.43.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Order them to join the Entente."
+		ai_chance = { factor = 60 }
+		LUX = { country_event = { days = 1 id = frafor.44 } }
+	}
+	option = {
+		name = "Demand they install a collaborationist government."
+		ai_chance = { factor = 30 }
+		LUX = { country_event = { days = 1 id = frafor.45 } }
+	}
+	option = {
+		name = "Just arrange an invasion already!"
+		ai_chance = { factor = 10 }
+		8 = { add_core_of = FRA }
+		declare_war_on = {
+			type = annex_everything
+			target = LUX
+		}
+	}
+}
+
+country_event = {
+	id = frafor.44
+	title = "France requests us to join the Entente"
+	desc = frafor.44.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "We'd rather stay out of the Entente."
+	}
+	option = {
+		name = "Uh... Sure?"
+		FRA = { add_to_faction = LUX }
+	}
+}
+
+country_event = {
+	id = frafor.45
+	title = "France demands us to install a collaborationist Regime!"
+	desc = frafor.45.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "We're not surrendering independence on a whim!"
+		ai_chance = { factor = 85 }
+		add_stability = 0.15
+		FRA = {
+			declare_war_on = {
+				type = annex_everything
+				target = LUX
+			}
+		}
+	}
+	option = {
+		name = "Let's be frank with ourselves, we're not winning a war against France."
+		ai_chance = { factor = 15 }
+		FRA = {
+			puppet = LUX
+		}
+		add_stability = -0.30
+	}
+}
+
+country_event = {
+	id = frafor.46
+	title = "French Machinery"
+	desc = frafor.46.d
+	picture = GFX_report_event_german_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Much needed assistance."
+		ai_chance = { factor = 100 }
+		add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Assisted_Development
+		}
+		random_owned_state = {
+			limit = {
+				is_core_of = ROOT
+				is_owned_and_controlled_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 2
+		   	add_building_construction = {
+				   type = industrial_complex
+				   level = 2
+				   instant_build = yes
+			   }
+		}
+	}
+}
+
+country_event = {
+	id = frafor.47
+	title = "French Volunteers"
+	desc = frafor.47.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Manpower is scare here, this is appeciated."
+		ai_chance = { factor = 100 }
+		add_manpower = 85000
+		add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Military_Assistance
+		}
+	}
+}
+
+country_event = {
+	id = frafor.48
+	title = "French Invite to the Entente"
+	desc = frafor.48.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "We'd rather stay out of the Entente."
+		ai_chance = { 
+			factor = 25 
+			modifier = {
+				has_opinion = { target = FRA value > 74 }
+				add = -25
+			}
+		}
+		
+		FRA = { country_event = { days = 1 id = frafor.49 } }
+	}
+	option = {
+		name = "Of course!"
+		ai_chance = { 
+			factor = 75
+			modifier = {
+				has_opinion = { target = FRA value > 74 }
+				add = 25
+			}
+		}
+		
+		FRA = { add_to_faction = KNE }
+		add_named_threat = { threat = 1 name = FRA_Joined_Entente }
+	}
+}
+
+country_event = {
+	id = frafor.49
+	title = "The Dutch Decline"
+	desc = frafor.49.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "After all we've helped them? How insolent."
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.50
+	title = "The Sale of Guiana"
+	desc = frafor.50.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "This offer is obviously in favour of the French, we decline."
+		FRA = { country_event = { days = 1 id = frafor.51 } }
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "It's in our best interest."
+		ai_chance = { factor = 99 }
+		FRA = { country_event = { days = 1 id = frafor.52 } }
+		add_timed_idea = {
+			idea = FRA_foreign_expenses_high
+			days = 120
+		}
+		transfer_state = 310
+		310 = { add_core_of = KNE }
+	}
+}
+
+country_event = {
+	id = frafor.51
+	title = "Dutch reject our proposal"
+	desc = frafor.51.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Their loss."
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.52
+	title = "The Dutch agree to purchase Guiana"
+	desc = frafor.52.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Lodes of emony"
+		ai_chance = { factor = 100 }
+		random_owned_state = {
+			limit = {
+				is_core_of = ROOT
+				is_owned_and_controlled_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+		   	add_building_construction = {
+				   type = industrial_complex
+				   level = 1
+				   instant_build = yes
+			   }
+		}
+		random_owned_state = {
+			limit = {
+				is_core_of = ROOT
+				is_owned_and_controlled_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+		   	add_building_construction = {
+				   type = industrial_complex
+				   level = 1
+				   instant_build = yes
+			   }
+		}
+		random_owned_state = {
+			limit = {
+				is_core_of = ROOT
+				is_owned_and_controlled_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+		   	add_building_construction = {
+				   type = industrial_complex
+				   level = 1
+				   instant_build = yes
+			   }
+		}
+	}
+}
+
+country_event = {
+	id = frafor.53
+	title = "France proposes the Mutual Defence Fund"
+	desc = frafor.53.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Perhaps it's the best for our safety."
+		FRA = { country_event = { days = 1 id = frafor.54 } }
+		set_country_flag = FRA_MUTUAL_DEFENCE_FUND_MEMBER
+		custom_effect_tooltip = FRA_MUTUAL_DEFENCE_FUND_MEMBER
+		ai_chance = { factor = 60 }
+	}
+	option = {
+		name = "Preparing for another war? That's not happening."
+		FRA = { country_event = { days = 1 id = frafor.55 } }
+		ai_chance = { factor = 40 }
+	}
+}
+
+country_event = {
+	id = frafor.54
+	title = "Belgium accepts"
+	desc = frafor.54.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "A fortunate outcome."
+		set_country_flag = FRA_MUTUAL_DEFENCE_FUND_MEMBER
+		custom_effect_tooltip = FRA_MUTUAL_DEFENCE_FUND_MEMBER
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.55
+	title = "Belgium rejects"
+	desc = frafor.55.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Filthy Neutrals."
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.56
+	title = "France borrows from the MDF Pool"
+	desc = frafor.56.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "We'll cover the costs."
+		add_timed_idea = { idea = FRA_MDF_loss days = 120 }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.57
+	title = "Belgium borrows from the MDF Pool"
+	desc = frafor.57.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "We'll cover the costs."
+		add_timed_idea = { idea = FRA_MDF_loss days = 120 }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.58
+	title = "France offers to fortify our Northern Border"
+	desc = frafor.58.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "Allow them to fortify our Northern Flank"
+		ai_chance = { factor = 40 }
+		FRA = { country_event = { days = 1 id = frafor.59 } }
+		6 = { #Flanders
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 9574
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 11419
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 6598
+				instant_build = yes
+			}
+		}
+		866 = { #Limburg
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 11562
+				instant_build = yes
+			}
+		}
+		867 = { #North Flanders
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 480
+				instant_build = yes
+			}
+		}
+	}
+
+	option = {
+		name = "Decline the gesture."
+		ai_chance = { factor = 10 }
+		FRA = { country_event = { days = 1 id = frafor.60 } }
+		add_stability = 0.075
+		add_war_support = -0.1
+		reverse_add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Refused_Assistance 
+		}
+	}
+}
+
+country_event = {
+	id = frafor.59
+	title = "Belgium accepts our Fortifications Project"
+	desc = frafor.59.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Send our contractors, let's get started."
+		add_timed_idea = {
+			idea = FRA_foreign_expenses_high
+			days = 90
+		}
+	}
+}
+
+country_event = {
+	id = frafor.60
+	title = "Belgium declines our fortification efforts"
+	desc = frafor.60.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "So be it."
+	}
+}
+
+country_event = {
+	id = frafor.61
+	title = "France invites us to the Entente"
+	desc = frafor.61.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "We'd rather stay out of the Entente."
+		ai_chance = { 
+			factor = 40 
+			modifier = {
+				has_opinion = { target = FRA value > 59 }
+				add = -30
+			}
+		}
+		FRA = { country_event = { days = 1 id = frafor.62 } }
+	}
+	option = {
+		name = "Of course we'll join!"
+		ai_chance = { 
+			factor = 60 
+			modifier = {
+				has_opinion = { target = FRA value > 59 }
+				add = 30
+			}
+		}
+		FRA = { add_to_faction = BEL }
+		add_named_threat = { threat = 1 name = FRA_Joined_Entente }
+
+	}
+}
+
+country_event = {
+	id = frafor.62
+	title = "The Belgians Decline"
+	desc = frafor.62.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Isolationist sods."
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.63
+	title = "The Blue Corps arrives!"
+	desc = frafor.63.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Much needed support."
+		hidden_effect = {
+			load_oob = FRA_BLUE_CORPS
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.64
+	title = "France invites us to the Entente"
+	desc = frafor.64.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "We're a sovereign nation! We answer to no-one!"
+		ai_chance = { 
+			factor = 20 
+			modifier = {
+				has_opinion = { target = FRA value > 59 }
+				add = -20
+			}
+		}
+		
+		FRA = { country_event = { days = 1 id = frafor.65 } }
+	}
+	option = {
+		name = "Let us formalize our alliance with the French."
+		ai_chance = { 
+			factor = 80
+			modifier = {
+				has_opinion = { target = FRA value > 59 }
+				add = 20
+			}
+		}
+		
+		FRA = { add_to_faction = SPR }
+	}
+}
+
+country_event = {
+	id = frafor.65
+	title = "Spanish refused our offer"
+	desc = frafor.65.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Outrageous! They'd be dead without us!"
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.66
+	title = "France provides support for our regime!"
+	desc = frafor.66.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Hopefully this will add to our legitimacy."
+		add_stability = 0.1
+		add_war_support = 0.1
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.67
+	title = "France formally recognizes us!"
+	desc = frafor.67.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Finally!"
+		add_political_power = 200
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.68
+	title = "France and Britain since the 20th Century"
+	desc = frafor.68.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Both an adversary and an ally, yet nearly a brother."
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.69
+	title = "Insurgents destabilize our regime!"
+	desc = frafor.69.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Crack down on them!"
+		add_stability = -0.05
+		add_timed_idea = {
+			idea = FRA_nationalist_insurgents
+			days = 90
+		}
+		ai_chance = { factor = 20 }
+	}
+	option = {
+		name = "Allow it to run its course."
+		add_timed_idea = {
+			idea = FRA_nationalist_insurgents
+			days = 200
+		}
+		ai_chance = { factor = 80 }
+	}
+}
+
+country_event = {
+	id = frafor.70
+	title = "Sign the Dover Pact?"
+	desc = frafor.70.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "It's the best for our mutual safety."
+		ai_chance = { 
+			factor = 80
+			modifier = {
+				has_war_with = GER
+				add = 20
+			}
+		}
+		
+		ENG = { country_event = { days = 1 id = frafor.71 } }
+	}
+	option = {
+		name = "Absolutely not!"
+		ai_chance = { 
+			factor = 20
+			modifier = {
+				has_war_with = GER
+				add = -20
+			}
+		}
+		
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = frafor.71
+	title = "France wishes to sign the Dover Pact"
+	desc = frafor.71.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Scared of Germany, are we? Provide the Greenlight."
+		ai_chance = { 
+			factor = 60
+			modifier = {
+				has_war_with = GER
+				add = 10
+			}
+			modifier = {
+				has_opinion = { target = FRA value > 100 }
+				add = 30
+			}
+		}
+		
+		add_opinion_modifier = {
+			modifier = ENG_jpact
+			target = FRA
+		}
+		set_country_flag = doverpact
+		modify_country_flag = { flag = lnt_members value = 2 }
+		FRA = { country_event = { days = 1 id = frafor.72 } }
+	}
+	option = {
+		name = "The proposal is many things, but most importantly; not in our interests."
+		ai_chance = { 
+			factor = 40
+			modifier = {
+				has_war_with = GER
+				add = -10
+			}
+			modifier = {
+				has_opinion = { target = FRA value > 100 }
+				add = 30
+			}
+		}
+		
+		FRA = { country_event = { days = 1 id = frafor.73 } }
+		add_stability = 0.025
+	}
+}
+
+country_event = {
+	id = frafor.72
+	title = "Britain provides us with a Greenlight"
+	desc = frafor.72.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "This will ensure lasting peace between us and the Empire."
+		add_opinion_modifier = {
+			modifier = ENG_jpact
+			target = ENG
+		}
+		ENG = { give_guarantee = FRA }
+		add_ideas = ENG_dovpact
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.73
+	title = "Britain refuses to allow us to sign the Dover Pact"
+	desc = frafor.73.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "That's a shame."
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.74
+	title = "Armee de l'Air makes a proposition"
+	desc = frafor.74.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Greenlight the proposition."
+		add_equipment_to_stockpile = { type = nav_bomber_equipment_1 amount = -75 producer = FRA }
+		add_equipment_to_stockpile = { type = fighter_equipment_1 amount = -15 producer = FRA }
+		add_equipment_to_stockpile = { type = tac_bomber_equipment_1 amount = -10 producer = FRA }
+		air_experience = 100
+		add_political_power = -50
+		add_war_support = -0.05
+		ENG = { country_event = { days = 1 id = frafor.75 } }
+		ai_chance = { factor = 70 }
+	}
+	option = {
+		name = "If we're going to war with the English, we will fight like men! Not like cowards!"
+		add_war_support = 0.1
+		declare_war_on = {
+			type = annex_everything
+			target = ENG
+		}
+		ai_chance = { factor = 30 }
+	}
+}
+
+country_event = {
+	id = frafor.75
+	title = "French Bombers sighted in British Airzones!"
+	desc = frafor.75.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Send a fighter squadron to intercept them!"
+		hidden_effect = {
+			FRA = { country_event = { days = 0 id = frafor.78 } }
+			country_event = { days = 1 id = frafor.76 }
+		}
+		add_equipment_to_stockpile = { type = fighter_equipment_1 amount = -100 producer = ENG }
+		add_political_power = -50
+		ai_chance = { factor = 40 }
+	}
+	option = {
+		name = "Send an immediate demand to the French Government to halt them!"
+		hidden_effect = {
+			FRA = { country_event = { days = 0 id = frafor.78 } }
+			country_event = { days = 1 id = frafor.77 }
+		}
+		ai_chance = { factor = 60 }
+	}
+}
+
+country_event = {
+	id = frafor.76
+	title = "The Attack on Portsmouth"
+	desc = frafor.76.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "To War!"
+		destroy_ships = { type = destroyer count = 8 }
+		destroy_ships = { type = light_cruiser count = 2 }
+		add_political_power = -50
+		add_war_support = 0.1
+		declare_war_on = {
+			type = annex_everything
+			target = FRA
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.77
+	title = "The Attack on Portsmouth"
+	desc = frafor.77.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "To War!"
+		destroy_ships = { type = destroyer count = 24 }
+		destroy_ships = { type = light_cruiser count = 6 }
+		add_political_power = -50
+		add_war_support = 0.1
+		declare_war_on = {
+			type = annex_everything
+			target = FRA
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.78
+	title = "Portsmouth attack was a success!"
+	desc = frafor.78.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Excellent!"
+		add_named_threat = { threat = 15 name = FRA_literally_japan }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.79
+	title = "French State-Visit to the United States"
+	desc = frafor.79.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		trigger = { tag = FRA }
+		name = "This will surely strengthen the bonds between our nations."
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		trigger = { tag = USA }
+		name = "We share many things in common."
+		ai_chance = { factor = 75 }
+		add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Diplomatic_Effort
+		}
+	}
+	option = {
+		trigger = { tag = USA }
+		name = "We haven't forgotten about the tragedies of the Great War."
+		ai_chance = { factor = 25 }
+	}
+}
+
+country_event = { #For allowing Entente members to join the NAFTA
+	id = frafor.80
+	title = "Join NAFTA?"
+	desc = frafor.80.d
+	picture = report_event_generic_conference
+
+	trigger = {
+		NOT = { 
+			tag = FRA
+			has_country_flag = FRA_NAFTA_Member
+			has_idea = FRA_NAFTA 
+		}
+		is_in_faction_with = FRA
+		has_global_flag = FRA_NAFTA_ACTIVE
+	}
+
+	mean_time_to_happen = {	days = 0 }
+
+	option = {
+		name = "This can only strengthen us."
+		set_country_flag = FRA_NAFTA_Member
+		add_ideas = FRA_NAFTA
+	}
+
+	option = {
+		name = "We'll decline the offer."
+		set_country_flag = FRA_NAFTA_Member
+	}
+}
+country_event = { #For kicking out non-entente members from the NAFTA
+	id = frafor.81
+	title = "Departure from NAFTA"
+	desc = frafor.81.d
+	picture = report_event_generic_conference
+
+	trigger = {
+		has_country_flag = FRA_NAFTA_Member
+		has_idea = FRA_NAFTA
+		NOT = {
+			is_in_faction_with = FRA
+			tag = FRA
+			tag = USA
+		}
+	}
+
+	mean_time_to_happen = {	days = 0 }
+
+	option = {
+		name = "Sad!"
+		clr_country_flag = FRA_NAFTA_Member
+		remove_ideas = FRA_NAFTA
+	}
+}
+
+country_event = {
+	id = frafor.82
+	title = "France wishes to form a Free Trade Agreement"
+	desc = frafor.82.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "What's the harm in it?"
+		ai_chance = { factor = 95 }
+		set_country_flag = FRA_NAFTA_Member
+		add_ideas = FRA_NAFTA
+		FRA = { country_event = { days = 1 id = frafor.83 } }
+	}
+
+	option = {
+		name = "We'll decline, it sounds like it'd only hurt American interests."
+		add_stability = 0.05
+		ai_chance = { factor = 5 }
+	}
+}
+
+country_event = {
+	id = frafor.83
+	title = "Birth of the North Atlantic Free Trade Agreement"
+	desc = frafor.83.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Through economic cooperation, unity will be acheived."
+		ai_chance = { factor = 100 }
+		set_country_flag = FRA_NAFTA_Member
+		set_global_flag = FRA_NAFTA_ACTIVE
+		add_ideas = FRA_NAFTA
+	}
+}
+
+country_event = {
+	id = frafor.84
+	title = "North Atlantic Free Trade Agreement talks break down"
+	desc = frafor.84.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "A shame, a door of opportunity was shut today."
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.85
+	title = "French Invite to the Entente"
+	desc = frafor.85.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "We're maintaining isolation no matter what!"
+		ai_chance = { 
+			factor = 75
+			modifier = {
+				has_opinion = { target = FRA value > 99 }
+				add = -60
+			}
+		}
+		
+		FRA = { country_event = { days = 1 id = frafor.87 } }
+	}
+	option = {
+		name = "It's time for us to discard Isolation"
+		ai_chance = {
+			factor = 25
+			modifier = {
+				has_opinion = { target = FRA value > 99 }
+				add = 60
+			}
+		}
+		
+		FRA = { add_to_faction = USA }
+		add_named_threat = { threat = 1 name = FRA_Joined_Entente }
+		FRA = { country_event = { days = 1 id = frafor.86 } }
+	}
+}
+
+country_event = {
+	id = frafor.86
+	title = "The Americans have discarded isolation"
+	desc = frafor.86.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "United we stand!"
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.87
+	title = "The Americans stand strong on Isolation"
+	desc = frafor.87.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Perhaps it was to have been expected."
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = frafor.88
+	title = "French Forces crack down on the Saigon Association"
+	desc = frafor.88.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "This was far too violent!"
+		add_political_power = -50
+		add_stability = -0.05
+		remove_ideas = VIN_socialist_revolutionaries
+		add_popularity = {
+			ideology = libertarian_socialist
+			popularity = -0.15
+		}
+		add_popularity = {
+			ideology = collectivist
+			popularity = -0.025
+		}
+		add_popularity = {
+			ideology = vanguardist
+			popularity = -0.025
+		}
+	}
+}
+
+country_event = {
+	id = frafor.89
+	title = "French Garrisons arrest dissidents"
+	desc = frafor.89.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "This won't be good for our popularity."
+		add_political_power = -50
+		remove_ideas = NFQ_colonial_unrest
+		add_popularity = {
+			ideology = social_democrat
+			popularity = -0.1
+		}
+	}
+}
+
+country_event = {
+	id = frafor.90
+	title = "Colonial Policy?"
+	desc = frafor.90.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Centralization & Imperialism will allow us to take the spotlight of the world once more."
+		set_country_flag = FRA_CEN_AND_IMP
+	}
+	option = {
+		name = "Decentralization & Internal Development is best for maintaining Stability."
+		set_country_flag = FRA_DECEN_AND_DEV
+	}
+}

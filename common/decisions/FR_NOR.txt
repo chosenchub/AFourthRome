@@ -1,0 +1,93 @@
+
+NOR_economical_decision_group = {
+	
+	NOR_land_distribution = {
+
+		icon = generic_construction
+		available = {
+			110 = { is_owned_by = NOR }
+			OR = {
+				has_government = vanguardist
+				has_government = collectivist
+				has_government = libertarian_socialist
+			}
+			has_completed_focus = NOR_economical_projects
+ 		}
+ 		visible = { 
+ 			110 = { is_owned_by = NOR }
+ 			OR = {
+				has_government = vanguardist
+				has_government = collectivist
+				has_government = libertarian_socialist
+			}
+			has_completed_focus = NOR_economical_projects
+ 		}
+		ai_will_do = {
+			factor = 1
+		}		
+		fire_only_once = no
+		days_re_enable = 300
+		cost = 100
+		complete_effect = {
+			country_event = { id = nor.200 }
+		}
+	}
+	
+	NOR_expand_steel_mines = {
+
+		icon = steel
+		available = {
+			144 = { is_owned_by = NOR }
+			has_completed_focus = NOR_expand_steel_industry
+ 		}
+ 		visible = { 
+ 			144 = { is_owned_by = NOR }
+			has_completed_focus = NOR_economical_projects
+ 		}
+		ai_will_do = {
+			factor = 1
+		}		
+		fire_only_once = no
+		days_re_enable = 720
+		cost = 100
+		complete_effect = {
+			add_resource = {
+				type = steel
+				amount = 3
+				state = 144
+			}
+		}
+	}
+}
+
+NOR_war_with_decistions = {
+	
+	NOR_white_peace_sweden = {
+
+		icon = generic_political_discourse
+		available = {
+			has_war_with = SWE
+			110 = { is_controlled_by = NOR }
+			142 = { is_controlled_by = NOR }
+			143 = { is_controlled_by = NOR }
+			144 = { is_controlled_by = NOR }
+			38 = { is_controlled_by = SWE }
+			139 = { is_controlled_by = SWE }
+			140 = { is_controlled_by = SWE }
+			141 = { is_controlled_by = SWE }
+			666 = { is_controlled_by = SWE }
+ 		}
+ 		visible = { 
+ 			has_war_with = SWE
+ 		}
+		ai_will_do = {
+			factor = 1
+		}		
+		fire_only_once = no
+		days_re_enable = 300
+		cost = 100
+		complete_effect = {
+			country_event = { id = nor.201 }
+		}
+	}
+}

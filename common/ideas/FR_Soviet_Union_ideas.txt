@@ -1,0 +1,176 @@
+######################
+# Soviet Union Ideas #
+######################
+# Made by mop #
+###############
+
+
+ideas = {
+	country = {
+		
+		SOV_Bread = {
+			picture = SOV_bread
+			modifier = {
+				monthly_population = 0.1
+				stability_factor = 0.1
+			}
+		}
+
+		SOV_Peace = {
+			picture = SOV_peace
+			modifier = {
+				conscription_factor = -0.15
+				generate_wargoal_tension = 0.5	
+				justify_war_goal_time = 1.0
+				army_attack_factor = -0.1
+				army_speed_factor = -0.15
+				stability_factor = 0.05
+				production_speed_arms_factory_factor = -0.20
+			}
+		}
+
+		SOV_Labour = {
+			picture = SOV_labour
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_infrastructure_factor = 0.05
+			}
+		}
+
+		SOV_ukraine_unrest = {
+			picture = FRA_scw_intervention_republicans_focus
+		}
+
+		SOV_centralize_union = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				political_power_gain = 0.05
+			}
+		}
+		SOV_decentralize_union = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				political_power_gain = 0.05
+			}
+		}
+		SOV_west_shield = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				political_power_gain = 0.05
+				training_time_factor = -0.1
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				research_time_factor = 0.03
+			}
+		}
+		SOV_south_hegemony = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				drift_defence_factor = 0.25
+			}
+		}
+		SOV_recovery_plan = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				stability_weekly = -0.03
+				political_power_gain = -0.30
+			}
+		}
+		SOV_eternal = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+			}
+		}
+		
+		SOV_russian_intergration = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				autonomy_gain = -5
+			}
+		}
+		SOV_less_union = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.05
+				autonomy_gain = 2
+			}
+		}
+		SOV_red_fin = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.1
+			}
+		}
+		AZR_sov_influence = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				libertarian_socialist_drift = 0.05
+				collectivist_drift = 0.05
+				vanguardist_drift = 0.05
+			}
+		}
+		SOV_industry_focus = {
+			picture = Idea_generic_local_self_management
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+		SOV_industry_focus2 = {
+			picture = Idea_generic_local_self_management
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		SOV_industry_focus3 = {
+			picture = Idea_generic_local_self_management
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.075
+				industrial_capacity_factory = 0.075
+			}
+		}
+		SOV_civil_war = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				conscription = 0.20
+				army_org_Factor = 0.20
+				political_power_gain = 0.10
+				stability_factor = 0.10
+			}
+		}
+		SOV_rally_people = {
+			picture = Generic_manpower_bonus
+			modifier = {
+				conscription = 0.005
+			}
+		}
+		SOV_bloated_bureaucracy = { #Preventing the USSR from going batshit insane when they centralize
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.2
+				political_power_cost = 0.35
+				conscription_factor = -0.25
+				production_factory_max_efficiency_factor = -0.10
+				industrial_capacity_factory = -0.10
+				production_speed_buildings_factor = -0.2
+				consumer_goods_factor = 0.2
+			}
+			picture = FRA_scw_intervention_republicans_focus
+			removal_cost = -1
+		}
+	}
+}

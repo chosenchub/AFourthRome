@@ -1,0 +1,41 @@
+###########################
+# - Sphering Decisions
+# - By jespertjee
+###########################
+#sphere_information_decision_group = {
+#	sphered_nations = {
+#
+#		allowed = { always = yes }
+#
+#		available = { always = no }
+#
+#		visible = {
+#			OR = {
+#				has_country_flag = great_power_1
+#				has_country_flag = great_power_2
+#				has_country_flag = great_power_3
+#				has_country_flag = great_power_4
+#				has_country_flag = great_power_5
+#				has_country_flag = great_power_6
+#				has_country_flag = great_power_7
+#				has_country_flag = great_power_8
+#				}
+#			}
+#
+#		target_trigger = {
+#			FROM = { has_country_flag = sphere_3_by_@ROOT }
+#			}
+#
+#		ai_will_do = {
+#			factor = 0
+#		}		
+#
+#		fire_only_once = no
+#
+#		complete_effect = {
+#			}
+#		}
+#	}
+
+
+

@@ -1,0 +1,3866 @@
+focus_tree = {
+	id = FR_Norway
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = NOR
+		}
+	}
+	default = no
+	focus = {
+		id = NOR_new_army_plan
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 5
+		x = 21
+		y = 0
+		
+		available = {
+			controls_state = 110
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			army_experience = 5
+			add_political_power = 10
+			110 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_norwegian_navy
+		icon = GFX_goal_generic_build_navy
+		cost = 5
+		x = 28
+		y = 0
+		
+		available = {
+			controls_state = 110
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			navy_experience = 10
+			110 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 6115
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_update_army_air_force
+		icon = GFX_goal_NOR_army_airforce
+		cost = 5
+		x = 32
+		y = 0
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			air_experience = 10
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 0.5
+				uses = 1
+				technology = CAS1
+				technology = CAS2
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_update_navy_air_force
+		icon = GFX_goal_NOR_navy_airforce
+		cost = 5
+		x = 34
+		y = 0
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			air_experience = 10
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 0.5
+				uses = 1
+				technology = naval_bomber1
+				technology = naval_bomber2
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_economical_projects
+		icon = GFX_goal_generic_production
+		cost = 5
+		x = 4
+		y = 0
+		
+		available = { 
+			NOT = { has_idea = NOR_effect_london_crash_idea }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			110 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_london_crash_reactions
+		icon = GFX_goal_state_economy
+		cost = 5
+		x = 12
+		y = 0
+		
+		available = {
+			always = no
+			custom_trigger_tooltip = { tooltip = unlocked_later  }
+		}
+		
+		bypass = {
+			has_country_flag = NOR_london_crash_flag
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+		}
+
+	}
+	focus = {
+		id = NOR_victory_against_samfundsvernet
+		icon = GFX_goal_ideology_collectivist
+		cost = 5
+		mutually_exclusive = {
+			focus = NOR_1936_election
+			focus = NOR_samfundsvernet_coup
+		}
+		x = 40
+		y = 0
+		
+		available = {
+			always = no
+			custom_trigger_tooltip = { tooltip = unlocked_later  }
+		}
+		
+		bypass = {
+			has_country_flag = NOR_victory_against_samfundsvernet_flag
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		}
+
+	}
+	focus = {
+		id = NOR_1936_election
+		icon = GFX_goal_generic_elections
+		cost = 5
+		mutually_exclusive = {
+			focus = NOR_victory_against_samfundsvernet
+			focus = NOR_samfundsvernet_coup
+		}
+		x = 43
+		y = 0
+		
+		available = {
+			always = no
+			custom_trigger_tooltip = { tooltip = unlocked_later  }
+		}
+		
+		bypass = {
+			has_country_flag = NOR_democracy_survives_flag
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		}
+
+	}
+	focus = {
+		id = NOR_samfundsvernet_coup
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 5
+		mutually_exclusive = {
+			focus = NOR_victory_against_samfundsvernet
+			focus = NOR_1936_election
+		}
+		x = 56
+		y = 0
+		
+		available = {
+			always = no
+			custom_trigger_tooltip = { tooltip = unlocked_later  }
+		}
+		
+		bypass = {
+			has_country_flag = NOR_samfundsvernet_couped_norway_flag
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		}
+
+	}
+	focus = {
+		id = NOR_lower_corporate_tax
+		icon = GFX_goal_ideology_market_liberal
+		cost = 10
+		prerequisite = {
+			focus = NOR_economical_projects
+		}
+		x = 1
+		y = 1
+		
+		available = { 
+			NOT = {
+				has_idea = NOR_effect_london_crash_idea
+			}
+			NOT = {
+				has_government = vanguardist
+				has_government = collectivist
+				has_government = libertarian_socialist
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_ideas = NOR_lower_corporate_tax_idea
+		}
+
+	}
+	focus = {
+		id = NOR_encourage_private_growth
+		icon = GFX_goal_generic_construction
+		cost = 10
+		prerequisite = {
+			focus = NOR_lower_corporate_tax
+		}
+		x = 1
+		y = 2
+		
+		available = {
+			NOT = {
+				has_idea = NOR_effect_london_crash_idea
+			}
+			NOT = {
+				has_government = vanguardist
+				has_government = collectivist
+				has_government = libertarian_socialist
+			}
+			controls_state = 110
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_lower_corporate_tax_idea
+				add_idea = NOR_lower_corporate_tax_idea1
+			}
+			110 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_privatize_more_industries
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = NOR_encourage_private_growth
+		}
+		x = 1
+		y = 3
+		
+		available = {
+			NOT = {
+				has_idea = NOR_effect_london_crash_idea
+			}
+			NOT = {
+				has_government = vanguardist
+				has_government = collectivist
+				has_government = libertarian_socialist
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_lower_corporate_tax_idea1
+				add_idea = NOR_lower_corporate_tax_idea2
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_expand_outskirt_industry
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		prerequisite = {
+			focus = NOR_economical_projects
+		}
+		x = 4
+		y = 1
+		
+		available = {
+			NOT = {
+				has_idea = NOR_effect_london_crash_idea
+			}
+			controls_state = 142
+			controls_state = 143
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			142 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			143 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_western_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10
+		prerequisite = {
+			focus = NOR_expand_outskirt_industry
+		}
+		x = 3
+		y = 2
+		
+		available = {
+			NOT = {
+				has_idea = NOR_effect_london_crash_idea
+			}
+			controls_state = 142
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			142 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_western_railways
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = NOR_western_dockyards
+		}
+		x = 3
+		y = 3
+		
+		available = {
+			NOT = {
+				has_idea = NOR_effect_london_crash_idea
+			}
+			controls_state = 142
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			142 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_northern_railway_project
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = NOR_expand_outskirt_industry
+		}
+		x = 5
+		y = 2
+		
+		available = {
+			NOT = {
+				has_idea = NOR_effect_london_crash_idea
+			}
+			controls_state = 144
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			144 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			143 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_exploit_northern_industries
+		icon = GFX_goal_generic_production
+		cost = 10
+		prerequisite = {
+			focus = NOR_northern_railway_project
+		}
+		x = 5
+		y = 3
+		
+		available = {
+			NOT = {
+				has_idea = NOR_effect_london_crash_idea
+			}
+			controls_state = 144
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			144 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_expand_aluminium_industry
+		icon = GFX_goal_aluminium
+		cost = 10
+		prerequisite = {
+			focus = NOR_western_railways
+		}
+		prerequisite = {
+			focus = NOR_exploit_northern_industries
+		}
+		x = 3
+		y = 4
+		
+		available = {
+			NOT = {
+				has_idea = NOR_effect_london_crash_idea
+			}
+			controls_state = 142
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			142 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = aluminium
+				amount = 10
+				state = 142
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_expand_university_oslo
+		icon = GFX_goal_NOR_FFI
+		cost = 10
+		prerequisite = {
+			focus = NOR_western_railways
+		}
+		prerequisite = {
+			focus = NOR_exploit_northern_industries
+		}
+		x = 4
+		y = 5
+		
+		available = {
+			NOT = {
+				has_idea = NOR_effect_london_crash_idea
+			}
+			controls_state = 142
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+	}
+	focus = {
+		id = NOR_expand_steel_industry
+		icon = GFX_goal_steel
+		cost = 10
+		prerequisite = {
+			focus = NOR_exploit_northern_industries
+		}
+		prerequisite = {
+			focus = NOR_western_railways
+		}
+		x = 5
+		y = 4
+		
+		available = {
+			NOT = {
+				has_idea = NOR_effect_london_crash_idea
+			}
+			controls_state = 144
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			144 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = steel
+				amount = 18
+				state = 144
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_strenghten_nationalized_sector
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = NOR_economical_projects
+		}
+		x = 7
+		y = 1
+		
+		available = {
+			NOT = {
+				has_idea = NOR_effect_london_crash_idea
+			}
+			NOT = {
+				has_government = market_liberal
+			}
+			controls_state = 110
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_ideas = NOR_strenghten_nationalized_sector_idea
+			110 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_expand_state_arms_industries
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = NOR_strenghten_nationalized_sector
+		}
+		x = 7
+		y = 2
+		
+		available = {
+			NOT = {
+				has_idea = NOR_effect_london_crash_idea
+			}
+			NOT = {
+				has_government = market_liberal
+			}
+			controls_state = 110
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_strenghten_nationalized_sector_idea
+				add_idea = NOR_strenghten_nationalized_sector_idea1
+			}
+			110 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_introduce_industrial_quotas
+		icon = GFX_goal_generic_build_tank
+		cost = 10
+		prerequisite = {
+			focus = NOR_expand_state_arms_industries
+		}
+		x = 7
+		y = 3
+		
+		available = {
+			NOT = {
+				has_idea = NOR_effect_london_crash_idea
+			}
+			NOT = {
+				has_government = market_liberal
+			}
+			controls_state = 110
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_strenghten_nationalized_sector_idea1
+				add_idea = NOR_strenghten_nationalized_sector_idea2
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_stimulus_tactic
+		icon = GFX_goal_continuous_repairments
+		cost = 5
+		prerequisite = {
+			focus = NOR_london_crash_reactions
+		}
+		mutually_exclusive = {
+			focus = NOR_austerity_tactics
+		}
+		x = 10
+		y = 1
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = NOR_new_farmer_quotas
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		prerequisite = {
+			focus = NOR_stimulus_tactic
+		}
+		x = 10
+		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_ideas = NOR_new_farmer_quotas_idea
+		}
+
+	}
+	focus = {
+		id = NOR_establish_labour_welfare_administration
+		icon = GFX_goal_continuous_increase_nu
+		cost = 10
+		prerequisite = {
+			focus = NOR_new_farmer_quotas
+		}
+		x = 9
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_ideas = NOR_establish_labour_welfare_administration_idea
+			add_political_power = -50
+		}
+
+	}
+	focus = {
+		id = NOR_austerity_tactics
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5
+		prerequisite = {
+			focus = NOR_london_crash_reactions
+		}
+		mutually_exclusive = {
+			focus = NOR_stimulus_tactic
+		}
+		x = 14
+		y = 1
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = NOR_inplement_government_control
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
+		prerequisite = {
+			focus = NOR_stimulus_tactic
+			focus = NOR_austerity_tactics
+		}
+		x = 12
+		y = 2
+		
+		available = {
+			controls_state = 143
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			143 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_sieze_highclass_wealth
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = NOR_new_farmer_quotas
+		}
+		prerequisite = {
+			focus = NOR_inplement_government_control
+		}
+		x = 11
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = NOR_corn_import_tariffs
+		icon = GFX_goal_generic_trade
+		cost = 5
+		prerequisite = {
+			focus = NOR_establish_labour_welfare_administration
+		}
+		prerequisite = {
+			focus = NOR_sieze_highclass_wealth
+		}
+		x = 10
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_new_farmer_quotas_idea
+				add_idea = NOR_corn_import_tariffs_idea
+			}
+			add_political_power = -50
+		}
+
+	}
+	focus = {
+		id = NOR_cut_development_aid
+		icon = GFX_goal_generic_trade
+		cost = 10
+		prerequisite = {
+			focus = NOR_austerity_tactics
+		}
+		x = 14
+		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_ideas = NOR_cut_development_aid_idea
+		}
+
+	}
+	focus = {
+		id = NOR_close_unprofitable_businesses
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		prerequisite = {
+			focus = NOR_inplement_government_control
+		}
+		prerequisite = {
+			focus = NOR_cut_development_aid
+		}
+		x = 13
+		y = 3
+		
+		available = {
+			controls_state = 110
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			110 = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = NOR_increase_taxes
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 10
+		prerequisite = {
+			focus = NOR_cut_development_aid
+		}
+		x = 15
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_ideas = NOR_increase_taxes_idea
+		}
+
+	}
+	focus = {
+		id = NOR_temporary_rations
+		icon = GFX_goal_generic_consumer_goods
+		cost = 5
+		prerequisite = {
+			focus = NOR_close_unprofitable_businesses
+		}
+		prerequisite = {
+			focus = NOR_increase_taxes
+		}
+		x = 14
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = NOR_temporary_rations_idea
+				days = 50
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_end_austerity
+		icon = GFX_goal_production
+		cost = 5
+		prerequisite = {
+			focus = NOR_temporary_rations
+		}
+		x = 14
+		y = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			remove_ideas = NOR_effect_london_crash_idea
+			remove_ideas = NOR_cut_development_aid_idea
+			remove_ideas = NOR_increase_taxes_idea
+		}
+
+	}
+	focus = {
+		id = NOR_stabalized_economy
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 5
+		prerequisite = {
+			focus = NOR_corn_import_tariffs
+		}
+		x = 10
+		y = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			remove_ideas = NOR_effect_london_crash_idea
+		}
+
+	}
+	focus = {
+		id = NOR_reformalize_commonwealth_trade
+		icon = GFX_goal_MAF_Support_Anglos
+		cost = 10
+		prerequisite = {
+			focus = NOR_stabalized_economy
+			focus = NOR_end_austerity
+		}
+		mutually_exclusive = {
+			focus = NOR_break_with_british_trade
+		}
+		x = 14
+		y = 6
+		
+		available = {
+			ENG = {
+				OR = {
+					has_completed_focus = ENG_national_effort
+					has_completed_focus = ENG_end_austerity
+					has_completed_focus = ENG_liberate_markets
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_opinion_modifier = { target = ENG modifier = NOR_established_relations }
+			ENG = { 
+			 	add_opinion_modifier = { target = NOR modifier = NOR_established_relations } 
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_british_naval_agreements
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = NOR_reformalize_commonwealth_trade
+		}
+		x = 14
+		y = 7
+		
+		available = {
+			OR = {
+				has_government = social_democrat
+				has_government = social_liberal
+				has_government = market_liberal
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			ENG = { 
+			 	country_event = { id = nor.76 }
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_break_with_british_trade
+		icon = GFX_Cutdown_the_United_Kingdom
+		cost = 10
+		prerequisite = {
+			focus = NOR_stabalized_economy
+			focus = NOR_end_austerity
+		}
+		mutually_exclusive = {
+			focus = NOR_reformalize_commonwealth_trade
+		}
+		x = 11
+		y = 6
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_opinion_modifier = { target = ENG modifier = hostile_status }
+			ENG = { 
+			 	add_opinion_modifier = { target = NOR modifier = hostile_status } 
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_strenghten_soviet_trade_routs
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10
+		prerequisite = {
+			focus = NOR_break_with_british_trade
+		}
+		mutually_exclusive = {
+			focus = NOR_strenghten_german_trade_routs
+		}
+		x = 10
+		y = 7
+		
+		available = {
+			OR = {
+				has_government = vanguardist
+				has_government = collectivist
+				has_government = libertarian_socialist
+				has_government = social_democrat
+				has_government = social_liberal
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_opinion_modifier = { target = SOV modifier = NOR_soviet_trade_strenghten }
+			SOV = { 
+			 	add_opinion_modifier = { target = NOR modifier = NOR_soviet_trade_strenghten } 
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_strenghten_german_trade_routs
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10
+		prerequisite = {
+			focus = NOR_break_with_british_trade
+		}
+		mutually_exclusive = {
+			focus = NOR_strenghten_soviet_trade_routs
+		}
+		x = 12
+		y = 7
+		
+		available = {
+			OR = {
+				has_government = market_liberal
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
+				has_government = national_populist
+				has_government = valkist
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_opinion_modifier = { target = GER modifier = NOR_german_trade_strenghten }
+			GER = { 
+			 	add_opinion_modifier = { target = NOR modifier = NOR_german_trade_strenghten } 
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_specialized_army
+		icon = GFX_goal_national_artillery
+		cost = 10
+		prerequisite = {
+			focus = NOR_new_army_plan
+		}
+		mutually_exclusive = {
+			focus = NOR_strong_in_numbers
+		}
+		x = 19
+		y = 1
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = NOR_specialized_army_idea
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_superior_firepower
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_anti_milita_act
+		icon = GFX_goal_HOL_ban_paramilitary
+		cost = 10
+		prerequisite = {
+			focus = NOR_specialized_army
+		}
+		x = 18
+		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_specialized_army_idea
+				add_idea = NOR_anti_milita_act_idea
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_improve_ski_divisions
+		icon = GFX_goal_generic_special_forces
+		cost = 10
+		prerequisite = {
+			focus = NOR_anti_milita_act
+		}
+		x = 18
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.7
+				uses = 1
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+				technology = tech_mountaineers3
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_artillary_prefrences
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10
+		prerequisite = {
+			focus = NOR_specialized_army
+		}
+		x = 20
+		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_defence_against_land_skies
+		icon = GFX_focus_generic_air_defense
+		cost = 10
+		prerequisite = {
+			focus = NOR_artillary_prefrences
+		}
+		x = 20
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 2
+				technology = interwar_antiair
+				technology = antiair1
+				technology = antiair2
+				technology = antiair3
+				technology = interwar_antitank
+				technology = antitank1
+				technology = antitank2
+				technology = antitank3
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_establish_motorized_units
+		icon = GFX_goal_generic_army_motorized
+		cost = 10
+		prerequisite = {
+			focus = NOR_improve_ski_divisions
+		}
+		prerequisite = {
+			focus = NOR_defence_against_land_skies
+		}
+		x = 19
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = motor_bonus
+				bonus = 0.5
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_strong_in_numbers
+		icon = GFX_goal_conscription
+		cost = 10
+		prerequisite = {
+			focus = NOR_new_army_plan
+		}
+		mutually_exclusive = {
+			focus = NOR_specialized_army
+		}
+		x = 23
+		y = 1
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = NOR_strong_in_numbers_idea
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_provide_new_equipment_manuals
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		prerequisite = {
+			focus = NOR_strong_in_numbers
+		}
+		x = 22
+		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = NOR_provide_new_equipment_manuals_idea
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_new_production_quotas
+		icon = GFX_goal_generic_production
+		cost = 10
+		prerequisite = {
+			focus = NOR_provide_new_equipment_manuals
+		}
+		x = 22
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_provide_new_equipment_manuals_idea
+				add_idea = NOR_new_production_quotas_idea
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_start_state_milita
+		icon = GFX_focus_secret_rearmament
+		cost = 10
+		prerequisite = {
+			focus = NOR_strong_in_numbers
+		}
+		x = 24
+		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_strong_in_numbers_idea
+				add_idea = NOR_start_state_milita_idea
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_milita_doctrines
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10
+		prerequisite = {
+			focus = NOR_start_state_milita
+		}
+		x = 24
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_grand_battle_plan
+				category = cat_mass_assault
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_experienced_general_staff
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = NOR_new_production_quotas
+		}
+		prerequisite = {
+			focus = NOR_milita_doctrines
+		}
+		x = 23
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_start_state_milita_idea
+				add_idea = NOR_experienced_general_staff_idea
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_general_doctrines
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+		prerequisite = {
+			focus = NOR_establish_motorized_units
+			focus = NOR_experienced_general_staff
+		}
+		x = 21
+		y = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_small_ship_efficency
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10
+		prerequisite = {
+			focus = NOR_norwegian_navy
+		}
+		mutually_exclusive = {
+			focus = NOR_focus_new_flagships
+		}
+		x = 27
+		y = 1
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			navy_experience = 5
+			add_ideas = NOR_small_ship_efficency_idea
+		}
+
+	}
+	focus = {
+		id = NOR_destroyer_efforts
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10
+		prerequisite = {
+			focus = NOR_small_ship_efficency
+		}
+		x = 27
+		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.5
+				uses = 1
+				category = dd_tech
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_ubat_efforts
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10
+		prerequisite = {
+			focus = NOR_destroyer_efforts
+		}
+		x = 27
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.5
+				uses = 1
+				category = ss_tech
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_protect_our_coast
+		icon = GFX_focus_generic_coastal_fort
+		cost = 10
+		prerequisite = {
+			focus = NOR_ubat_efforts
+		}
+		x = 27
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			navy_experience = 5
+			swap_ideas = {
+				remove_idea = NOR_small_ship_efficency_idea
+				add_idea = NOR_protect_our_coast_idea
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_focus_new_flagships
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10
+		prerequisite = {
+			focus = NOR_norwegian_navy
+		}
+		mutually_exclusive = {
+			focus = NOR_small_ship_efficency
+		}
+		x = 29
+		y = 1
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			navy_experience = 5
+			add_ideas = NOR_focus_new_flagships_idea
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 0.5
+				uses = 1
+				category = fleet_in_being_tree
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_new_manuals_for_big_ships
+		icon = GFX_goal_continuous_naval_production
+		cost = 10
+		prerequisite = {
+			focus = NOR_focus_new_flagships
+		}
+		x = 29
+		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_focus_new_flagships_idea
+				add_idea = NOR_new_manuals_for_big_ships_idea
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_cruiser_efforts
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10
+		prerequisite = {
+			focus = NOR_new_manuals_for_big_ships
+		}
+		x = 29
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 0.5
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_protect_our_waters
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10
+		prerequisite = {
+			focus = NOR_cruiser_efforts
+		}
+		x = 29
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_new_manuals_for_big_ships_idea
+				add_idea = NOR_protect_our_waters_idea
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_combined_air_force
+		icon = GFX_goal_generic_build_airforce
+		cost = 5
+		prerequisite = {
+			focus = NOR_update_army_air_force
+		}
+		prerequisite = {
+			focus = NOR_update_navy_air_force
+		}
+		x = 33
+		y = 1
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			air_experience = 5
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_fighter_efforts
+		icon = GFX_goal_generic_air_fighter
+		cost = 10
+		prerequisite = {
+			focus = NOR_combined_air_force
+		}
+		mutually_exclusive = {
+			focus = NOR_bomber_efforts
+		}
+		x = 32
+		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 1
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_near_mountain_fighters
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10
+		prerequisite = {
+			focus = NOR_fighter_efforts
+		}
+		x = 32
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 0.5
+				uses = 1
+				category = cas_bomber
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_bomber_efforts
+		icon = GFX_goal_generic_air_bomber
+		cost = 10
+		prerequisite = {
+			focus = NOR_combined_air_force
+		}
+		mutually_exclusive = {
+			focus = NOR_fighter_efforts
+		}
+		x = 34
+		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.5
+				uses = 1
+				technology = tactical_bomber1
+				technology = tactical_bomber2
+				technology = tactical_bomber3
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_naval_bomber_efforts
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 10
+		prerequisite = {
+			focus = NOR_bomber_efforts
+		}
+		x = 34
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_bomber
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_establish_new_air_bases
+		icon = GFX_goal_generic_air_production
+		cost = 10
+		prerequisite = {
+			focus = NOR_near_mountain_fighters
+			focus = NOR_naval_bomber_efforts
+		}
+		x = 33
+		y = 4
+		
+		available = {
+			controls_state = 142
+			controls_state = 143
+			controls_state = 144
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			142 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			143 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			144 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_ap_victory
+		icon = GFX_goal_ideology_libertarian_socialism
+		cost = 5
+		prerequisite = {
+			focus = NOR_1936_election
+			focus = NOR_victory_against_samfundsvernet
+		}
+		mutually_exclusive = {
+			focus = NOR_venstre_victory
+			focus = NOR_hoyre_victory
+		}
+		x = 40
+		y = 1
+		
+		available = {
+			has_country_flag = NOR_ap_victory_flag
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = NOR_radical_rise
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 5
+		prerequisite = {
+			focus = NOR_ap_victory
+		}
+		mutually_exclusive = {
+			focus = NOR_moderate_control
+		}
+		x = 38
+		y = 2
+		
+		available = {
+			OR = {
+				has_idea = NOR_Peder_Furubotn_hog_col
+				has_idea = NOR_Alfred_Madsen_hog_lso
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_popularity = { ideology = collectivist popularity = 0.05 }
+			add_popularity = { ideology = libertarian_socialist popularity = -0.05 }
+			add_political_power = 15
+		}
+
+	}
+	focus = {
+		id = NOR_gain_vanguardist_support
+		icon = GFX_goal_socialist_star
+		cost = 10
+		prerequisite = {
+			focus = NOR_radical_rise
+		}
+		x = 37
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_popularity = { ideology = collectivist popularity = 0.04 }
+			add_popularity = { ideology = vanguardist popularity = 0.02 }
+			add_political_power = 30
+		}
+
+	}
+	focus = {
+		id = NOR_sheflo_in_government
+		icon = GFX_goal_NOR_syndicalist
+		cost = 10
+		prerequisite = {
+			focus = NOR_gain_vanguardist_support
+		}
+		x = 37
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 10
+			custom_effect_tooltip  = NOR_sheflo_in_government_tooltip
+			hidden_effect = {
+				remove_ideas_with_trait = foreign_minister
+				add_ideas = NOR_Olav_Scheflo_for_int
+				set_party_name = {
+					ideology = vanguardist
+					long_name = NOR_AP_vanguardist_party_long
+					name = NOR_AP_vanguardist_party
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_strenghten_radical_propaganda
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		prerequisite = {
+			focus = NOR_sheflo_in_government
+		}
+		x = 37
+		y = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_popularity = { ideology = vanguardist popularity = 0.05 }
+			add_popularity = { ideology = collectivist popularity = 0.05 }
+			add_popularity = { ideology = libertarian_socialist popularity = -0.05 }
+		}
+
+	}
+	focus = {
+		id = NOR_socialist_secret_police
+		icon = GFX_goal_NOR_secret_police
+		cost = 10
+		prerequisite = {
+			focus = NOR_strenghten_radical_propaganda
+		}
+		x = 37
+		y = 6
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = NOR_socialist_secret_police_idea
+		}
+
+	}
+	focus = {
+		id = NOR_moderate_control
+		icon = GFX_goal_tripartite_pact
+		cost = 5
+		prerequisite = {
+			focus = NOR_ap_victory
+		}
+		mutually_exclusive = {
+			focus = NOR_radical_rise
+		}
+		x = 42
+		y = 2
+		
+		available = {
+			OR = {
+				has_idea = NOR_Aksel_Zachariassen_hog_lso
+				has_idea = NOR_Alfred_Madsen_hog_lso
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_popularity = { ideology = collectivist popularity = -0.05 }
+			add_popularity = { ideology = libertarian_socialist popularity = 0.05 }
+			add_political_power = 25
+		}
+
+	}
+	focus = {
+		id = NOR_internal_control
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = NOR_radical_rise
+			focus = NOR_moderate_control
+		}
+		x = 40
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = NOR_internal_control_idea
+			country_event = {
+				id = nor.30 days = 1
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_outlaw_pro_monarchism
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		cost = 10
+		prerequisite = {
+			focus = NOR_internal_control
+		}
+		x = 39
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_monarchist_right_idea
+				add_idea = NOR_monarchist_right_idea1
+			}
+			add_popularity = { ideology = national_populist popularity = -0.02 }
+			add_political_power = -50
+			add_manpower = -10000
+		}
+
+	}
+	focus = {
+		id = NOR_hambro_in_prison
+		icon = GFX_goal_HOL_amend_wapenwet
+		cost = 10
+		prerequisite = {
+			focus = NOR_outlaw_pro_monarchism
+		}
+		x = 39
+		y = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			remove_ideas = NOR_monarchist_right_idea1
+			add_popularity = { ideology = market_liberal popularity = -0.02 }
+			add_political_power = -50
+			add_manpower = -5000
+		}
+
+	}
+	focus = {
+		id = NOR_continue_war_samfundsvernet
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = NOR_internal_control
+		}
+		x = 41
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_war_on_samfundsvernet_idea
+				add_idea = NOR_war_on_samfundsvernet_idea1
+			}
+			add_popularity = { ideology = paternal_autocrat popularity = -0.01 }
+			add_popularity = { ideology = valkist popularity = -0.01 }
+			add_political_power = -50
+			add_manpower = -10000
+		}
+
+	}
+	focus = {
+		id = NOR_arrest_ns_leaders
+		icon = GFX_goal_HOL_ban_VNH
+		cost = 10
+		prerequisite = {
+			focus = NOR_continue_war_samfundsvernet
+		}
+		x = 41
+		y = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			remove_ideas = NOR_war_on_samfundsvernet_idea1
+			add_popularity = { ideology = paternal_autocrat popularity = -0.01 }
+			add_popularity = { ideology = valkist popularity = -0.01 }
+			add_political_power = -50
+			add_manpower = -5000
+		}
+
+	}
+	focus = {
+		id = NOR_stabalize_society
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = NOR_hambro_in_prison
+		}
+		prerequisite = {
+			focus = NOR_arrest_ns_leaders
+		}
+		x = 40
+		y = 6
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_internal_control_idea
+				add_idea = NOR_internal_control_idea1
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_soviet_alliance
+		icon = GFX_goal_red_star_pact
+		cost = 10
+		prerequisite = {
+			focus = NOR_stabalize_society
+		}
+		x = 40
+		y = 7
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			SOV = {
+				country_event = { id = nor.73 }
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_gain_socialdemocrats_support
+		icon = GFX_goal_ideology_social_democrat
+		cost = 10
+		prerequisite = {
+			focus = NOR_moderate_control
+		}
+		x = 43
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_popularity = { ideology = libertarian_socialist popularity = 0.03 }
+			add_popularity = { ideology = social_democrat popularity = 0.03 }
+			add_political_power = 30
+		}
+
+	}
+	focus = {
+		id = NOR_nygaardsvold_in_government
+		icon = GFX_goal_new_treaty
+		cost = 10
+		prerequisite = {
+			focus = NOR_gain_socialdemocrats_support
+		}
+		x = 43
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 10
+			custom_effect_tooltip  = NOR_nygaardsvold_in_government_tooltip
+			hidden_effect = {
+				remove_ideas_with_trait = economy_minister
+				add_ideas = NOR_Johan_Nygaardsvold_eco_sde
+				set_party_name = {
+					ideology = social_democrat
+					long_name = NOR_AP_social_democrat_party_long
+					name = NOR_AP_social_democrat_party
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_grow_welfare_state
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = NOR_nygaardsvold_in_government
+		}
+		x = 43
+		y = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = NOR_grow_welfare_state_idea
+		}
+
+	}
+	focus = {
+		id = NOR_embrace_peoples_freedom
+		icon = GFX_goal_HOL_CNA_restored_stability
+		cost = 10
+		prerequisite = {
+			focus = NOR_grow_welfare_state
+		}
+		x = 43
+		y = 6
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 20
+			add_stability = 0.05
+		}
+
+	}
+	focus = {
+		id = NOR_venstre_victory
+		icon = GFX_goal_ideology_social_liberal
+		cost = 5
+		prerequisite = {
+			focus = NOR_1936_election
+		}
+		mutually_exclusive = {
+			focus = NOR_ap_victory
+			focus = NOR_hoyre_victory
+		}
+		x = 46
+		y = 1
+		
+		available = {
+			has_country_flag = NOR_venstre_victory_flag
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = NOR_labour_unionists_in_government
+		icon = GFX_focus_HOL_deal_with_left
+		cost = 10
+		prerequisite = {
+			focus = NOR_venstre_victory
+		}
+		x = 45
+		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 20
+			add_popularity = { ideology = libertarian_socialist popularity = 0.01 }
+			add_popularity = { ideology = social_democrat popularity = 0.01 }
+			add_popularity = { ideology = social_liberal popularity = 0.02 }
+		}
+
+	}
+	focus = {
+		id = NOR_liberal_welfare_plan
+		icon = GFX_goal_tripartite_pact
+		cost = 10
+		prerequisite = {
+			focus = NOR_labour_unionists_in_government
+		}
+		x = 45
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = NOR_liberal_welfare_plan_idea
+		}
+
+	}
+	focus = {
+		id = NOR_adopt_keynes_ideas
+		icon = GFX_goal_economic_control
+		cost = 10
+		prerequisite = {
+			focus = NOR_liberal_welfare_plan
+		}
+		x = 45
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_liberal_welfare_plan_idea
+				add_idea = NOR_adopt_keynes_idea
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_hoyre_victory
+		icon = GFX_goal_ideology_social_conservative
+		cost = 5
+		prerequisite = {
+			focus = NOR_1936_election
+			focus = NOR_samfundsvernet_coup
+		}
+		mutually_exclusive = {
+			focus = NOR_monarchist_victory
+			focus = NOR_ns_victory
+			focus = NOR_venstre_victory
+			focus = NOR_ap_victory
+		}
+		x = 48
+		y = 1
+		
+		available = {
+			has_country_flag = NOR_hoyre_victory_flag
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = NOR_allow_conservative_generals
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = NOR_venstre_victory
+			focus = NOR_hoyre_victory
+		}
+		x = 47
+		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 20
+			remove_ideas = NOR_war_on_samfundsvernet_idea
+			remove_ideas = NOR_samfundsvernets_rule_idea
+			add_timed_idea = {
+				idea = NOR_samfundsvernet_peaceful_idea
+				days = 150
+			}
+			
+			hidden_effect = {
+				create_corps_commander = {
+					name = "Olav of Glücksburg"
+					portrait_path = "gfx/leaders/NOR/Portrait_Olav_V.tga"
+					traits = { trickster naval_invader }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 3
+					logistics_skill = 2
+				}
+				create_corps_commander = {
+					name = "Birger Eriksen"
+					portrait_path = "gfx/leaders/NOR/Portrait_NOR_Birger_Eriksen.tga"
+					traits = { old_guard urban_assault_specialist }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 2
+				}
+				create_corps_commander = {
+					name = "Birger Ljungberg"
+					portrait_path = "gfx/leaders/NOR/Portrait_NOR_Birger_Ljungberg.tga"
+					traits = {  }
+					skill = 1
+					attack_skill = 1
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 2
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_monarchy_referendum
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10
+		prerequisite = {
+			focus = NOR_allow_conservative_generals
+		}
+		x = 47
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			country_event = {
+				id = nor.31 days = 1
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_lower_taxes_rich
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = NOR_monarchy_referendum
+		}
+		x = 47
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_ideas = NOR_lower_taxes_rich_idea
+		}
+
+	}
+	focus = {
+		id = NOR_encourage_private_innovation
+		icon = GFX_goal_continuous_research
+		cost = 10
+		prerequisite = {
+			focus = NOR_lower_taxes_rich
+		}
+		x = 47
+		y = 5
+		
+		available = {
+			controls_state = 110
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			110 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_research_slot = 1
+		}
+
+	}
+	focus = {
+		id = NOR_independent_radio
+		icon = GFX_goal_generic_radar
+		cost = 10
+		prerequisite = {
+			focus = NOR_encourage_private_innovation
+		}
+		x = 47
+		y = 6
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = electric_bonus
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+			country_event = { id = nor.32 }
+		}
+
+	}
+	focus = {
+		id = NOR_strengthen_democratic_principles
+		icon = GFX_goal_NOR_democratic
+		cost = 5
+		prerequisite = {
+			focus = NOR_independent_radio
+			focus = NOR_embrace_peoples_freedom
+		}
+		x = 45
+		y = 7
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = NOR_principles_of_democracy_idea
+		}
+
+	}
+	focus = {
+		id = NOR_close_down_radical_unions
+		icon = GFX_goal_red_star_guard
+		cost = 10
+		prerequisite = {
+			focus = NOR_hoyre_victory
+		}
+		x = 49
+		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = -30
+			add_popularity = { ideology = collectivist popularity = -0.02 }
+			add_popularity = { ideology = libertarian_socialist popularity = -0.02 }
+			add_popularity = { ideology = social_democrat popularity = 0.02 }
+		}
+
+	}
+	focus = {
+		id = NOR_found_christian_trade_union
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10
+		prerequisite = {
+			focus = NOR_close_down_radical_unions
+		}
+		x = 49
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = -50
+			add_ideas = NOR_found_christian_trade_union_idea
+			add_popularity = { ideology = market_liberal popularity = 0.01 }
+			add_popularity = { ideology = social_conservative popularity = 0.02 }
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+		}
+
+	}
+	focus = {
+		id = NOR_freer_economy
+		icon = GFX_goal_model_cities
+		cost = 10
+		prerequisite = {
+			focus = NOR_found_christian_trade_union
+		}
+		x = 49
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = -50
+			swap_ideas = {
+				remove_idea = NOR_found_christian_trade_union_idea
+				add_idea = NOR_found_christian_trade_union_idea1
+			}
+			add_popularity = { ideology = market_liberal popularity = 0.01 }
+		}
+
+	}
+	focus = {
+		id = NOR_monarchist_victory
+		icon = GFX_focus_generic_home_defense
+		cost = 5
+		prerequisite = {
+			focus = NOR_samfundsvernet_coup
+		}
+		mutually_exclusive = {
+			focus = NOR_ns_victory
+			focus = NOR_hoyre_victory
+		}
+		x = 53
+		y = 1
+		
+		available = {
+			has_country_flag = NOR_monarchist_victory_flag
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+			remove_ideas = NOR_samfundsvernets_rule_idea
+			hidden_effect = {
+				create_corps_commander = {
+					name = "Olav of Glücksburg"
+					portrait_path = "gfx/leaders/NOR/Portrait_Olav_V.tga"
+					traits = { trickster naval_invader }
+					skill = 2
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_the_crown_prince
+		icon = GFX_goal_monarchism
+		cost = 8
+		prerequisite = {
+			focus = NOR_monarchist_victory
+		}
+		mutually_exclusive = {
+			focus = NOR_the_king
+		}
+		x = 52
+		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			country_event = { id = nor.33 }
+		}
+
+	}
+	focus = {
+		id = NOR_listen_to_people
+		icon = GFX_goal_liberty
+		cost = 10
+		prerequisite = {
+			focus = NOR_the_crown_prince
+		}
+		x = 51
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 20
+			add_popularity = { ideology = social_democrat popularity = 0.01 }
+			add_popularity = { ideology = social_liberal popularity = 0.01 }
+			add_popularity = { ideology = market_liberal popularity = 0.01 }
+			add_popularity = { ideology = social_conservative popularity = 0.01 }
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		}
+
+	}
+	focus = {
+		id = NOR_gain_bipartisan_support
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		prerequisite = {
+			focus = NOR_listen_to_people
+		}
+		x = 51
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 20
+			add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+		}
+
+	}
+	focus = {
+		id = NOR_reestablish_parliament
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		prerequisite = {
+			focus = NOR_gain_bipartisan_support
+		}
+		x = 51
+		y = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 40
+			add_popularity = { ideology = social_democrat popularity = 0.02 }
+			add_popularity = { ideology = social_liberal popularity = 0.02 }
+			add_popularity = { ideology = market_liberal popularity = 0.02 }
+			add_popularity = { ideology = social_conservative popularity = 0.02 }
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.02 }
+			country_event = { id = nor.37 }
+		}
+
+	}
+	focus = {
+		id = NOR_peoples_king
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10
+		prerequisite = {
+			focus = NOR_reestablish_parliament
+		}
+		x = 51
+		y = 6
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = NOR_peoples_king_idea
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.01 }
+			add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+		}
+
+	}
+	focus = {
+		id = NOR_the_king
+		icon = GFX_goal_NOR_royal_guards
+		cost = 8
+		prerequisite = {
+			focus = NOR_monarchist_victory
+		}
+		mutually_exclusive = {
+			focus = NOR_the_crown_prince
+		}
+		x = 54
+		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			country_event = { id = nor.34 }
+		}
+
+	}
+	focus = {
+		id = NOR_royal_privileges
+		icon = GFX_focus_rom_parties_end
+		cost = 10
+		prerequisite = {
+			focus = NOR_the_crown_prince
+			focus = NOR_the_king
+		}
+		x = 53
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = NOR_royal_privleges_idea #needs correction
+		}
+
+	}
+	focus = {
+		id = NOR_monarchs_industry
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		prerequisite = {
+			focus = NOR_royal_privileges
+		}
+		x = 53
+		y = 4
+		
+		available = {
+			controls_state = 110
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			110 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_kings_of_scandinaiva
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = NOR_monarchs_industry
+		}
+		x = 53
+		y = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			country_event = { id = nor.61 }
+			add_opinion_modifier = { target = SWE modifier = NOR_established_relations }
+			add_opinion_modifier = { target = DEN modifier = NOR_established_relations }
+			add_political_power = 50
+			add_manpower = 2000
+			SWE = { 
+			 	add_opinion_modifier = { target = NOR modifier = NOR_established_relations }
+				add_political_power = 20
+				add_manpower = 1000
+			}
+			DEN = { 
+			 	add_opinion_modifier = { target = NOR modifier = NOR_established_relations }
+				add_political_power = 20
+				add_manpower = 1000
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_long_live_king
+		icon = GFX_goal_monarchism_black
+		cost = 5
+		prerequisite = {
+			focus = NOR_kings_of_scandinaiva
+		}
+		x = 53
+		y = 6
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 100
+			add_manpower = 15000
+			swap_ideas = {
+				remove_idea = NOR_royal_privleges_idea #needs correction
+				add_idea = NOR_long_live_king_idea
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_ns_in_kings_council
+		icon = GFX_goal_national_populism
+		cost = 10
+		prerequisite = {
+			focus = NOR_the_king
+		}
+		x = 55
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 10
+			add_popularity = { ideology = national_populist popularity = 0.05 }
+			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+			country_event = { id = nor.35 }
+		}
+
+	}
+	focus = {
+		id = NOR_ns_victory
+		icon = GFX_goal_NOR_NS
+		cost = 5
+		prerequisite = {
+			focus = NOR_samfundsvernet_coup
+		}
+		mutually_exclusive = {
+			focus = NOR_monarchist_victory
+			focus = NOR_hoyre_victory
+		}
+		x = 59
+		y = 1
+		
+		available = {
+			has_country_flag = NOR_ns_victory_flag
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+			remove_ideas = NOR_samfundsvernets_rule_idea
+			hidden_effect = {
+				remove_unit_leader = 2000
+				remove_unit_leader = 2001
+				remove_unit_leader = 2002
+				remove_unit_leader = 2003
+				remove_unit_leader = 2004
+				remove_unit_leader = 2005
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_loyal_police
+		icon = GFX_goal_NOR_statspolitiet
+		cost = 10
+		prerequisite = {
+			focus = NOR_ns_victory
+		}
+		x = 57
+		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			remove_ideas = NOR_monarchist_right_idea
+			add_ideas = NOR_loyal_police_idea
+		}
+
+	}
+	focus = {
+		id = NOR_arrest_labour_unionsts
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
+		prerequisite = {
+			focus = NOR_loyal_police
+		}
+		x = 57
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = 10
+			add_popularity = { ideology = collectivist popularity = -0.02 }
+			add_popularity = { ideology = libertarian_socialist popularity = -0.02 }
+		}
+
+	}
+	focus = {
+		id = NOR_introduce_arbeidsteneste
+		icon = GFX_goal_generic_production
+		cost = 10
+		prerequisite = {
+			focus = NOR_ns_in_kings_council
+			focus = NOR_arrest_labour_unionsts
+		}
+		x = 55
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = NOR_introduce_arbeidsteneste_idea
+		}
+
+	}
+	focus = {
+		id = NOR_militarize_society
+		icon = GFX_focus_generic_little_entente
+		cost = 10
+		prerequisite = {
+			focus = NOR_ns_in_kings_council
+			focus = NOR_arrest_labour_unionsts
+		}
+		x = 57
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = NOR_militarize_society_idea
+		}
+
+	}
+	focus = {
+		id = NOR_festning_norge
+		icon = GFX_goal_generic_construct_military
+		cost = 10
+		prerequisite = {
+			focus = NOR_introduce_arbeidsteneste
+		}
+		prerequisite = {
+			focus = NOR_militarize_society
+		}
+		x = 56
+		y = 5
+		
+		available = {
+			controls_state = 110
+			controls_state = 142
+			controls_state = 143
+			controls_state = 144
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			110 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 6115
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 3171
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 14
+					instant_build = yes
+				}
+			}
+			142 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 122
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 9296
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 53
+					instant_build = yes
+				}
+			}
+			143 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 3022
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 6116
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 9132
+					instant_build = yes
+				}
+			}
+			144 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 192
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 11050
+					instant_build = yes
+				}
+			}
+			910 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 9116
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_no_king_of_communist
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10
+		prerequisite = {
+			focus = NOR_festning_norge
+		}
+		x = 55
+		y = 6
+		
+		available = {
+			has_country_flag = NOR_monarchist_victory_flag
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = NOR_no_king_of_communist_idea
+		}
+
+	}
+	focus = {
+		id = NOR_work_camps_for_commies
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		prerequisite = {
+			focus = NOR_festning_norge
+		}
+		x = 57
+		y = 6
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_introduce_arbeidsteneste_idea
+				add_idea = NOR_work_camps_for_commies_idea
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_approach_party_strifes
+		icon = GFX_goal_valkist_star
+		cost = 10
+		prerequisite = {
+			focus = NOR_ns_victory
+		}
+		x = 60
+		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_political_power = -50
+			country_event = { id = nor.36 }
+		}
+
+	}
+	focus = {
+		id = NOR_st_olavs_spirit
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 10
+		prerequisite = {
+			focus = NOR_approach_party_strifes
+		}
+		mutually_exclusive = {
+			focus = NOR_odins_spirit
+		}
+		x = 59
+		y = 3
+		
+		available = {
+			has_country_flag = NOR_st_olavs_spirit_flag
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = NOR_st_olavs_spirit_idea
+		}
+
+	}
+	focus = {
+		id = NOR_promote_christian_valkism
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		prerequisite = {
+			focus = NOR_st_olavs_spirit
+		}
+		x = 59
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_st_olavs_spirit_idea
+				add_idea = NOR_promote_christian_valkism_idea
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_loyal_priests
+		icon = GFX_goal_agriculture
+		cost = 10
+		prerequisite = {
+			focus = NOR_promote_christian_valkism
+		}
+		x = 59
+		y = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_promote_christian_valkism_idea
+				add_idea = NOR_loyal_priestes_idea #needs correction
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_odins_spirit
+		icon = GFX_goal_NOR_hirden
+		cost = 10
+		prerequisite = {
+			focus = NOR_approach_party_strifes
+		}
+		mutually_exclusive = {
+			focus = NOR_st_olavs_spirit
+		}
+		x = 61
+		y = 3
+		
+		available = {
+			has_country_flag = NOR_odins_spirit_flag
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = NOR_odins_spirit_idea
+		}
+
+	}
+	focus = {
+		id = NOR_sea_raids
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 10
+		prerequisite = {
+			focus = NOR_odins_spirit
+		}
+		x = 61
+		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_odins_spirit_idea
+				add_idea = NOR_sea_raids_idea
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_purify_society
+		icon = GFX_goal_valkist_supreme
+		cost = 10
+		prerequisite = {
+			focus = NOR_sea_raids
+		}
+		x = 61
+		y = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_sea_raids_idea
+				add_idea = NOR_purify_society_idea
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_stahlpakt_alliance
+		icon = GFX_Valkist_Germany
+		cost = 10
+		prerequisite = {
+			focus = NOR_loyal_priests
+			focus = NOR_purify_society
+		}
+		x = 60
+		y = 6
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			GER = {
+				country_event = { id = nor.70 }
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_expand_nation_state
+		icon = GFX_goal_demand_sudetenland
+		cost = 5
+		prerequisite = {
+			focus = NOR_samfundsvernet_coup
+		}
+		x = 66
+		y = 1
+		
+		available = {
+			OR = {
+				has_country_flag = NOR_monarchist_victory_flag
+				has_country_flag = NOR_ns_victory_flag
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_manpower = 15000
+		}
+
+	}
+	focus = {
+		id = NOR_greenland_case
+		icon = GFX_goal_NOR_greenland
+		cost = 5
+		prerequisite = {
+			focus = NOR_expand_nation_state
+		}
+		x = 64
+		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_state_claim = 100
+			add_state_claim = 908
+			add_state_claim = 101
+			add_state_claim = 911
+			add_state_claim = 337
+		}
+
+	}
+	focus = {
+		id = NOR_northatlantic_islands_or_war
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = NOR_greenland_case
+		}
+		x = 64
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			country_event = { id = nor.40 }
+		}
+
+	}
+	focus = {
+		id = NOR_improve_islandic_industry
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		prerequisite = {
+			focus = NOR_northatlantic_islands_or_war
+		}
+		x = 63
+		y = 4
+		
+		available = {
+			controls_state = 100
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			100 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_manpower = 12000
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_integrate_iceland
+		icon = GFX_goal_continuous_increase_nu
+		cost = 5
+		prerequisite = {
+			focus = NOR_improve_islandic_industry
+		}
+		x = 63
+		y = 5
+		
+		available = {
+			controls_state = 100
+			controls_state = 908
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			100 = {
+				add_manpower = 8000
+			}
+			add_state_core = 100
+			add_state_core = 908
+			add_state_core = 337
+		}
+
+	}
+	focus = {
+		id = NOR_exploration_greenland
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = NOR_northatlantic_islands_or_war
+		}
+		x = 65
+		y = 4
+		
+		available = {
+			controls_state = 101
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			101 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_manpower = 4000
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_integrate_greenland
+		icon = GFX_goal_generic_national_unity
+		cost = 5
+		prerequisite = {
+			focus = NOR_exploration_greenland
+		}
+		x = 65
+		y = 5
+		
+		available = {
+			controls_state = 101
+			controls_state = 911
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			101 = {
+				add_manpower = 4000
+			}
+			add_state_core = 101
+			add_state_core = 911
+		}
+
+	}
+	focus = {
+		id = NOR_claims_on_sweden
+		icon = GFX_goal_nested_fortifications
+		cost = 10
+		prerequisite = {
+			focus = NOR_expand_nation_state
+		}
+		x = 68
+		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_state_claim = 906
+			add_state_claim = 907
+		}
+
+	}
+	focus = {
+		id = NOR_retake_lost_eastern_land
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = NOR_claims_on_sweden
+		}
+		x = 68
+		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			country_event = { id = nor.52 }
+		}
+
+	}
+	focus = {
+		id = NOR_stomstad_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10
+		prerequisite = {
+			focus = NOR_retake_lost_eastern_land
+		}
+		x = 67
+		y = 4
+		
+		available = {
+			controls_state = 907
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			907 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_manpower = 15000
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_integrate_bohuslen
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		prerequisite = {
+			focus = NOR_stomstad_dockyards
+		}
+		x = 67
+		y = 5
+		
+		available = {
+			controls_state = 907
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			907 = {
+				add_manpower = 6000
+			}
+			add_state_core = 907
+		}
+
+	}
+	focus = {
+		id = NOR_ostersund_industry
+		icon = GFX_goal_generic_construction
+		cost = 10
+		prerequisite = {
+			focus = NOR_retake_lost_eastern_land
+		}
+		x = 69
+		y = 4
+		
+		available = {
+			controls_state = 906
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			906 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_manpower = 20000
+			}
+		}
+
+	}
+	focus = {
+		id = NOR_integrate_jamtland
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = NOR_ostersund_industry
+		}
+		x = 69
+		y = 5
+		
+		available = {
+			controls_state = 906
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			906 = {
+				add_manpower = 10000
+			}
+			add_state_core = 906
+		}
+
+	}
+	focus = {
+		id = NOR_greater_norway
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10
+		prerequisite = {
+			focus = NOR_integrate_iceland
+		}
+		prerequisite = {
+			focus = NOR_integrate_greenland
+		}
+		prerequisite = {
+			focus = NOR_integrate_bohuslen
+		}
+		prerequisite = {
+			focus = NOR_integrate_jamtland
+		}
+		x = 66
+		y = 6
+		
+		available = {
+			controls_state = 100
+			controls_state = 101
+			controls_state = 337
+			controls_state = 140
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_ideas = NOR_greater_norway_idea
+			add_manpower = 10000
+		}
+
+	}
+}

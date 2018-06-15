@@ -1,0 +1,175 @@
+### Newfoundland's Debt Effects, written by CIA
+#
+# How to use:
+#
+#	more_denbts = yes
+#	less_denbts = yes
+#
+
+more_denbts = {
+	if = {
+		limit = {
+			has_idea = NFL_debt_crisis2
+		}
+		swap_ideas = {
+			remove_idea = NFL_debt_crisis2
+			add_idea = NFL_debt_crisis1
+		}
+	}
+	if = {
+		limit = {
+			has_idea = NFL_debt_crisis3
+		}
+		swap_ideas = {
+			remove_idea = NFL_debt_crisis3
+			add_idea = NFL_debt_crisis2
+		}
+	}
+	if = {
+		limit = {
+			has_idea = NFL_debt_crisis4
+		}
+		swap_ideas = {
+			remove_idea = NFL_debt_crisis4
+			add_idea = NFL_debt_crisis3
+		}
+	}
+	if = {
+		limit = {
+			has_idea = NFL_debt_crisis5
+		}
+		swap_ideas = {
+			remove_idea = NFL_debt_crisis5
+			add_idea = NFL_debt_crisis4
+		}
+	}
+	if = {
+		limit = {
+			has_idea = NFL_debt_crisis6
+		}
+		swap_ideas = {
+			remove_idea = NFL_debt_crisis6
+			add_idea = NFL_debt_crisis5
+		}
+	}
+	if = {
+		limit = {
+			has_idea = NFL_debt_crisis7
+		}
+		swap_ideas = {
+			remove_idea = NFL_debt_crisis7
+			add_idea = NFL_debt_crisis6
+		}
+	}
+	if = {
+		limit = {
+			has_idea = NFL_debt_crisis8
+		}
+		swap_ideas = {
+			remove_idea = NFL_debt_crisis8
+			add_idea = NFL_debt_crisis7
+		}
+	}
+	if = {
+		limit = {
+			has_idea = NFL_debt_crisis9
+		}
+		swap_ideas = {
+			remove_idea = NFL_debt_crisis9
+			add_idea = NFL_debt_crisis8
+		}
+	}
+	if = {
+		limit = {
+			has_idea = NFL_debt_crisis10
+		}
+		swap_ideas = {
+			remove_idea = NFL_debt_crisis10
+			add_idea = NFL_debt_crisis9
+		}
+	}
+}
+
+less_denbts = {
+	if = {
+		limit = {
+			has_idea = NFL_debt_crisis9
+		}
+		swap_ideas = {
+			remove_idea = NFL_debt_crisis9
+			add_idea = NFL_debt_crisis10
+		}
+	}
+	if = {
+		limit = {
+			has_idea = NFL_debt_crisis8
+		}
+		swap_ideas = {
+			remove_idea = NFL_debt_crisis8
+			add_idea = NFL_debt_crisis9
+		}
+	}
+	if = {
+		limit = {
+			has_idea = NFL_debt_crisis7
+		}
+		swap_ideas = {
+			remove_idea = NFL_debt_crisis7
+			add_idea = NFL_debt_crisis8
+		}
+	}
+	if = {
+		limit = {
+			has_idea = NFL_debt_crisis6
+		}
+		swap_ideas = {
+			remove_idea = NFL_debt_crisis6
+			add_idea = NFL_debt_crisis7
+		}
+	}
+	if = {
+		limit = {
+			has_idea = NFL_debt_crisis5
+		}
+		swap_ideas = {
+			remove_idea = NFL_debt_crisis5
+			add_idea = NFL_debt_crisis6
+		}
+	}
+	if = {
+		limit = {
+			has_idea = NFL_debt_crisis4
+		}
+		swap_ideas = {
+			remove_idea = NFL_debt_crisis4
+			add_idea = NFL_debt_crisis5
+		}
+	}
+	if = {
+		limit = {
+			has_idea = NFL_debt_crisis3
+		}
+		swap_ideas = {
+			remove_idea = NFL_debt_crisis3
+			add_idea = NFL_debt_crisis4
+		}
+	}
+	if = {
+		limit = {
+			has_idea = NFL_debt_crisis2
+		}
+		swap_ideas = {
+			remove_idea = NFL_debt_crisis2
+			add_idea = NFL_debt_crisis3
+		}
+	}
+	if = {
+		limit = {
+			has_idea = NFL_debt_crisis1
+		}
+		swap_ideas = {
+			remove_idea = NFL_debt_crisis1
+			add_idea = NFL_debt_crisis2
+		}
+	}
+}

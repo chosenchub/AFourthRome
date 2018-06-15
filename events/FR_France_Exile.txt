@@ -1,0 +1,194 @@
+﻿#########################
+# France Exile Events#
+###################################
+# Made by jespertjee#
+###################################
+
+add_namespace = fra.exile
+
+#country_event = { # France Capitulates to North Africa
+#    id = fra.exile.1
+#    title = fra.exile.1.t
+#    desc = fra.exile.1.d
+#    picture = GFX_report_event_communists_cheer
+
+#    trigger = {
+#        AND = {
+#            tag = FRA
+#            FRA = {
+#                surrender_progress > 0.50
+#            }
+#           	any_country = {
+#            		AND = {
+#              			has_war_with = FRA
+#                		controls_state = 16
+#                	}
+#                }
+#            }
+#        }
+
+#	mean_time_to_happen = {
+#        days = 1
+#    }
+
+#    fire_only_once = yes
+
+#    option = {
+#    	name = fra.exile.1.a
+#    	ai_chance = {
+#			factor = 100
+#		}
+#
+#        hidden_effect = {
+#			set_global_flag = fall_of_mainland_france
+#        	every_state = {
+#			limit = {
+#				is_owned_by = FRA
+#				NOT = {
+#					is_controlled_by = FRA
+#				}
+#			}
+#			GER = {
+#				limit = {
+#					has_war_with = FRA
+#					controls_state = PREV
+#				}
+#				transfer_state = PREV
+#				country_event = { id = fra.exile.2 }
+#				}
+#			}
+#
+#       	set_capital = 459
+#
+#       		458 = {
+#            	add_core_of = FRX
+#        	}
+#        	459 = {
+#            	add_core_of = FRX
+#        	}
+#        	460 = {
+#            	add_core_of = FRX
+#        	}
+#        	461 = {
+#            	add_core_of = FRX
+#        	}
+#        	462 = {
+#            	add_core_of = FRX
+#        	}
+#        	513 = {
+#            	add_core_of = FRX
+#        	}
+#        	665 = {
+#            	add_core_of = FRX
+#        	}
+#        	677 = {
+#            	add_core_of = FRX
+#        	}
+#        	680 = {
+#            	add_core_of = FRX
+#        	}
+#        	553 = {
+#            	add_core_of = FRX
+#        	}
+#        	344 = {
+#            	add_core_of = FRX
+#        	}
+#        	350 = {
+#            	add_core_of = FRX
+#        	}
+#        	514 = {
+#            	add_core_of = FRX
+#        	}
+#        	557 = {
+#            	add_core_of = FRX
+#        	}
+#        	515 = {
+#            	add_core_of = FRX
+#        	}
+#
+#        	every_state = {
+#				limit = {
+#					is_core_of = FRA
+#				}
+#				FRX = {
+#					add_state_core = PREV
+#				}
+#			}
+#
+#			france_capitulates = yes
+#
+#			if = {
+#				limit = { 
+#					VIN = { 
+#						is_subject_of = FRA } 
+#						}
+#				end_puppet = VIN
+#				FRX = { puppet = VIN }
+#			}
+#
+#
+#   		every_state = {
+#			limit = {
+#				is_core_of = FRA
+#				is_on_continent = europe
+#				is_controlled_by = FRA
+#			}
+#			every_country = {
+#				limit = {
+#					controls_state = 16
+#				}
+#				transfer_state = PREV
+#				}
+#			}
+#
+#			FRX = {
+#				change_tag_from = FRA
+#			}
+#
+#			every_state = {
+#			limit = {
+#				NOT = { is_on_continent = europe }
+#				is_controlled_by = FRA
+#			}
+#			FRX = { transfer_state = PREV }
+#			}
+#   	}
+#    }
+#    option = {
+#    	name = fra.exile.1.b
+#    	ai_chance = {
+#			factor = 0
+#		}
+#
+#    }
+#}
+
+country_event = { #give everything to the faction leader
+	id = fra.exile.2
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = fra.exile.2.a
+
+		every_state = {
+			limit = {
+				is_controlled_by = ROOT
+				is_core_of = GER
+				is_on_continent = europe
+				NOT = {
+					state = 116
+					state = 182
+					is_core_of = ROOT
+				}
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					is_faction_leader = yes
+				}
+				transfer_state = PREV
+			}
+		}
+	}
+}

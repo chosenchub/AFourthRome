@@ -1,0 +1,1084 @@
+﻿#######################
+# Soviet Union events #
+##################
+# Created by mop #
+##################
+
+add_namespace = soviet
+
+country_event = {
+	id = soviet.1
+	title = "Recent History of Russia"
+	desc = soviet.1.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+		date > 1.1.1936
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Come forth, Revolutionaries!"
+		add_stability = 0.05
+	}
+}
+
+country_event = { #1936 Legislative Election
+	id = soviet.15
+	title = "Beginning of the 1936 Russian Legislative Elections"
+	desc = soviet.15.d
+	#picture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+		date > 1936.5.1
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Let's not waste any time dawdling."
+		country_event = { days = 7 id = soviet.16}
+		add_political_power = 50
+		# set election flags
+		set_country_flag = { flag = SOV_LIBSOC value = 0 }
+		set_country_flag = { flag = SOV_COLLIE value = 0 }
+		set_country_flag = { flag = SOV_VANG value = 0 }
+	}
+}
+country_event = {
+	id = soviet.16
+	title = "Election Campaigns: Internal Development"
+	desc = soviet.16.d
+	#picture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Libsoc
+		name = "RKP: We need to bring our infrastructure up to western standards!"
+		ai_chance = { factor = 20 }
+
+		add_popularity = { ideology = libertarian_socialist popularity = 0.05 }
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			
+		country_event = { days = 7 id = soviet.17 }
+		modify_country_flag = { flag = SOV_LIBSOC value = 1 }
+	}
+
+	option = {#Collie
+		name = "SRKYPMK: Bigger and better factories for the workers!"
+		ai_chance = { factor = 45 }
+
+		add_popularity = { ideology = collectivist popularity = 0.075 }
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+
+		country_event = { days = 7 id = soviet.17 }
+		modify_country_flag = { flag = SOV_COLLIE value = 1 }
+	}
+
+	option = {#Vang
+		name = "SNRP: The Union will be transformed into a machine of revolution!"
+		ai_chance = { factor = 30 }
+
+		add_popularity = { ideology = vanguardist popularity = 0.05 }
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+
+		country_event = { days = 7 id = soviet.17 }
+		modify_country_flag = { flag = SOV_VANG value = 1 }
+	}
+}
+
+country_event = {
+	id = soviet.17
+	title = "Election Campaigns: Women in the Union"
+	desc = soviet.17.d
+	#picture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Libsoc
+		name = "RKP: fully egalitarian ideals must be pursued!"
+		ai_chance = { factor = 20 }
+
+		add_popularity = { ideology = libertarian_socialist popularity = 0.075 }
+		
+		country_event = { days = 7 id = soviet.19 }
+		modify_country_flag = { flag = SOV_LIBSOC value = 1 }
+	}
+
+	option = {#Collie
+		name = "SRKYPMK: some reforms are appropriate, but hold off on others."
+		ai_chance = { factor = 45 }
+
+		add_popularity = { ideology = collectivist popularity = 0.05 }
+
+		country_event = { days = 7 id = soviet.19 }
+		modify_country_flag = { flag = SOV_COLLIE value = 1 }
+	}
+
+	option = {#Vang
+		name = "SNRP: Rights of Soviet women already surpass european standards!"
+		ai_chance = { factor = 30 }
+
+		add_popularity = { ideology = vanguardist popularity = 0.05 }
+
+		country_event = { days = 7 id = soviet.19 }
+		modify_country_flag = { flag = SOV_VANG value = 1 }
+	}
+}
+
+country_event = {
+	id = soviet.19
+	title = "Election Campaigns: Our place in the World"
+	desc = soviet.19.d
+	#picture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Libsoc
+		name = "RKP: We should support the Chinese KMT!"
+		ai_chance = { factor = 20 }
+
+		add_popularity = { ideology = libertarian_socialist popularity = 0.05 }
+		remove_ideas = SOV_peace
+		
+		country_event = { days = 7 id = soviet.20 }
+		modify_country_flag = { flag = SOV_LIBSOC value = 1 }
+	}
+
+	option = {#Collie
+		name = "SRKYPMK: The Popular Front needs our support!"
+		ai_chance = { factor = 45 }
+
+		add_popularity = { ideology = collectivist popularity = 0.05 }
+		remove_ideas = SOV_peace
+
+		country_event = { days = 7 id = soviet.20 }
+		modify_country_flag = { flag = SOV_COLLIE value = 1 }
+	}
+
+	option = {#Vang
+		name = "SNRP: Who says we can't support them both?!"
+		ai_chance = { factor = 30 }
+
+		add_popularity = { ideology = vanguardist popularity = 0.075 }
+		remove_ideas = SOV_peace
+
+		country_event = { days = 7 id = soviet.20 }
+		modify_country_flag = { flag = SOV_VANG value = 1 }
+	}
+}
+
+country_event = {
+	id = soviet.20
+	title = "Election Campaigns: Civil Security"
+	desc = soviet.20.d
+	#picture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Libsoc
+		name = "RKP: The Status Quo is absolutely fine!"
+		ai_chance = { factor = 20 }
+
+		add_popularity = { ideology = libertarian_socialist popularity = 0.05 }
+		remove_ideas = SOV_peace
+		
+		country_event = { days = 7 id = soviet.21 }
+		modify_country_flag = { flag = SOV_LIBSOC value = 1 }
+	}
+
+	option = {#Collie
+		name = "SRKYPMK: Release more funding to police forces!"
+		ai_chance = { factor = 45 }
+
+		add_popularity = { ideology = collectivist popularity = 0.05 }
+		remove_ideas = SOV_peace
+
+		country_event = { days = 7 id = soviet.21 }
+		modify_country_flag = { flag = SOV_COLLIE value = 1 }
+	}
+
+	option = {#Vang
+		name = "SNRP: Strict control over the Soviet society is a necessity for security!"
+		ai_chance = { factor = 30 }
+
+		add_popularity = { ideology = vanguardist popularity = 0.05 }
+		remove_ideas = SOV_peace
+
+		country_event = { days = 7 id = soviet.21 }
+		modify_country_flag = { flag = SOV_VANG value = 1 }
+	}
+}
+
+#Election results, 4 total flags
+country_event = {
+	id = soviet.21
+	title = "Election Results"
+	is_triggered_only = yes
+
+	hidden = yes
+
+	immediate = {
+		set_country_flag = SOV_1936_ELECTION_DONE
+		if = {
+			limit = {
+				has_country_flag = { flag = SOV_LIBSOC value < 2 }
+				has_country_flag = { flag = SOV_COLLIE value < 2 }
+				has_country_flag = { flag = SOV_VANG value < 2 }
+			}
+			country_event = soviet.22
+		}
+
+		if = {
+			limit = { has_country_flag = { flag = SOV_LIBSOC value > 3 } }
+			country_event = soviet.23
+		}
+
+		if = {
+			limit = { has_country_flag = { flag = SOV_COLLIE value > 3 } }
+			country_event = soviet.24
+		}
+
+		if = {
+			limit = { has_country_flag = { flag = SOV_VANG value > 3 } }
+			country_event = soviet.25
+		}
+	}
+}
+
+#Gridlock
+country_event = {
+	id = soviet.22
+	title = "Gridlock"
+	desc = soviet.22.d
+
+	picture = report_event_generic_conference
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "The RKP & SRKYPMK form an unsteady coalition."
+		add_stability = -0.05
+		set_country_flag = SOV_GRIDLOCK
+	}
+}
+
+#RKP Victory
+country_event = {
+	id = soviet.23
+	title = "The RKP gains a clear majority"
+	desc = soviet.23.d
+
+	picture = report_event_generic_conference
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "Only through moderate socialism can the workers know liberty!"
+		add_stability = 0.05
+		add_political_power = 50
+		set_country_flag = SOV_COALITION
+		set_politics = {
+			ruling_party = libertarian_socialist
+			elections_allowed = no
+		}
+		add_popularity = { ideology = libertarian_socialist popularity = 0.05 }
+	}
+}
+
+#SRKYPMK Victory
+country_event = {
+	id = soviet.24
+	title = "The SRKYPMK gains a clear majority"
+	desc = soviet.24.d
+
+	picture = report_event_generic_conference
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "Workers of the World, unite!"
+		add_stability = 0.1
+		set_country_flag = SOV_SRKYPMK_VICTORY
+		set_politics = {
+			ruling_party = collectivist
+			elections_allowed = no
+		}
+		add_popularity = { ideology = collectivist popularity = 0.1 }
+		hidden_effect = {
+			IF = {
+				limit = {
+					collectivist < 0.5
+				}
+				add_popularity = { ideology = collectivist popularity = 0.1 }
+			}
+		}
+		hidden_effect = { country_event = { days = 7 id = soviet.26 } }
+	}
+}
+
+#SRNP Victory
+country_event = {
+	id = soviet.25
+	title = "The SRNP gains a clear majority"
+	desc = soviet.25.d
+
+	picture = report_event_generic_conference
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "We will bear the Torch of Revolution!"
+		add_stability = 0.05
+		add_war_support = 0.05
+		set_country_flag = SOV_SRNP_VICTORY
+		set_politics = {
+			ruling_party = vanguardist
+			elections_allowed = no
+		}
+		add_popularity = { ideology = vanguardist popularity = 0.05 }
+		hidden_effect = {
+			IF = {
+				limit = {
+					vanguardist < 0.5
+				}
+				add_popularity = { ideology = vanguardist popularity = 0.1 }
+			}
+		}
+		hidden_effect = { country_event = { days = 7 id = soviet.26 } }
+	}
+}
+
+country_event = {
+	id = soviet.26
+	title = "The Chairman"
+	desc = soviet.26.d
+
+	picture = report_event_generic_conference
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "Kirov remains Chairman."
+		ai_chance = { factor = 60 }
+		add_political_power = 50
+	}
+
+	option = {
+		name = "Kalinin succeeds Kirov and becomes Chairman."
+		ai_chance = { factor = 40 }
+		trigger = {
+			has_government = collectivist
+		}
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Mikhail Kalinin"
+			desc = ""
+			picture = "Portrait_Soviet_Mikhail_Kalinin.tga"
+			expire = "1955.3.1"
+			ideology = collectivist_subtype
+			traits = {	}
+		}
+		add_popularity = { ideology = collectivist popularity = 0.05 }
+		add_popularity = { ideology = libertarian_socialist popularity = -0.05 }
+	}
+
+	option = {
+		name = "Trotsky succeeds Kirov and becomes Chairman."
+		ai_chance = { factor = 40 }
+		trigger = {
+			has_government = vanguardist
+		}
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Leon Trotsky"
+			desc = ""
+			picture = "Portrait_Soviet_Leon_Thotsky.tga"
+			expire = "1955.3.1"
+			ideology = vanguardist_subtype
+			traits = {	}
+		}
+		add_popularity = { ideology = vanguardist popularity = 0.05 }
+		add_popularity = { ideology = libertarian_socialist popularity = -0.05 }
+	}
+}
+
+country_event = { # Soviet congress event, just explains the ramifications to the player.
+	id = soviet.29
+	title = soviet.29.t
+	desc = soviet.29.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "The topic of Centralization proves to be popular."
+		trigger = {
+			OR = {
+				has_government = collectivist
+				has_government = vanguardist
+			}
+		}
+		custom_effect_tooltip = sov_congress_tip
+		hidden_effect = { country_event = { id = soviet.30 days = 5} }
+	}
+	option = {
+		name = "Decentralization seems to remain as an appealing prospect."
+		trigger = {
+			OR = {
+				has_government = collectivist
+				has_government = libertarian_socialist
+			}
+		}
+		custom_effect_tooltip = sov_congress_tip
+		hidden_effect = { country_event = { id = soviet.31 days = 5} }
+	}
+
+	option = {
+		name = "Bickering between delegates appears to be rampant."
+		trigger = {
+			has_government = collectivist
+		}
+		custom_effect_tooltip = sov_congress_tip
+		hidden_effect = { country_event = { id = soviet.32 days = 5} }
+	}
+}
+country_event = { #centralize
+	id = soviet.30
+	title = soviet.30.t
+	desc = soviet.30.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = soviet.30.a
+		add_political_power = 20
+		hidden_effect = {
+			set_country_flag = sov_centralize
+		}
+	}
+}
+country_event = { #decentralize
+	id = soviet.31
+	title = soviet.31.t
+	desc = soviet.31.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = soviet.31.a
+		add_political_power = 20
+		hidden_effect = {
+			set_country_flag = sov_decentralize
+		}
+	}
+}
+country_event = { #deadlock
+	id = soviet.32
+	title = soviet.32.t
+	desc = soviet.32.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = soviet.32.a
+		add_political_power = -50
+		add_stability = -0.30
+		hidden_effect = {
+			set_country_flag = sov_deadlock
+		}
+	}
+}
+country_event = { #Ukranian event, ukranian independance movement.
+	id = soviet.33
+	title = soviet.33.t
+	desc = soviet.33.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #push for independance
+		name = soviet.33.a
+		add_political_power = -20
+		SOV = {
+			country_event = { id = soviet.34 days = 1 }
+			add_ideas = SOV_ukraine_unrest
+		}
+	}
+}
+country_event = { #Ukraine begins independance movement
+	id = soviet.34
+	title = soviet.34.t
+	desc = soviet.34.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #oof
+		name = soviet.34.a
+		add_political_power = -25
+	}
+}
+
+country_event = { #Western Shield 
+	id = soviet.35
+	title = soviet.35.t
+	desc = soviet.35.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	option = { # Yea! bonus
+		name = soviet.35.a
+		add_political_power = 50
+		add_ideas = SOV_west_shield
+	}
+}
+
+country_event = { #Islamic council for the advancement of socialism
+	id = soviet.36
+	title = soviet.36.t
+	desc = soviet.36.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	option = { # Yea! bonus
+		name = soviet.36.a
+		add_political_power = 50
+		add_ideas = SOV_south_hegemony
+	}
+}
+
+country_event = { #Islamic council influences our country
+	id = soviet.37
+	title = soviet.37.t
+	desc = soviet.37.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	option = { # boo
+		name = soviet.37.a
+		add_political_power = -50
+		add_popularity = {
+			ideology = libertarian_socialist
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = { # Reform the Union
+	id = soviet.38
+	title = soviet.38.t
+	desc = soviet.38.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	option = { # Yeah
+		name = soviet.38.a
+		add_political_power = 50
+		add_ideas = SOV_less_union
+	}
+}
+
+country_event = { # Treaty of Stockholm
+	id = soviet.39
+	title = soviet.39.t
+	desc = soviet.39.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	option = {  
+	trigger = {
+		original_tag = SOV
+	}
+		name = soviet.38.a
+		add_political_power = 50
+	}
+	
+	option = {  
+	trigger = {
+		original_tag = FIN
+	}
+		name = soviet.38.b
+		annex_country = { target = RFN }
+		set_capital = 111
+		add_ideas = SOV_red_fin
+		add_popularity = {
+			ideology = libertarian_socialist
+			popularity = 0.20
+		}
+		add_opinion_modifier = { target = SOV modifier = FIN_soviet_cool }
+	}
+	
+	option = {
+	trigger = {
+		original_tag = SWE
+	}
+		name = soviet.38.a
+		add_political_power = 50
+		add_opinion_modifier = { target = SOV modifier = FIN_soviet_cool }
+	}
+}
+
+country_event = { # Caucus Independence
+	id = soviet.40
+	title = soviet.40.t
+	desc = soviet.40.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	option = { # Yeah
+		name = soviet.40.a
+		SOV = {
+			end_puppet = GOR
+		}
+		set_politics = {
+ 			ruling_party = authoritarian_democrat
+ 			elections_allowed = no
+ 		}
+ 		add_popularity = { ideology = authoritarian_democrat popularity = 0.20 }
+ 		add_popularity = { ideology = libertarian_socialist popularity = -0.20 }
+	 	hidden_effect = {
+	 		GOR = {
+				remove_ideas = { 
+					sphered_idea_1
+					sphered_idea_2
+					sphered_idea_3
+					sphered_idea_4
+					sphered_idea_5
+					sphered_idea_6
+					sphered_idea_7
+					sphered_idea_8
+				}
+				clr_country_flag = sphere_3_by_SOV
+				clr_country_flag = sphered
+			}
+			SOV = {
+				clr_country_flag = sphered_GOR
+			}
+		}
+	}
+}
+
+country_event = { # Caucus Independence
+	id = soviet.41
+	title = soviet.40.t
+	desc = soviet.40.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	option = { # Yeah
+		name = soviet.40.a
+		SOV = {
+			end_puppet = DAG
+		}
+		set_politics = {
+ 			ruling_party = authoritarian_democrat
+ 			elections_allowed = no
+ 		}
+ 		add_popularity = { ideology = authoritarian_democrat popularity = 0.20 }
+ 		add_popularity = { ideology = libertarian_socialist popularity = -0.20 }
+	 	hidden_effect = {
+	 		DAG = {
+				remove_ideas = { 
+					sphered_idea_1
+					sphered_idea_2
+					sphered_idea_3
+					sphered_idea_4
+					sphered_idea_5
+					sphered_idea_6
+					sphered_idea_7
+					sphered_idea_8
+				}
+				clr_country_flag = sphere_3_by_SOV
+				clr_country_flag = sphered
+			}
+			SOV = {
+				clr_country_flag = sphered_DAG
+			}
+		}
+	}
+}
+
+country_event = { # Russian influence
+	id = soviet.42
+	title = soviet.42.t
+	desc = soviet.42.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	option = { # Yeah
+		name = soviet.42.a
+		add_political_power = -50
+		add_ideas = SOV_russian_intergration
+	}
+}
+
+country_event = { # Russian influence
+	id = soviet.43
+	title = soviet.43.t
+	desc = soviet.43.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	option = { # Yeah
+	ai_chance = {
+		factor = 80
+	}
+		name = soviet.43.a
+		if = {
+			limit = {
+				is_puppet_of = SOV
+			}
+			SOV = {
+				annex_country = { target = PREV transfer_troops = yes }
+			}
+		}
+	}
+
+	option = { # Yeah
+	ai_chance = {
+		factor = 40
+	}
+		name = soviet.43.a
+		SOV = {
+			remove_from_faction = ROOT
+			end_puppet = ROOT
+		}
+		if = {
+			limit = {
+				has_idea = SOV_russian_intergration
+			}
+			remove_ideas = SOV_russian_intergration
+		}
+		declare_war_on = {
+			target = SOV
+			type = annex_everything
+		}
+	}
+}
+
+country_event = { #2nd Russian Civil War
+	id = soviet.44
+	title = soviet.44.t
+	desc = soviet.44.d
+	picture = news_event_generic_rally2
+
+	trigger = {
+		has_country_flag = soviet_collapse
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = { # oh my
+		name = soviet.44.a
+		add_ideas = SOV_civil_war
+		custom_effect_tooltip = sov_civil_war
+		hidden_effect = {
+			country_event = { id = soviet.46 days = 5 }
+		}
+		hidden_effect = {
+			RUS = {
+				every_state = {
+					limit = {
+						is_core_of = SOV
+					}
+					add_core_of = RUS
+				}
+				transfer_state = 644
+				###
+				transfer_state = 637
+				###
+				transfer_state = 562
+				###
+				transfer_state = 574
+				###
+				transfer_state = 563
+				###
+				transfer_state = 564
+				###
+				transfer_state = 565
+				###
+				transfer_state = 575
+				###
+				transfer_state = 576
+				###
+				transfer_state = 516
+				###
+				transfer_state = 578
+				###
+				transfer_state = 571
+				###
+				transfer_state = 588
+				###
+				transfer_state = 590
+				###
+				transfer_state = 403
+				###
+				transfer_state = 583
+				###
+				transfer_state = 577
+				###
+				transfer_state = 580
+				###
+				transfer_state = 579
+				###
+				transfer_state = 581
+				###
+				transfer_state = 590
+				###
+				transfer_state = 397
+				###
+				transfer_state = 262
+				###
+				transfer_state = 214
+				###
+				transfer_state = 216
+				###
+				transfer_state = 215
+				###
+				transfer_state = 213
+				###
+				transfer_state = 263
+				###
+				transfer_state = 222
+				###
+				transfer_state = 137
+				###
+				transfer_state = 234
+				###
+				transfer_state = 235
+				###
+				transfer_state = 237
+				###
+				transfer_state = 236
+				###
+				transfer_state = 217
+				###
+				transfer_state = 401
+				###
+				transfer_state = 652
+				###
+				transfer_state = 582
+				###
+				country_event = { id = russia.1 days = 10 }
+				load_oob = RUS_1936
+				set_cosmetic_tag = RUS_white
+			}
+		}
+	}
+}
+country_event = { #victory in the 2RCW
+	id = soviet.45
+	title = soviet.45.t
+	desc = soviet.45.d
+	picture = news_event_generic_rally2
+
+	trigger = {
+		tag = SOV
+		RUS = {
+			exists = no
+			has_capitulated = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = russia.2.a
+		drop_cosmetic_tag = yes
+		remove_ideas = RUS_civil_war
+		add_ideas = RUS_strife
+	}
+}
+country_event = {
+	id = soviet.46
+	title = soviet.46.t
+	desc = soviet.46.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+        SOV = {
+            end_puppet = UKR
+            end_puppet = GOR
+            end_puppet = DAG
+            remove_from_faction = UKR
+            remove_from_faction = GOR
+            remove_from_faction = DAG
+        }
+        UKR = {
+            declare_war_on = { target = SOV type = annex_everything }
+            set_cosmetic_tag = UKR_IND
+		}
+		hidden_effect = {
+			UKR = {
+                set_politics = {
+                    ruling_party = authoritarian_democrat
+                    elections_allowed = no
+                }
+                add_popularity = { ideology = authoritarian_democrat popularity = 0.30 }
+                add_popularity = { ideology = libertarian_socialist popularity = -0.20 }
+            }
+        }
+        GOR = {
+            annex_country = { target = DAG }
+            set_cosmetic_tag = GOR_IND
+            declare_war_on = { target = SOV type = annex_everything }
+            hidden_effect = {
+                set_politics = {
+                    ruling_party = authoritarian_democrat
+                    elections_allowed = no
+                }
+                add_popularity = { ideology = authoritarian_democrat popularity = 0.30 }
+                add_popularity = { ideology = libertarian_socialist popularity = -0.20 }
+          	}
+       	}
+    }
+}

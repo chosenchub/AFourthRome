@@ -1,0 +1,349 @@
+##### INTERNAL POLITICS #####
+
+foreign_politics = {
+	
+	FRA_Mutual_Defence_Fund_France = {
+
+		icon = generic_operation
+	
+		available = {
+			NOT = { has_global_flag = MDF_BEL_ACTIVE }
+		}
+
+		visible = {
+			has_country_flag = FRA_MUTUAL_DEFENCE_FUND_MEMBER
+			tag = FRA
+		}
+		
+		cost = 25
+		
+		days_re_enable = 60
+		
+		days_remove = 120
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+		}
+		
+		complete_effect = {
+			add_timed_idea = { idea = FRA_MDF_benefits days = 120 }
+			set_global_flag = MDF_FRA_ACTIVE
+			BEL = { country_event = { id = frafor.56 } }
+		}
+		
+		remove_effect = {
+			clr_global_flag = MDF_FRA_ACTIVE
+		}
+	}
+
+	FRA_Mutual_Defence_Fund_Belgium = {
+
+		icon = generic_operation
+	
+		available = {
+			NOT = { has_global_flag = MDF_FRA_ACTIVE }
+		}
+
+		visible = {
+			has_country_flag = FRA_MUTUAL_DEFENCE_FUND_MEMBER
+			tag = BEL
+		}
+		
+		cost = 25
+		
+		days_re_enable = 60
+		
+		days_remove = 120
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		modifier = {
+		}
+		
+		complete_effect = {
+			add_timed_idea = { idea = FRA_MDF_benefits days = 120 }
+			set_global_flag = MDF_BEL_ACTIVE
+			FRA = { country_event = { id = frafor.57 } }
+		}
+		
+		remove_effect = {
+			clr_global_flag = MDF_BEL_ACTIVE
+		}
+	}
+
+	#Imperialism and stuff
+
+	FRA_attack_thailand = {
+		visible = { 
+			has_country_flag = FRA_imperialism_dec_unlocked
+			SIA = { exists = yes }
+		}
+		available = {
+			tag = FRA
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			create_wargoal = {
+				target = SIA
+				type = annex_everything
+			}
+		}
+	}
+	FRA_attack_yunnan = {
+		visible = { 
+			has_country_flag = FRA_imperialism_dec_unlocked
+			YUN = { exists = yes }
+		}
+		available = {
+			tag = FRA
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = yes
+		complete_effect = {
+			create_wargoal = {
+				target = YUN
+				type = annex_everything
+			}
+		}
+	}
+	FRA_attack_philly = {
+		visible = { 
+			has_country_flag = FRA_imperialism_dec_unlocked
+			"PHI" = { exists = yes }
+		}
+		available = {
+			tag = FRA
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			create_wargoal = {
+				target = PHI
+				type = annex_everything
+			}
+		}
+	}
+	FRA_attack_iraq = {
+		visible = { 
+			has_country_flag = FRA_imperialism_dec_unlocked
+			IRQ = { exists = yes }
+		}
+		available = {
+			tag = FRA
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			create_wargoal = {
+				target = IRQ
+				type = annex_everything
+			}
+		}
+	}
+
+	#DEVELOPMENT & SHITE
+
+	FRA_develop_VIN = {
+		visible = { 
+			has_country_flag = FRA_development_dec_unlocked
+			VIN = { 
+				exists = yes
+				is_subject_of = FRA
+			}
+		}
+		available = {
+			tag = FRA
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		cost = 25
+		fire_only_once = yes
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					is_core_of = VIN
+					is_owned_and_controlled_by = VIN
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = VIN
+					is_owned_and_controlled_by = VIN
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	FRA_develop_MOR = {
+		visible = { 
+			has_country_flag = FRA_development_dec_unlocked
+			MOR = { 
+				exists = yes
+				is_subject_of = FRA
+			}
+		}
+		available = {
+			tag = FRA
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		cost = 25
+		fire_only_once = yes
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					is_core_of = MOR
+					is_owned_and_controlled_by = MOR
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = MOR
+					is_owned_and_controlled_by = MOR
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	FRA_develop_NFA = {
+		visible = { 
+			has_country_flag = FRA_development_dec_unlocked
+			NFA = { 
+				exists = yes
+				is_subject_of = FRA
+			}
+		}
+		available = {
+			tag = FRA
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		cost = 25
+		fire_only_once = yes
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					is_core_of = NFA
+					is_owned_and_controlled_by = NFA
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NFA
+					is_owned_and_controlled_by = NFA
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	FRA_develop_NFQ = {
+		visible = { 
+			has_country_flag = FRA_development_dec_unlocked
+			NFQ = { 
+				exists = yes
+				is_subject_of = FRA
+			}
+		}
+		available = {
+			tag = FRA
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		cost = 25
+		fire_only_once = yes
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					is_core_of = NFQ
+					is_owned_and_controlled_by = NFQ
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = NFQ
+					is_owned_and_controlled_by = NFQ
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+}
+

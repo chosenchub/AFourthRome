@@ -1,0 +1,1471 @@
+﻿#########################
+# French Republic Events#
+###########################################################################################
+# Made by VirtualHummingbird, CIA, Jespertjee, Supermarks and probably a few other people.#
+###########################################################################################
+
+add_namespace = frafla
+
+country_event = {
+	id = frafla.1
+	title = "The Fusil Automatique Leger"
+	desc = frafla.1.d
+
+	picture = report_event_generic_conference
+
+	trigger = {
+		tag = FRA
+		date > 1938.9.6
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = "Impressive!"
+		add_political_power = 5
+		add_tech_bonus = {
+  			bonus = 0.25
+			uses = 1
+			category = infantry_weapons
+		}
+	}
+}
+
+country_event = {
+	id = frafla.2
+	title = "Preparations for the P.C.E."
+	desc = frafla.2.d
+
+	picture = GFX_report_event_physics_lab_01
+
+	trigger = {
+		tag = FRA
+		date > 1936.1.28
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = "It should be centred around Human displays."
+		ai_chance = { factor = 25 }
+		add_political_power = -25
+		add_popularity = { ideology = social_conservative popularity = 0.05 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		reverse_add_opinion_modifier = {
+			target = VIN
+			modifier = FRA_Human_Zoos
+		}
+		reverse_add_opinion_modifier = {
+			target = PHN
+			modifier = FRA_Human_Zoos
+		}
+		reverse_add_opinion_modifier = {
+			target = MOR
+			modifier = FRA_Human_Zoos
+		}
+		reverse_add_opinion_modifier = {
+			target = NFQ
+			modifier = FRA_Human_Zoos
+		}
+		reverse_add_opinion_modifier = {
+			target = NFA
+			modifier = FRA_Human_Zoos_FWA
+		}
+		hidden_effect = {
+			country_event = { id = frafla.3 days = 7 }
+		}
+	}
+	option = {
+		name = "It should have a bit of both."
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+			country_event = { id = frafla.3 days = 7 }
+		}
+	}
+	option = {
+		name = "It should be centred around native culture, art & cuisine."
+		ai_chance = { factor = 25 }
+		add_political_power = -25
+		add_popularity = { ideology = social_democrat popularity = 0.05 }
+		add_popularity = { ideology = libertarian_socialist popularity = 0.05 }
+		reverse_add_opinion_modifier = {
+			target = VIN
+			modifier = FRA_Culture_Apperciated
+		}
+		reverse_add_opinion_modifier = {
+			target = PHN
+			modifier = FRA_Culture_Apperciated
+		}
+		reverse_add_opinion_modifier = {
+			target = MOR
+			modifier = FRA_Culture_Apperciated
+		}
+		reverse_add_opinion_modifier = {
+			target = NFQ
+			modifier = FRA_Culture_Apperciated
+		}
+		reverse_add_opinion_modifier = {
+			target = NFA
+			modifier = FRA_Culture_Apperciated_FWA
+		}
+		hidden_effect = {
+			country_event = { id = frafla.3 days = 7 }
+		}
+	}
+}
+
+country_event = {
+	id = frafla.3
+	title = "Invitations to the Paris Colonial Exposition"
+	desc = frafla.3.d
+
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Send the invites out!"
+		#add_political_power = 20
+		KNE = { country_event = { id = frafla.4 } }
+		BEL = { country_event = { id = frafla.4 } }
+		ITA = { country_event = { id = frafla.4 } }
+		PRR = { country_event = { id = frafla.4 } }
+		ENG = { country_event = { id = frafla.4 } }
+		USA = { country_event = { id = frafla.4 } }
+		JAP = { country_event = { id = frafla.4 } }
+		hidden_effect = {
+			country_event = { id = frafla.5 days = 32 }
+		}
+	}
+}
+
+country_event = {
+	id = frafla.4
+	title = "An invitation to the Paris Colonial Exposition"
+	desc = frafla.4.d
+
+	picture = GFX_report_event_french_british_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We shall participate."
+		ai_chance = { factor = 80 }
+		set_country_flag = FRA_Attending_Paris_Colonial_Exposition
+		reverse_add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Accepted_Invitation
+		}
+		reverse_add_opinion_modifier = {
+			target = SOV
+			modifier = FRA_Paris_Colonial_Exposition_Participant
+		}
+		reverse_add_opinion_modifier = {
+			target = GER
+			modifier = FRA_Paris_Colonial_Exposition_Participant
+		}
+	}
+
+	option = {
+		name = "We're not participating in a politically-charged display."
+		ai_chance = { factor = 20 }
+		reverse_add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_Denied_Invitation
+		}
+		reverse_add_opinion_modifier = {
+			target = SOV
+			modifier = FRA_Refused_Paris_Colonial_Exposition
+		}
+		reverse_add_opinion_modifier = {
+			target = GER
+			modifier = FRA_Refused_Paris_Colonial_Exposition
+		}
+	}
+}
+
+country_event = {
+	id = frafla.5
+	title = "Opening of the Paris Colonial Exposition"
+	desc = frafla.5.d
+
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Come one, come all!"
+		set_country_flag = FRA_PCE_OPEN
+		hidden_effect = {
+			country_event = { id = frafla.6 days = 60 }
+		}
+	}
+}
+
+country_event = {
+	id = frafla.6
+	title = "Leftist Counter-Exhibition"
+	desc = frafla.6.d
+
+	picture = GFX_report_event_generic_rally
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Nice try."
+		add_popularity = { ideology = collectivist popularity = 0.005 }
+	}
+}
+
+country_event = {
+	id = frafla.7
+	title = "Leftist Factory Tours"
+	desc = frafla.7.d
+
+	picture = GFX_report_event_generic_factory
+
+	trigger = {
+		tag = FRA
+		has_idea = FRA_lsmc
+		NOT = { 
+			OR = {
+				has_government = libertarian_socialist
+				has_government = social_democrat 
+			}
+		}
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 120 }
+
+	option = {
+		name = "All talk, no walk!"
+		add_stability = -0.05
+		add_popularity = { ideology = libertarian_socialist popularity = 0.05 }
+	}
+}
+
+country_event = {
+	id = frafla.8
+	title = "Catholic support for Action Française"
+	desc = frafla.8.d
+
+	picture = GFX_report_event_generic_rally
+
+	trigger = {
+		tag = FRA
+		has_idea = FRA_lsmc
+		NOT = { 
+			OR = {
+				has_government = social_conservative
+				has_government = paternal_autocrat
+			}
+		}
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 120 }
+
+	option = {
+		name = "Damn them!"
+		add_stability = -0.05
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+	}
+}
+
+country_event = {
+	id = frafla.9
+	title = "Anglophobic Rally"
+	desc = frafla.9.d
+
+	picture = GFX_report_event_generic_rally
+
+	trigger = {
+		tag = FRA
+		has_idea = FRA_lsmc
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 200 }
+
+	option = {
+		name = "Worrying."
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.025 }
+		add_popularity = { ideology = national_populist popularity = 0.025 }
+	}
+}
+
+country_event = {
+	id = frafla.10
+	title = "Youth support for [Root.GetLeader]"
+	desc = frafla.10.d
+
+	picture = GFX_report_event_generic_rally
+
+	trigger = {
+		tag = FRA
+		has_idea = FRA_lsmc
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 260 }
+
+	option = {
+		name = "Thank god!"
+		#increase_popularity_law = yes
+		increase_ruling_party_popularity_by_10 = yes
+	}
+}
+
+################
+###Main stuff###
+################
+
+add_namespace = fra
+
+# Air Army Fighter v. Bomber
+country_event = { 
+	id = fra.1
+	title = "The Plane Dispute"
+	desc = fra.1.d
+	picture = GFX_report_event_airplane_factory
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "Bombers!"
+
+		set_global_flag = BOMBER_FOCUS
+
+		ai_chance = {
+			factor = 50
+		}
+	}
+
+	option = {
+		name = "Fighters!"
+
+		set_global_flag = FIGHTER_FOCUS
+
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+country_event = { 
+	id = fra.2
+	title = "The French Republic"
+	desc = fra.2.d
+	picture = GFX_report_event_soldiers_in_france
+
+	trigger = {
+		tag = FRA
+	}
+
+	mean_time_to_happen = { days = 0 }
+
+	fire_only_once = yes
+
+	option = {
+		name = "Vive La Troisième République!"
+	}
+}
+
+country_event = { 
+	id = fra.3
+	title = "The Doctrine Dispute"
+	desc = fra.3.d
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "Mobile Warfare!"
+		set_global_flag = BLITZKRIEG_DOCTRINE
+		ai_chance = {
+			factor = 15
+		}
+	}
+
+	option = {
+		name = "Superior Firepower!"
+		set_global_flag = FIREPOWER_DOCTRINE
+		ai_chance = {
+			factor = 15
+		}
+	}
+
+	option = {
+		name = "Mass Assault!"
+		set_global_flag = CONSCRIPTION_DOCTRINE
+		ai_chance = {
+			factor = 20
+		}
+	}
+
+	option = {
+		name = "Grand Battleplan!"
+		set_global_flag = BATTLEPLAN_DOCTRINE
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# National Navy Battleship v. Carrier
+country_event = { 
+	id = fra.4
+	title = "Naval Doctrine Dispute"
+	desc = fra.4.d
+	picture = GFX_report_event_ast_navy
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "Orthodox tactics - they've always been reliable."
+		set_global_flag = BATTLESHIP_FOCUS
+		ai_chance = {
+			factor = 65
+		}
+	}
+
+	option = {
+		name = "Something new - it's time to innovate"
+		set_global_flag = CARRIER_FOCUS
+		ai_chance = {
+			factor = 35
+		}
+	}
+}
+
+country_event = { 
+	id = fra.5
+	title = "Anti-Conscription Riots"
+	desc = fra.5.d
+	picture = GFX_report_event_generic_riot
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = { days = 1 }
+
+	fire_only_once = yes
+
+	option = {
+		name = "Damn them!"
+
+		set_global_flag = CONSCRIPTIONRIOTS1
+		add_political_power = -50
+		16 = { damage_building = { type = industrial_complex damage = 1 }
+		damage_building = { type = industrial_complex damage = 1 }
+		damage_building = { type = arms_factory damage = 1 }
+		damage_building = { type = infrastructure damage = 4 } 
+		}
+		29 = { 
+		damage_building = { type = industrial_complex damage = 1 }
+		damage_building = { type = industrial_complex damage = 1 }
+		damage_building = { type = industrial_complex damage = 1 }
+		}
+		20 = {
+		damage_building = { type = industrial_complex damage = 1 }
+		}
+		33 = {
+		damage_building = { type = industrial_complex damage = 1 }
+		}
+	}
+}
+
+country_event = { 
+	id = fra.6
+	title = "Continued Conscription Riots"
+	desc = fra.6.d
+	picture = GFX_report_event_generic_riot
+
+	trigger = {
+		tag = FRA
+		has_global_flag = CONSCRIPTIONRIOTS1
+	}
+
+	mean_time_to_happen = { days = 30 }
+
+	fire_only_once = yes
+
+	option = {
+		name = "Blasted Leftists!"
+		add_political_power = -50
+		set_global_flag = CONSCRIPTIONRIOTS2
+		14 = { damage_building = { type = dockyard damage = 1 }
+		damage_building = { type = dockyard damage = 1 }
+		}
+		19 = { damage_building = { type = dockyard damage = 1 }
+		damage_building = { type = arms_factory damage = 1 }
+		}
+		25 = {
+		damage_building = { type = industrial_complex damage = 1 }
+		}
+		31 = {
+		damage_building = { type = industrial_complex damage = 1 }
+		damage_building = { type = industrial_complex damage = 1 }
+		}
+	}
+}
+
+# Crush the Communists or negotiate?
+country_event = { 
+	id = fra.7
+	title = "Mending the Conscription Crisis"
+	desc = fra.7.d
+	picture = GFX_report_event_military_planning
+
+	trigger = {
+		tag = FRA
+		has_global_flag = CONSCRIPTIONRIOTS2
+	}
+
+	mean_time_to_happen = { days = 20 }
+
+	fire_only_once = yes
+
+	option = {
+		name = "It's time to negotiate, we're no monsters."
+		set_global_flag = FRA_NEGOTIATION
+		ai_chance = {
+			factor = 65
+		}
+	}
+
+	option = {
+		name = "Crack down on the Vandals! No compromise!"
+		set_global_flag = FRA_CRUSH_THE_COMMIES
+		add_political_power = 100
+		add_popularity = {
+			ideology = collectivist
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = libertarian_socialist
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = -0.1
+		}
+		ai_chance = {
+			factor = 35
+		}
+	}
+}
+
+# Negotiating with the leftists
+country_event = { 
+	id = fra.8
+	title = "Negotiations with the Leftists"
+	desc = fra.8.d
+	picture = GFX_report_event_bose_meeting
+
+	trigger = {
+		tag = FRA
+		has_global_flag = FRA_NEGOTIATION
+	}
+
+	mean_time_to_happen = { days = 15 }
+
+	fire_only_once = yes
+
+	option = {
+		name = "Reduce the number of men conscripted."
+		swap_ideas = {
+			remove_idea = FRA_conscription_idea
+			add_idea = FRA_reduced_conscription_idea
+			}
+		add_political_power = -75
+		ai_chance = {
+			factor = 70
+		}
+	}
+
+	option = {
+		name = "Agree to fully repeal the policy."
+		remove_ideas = FRA_conscription_idea
+		add_political_power = 100
+		add_stability = 0.1
+		add_war_support = -0.2
+		ai_chance = {
+			factor = 30
+		}
+	}
+}
+
+# Commies reorganize
+country_event = {
+	id = fra.9
+	title = "The Reds reorganize!"
+	desc = fra.9.d
+	picture = GFX_report_event_military_planning
+
+	trigger = {
+		tag = FRA
+		has_global_flag = FRA_CRUSH_THE_COMMIES
+		date > 1936.9.10
+	}
+
+	mean_time_to_happen = { days = 14 }
+
+	fire_only_once = yes
+
+	option = {
+		name = "Like a infestation of bugs!"
+
+		add_political_power = -50
+
+		add_popularity = {
+			ideology = collectivist
+			popularity = 0.05
+		}
+
+		add_popularity = {
+			ideology = libertarian_socialist
+			popularity = 0.15
+		}
+
+		hidden_effect = {
+			country_event = { days = 15 id = fra.37 }
+		}
+	}
+}
+
+# Red Purge 2: Electric Boogaloo
+country_event = { 
+	id = fra.10
+	title = "Red Purge 2: Electric Boogaloo"
+	desc = fra.10.d
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "Purge them! Crush them! Jail them! For good this time!"
+
+		add_political_power = 150
+
+		add_popularity = {
+			ideology = collectivist
+			popularity = -0.50
+		}
+
+		add_popularity = {
+			ideology = libertarian_socialist
+			popularity = -0.50
+		}
+
+		add_popularity = {
+			ideology = vanguardist
+			popularity = -0.50
+		}
+	}
+
+	option = {
+		name = "Fine! Let them scream to their heart's desire!"
+
+		add_popularity = {
+			ideology = collectivist
+			popularity = 0.05
+		}
+
+		add_popularity = {
+			ideology = libertarian_socialist
+			popularity = 0.05
+		}
+
+		add_popularity = {
+			ideology = vanguardist
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {
+	id = fra.12
+	title = "The London Stock Market Crash"
+	desc = fra.12.d
+	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		date > 1936.9.1
+	}
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+	
+	option = {
+		name = "L'Angleterre, ah, la perfide Angleterre..."
+		add_stability = -0.2
+		add_political_power = -100
+		add_ideas = FRA_lsmc
+		remove_ideas = FRA_british_tariffs
+		}
+	}
+
+#Conscripting from subjects
+country_event = {
+	id = fra.34
+	title = "Dire lack of recruits"
+	desc = fra.34.d
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We need more men, go through with it."
+		add_manpower = 100000
+		add_political_power = -75
+		army_experience = -10
+		VIN = { country_event = fra.35 }
+		ai_chance = {
+			factor = 30
+
+			}
+		}
+
+	option = {
+		name = "Conduct Conscription in the Rhine instead."
+		add_manpower = 50000
+		add_political_power = -10
+		RHI = { country_event = fra.35 }
+		ai_chance = {
+			factor = 30
+			}
+		}
+
+	option = {
+		name = "That rabble? In the Armee d'Terre?"
+		add_political_power = 20
+		army_experience = 20
+		ai_chance = {
+			factor = 40
+			}
+		}
+	}
+
+#Conscripting from subjects
+country_event = {
+	id = fra.35
+	title = "French Conscription!"
+	desc = fra.35.d
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Bastards!"
+		add_manpower = -50000
+		add_political_power = -25
+		}
+	}
+
+country_event = {
+	id = fra.36
+	title = "The Germans are breaking through!"
+	desc = fra.36.d
+	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	trigger = {
+		AND = {
+			tag = FRA
+			28 = { is_controlled_by = GER }
+			GER = { has_war_with = FRA }
+		}
+	}
+
+	option = {
+		name = "Pas un pas en arrière!"
+		add_stability = 0.1
+		add_war_support = 0.1
+		hidden_effect = {
+			add_manpower = 200000
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 10000 producer = FRA }
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = FRA }
+		add_timed_idea = {
+				idea = FRA_desperate_defence
+				days = 120
+			}	
+		}
+	}
+
+# War stimulation
+country_event = {
+	id = fra.37
+	title = "The Economy is stirring!"
+	desc = fra.37.d
+	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		has_war = yes
+		}
+
+	option = {
+		name = "Finally!"
+		add_political_power = 50
+		add_timed_idea = {
+				idea = FRA_war_stim
+				days = 105
+			}	
+		}
+	}
+
+country_event = {
+	id = fra.38
+	title = "A cold day for a General and an Admiral"
+	desc = fra.38.d
+	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		has_country_flag = { flag = FRA_german_threat value > 2 }
+		}
+
+	option = { #Coup imminent
+		name = "We must end the Third Republic, or the Third Republic ends France."
+		ai_chance = { factor = 35 }
+		hidden_effect = {
+			country_event = { days = 60 id = fra.39 }
+		}
+	}
+	option = { #France is not France without Democracy.
+		name = "We cannot destroy French Democracy; it's part of our identity."
+		ai_chance = { factor = 65 }
+	}
+}
+
+country_event = {
+	id = fra.39
+	title = "Military Coup d'état!"
+	desc = fra.39.d
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We were faced with no other choices."
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			country_event = { days = 14 id = fra.40 }
+		}
+		#if = {
+			#limit = { has_idea = very_high_popularity }
+			#effect_tooltip = { swap_ideas = { remove_idea = very_high_popularity add_idea = very_low_popularity } }
+			#hidden_effect = {  swap_ideas = { remove_idea = very_high_popularity add_idea = high_popularity } }
+		#}
+		#if = {
+			#limit = { has_idea = high_popularity }
+			#effect_tooltip = { swap_ideas = { remove_idea = high_popularity add_idea = very_low_popularity } }
+			#hidden_effect = {  swap_ideas = { remove_idea = high_popularity add_idea = normal_popularity } }
+		#}
+		#if = {
+			#limit = { has_idea = normal_popularity }
+			#effect_tooltip = { swap_ideas = { remove_idea = normal_popularity add_idea = very_low_popularity } }
+			#hidden_effect = {  swap_ideas = { remove_idea = normal_popularity add_idea = low_popularity } }
+		#}
+		#if = {
+			#limit = { has_idea = low_popularity }
+			#swap_ideas = { remove_idea = low_popularity add_idea = very_low_popularity }
+		#}
+		custom_effect_tooltip  = FRA_petain_party_pop_enabled
+		clr_country_flag = party_popularity_system_disabled
+		set_country_flag = FRA_NO_ELECTIONS
+		set_country_flag = FRA_COUPED_BY_JUNTA
+		add_manpower = -50000
+		add_stability = -0.1
+		air_experience = -100
+		hidden_effect = {
+			remove_ideas_with_trait = head_of_government
+			remove_ideas_with_trait = foreign_minister
+			remove_ideas_with_trait = economy_minister
+			remove_ideas_with_trait = security_minister
+		}
+		add_ideas = {
+			NFA_Jean_Francois_Darlan_hog_ade
+			NFA_Paul_Baudouin_for_ade
+			NFA_Charles_de_Gaulle_eco_ade
+			NFA_Gouffre_de_Lapradelle_sec_ade
+		}
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.1 }
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+	}
+}
+
+country_event = {
+	id = fra.40
+	title = "Solidifying the Regime"
+	desc = fra.40.d
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Crackdown on agitators and impose press restrictions."
+		ai_chance = { factor = 100 } #Players that don't take this option are objectively retarded
+		hidden_effect = {
+			country_event = { days = 14 id = fra.41 }
+		}
+		#increase_popularity_law = yes
+		add_manpower = -25000
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.3 }
+	}
+	option = {
+		name = "We may be Soldiers, but we're not animals."
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			country_event = { days = 14 id = fra.41 }
+		}
+		add_stability = 0.1
+	}
+}
+
+country_event = {
+	id = fra.41
+	title = "Matters of the Economy"
+	desc = fra.41.d
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Nationalize all industries, both Domestic and Foreign."
+		ai_chance = { factor = 50 }
+		reverse_add_opinion_modifier = {
+			target = GER
+			modifier = FRA_Nationalized_Foreign_Industries
+		}
+		reverse_add_opinion_modifier = {
+			target = ITA
+			modifier = FRA_Nationalized_Foreign_Industries
+		}
+		reverse_add_opinion_modifier = {
+			target = ENG
+			modifier = FRA_Nationalized_Foreign_Industries
+		}
+		reverse_add_opinion_modifier = {
+			target = USA
+			modifier = FRA_Nationalized_Foreign_Industries
+		}
+		#increase_popularity_law = yes
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.1 }
+		add_political_power = 50
+		hidden_effect = {
+			country_event = { days = 14 id = fra.42 }
+		}
+	}
+	option = { #Market Autocracy
+		name = "Enact complete privatization of the Markets."
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+			remove_ideas_with_trait = economy_minister
+		}
+		add_ideas = {
+			FRA_Edouard_Herriot_eco_mli
+		}
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		hidden_effect = {
+			country_event = { days = 14 id = fra.42 }
+		}
+	}
+}
+
+country_event = {
+	id = fra.42
+	title = "Future of the Youth"
+	desc = fra.42.d
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Introduce Combat Training into the curriculum."
+		ai_chance = { factor = 25 }
+		add_manpower = 105000
+		add_war_support = 0.1
+		hidden_effect = {
+			country_event = { days = 14 id = fra.43 }
+		}
+	}
+	option = {
+		name = "Political Indoctrination will suffice."
+		ai_chance = { factor = 75 }
+		#increase_popularity_law = yes
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.1 }
+		add_stability = 0.05
+		hidden_effect = {
+			country_event = { days = 14 id = fra.43 }
+		}
+	}
+}
+
+country_event = {
+	id = fra.43
+	title = "The Radical-left"
+	desc = fra.43.d
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Colonial Deportion is a proper punishment!" #Option was formerly 'Sentence them to Crucifixion!', but unfortunately crucifixion was deemed an unrealistic punishment for the 20th century... For the Junta, at least.
+		ai_chance = { factor = 25 }
+		add_popularity = {
+			ideology = social_democrat
+			popularity = -0.75
+		}
+		add_popularity = {
+			ideology = libertarian_socialist
+			popularity = -0.75
+		}
+		add_popularity = {
+			ideology = collectivist
+			popularity = -0.75
+		}
+		add_popularity = {
+			ideology = vanguardist
+			popularity = -0.75
+		}
+		hidden_effect = {
+			country_event = { days = 14 id = fra.44 }
+		}
+		#increase_popularity_law = yes
+		add_manpower = -50000
+	}
+	option = {
+		name = "Put them behind bars!"
+		ai_chance = { factor = 25 }
+		add_popularity = {
+			ideology = social_democrat
+			popularity = -0.035
+		}
+		add_popularity = {
+			ideology = libertarian_socialist
+			popularity = -0.035
+		}
+		add_popularity = {
+			ideology = collectivist
+			popularity = -0.035
+		}
+		add_popularity = {
+			ideology = vanguardist
+			popularity = -0.035
+		}
+		add_manpower = -25000
+		add_political_power = 75
+		hidden_effect = {
+			country_event = { days = 14 id = fra.44 }
+		}
+	}
+	option = {
+		name = "They can serve their term in the Armee de Terre!"
+		ai_chance = { factor = 50 }
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.025
+		}
+		add_popularity = {
+			ideology = libertarian_socialist
+			popularity = 0.025
+		}
+		add_popularity = {
+			ideology = collectivist
+			popularity = 0.025
+		}
+		add_popularity = {
+			ideology = vanguardist
+			popularity = 0.025
+		}
+		add_manpower = 50000
+		army_experience = 25
+		hidden_effect = {
+			country_event = { days = 14 id = fra.44 }
+		}
+	}
+}
+
+country_event = {
+	id = fra.44
+	title = "Entrenched Regime"
+	desc = fra.44.d
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Vive la Patrie!"
+		increase_popularity_law = yes
+		add_stability = 0.05
+		add_war_support = 0.05
+		ai_chance = { factor = 100 }
+	}
+}
+	
+# - British East Africa Revolt Involvement
+
+country_event = {
+	id = fra.50
+	title = "Revolt in British East Africa"
+	desc = fra.50.d
+	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Condemn British Imperialism in Africa"
+		ai_chance = {
+			base = 80
+		}
+		add_political_power = -50
+		ENG = { country_event = { id = fra.51 days = 1 } }
+	}
+	
+	option = {
+		name = "Send supplies to the rebels"
+		ai_chance = {
+			base = 20
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = -1000 producer = FRA }
+		ENG = { 
+			country_event = { id = fra.52 days = 1 } 
+			add_timed_idea = {
+				idea = ENG_col_uprising_france
+				days = 150
+			}
+		}
+	}
+	
+	option = {
+		name = "This isn't worth our attention"
+		ai_chance = {
+			base = 0
+		}
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = fra.51
+	title = "France condemns our rule in Africa"
+	desc = fra.51.d
+	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Lodge an official diplomatic protest"
+		ai_chance = {
+			base = 25
+		}
+		add_political_power = -50
+		add_opinion_modifier = {
+			target = FRA
+			modifier = ENG_diplomatic_spat
+		}
+		FRA = { country_event = { id = fra.53 days = 1 } }
+	}
+	
+	option = {
+		name = "Demand they issue a retraction"
+		ai_chance = {
+			base = 75
+		}
+		add_political_power = -50
+		add_opinion_modifier = {
+			target = FRA
+			modifier = ENG_diplomatic_spat
+		}
+		FRA = { country_event = { id = fra.54 days = 1 } }
+	}
+}
+
+country_event = {
+	id = fra.52
+	title = "Rebels receive foreign supplies"
+	desc = fra.52.d
+	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Demand France cease assisting them"
+		ai_chance = {
+			base = 40
+		}
+		add_political_power = -50
+		add_opinion_modifier = {
+			target = FRA
+			modifier = ENG_diplomatic_spat
+		}
+		FRA = { country_event = { id = fra.55 days = 1 } }
+	}
+	
+	option = {
+		name = "Bring proof of French involvement to the world"
+		ai_chance = {
+			base = 60
+		}
+		add_political_power = -50
+		add_opinion_modifier = {
+			target = FRA
+			modifier = ENG_diplomatic_spat
+		}
+		hidden_effect = {
+			random_other_country = {
+				news_event = { id = uknews.19 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fra.53
+	title = "Britain lodges diplomatic protest"
+	desc = fra.53.d
+	picture = report_event_generic_conference
+	
+	immediate = { ENG = { set_country_flag = ear_complaint } }
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Who cares?"
+		add_opinion_modifier = {
+			target = ENG
+			modifier = ENG_diplomatic_spat
+		}
+		hidden_effect = {
+			random_other_country = {
+				news_event = { id = uknews.19 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fra.54
+	title = "Britain demands we retract our condemnation"
+	desc = fra.54.d
+	picture = report_event_generic_conference
+	
+	immediate = { ENG = { set_country_flag = ear_rejected } }
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Never!"
+		add_opinion_modifier = {
+			target = ENG
+			modifier = ENG_diplomatic_spat
+		}
+		hidden_effect = {
+			random_other_country = {
+				news_event = { id = uknews.19 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fra.55
+	title = "Britain demands we cease support for the rebels"
+	desc = fra.55.d
+	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Issue a firm rejection of their demand"
+		ai_chance = {
+			base = 60
+		}
+		add_opinion_modifier = {
+			target = ENG
+			modifier = ENG_diplomatic_spat
+		}
+		ENG = { country_event = { id = fra.56 days = 1 } }
+	}
+	
+	option = {
+		name = "Attempt to supply the rebels more covertly"
+		ai_chance = {
+			base = 40
+		}
+		add_opinion_modifier = {
+			target = ENG
+			modifier = ENG_diplomatic_spat
+		}
+		hidden_effect = {
+			ENG = { set_country_flag = ear_covert }
+			random_other_country = {
+				news_event = { id = uknews.20 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fra.56
+	title = "France rejects our demand"
+	desc = fra.56.d
+	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Issue an embargo on French goods"
+		ai_chance = {
+			base = 80
+		}
+		add_opinion_modifier = { target = FRA modifier = embargo }
+		every_country = {
+			limit = {
+				is_puppet_of = ENG
+			}
+			add_opinion_modifier = { target = FRA modifier = embargo }
+		}
+		FRA = { country_event = { id = fra.57 days = 1 } }
+	}
+	
+	option = {
+		name = "Forget it"
+		ai_chance = {
+			base = 20
+		}
+		hidden_effect = {
+			set_country_flag = ear_covert
+			random_other_country = {
+				news_event = { id = uknews.20 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fra.57
+	title = "Britain Embargoes Our Trade!"
+	desc = fra.57.d
+	picture = report_event_generic_conference
+	
+	immediate = { ENG = { set_country_flag = ear_embargo } }
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Damn them!"
+		hidden_effect = {
+			set_country_flag = ear_covert
+			random_other_country = {
+				news_event = { id = uknews.20 }
+			}
+		}
+	}
+}
+
+# Italy asks us to join tech sharing group - added by Drowse
+country_event = {
+	id = fra.3000
+	title = fra.3000.t
+	desc = fra.3000.d
+	picture = GFX_report_event_physics_lab_02
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = fra.3000a
+		set_country_flag = ITA_latin_research
+		add_to_tech_sharing_group = latin_committee_research
+		}
+	}
+	
+# military exercize with Italy - added by Drowse
+country_event = {
+	id = fra.3001
+	title = fra.3001.t
+	desc = fra.3001.d
+	picture = GFX_report_event_chinese_army_training
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = fra.3001.a
+		army_experience = 10
+		air_experience = 10
+		navy_experience = 10
+		ITA = {
+			country_event = { id = italy.63 }
+		}
+	}
+}

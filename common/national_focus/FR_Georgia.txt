@@ -1,0 +1,1799 @@
+### FOCUS TREE FOR GEORGIA
+### DONE BY ARSER (/u/TheNoobArser)
+### SPECIAL THANKS GO TO THE CAUCASIAN SERVER ON DISCORD
+
+focus_tree = {
+	id = FR_Georgia
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = GEO
+		}
+	}
+	continuous_focus_position = { x = 50 y = 3200 }
+	default = no
+
+	shared_focus = GEO_industry
+	shared_focus = GEO_army
+	shared_focus = GEO_navy
+	shared_focus = GEO_airforce
+#### POLITICAL TREE ####
+	focus = {
+		id = GEO_1936_elections
+		icon = GFX_goal_generic_elections
+		available = {
+			has_country_flag = elections
+		}
+		cost = 0.00
+		x = 8
+		y = 0
+		completion_reward = {
+			add_political_power = 100
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+ ### PRO-UNION ###	
+	focus = {
+		id = GEO_pro_union_victory
+		icon = GFX_goal_red_eagle
+		cost = 0.00
+		prerequisite = {
+			focus = GEO_1936_elections
+		}
+		mutually_exclusive = {
+			focus = GEO_become_SSR
+		}
+		available = {
+			has_country_flag = pro_union_won
+		}
+		x = 6
+		y = 1
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			set_country_flag = sphered
+			set_country_flag = sphere_1_by_SOV
+			set_country_flag = sphere_2_by_SOV
+			set_country_flag = sphere_3_by_SOV
+			add_ideas = sphered_idea_3
+			SOV = { set_country_flag = sphered_GEO }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	## SSR ##
+	focus = {
+		id = GEO_become_SSR
+		icon = GFX_goal_commune_politics
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_pro_union_victory
+		}
+		mutually_exclusive = {
+			focus = GEO_only_join_international
+		}
+		x = 5
+		y = 2
+		completion_reward = {
+			SOV = {
+				if = {
+					limit = {
+						has_dlc = "Together for Victory"
+					}
+					set_autonomy = {
+						target = GEO
+						autonomous_state = associated_ssr
+						freedom_level = 0.5
+					}
+					else = {
+						puppet = GEO
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = All_News_Events
+						has_global_flag = Important_News_Events
+					}
+				}
+				news_event = { id = ge.10004 }
+			}
+			set_cosmetic_tag = GEO_SSR
+			hidden_effect = { country_event = { id = ge.120 days = 30 } }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_collie_takeover
+		icon = GFX_goal_collie_politics
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_become_SSR
+		}
+		mutually_exclusive = {
+			focus = GEO_our_union
+		}
+		x = 4
+		y = 3
+		completion_reward = {
+			set_politics = { ruling_party = collectivist elections_allowed = no }
+			add_popularity = { ideology = collectivist popularity = 0.2 }
+			add_popularity = { ideology = vanguardist popularity = 0.1 }
+			add_stability = -0.2
+			remove_ideas = GEO_menshevik_schism
+		}
+		ai_will_do = {
+			factor = 160
+		}
+
+	}
+	focus = {
+		id = GEO_find_new_partners
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_collie_takeover
+		}
+		x = 4
+		y = 4
+		completion_reward = {
+			add_popularity = { ideology = collectivist popularity = 0.05 }
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}	
+	focus = {
+		id = GEO_realpolitik
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_find_new_partners
+		}
+		x = 4
+		y = 5
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = -0.1
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	# VANG #
+	focus = {
+		id = GEO_collie_betrayal
+		icon = GFX_slaughter_the_weak
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_realpolitik
+		}
+		mutually_exclusive = {
+			focus = GEO_still_alive
+		}
+		x = 2
+		y = 6
+		completion_reward = {
+			add_political_power = 150
+			add_popularity = { ideology = vanguardist popularity = 0.2 }
+			add_stability = -0.05
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_vang_takeover
+		icon = GFX_goal_ideology_vanguardist
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_collie_betrayal
+		}
+		x = 2
+		y = 7
+		completion_reward = {
+			set_politics = { ruling_party = vanguardist elections_allowed = no }
+			add_war_support = -0.2
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_crush_unloyalty
+		icon = GFX_goal_red_star_soldier
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_vang_takeover
+		}
+		x = 2
+		y = 8
+		completion_reward = {
+			remove_ideas = GEO_separatism
+			add_popularity = { ideology = collectivist popularity = -0.1 }
+			add_stability = 0.1
+			add_popularity = { ideology = libertarian_socialist popularity = -0.1 }
+			add_popularity = { ideology = social_democrat popularity = -0.1 }
+			add_popularity = { ideology = social_conservative popularity = -0.03 }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_vang_constitution
+		icon = GFX_goal_skull_treaty
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_crush_unloyalty
+		}
+		x = 2
+		y = 9
+		completion_reward = {
+			add_ideas = GEO_vang_constitution_idea
+			add_ideas = war_economy
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_their_worst_nightmare
+		icon = GFX_goal_refugee_management
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_vang_constitution
+		}
+		x = 2
+		y = 10
+		completion_reward = {
+			add_political_power = 200
+			add_ideas = GEO_their_worst_nightmare_idea
+			add_timed_idea = { idea = GEO_restabilization days = 365 }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	# COLLIE #
+	focus = {
+		id = GEO_still_alive
+		icon = GFX_goal_generic_demand_territory
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_realpolitik
+		}
+		mutually_exclusive = {
+			focus = GEO_collie_betrayal
+		}
+		x = 4
+		y = 6
+		completion_reward = {
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_crush_revolts
+		icon = GFX_goal_revolution
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_still_alive
+		}
+		x = 4
+		y = 8
+		completion_reward = {
+			remove_ideas = GEO_separatism
+			add_war_support = -0.1
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_handle_instability
+		icon = GFX_goal_authority
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_crush_revolts
+		}
+		x = 4
+		y = 9
+		completion_reward = {
+			add_stability = 0.1
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_another_SSR
+		icon = GFX_focus_red_treaty
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_handle_instability
+		}
+		x = 4
+		y = 10
+		completion_reward = {
+			add_ideas = GEO_another_SSR_idea
+			add_timed_idea = { idea = GEO_restabilization days = 365 }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	# LIBSOC #
+		focus = {
+		id = GEO_our_union
+		icon = GFX_focus_YUG_pan_slavic_congress
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_become_SSR
+		}
+		mutually_exclusive = {
+			focus = GEO_collie_takeover
+		}
+		x = 6
+		y = 3
+		completion_reward = {
+			remove_ideas = GEO_menshevik_schism
+			add_stability = 0.1
+			add_popularity = { ideology = libertarian_socialist popularity = 0.1 }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_libsoc_support
+		icon = GFX_goal_ideology_libsoc
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_our_union
+		}
+		x = 6
+		y = 4
+		completion_reward = {
+			add_popularity = { ideology = libertarian_socialist popularity = 0.05 }
+			add_opinion_modifier = { target = SOV modifier = GEO_libsoc }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_benefits_of_union
+		icon = GFX_goal_red_star_pact
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_libsoc_support
+		}
+		x = 6
+		y = 5
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_influence_USSR_politics
+		icon = GFX_goal_continuous_political
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_benefits_of_union
+		}
+		mutually_exclusive = {
+			focus = GEO_collie_betrayal
+		}
+		x = 6
+		y = 6
+		completion_reward = {
+			SOV = { add_ideas = GEO_menshevik_influence }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_soviet_arbitration
+		icon = GFX_goal_red_star_dove
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_influence_USSR_politics
+		}
+		x = 6
+		y = 8
+		completion_reward = {
+			remove_ideas = GEO_separatism
+			SOV = { country_event = { id = ge.110 } }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_one_part_of_many
+		icon = GFX_goal_generic_national_unity_red
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_soviet_arbitration
+		}
+		x = 6
+		y = 10
+		completion_reward = {
+			add_ideas = GEO_one_part_idea
+			add_timed_idea = { idea = GEO_restabilization days = 365 }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	# JOIN ONLY INTERNATIONAL, REUNITE MENSHEVIKS #
+		focus = {
+		id = GEO_only_join_international
+		icon = GFX_goal_red_star_guard
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_pro_union_victory
+		}
+		mutually_exclusive = {
+			focus = GEO_become_SSR
+		}
+		x = 7
+		y = 2
+		completion_reward = {
+			SOV = { add_to_faction = GEO }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	### ANTI-UNION ###
+	focus = {
+		id = GEO_anti_union_victory
+		icon = GFX_goal_liberty
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_1936_elections
+		}
+		available = {
+			has_country_flag = anti_union_won
+		}
+		x = 10
+		y = 1
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	# RUSSIA PROVES TO BE COLLIE/VANG, REUNITE MENSHEVIKS #
+	focus = {
+		id = GEO_correct_choice
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_anti_union_victory
+		}
+		available = {
+			NOT = {
+				SOV = { has_government = libertarian_socialist }
+			}
+		}
+		mutually_exclusive = {
+			focus = GEO_become_SSR
+			focus = GEO_wide_coalition
+		}
+		x = 9
+		y = 2
+		completion_reward = {
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_mend_schism
+		icon = GFX_goal_red_unity
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_only_join_international
+			focus = GEO_correct_choice
+		}
+		x = 8
+		y = 3
+		completion_reward = {
+			remove_ideas = GEO_menshevik_schism
+			if = {
+				limit = {
+					has_completed_focus = GEO_only_join_international
+				}
+				add_popularity = { ideology = libertarian_socialist popularity = 0.15 }
+				add_popularity = { ideology = social_democrat popularity = -0.2 }
+				else = {
+					add_popularity = { ideology = libertarian_socialist popularity = -0.2 }
+					add_popularity = { ideology = social_democrat popularity = 0.15 }
+				}
+			}
+			set_country_flag = GEO_united_menshevik_party
+			set_party_name = { ideology = libertarian_socialist long_name = GEO_menshevik_party_long name = GEO_menshevik_party}
+			set_party_name = { ideology = social_democrat long_name = GEO_menshevik_party_long name = GEO_menshevik_party}
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+		focus = {
+		id = GEO_keeping_what_worked
+		icon = GFX_goal_red_star_gold_wreath
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_mend_schism
+		}
+		x = 8
+		y = 4
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 100
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_focus_on_ourselves
+		icon = GFX_goal_generic_isolation
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_keeping_what_worked
+		}
+		x = 8
+		y = 5
+		completion_reward = {
+			add_stability = 0.05
+			add_timed_idea = { idea = GEO_neutrality_idea days = 180 }	
+		}
+		ai_will_do = {
+			factor = 160
+		}		
+	}
+	focus = {
+		id = GEO_local_menshevik_leadership
+		icon = GFX_focus_generic_self_management
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_focus_on_ourselves
+		}
+		x = 8
+		y = 8
+		completion_reward = {
+			remove_ideas = GEO_separatism
+			if = {
+				limit = {
+					has_country_flag = pro_union_won
+				}
+				add_ideas = GEO_local_ls_menshevik_leadership_idea
+				else = {
+					add_ideas = GEO_local_sd_menshevik_leadership_idea
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_stable_once_more
+		icon = GFX_goal_HOL_CNA_restored_stability
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_local_menshevik_leadership
+		}
+		x = 8
+		y = 10
+		completion_reward = {
+			add_ideas = GEO_stable_once_more_idea
+			add_timed_idea = { idea = GEO_restabilization days = 365 }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	# COALITION/SOCLIB/SOCCON #
+	focus = {
+		id = GEO_wide_coalition
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_anti_union_victory
+		}
+		mutually_exclusive = {
+			focus = GEO_correct_choice
+		}
+		x = 11
+		y = 2
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = -100
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_painful_compromises
+		icon = GFX_focus_generic_concessions
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_wide_coalition
+		}
+		x = 11
+		y = 3
+		completion_reward = {
+			remove_ideas = GEO_menshevik_schism
+			add_popularity = { ideology = social_democrat popularity = -0.05 }
+			add_popularity = { ideology = social_liberal popularity = 0.1 }
+			add_popularity = { ideology = social_conservative popularity = 0.1 }
+			add_popularity = { ideology = market_liberal popularity = 0.03 }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_free_market
+		icon = GFX_goal_generic_trade
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_painful_compromises
+		}
+		x = 10
+		y = 4
+		completion_reward = {
+			add_ideas = free_trade
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_talk_with_church
+		icon = GFX_goal_georgian_orthodox_state
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_painful_compromises
+		}
+		x = 12
+		y = 4
+		completion_reward = {
+			add_political_power = 150
+			add_popularity = { ideology = social_democrat popularity = -0.05 }
+			add_popularity = { ideology = social_conservative popularity = 0.1 }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_monarchy_referendum
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_talk_with_church
+		}
+		x = 14
+		y = 5
+		completion_reward = {
+			country_event = { id = ge.10 }
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	#-# COALITION #-#
+		focus = {
+		id = GEO_keep_social_reforms
+		icon = GFX_goal_generic_consumer_goods
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_free_market
+		}
+		mutually_exclusive = {
+			focus = GEO_dead_coalition
+		}
+		x = 10
+		y = 5
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_historical_compromise
+		icon = GFX_goal_generic_improve_relations
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_keep_social_reforms
+		}
+		x = 10
+		y = 6
+		completion_reward = {
+			add_popularity = { ideology = social_democrat popularity = 0.15 }
+			add_popularity = { ideology = social_conservative popularity = -0.1 }
+			add_popularity = { ideology = social_liberal popularity = -0.05 }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_moderate_alliance
+		icon = GFX_goal_government_icon
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_historical_compromise
+		}
+		x = 10
+		y = 7
+		completion_reward = {
+			add_stability = 0.1
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_wide_consensus
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_moderate_alliance
+		}
+		x = 10
+		y = 8
+		completion_reward = {
+			remove_ideas = GEO_separatism
+			add_war_support = 0.1
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_socially_united
+		icon = GFX_goal_generic_national_unity
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_wide_consensus
+		}
+		x = 10
+		y = 10
+		completion_reward = {
+			add_ideas = GEO_socially_united_idea
+			add_timed_idea = { idea = GEO_restabilization days = 365 }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	#-# NON COALITION - SOCLIB/SOCCON #-#
+	focus = {
+		id = GEO_dead_coalition
+		icon = GFX_goal_broken_red_star
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_talk_with_church
+		}
+		prerequisite = {
+			focus = GEO_free_market
+		}
+		mutually_exclusive = {
+			focus = GEO_keep_social_reforms
+		}
+		x = 12
+		y = 5
+		completion_reward = {
+			add_stability = -0.1
+			add_popularity = { ideology = social_democrat popularity = -0.1 }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	#--# SOCLIB #--#
+	focus = {
+		id = GEO_snap_elections
+		icon = GFX_goal_generic_elections
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_dead_coalition
+		}
+		x = 12
+		y = 6
+		completion_reward = {
+			country_event = { id = ge.3 }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_socfed_plurality
+		icon = GFX_goal_ideology_social_liberal
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_snap_elections
+		}
+		mutually_exclusive = {
+			focus = GEO_natdem_plurality
+		}
+		available = {
+			has_country_flag = SF_won
+		}
+		x = 12
+		y = 7
+		completion_reward = {
+			add_popularity = { ideology = social_liberal popularity = 0.05 }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_federal_system
+		icon = GFX_focus_generic_self_management
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_socfed_plurality
+		}
+		x = 12
+		y = 8
+		completion_reward = {
+			remove_ideas = GEO_separatism
+			add_political_power = -100
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_social_market
+		icon = GFX_goal_generic_positive_trade_relations_gold
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_federal_system
+		}
+		x = 12
+		y = 9
+		completion_reward = {
+			add_ideas = GEO_social_market_idea
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_fair_georgia
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_social_market
+		}
+		x = 12
+		y = 10
+		completion_reward = {
+			add_ideas = GEO_fair_georgia_idea
+			add_timed_idea = { idea = GEO_restabilization days = 365 }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	#--# NATDEM #--#
+	focus = {
+		id = GEO_natdem_plurality
+		icon = GFX_goal_ideology_social_conservative
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_snap_elections
+		}
+		mutually_exclusive = {
+			focus = GEO_socfed_plurality
+		}
+		available = {
+			has_country_flag = EDP_won
+		}
+		x = 14
+		y = 7
+		completion_reward = {
+			add_popularity = { ideology = social_conservative popularity = 0.05 }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_forced_centralization
+		icon = GFX_goal_generic_political_pressure
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_natdem_plurality
+		}
+		x = 14
+		y = 8
+		completion_reward = {
+			remove_ideas = GEO_separatism
+			add_stability = -0.1
+			add_political_power = 100
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_minimal_welfare
+		icon = GFX_focus_empty_coffers
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_forced_centralization
+		}
+		x = 14
+		y = 9
+		completion_reward = {
+			add_ideas = GEO_minimal_welfare_idea
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_all_are_georgians
+		icon = GFX_focus_generic_little_entente
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_minimal_welfare
+		}
+		x = 14
+		y = 10
+		completion_reward = {
+			add_ideas = GEO_greater_georgia_revanchism
+			add_timed_idea = { idea = GEO_restabilization days = 365 }	
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+#### FOREIGN POLICY ####
+	focus = {
+		id = GEO_foreign_policy
+		icon = GFX_goal_generic_alliance
+		available = {
+			OR = {
+				has_completed_focus = GEO_collie_betrayal
+				has_completed_focus = GEO_still_alive
+				has_completed_focus = GEO_our_union
+				has_completed_focus = GEO_mend_schism
+				has_completed_focus = GEO_keep_social_reforms
+				has_completed_focus = GEO_socfed_plurality
+				has_completed_focus = GEO_natdem_plurality
+				has_completed_focus = GEO_STA_return
+			}
+		}
+		cost = 0.00
+		x = 10
+		y = 12
+		completion_reward = {
+			add_political_power = 50
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	### SSR ###
+	focus = {
+		id = GEO_SSR_policy
+		icon = GFX_focus_red_treaty
+		cost = 0.00
+		prerequisite = {
+			focus = GEO_foreign_policy
+		}
+		mutually_exclusive = {
+			focus = GEO_our_ancient_claims
+			focus = GEO_revive_transcaucasia
+		}
+		available = {
+			is_puppet_of = SOV
+		}
+		x = 3
+		y = 13
+		completion_reward = {
+			add_political_power = 25
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	## GOOD RELATIONS WITH THE SSRS - LIBSOC/COLLIE ##
+	focus = {
+		id = GEO_friendliness
+		icon = GFX_goal_social_commune
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_SSR_policy
+		}
+		mutually_exclusive = {
+			focus = GEO_expansion
+		}
+		available = {
+			NOT = {
+				has_government = vanguardist
+			}
+		}
+		x = 1
+		y = 14
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_puppet_of = SOV
+				}
+				add_opinion_modifier = { target = GEO modifier = GEO_SSR_friendliness_opinion }
+			}
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_soviet_industrial_help
+		icon = GFX_goal_collie_industry
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_friendliness
+		}
+		x = 1
+		y = 15
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}				
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_expeditionary_forces
+		icon = GFX_goal_volunteer_alliance
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_soviet_industrial_help
+		}
+		x = 1
+		y = 16
+		completion_reward = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = -800 }	
+			SOV = { country_event = { id = ge.900 } }	
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	## EXPANSION - VANG ##
+	focus = {
+		id = GEO_expansion
+		icon = GFX_goal_generic_territory_or_war
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_SSR_policy
+		}
+		mutually_exclusive = {
+			focus = GEO_friendliness
+		}
+		available = {
+			has_government = vanguardist
+		}
+		x = 5
+		y = 14
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_puppet_of = SOV
+				}
+				add_opinion_modifier = { target = GEO modifier = GEO_unfriendliness }
+			}
+			add_war_support = 0.2
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_ties_to_soviet_leadership
+		icon = GFX_goal_red_star_pact
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_expansion
+		}
+		x = 5
+		y = 15
+		completion_reward = {
+			SOV = { add_opinion_modifier = { target = GEO modifier = GEO_suck_soviet } }
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_invade_azerbaijan
+		icon = GFX_goal_Cutdown_Azerbaijan
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_ties_to_soviet_leadership
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = AZR
+				AZR = { is_puppet_of = SOV }
+			}
+		}
+		x = 4
+		y = 16
+		completion_reward = {
+			AZR = { every_owned_state = { add_claim_by = GEO } }
+			declare_war_on = { target = AZR type = annex_everything }
+			set_country_flag = AZR_OCCUPIED
+			add_war_support = 0.05
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+	focus = {
+		id = GEO_invade_armenia
+		icon = GFX_goal_Cutdown_Armenia
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_ties_to_soviet_leadership
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = ARM
+				ARM = { is_puppet_of = SOV }
+			}
+		}
+		x = 6
+		y = 16
+		completion_reward = {
+			ARM = { every_owned_state = { add_claim_by = GEO } }
+			declare_war_on = { target = ARM type = annex_everything }
+			set_country_flag = ARM_OCCUPIED
+			add_war_support = 0.05
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	focus = {
+		id = GEO_form_socialist_transcaucasia
+		icon = GFX_commie_transcaucasia
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_invade_armenia
+		}
+		prerequisite = {
+			focus = GEO_invade_azerbaijan
+		}
+		available = {
+			354 = { is_owned_by = GEO }
+			353 = { is_owned_by = GEO }
+			230 = { is_owned_by = GEO }
+			229 = { is_owned_by = GEO }
+		}
+		x = 5
+		y = 17
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = AZR
+						is_core_of = ARM
+					}
+				}
+				add_core_of = GEO
+			}
+			set_cosmetic_tag = GEO_TCF
+			add_war_support = 0.1
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	### TRANSCAUCASIAN FEDERATION ###
+	focus = {
+		id = GEO_revive_transcaucasia
+		icon = GFX_goal_new_treaty
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_foreign_policy
+		}
+		mutually_exclusive = {
+			focus = GEO_our_ancient_claims
+			focus = GEO_SSR_policy
+		}
+		available = {
+			OR = {
+				has_government = social_democrat
+				has_government = social_liberal
+			}
+		}
+		x = 8
+		y = 13
+		completion_reward = {
+			increase_ruling_party_popularity_by_5 = yes
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_armenia_talks
+		icon = GFX_GEOARM
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_revive_transcaucasia
+		}
+		x = 8
+		y = 14
+		completion_reward = {
+			country_event = { id = ge.150 }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_azerbaijan_talks
+		icon = GFX_GEOAZR
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_armenia_talks
+		}
+		x = 8
+		y = 15
+		completion_reward = {
+			country_event = { id = ge.151 }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_transcaucasia_campaign
+		icon = GFX_transcaucasia_campaign
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_azerbaijan_talks
+		}
+		x = 8
+		y = 16
+		completion_reward = {
+			custom_effect_tooltip = GEO_increase_trans_opinions
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_transcaucasia_referendum
+		icon = GFX_goal_generic_elections
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_transcaucasia_campaign
+		}
+		x = 8
+		y = 17
+		completion_reward = {
+			country_event = { id = ge.152 }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_form_transcaucasia
+		icon = GFX_form_transcaucasia
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_transcaucasia_referendum
+		}
+		available = {
+			has_country_flag = GEO_transcaucasia_formed
+		}
+		x = 8
+		y = 18
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = AZR
+						is_core_of = ARM
+					}
+				}
+				add_core_of = GEO
+			}
+			if = {
+				limit = {
+					has_country_flag = GEO_monarchy
+				}
+				set_cosmetic_tag = GEO_TCF_MON
+				else = {
+					set_cosmetic_tag = GEO_TCF
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = GEO_united_menshevik_party
+				}
+				set_party_name = { ideology = libertarian_socialist long_name = GEO_TCF_menshevik_party_long name = GEO_TCF_menshevik_party}
+				set_party_name = { ideology = social_democrat long_name = GEO_TCF_menshevik_party_long name = GEO_TCF_menshevik_party}
+				else = {
+					set_party_name = { ideology = libertarian_socialist long_name = GEO_TCF_libertarian_socialist_party_long name = GEO_TCF_libertarian_socialist_party}
+					set_party_name = { ideology = social_democrat long_name = GEO_TCF_social_democrat_party_long name = GEO_TCF_social_democrat_party}
+				}
+			}
+			country_event = { id = ge.199 days = 30 } #Transcaucasian elections
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	### GREATER GEORGIA - NATDEM ###
+	focus = {
+		id = GEO_our_ancient_claims
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 0.00
+		prerequisite = {
+			focus = GEO_foreign_policy
+		}
+		mutually_exclusive = {
+			focus = GEO_defense_pact
+			focus = GEO_revive_transcaucasia
+			focus = GEO_SSR_policy
+		}
+		available = { has_government = social_conservative }
+		x = 13
+		y = 13
+		completion_reward = {
+			add_political_power = -50
+			add_ideas = GEO_invade_everyone
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_trapizoni_plebiscite
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_our_ancient_claims
+		}
+		mutually_exclusive = {
+			focus = GEO_claim_armenia
+		}
+		x = 10
+		y = 14
+		completion_reward = {
+			random_list = { 60 = { country_event = { id = ge.160 } } 40 = { country_event = { id = ge.161 } } }
+		}
+		ai_will_do = {
+			factor = 80
+		}
+	}
+	focus = {
+		id = GEO_claim_armenia
+		icon = GFX_goal_Cutdown_Armenia
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_our_ancient_claims
+		}
+		mutually_exclusive = {
+			focus = GEO_trapizoni_plebiscite
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = ARM
+			}
+		}
+		x = 12
+		y = 14
+		completion_reward = {
+			ARM = { every_owned_state = { add_claim_by = GEO } }
+			declare_war_on = { target = ARM type = annex_everything }
+			set_country_flag = ARM_OCCUPIED
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = { has_war = yes factor = 0 }
+		}
+	}
+	focus = {
+		id = GEO_claim_old_trapizoni
+		icon = GFX_goal_Cutdown_Ottoman_Empire
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_claim_armenia
+			focus = GEO_trapizoni_plebiscite
+		}
+		mutually_exclusive = {
+			focus = GEO_trapizoni_plebiscite
+		}
+		available = {
+			NOT = {
+				OR = {
+					is_in_faction_with = TUR
+					is_in_faction_with = TRT
+				}
+			}
+		}
+		x = 11
+		y = 15
+		completion_reward = {
+			778 = { add_claim_by = GEO }
+			355 = { add_claim_by = GEO }
+			356 = { add_claim_by = GEO }
+			777 = { add_claim_by = GEO }
+			if = {
+				limit = {
+					OR = {
+						778 = { is_owned_by = TUR }
+						355 = { is_owned_by = TUR }
+						356 = { is_owned_by = TUR }
+						777 = { is_owned_by = TUR }
+					}
+				}
+				declare_war_on = { type = take_state_focus target = TUR generator = { 778 355 356 777 } }
+				set_country_flag = TR_GEO_WAR
+			}
+			if = {
+				limit = {
+					OR = {
+						778 = { is_owned_by = TRK }
+						355 = { is_owned_by = TRK }
+						356 = { is_owned_by = TRK }
+						777 = { is_owned_by = TRK }
+					}
+				}
+				declare_war_on = { type = take_state_focus target = TRK generator = { 778 355 356 777 } }
+				set_country_flag = TR_GEO_WAR
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = { has_war = yes factor = 0 }
+		}
+	}
+	focus = {
+		id = GEO_claim_azerbaijan
+		icon = GFX_goal_Cutdown_Azerbaijan
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_our_ancient_claims
+		}
+		mutually_exclusive = {
+			focus = GEO_trapizoni_plebiscite
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = AZR
+			}
+		}
+		x = 13
+		y = 15
+		completion_reward = {
+			AZR = { every_owned_state = { add_claim_by = GEO } }
+			declare_war_on = { target = AZR type = annex_everything }
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = { has_war = yes factor = 0 }
+		}
+	}
+	focus = {
+		id = GEO_exploit_soviet_weakness
+		icon = GFX_Cutdown_the_Soviet_Union
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_our_ancient_claims
+		}
+		x = 15
+		y = 14
+		completion_reward = {
+			GER = { country_event = { id = ge.170 } }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	focus = {
+		id = GEO_conflict_over_north_caucasia
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_exploit_soviet_weakness
+		}
+		bypass = {
+			859 = { is_owned_by = GEO }
+			233 = { is_owned_by = GEO }
+			857 = { is_owned_by = GEO }
+			860 = { is_owned_by = GEO }
+			232 = { is_owned_by = GEO }
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = GOR
+			}
+		}
+		x = 15
+		y = 15
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = GOR
+						is_core_of = DAG
+					}
+				}
+				add_claim_by = GEO
+			}
+			if = {
+				limit = {
+					GOR = { is_subject_of = SOV }
+				}
+				SOV = { country_event = ge.180 }
+				else = {
+					set_country_flag = SOV_GEO_WAR
+					if = { 
+						limit = {
+							country_exists = GOR
+							country_exists = DAG
+						}
+						declare_war_on = { type = annex_everything target = GOR }
+						declare_war_on = { type = annex_everything target = DAG }
+						else = {
+							if = {
+								limit = {
+									any_state = {
+										OR = {
+											AND = {
+												is_core_of = GOR
+												is_controlled_by = SOV
+											}
+											AND = {
+												is_core_of = DAG
+												is_controlled_by = SOV
+											}
+										}
+									}
+								}
+								declare_war_on = { type = take_state_focus target = SOV generator = { 859 233 857 860 232 } }
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = { has_war = yes factor = 0 }
+		}
+	}
+	focus = {
+		id = GEO_claim_crimea_krasnodar
+		icon = GFX_goal_generic_demand_territory
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_conflict_over_north_caucasia
+		}
+		bypass = {
+			OR = {
+				AND = {
+					234 = { is_owned_by = GEO }
+					137 = { is_owned_by = GEO }
+				}
+				NOT = {
+					234 = { is_owned_by = SOV }
+					137 = { is_owned_by = SOV }
+				}
+			}
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = SOV
+			}
+		}
+		x = 16
+		y = 16
+		completion_reward = {
+			234 = { add_claim_by = GEO }
+			137 = { add_claim_by = GEO }
+			declare_war_on = { type = take_state_focus target = SOV generator = { 234 137 } }
+			set_country_flag = SOV_GEO_WAR
+			set_country_flag = demand_crimea
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = { has_war = yes factor = 0 }
+		}
+	}
+	focus = {
+		id = GEO_greater_georgia
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_claim_old_trapizoni
+		}
+		prerequisite = {
+			focus = GEO_conflict_over_north_caucasia
+		}
+		prerequisite = {
+			focus = GEO_claim_azerbaijan
+		}
+		available = {
+			354 = { is_owned_by = GEO }
+			353 = { is_owned_by = GEO }
+			230 = { is_owned_by = GEO }
+			229 = { is_owned_by = GEO }
+		}
+		x = 13
+		y = 17
+		completion_reward = {
+			set_cosmetic_tag = GEO_GREAT
+			add_popularity = { ideology = social_conservative popularity = 0.2 }
+			add_stability = 0.1
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	### TBILISI PACT ###
+	focus = {
+		id = GEO_defense_pact
+		icon = GFX_goal_generic_major_alliance
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_foreign_policy
+		}
+		mutually_exclusive = {
+			focus = GEO_our_ancient_claims
+		}
+		available = {
+			is_in_faction = no
+			NOT = {
+				FRA = { has_guaranteed = GEO }
+				ENG = { has_guaranteed = GEO }
+			}
+		}
+		x = 16
+		y = 13
+		completion_reward = {
+			create_faction = "tbilisi_pact"
+			custom_effect_tooltip = GEO_can_invite_alliance
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+	### BRITISH PROTECTION ###
+	focus = {
+		id = GEO_request_british_protection
+		icon = GFX_imperial_army
+		cost = 5.00
+		prerequisite = {
+			focus = GEO_foreign_policy
+		}
+		available = {
+			is_in_faction = no
+			is_puppet = no
+		}
+		x = 18
+		y = 13
+		completion_reward = {
+			ENG = { country_event = ge.190 }
+		}
+		ai_will_do = {
+			factor = 160
+		}
+	}
+}	

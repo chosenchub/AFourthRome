@@ -1,0 +1,2367 @@
+﻿##################
+# Hungary Events #
+#########################
+# Made by Darknight1342 #
+#########################
+
+### NOTE: please contact me before touching this file.
+
+add_namespace = hunai
+
+country_event = {
+	id = hunai.1
+	title = hunai.1.t
+	desc = hunai.1.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		is_ai = yes
+	}
+	option = {
+		name = hunai.1.a
+		ai_chance = {
+			base = 3
+		}
+		set_country_flag = hun_ai_democracy
+	}
+	option = {
+		name = hunai.1.b
+		set_country_flag = hun_ai_horthy
+		ai_chance = {
+			base = 2
+		}
+	}
+	option = {
+		name = hunai.1.c
+		set_country_flag = hun_ai_commie
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+add_namespace = hungary
+
+country_event = { #Intro
+	id = hungary.1
+	title = hungary.1.t
+	desc = hungary.1.d
+	picture = GFX_report_event_hungarian_soldiers
+
+	mean_time_to_happen = { days = 1 }
+
+	fire_only_once = yes
+
+	option = {
+		name = hungary.1.a
+		set_country_flag = hun_horthy_resistance
+		set_country_flag = hun_kun_resistance
+	}
+}
+country_event = { #Black Wednesday
+	id = hungary.2
+	title = hungary.2.t
+	desc = hungary.2.d
+	picture = news_Blackweekover
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		has_global_flag = black_wednesday
+	}
+	option = {
+		name = hungary.2.a
+		add_ideas = hun_bw_1
+		add_ideas = hun_closed_markets
+		set_country_flag = HUN_bw
+		add_political_power = -100
+	}
+}
+country_event = { #demand a truce. THIS EVENT IS TO BE REMOVED
+	id = hungary.3
+	title = hungary.3.t
+	desc = hungary.3.d
+	picture = news_am_police
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.3.a
+	}
+}
+country_event = { #purging Kun 1
+	id = hungary.4
+	title = hungary.4.t
+	desc = hungary.4.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	trigger = {
+		focus_progress = {
+            focus = hun_root_out_commies
+            progress > 0.33
+        }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = hungary.4.a
+		random_owned_state = {
+		    damage_building = { type = industrial_complex damage = 0.50 }
+		}
+		random_owned_state = {
+        	damage_building = { type = industrial_complex damage = 0.50 }
+		}
+	}
+}
+country_event = { #purging Kun 2
+	id = hungary.5
+	title = hungary.5.t
+	desc = hungary.5.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	trigger = {
+		focus_progress = {
+            focus = hun_root_out_commies
+            progress > 0.45
+        }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = hungary.5.a
+		random_owned_state = {
+		    damage_building = { type = arms_factory damage = 0.75 }
+		}
+		random_owned_state = {
+        	damage_building = { type = arms_factory damage = 0.75 }
+        }
+        random_owned_state = {
+        	damage_building = { type = arms_factory damage = 0.75 }
+        }
+        random_owned_state = {
+        	damage_building = { type = arms_factory damage = 0.75 }
+        }
+	}
+}
+country_event = { #purging Kun 3
+	id = hungary.6
+	title = hungary.6.t
+	desc = hungary.6.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	trigger = {
+		focus_progress = {
+            focus = hun_root_out_commies
+            progress > 0.77
+        }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = hungary.6.a
+		random_owned_state = {
+		    damage_building = { type = infrastructure damage = 0.75 }
+		   }
+		random_owned_state = {
+        	damage_building = { type = infrastructure damage = 0.75 }
+        }
+        random_owned_state = {
+        	damage_building = { type = infrastructure damage = 0.75 }
+        }
+        random_owned_state = {
+        	damage_building = { type = infrastructure damage = 0.75 }
+        }
+        random_owned_state = {
+        	damage_building = { type = infrastructure damage = 0.75 }
+        }
+        random_owned_state = {
+        	damage_building = { type = infrastructure damage = 0.75 }
+        }
+	}
+}
+country_event = { #the Budapest Conference 1. WILL BE REDONE AFTER 0.1
+	id = hungary.7
+	title = hungary.7.t
+	desc = hungary.7.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.7.a
+		hidden_effect = {
+			country_event = { id = hungary.8 days = 1 }
+		}
+	}
+		
+}
+country_event = { #the Budapest Conference 2. WILL BE REDONE AFTER 0.1
+	id = hungary.8
+	title = hungary.8.t
+	desc = hungary.8.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.8.a
+		ai_chance = {
+			base = 2
+		}
+		set_politics = { #listen to Kun
+ 			ruling_party = social_democrat
+ 			elections_allowed = no
+ 		}
+ 		add_popularity = { ideology = social_democrat popularity = 0.20 }
+	}
+	option = {
+		name = hungary.8.b
+		ai_chance = {
+			base = 2
+		}
+		set_politics = { #listen to Horthy
+ 			ruling_party = social_conservative
+ 			elections_allowed = no
+ 		}
+		add_popularity = { ideology = social_conservative popularity = 0.20 }
+	}
+	option = { #do not give into any demands
+		name = hungary.8.c
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = { #general election 1
+	id = hungary.9
+	title = hungary.9.t
+	desc = hungary.9.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	option = { #soccon win
+		name = hungary.9.a
+		ai_chance = {
+			base = 1
+		}
+		set_country_flag = soccon_win
+		set_politics = {
+ 			ruling_party = social_conservative
+ 			elections_allowed = no
+ 		}
+ 		add_popularity = { ideology = social_conservative popularity = 0.30 }
+	}
+	option = { #socdem win
+		name = hungary.9.b
+		ai_chance = {
+			base = 1
+		}
+		set_country_flag = socdem_win
+		set_politics = {
+ 			ruling_party = social_democrat
+ 			elections_allowed = no
+ 		}
+ 		add_popularity = { ideology = social_democrat popularity = 0.30 }
+	}
+	option = { #soclib win
+		name = hungary.9.c
+		ai_chance = {
+			base = 2
+		}
+		set_country_flag = soclib_win
+		set_politics = {
+ 			ruling_party = social_liberal
+ 			elections_allowed = no
+ 		}
+ 		add_popularity = { ideology = social_liberal popularity = 0.30 }
+	}
+	option = { #marklib win
+		name = hungary.9.e
+		ai_chance = {
+			base = 3
+		}
+		set_country_flag = marklib_win
+		set_politics = {
+ 			ruling_party = market_liberal
+ 			elections_allowed = no
+ 		}
+ 		add_popularity = { ideology = market_liberal popularity = 0.30 }
+	}
+}
+country_event = { #Transylvania accepts NAP
+	id = hungary.10
+	title = hungary.10.t
+	desc = hungary.10.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.10.a
+	}
+}
+country_event = { #Crisis prelude 1
+	id = hungary.11
+	title = hungary.11.t
+	desc = hungary.11.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		date > 1936.2.13
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	option = { #oh, bother
+		name = hungary.11.a
+		add_political_power = -15
+	}
+}
+country_event = { #Crisis prelude 2
+	id = hungary.12
+	title = hungary.12.t
+	desc = hungary.12.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		date > 1936.10.2
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = { #decline the demands
+		name = hungary.12.a
+		add_political_power = -50
+		add_popularity = { ideology = social_conservative popularity = -0.05 }
+	}
+	option = { #accept the demands
+		name = hungary.12.b
+		add_political_power = -20
+		add_popularity = { ideology = paternal_autocrat popularity = 0.10}
+	}
+}
+country_event = { #crisis prelude 3
+	id = hungary.13
+	title = hungary.13.t
+	desc = hungary.13.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		date > 1937.2.13
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = {
+		name = hungary.13.a
+	}
+}
+country_event = { #Crisis prelude 4
+	id = hungary.14
+	title = hungary.14.t
+	desc = hungary.14.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		date > 1937.7.7
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	option = {
+		name = hungary.14.a
+		set_country_flag = hun_crisis_active
+		155 = {
+		    damage_building = { type = infrastructure damage = 0.10 }
+		   }
+	}
+}
+country_event = { #buying French artillery #As if the guns will even shoot.
+	id = hungary.15
+	title = hungary.15.t
+	desc = hungary.15.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.15.a
+		FRA = {
+			country_event = {
+				id = frahun.1 days = 1
+			}
+		}
+	}
+}
+country_event = { #France accepts
+	id = hungary.16
+	title = hungary.16.t
+	desc = hungary.16.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.16.a
+		add_timed_idea = {
+            idea = hun_gun_buy
+            days = 182
+		}
+		FRA = {
+			add_timed_idea = {
+				idea = FRA_gun_buy
+				days = 182
+			}
+		}
+	}
+}
+country_event = { #France declines offer to buy guns
+	id = hungary.17
+	title = hungary.17.t
+	desc = hungary.17.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.17.a
+		add_political_power = -20
+	}
+}
+country_event = { #france lets hungary into CE
+	id = hungary.18
+	title = hungary.19.t
+	desc = hungary.19.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.18.a
+		add_political_power = 25
+	}
+}
+country_event = { #France doesn't let Hungary into the Continential Entente
+	id = hungary.19
+	title = hungary.19.t
+	desc = hungary.19.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.19.a
+		add_political_power = -25
+	}
+}
+country_event = { #britain gives fighter
+	id = hungary.21
+	title = hungary.21.t
+	desc = hungary.21.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.21.a
+	}
+}
+country_event = { #britain gives cas
+	id = hungary.22
+	title = hungary.22.t
+	desc = hungary.22.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.22.a
+	}
+}
+country_event = { #britain gives tac bomber
+	id = hungary.23
+	title = hungary.23.t
+	desc = hungary.23.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.23.a
+	}
+}
+country_event = { #Britain declines license
+	id = hungary.24
+	title = hungary.24.t
+	desc = hungary.24.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.24.a
+		add_political_power = -25
+	}
+}
+country_event = { #Horthy seizes power
+	id = hungary.27
+	title = hungary.27.t
+	desc = hungary.27.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 1938.7.7
+		tag = HUN
+		has_country_flag = hun_horthy_resistance
+		NOT = {
+			has_country_flag = hun_kun_resistance
+		}
+		NOT = {
+			has_completed_focus = hun_hunt_blackshirts
+		}
+		NOT = {
+			has_completed_focus = hun_blackshirt_amnesty
+		}
+		NOT = {
+			is_puppet = yes
+		}
+	}
+
+	option = {
+		name = hungary.27.a
+		set_politics = {
+ 			ruling_party = paternal_autocrat
+ 			elections_allowed = no
+		}
+		set_country_flag = hun_horthys_back
+		add_popularity = { ideology = paternal_autocrat popularity = 0.10 }
+		remove_ideas = hun_horthy_resistance
+		clr_country_flag = hun_kun_resistance
+		clr_country_flag = hun_horthy_resistance
+		hidden_effect = {
+			HUN = {
+				country_event = { id = hungary.55 days = 10}
+			}
+		}
+	}
+}
+country_event = { #Serbia declines Bosnian demands
+	id = hungary.28
+	title = hungary.28.t
+	desc = hungary.28.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.28.a
+		declare_war_on = { target = SER type = take_state }
+	}
+
+	option = {
+		name = hungary.28.b
+		add_political_power = -25
+	}
+}
+country_event = { #Serbia cedes Bosnia during war
+	id = hungary.29
+	title = hungary.29.t
+	desc = hungary.29.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		HUN = {
+			has_war_with = SER
+		}
+		104 = {
+			is_fully_controlled_by = HUN
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = hungary.29.a
+	}
+}
+#This event causes a CTD when it fires, axing it until I can fix it.
+#country_event = { #Croatia revolts
+#	id = hungary.30
+#	title = hungary.30.t
+#	desc = hungary.30.d
+#	picture = news_event_generic_rally2
+#
+#	fire_only_once = yes
+#
+#	trigger = {
+#		tag = HUN
+#		date > 1937.2.15
+#	}
+#
+#	mean_time_to_happen = {
+#		days = 5
+#	}
+#
+#	option = {
+#		name = hungary.30.a
+#		set_country_flag = cro_revolt
+#		remove_ideas = hun_croat_unrest
+#		add_relation_modifier = { target = CRO modifier = HUN_recent_seperate }
+#		CRO = {
+#			transfer_state = 109
+#			load_oob = CRO_phase_1
+#			set_cosmetic_tag = cro_war
+#			add_ideas = cro_united_revolt
+#			create_wargoal = { type = annex_everything target = HUN }
+#			add_relation_modifier = { target = HUN modifier = HUN_recent_seperate }
+#		}
+#	}
+#}
+country_event = { #Croatia wins
+	id = hungary.31
+	title = hungary.31.t
+	desc = hungary.31.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = hungary.31.a
+		add_political_power = -50
+	}
+}
+country_event = { #germany lets hungary into stahlpakt
+	id = hungary.32
+	title = hungary.32.t
+	desc = hungary.32.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #cool beans
+		name = hungary.32.a
+	}
+}
+country_event = { #germany says no to stahlpakt invite
+	id = hungary.33
+	title = hungary.33.t
+	desc = hungary.33.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #losers don't know what they're missing
+		name = hungary.33.a
+	}
+}
+country_event = { #transylvania refuses annexation
+	id = hungary.34
+	title = hungary.34.t
+	desc = hungary.34.d
+	picture = news_event_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #let it go
+		name = hungary.34.a
+	}
+	option = { # A N G E R Y
+		name = hungary.34.b
+		add_state_claim = 84
+		add_state_claim = 76
+		add_state_claim = 82
+		create_wargoal = {
+			type = annex_everything
+			target = TRA
+		}
+	}
+}
+country_event = { #Serbia refuses to cede West Banat
+	id = hungary.35
+	title = hungary.35.t
+	desc = hungary.35.d
+	picture = GFX_event_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Let it go
+		name = hungary.35.a
+	}
+	option = {
+		name = hungary.35.b
+		add_state_claim = 750
+		create_wargoal = {
+			type = annex_everything
+			target = SER
+		}
+	}
+}
+country_event = { #Zap doesn't cede Slovakia
+	id = hungary.36
+	title = hungary.36.t
+	desc = hungary.36.d
+	picture = GFX_event_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #let it go
+		name = hungary.36.a
+		HUN = {
+			remove_state_claim = 73 
+		}
+		add_political_power = -50
+	}
+	option = { #damn slavs
+		name = hungary.36.b
+		HUN = {
+			add_state_claim = 71
+			add_state_claim = 70
+			add_state_claim = 796
+			create_wargoal = {
+			type = annex_everything
+			target = SER
+			}
+		}
+	}
+}
+country_event = { #Italy doesn't cede Ljubljana
+	id = hungary.37
+	title = hungary.37.t
+	desc = hungary.37.d
+	picture = GFX_event_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #let it go
+		name = hungary.37.a
+		add_political_power = -25
+	}
+	option = { #stinky pasta makers
+		name = hungary.37.b
+		HUN = {
+			add_state_claim = 102
+			create_wargoal = {
+				type = annex_everything
+				target = ITA
+			}
+		}
+	}
+}
+country_event = { #Kun seizes power
+	id = hungary.38
+	title = hungary.38.t
+	desc = hungary.38.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 1938.7.7
+		tag = HUN
+		has_country_flag = hun_kun_resistance
+		NOT = {
+			has_country_flag = hun_horthy_resistance
+		}
+		NOT = {
+			has_completed_focus = hun_social_autonomy_towns
+		}
+		NOT = {
+			has_completed_focus = hun_root_out_commies
+		}
+		NOT = {
+			is_puppet = yes
+		}
+	}
+
+	option = {
+		name = hungary.38.a
+		set_politics = {
+ 			ruling_party = collectivist
+ 			elections_allowed = no
+		}
+		set_country_flag = hun_kuns_back
+		clr_country_flag = hun_kun_resistance
+		clr_country_flag = hun_horthy_resistance
+		add_popularity = { ideology = collectivist popularity = 0.10 }
+		create_country_leader = {
+			name = "Béla Kun"
+			desc = "POLITICS_BELA_KUN_DESC"
+			picture = "Portrait_HUN_BelaKun.tga"
+			expire = "1965.1.1"
+			ideology = collectivist_subtype
+			traits = {
+			}
+		}
+		hidden_effect = {
+			HUN = {
+				country_event = { id = hungary.56 days = 10}
+			}
+		}
+	}
+}
+country_event = { #Horthy vs. Kun showdown of the century
+	id = hungary.39
+	title = hungary.39.t
+	desc = hungary.39.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		has_country_flag = hun_horthy_resistance
+		has_country_flag = hun_kun_resistance
+		date > 1938.4.1
+		NOT = {
+			has_country_flag = hun_no_battle
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = { #Horthy wins
+		name = hungary.39.a
+		hidden_effect = {
+			clr_country_flag = hun_kun_resistance
+		}
+		43 = {
+			damage_building = {
+                type = infrastructure
+                damage = 0.7
+            }
+		}
+		add_political_power = -50
+		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		remove_ideas = hun_kun_resistance
+	}
+	option = { #Kun wins
+		name = hungary.39.b
+		hidden_effect = {
+			clr_country_flag = hun_horthy_resistance
+		}
+		43 = {
+			damage_building = {
+                type = infrastructure
+                damage = 0.7
+            }
+		}
+		add_political_power = -50
+		add_popularity = { ideology = collectivist popularity = 0.05 }
+		remove_ideas = hun_horthy_resistance
+	}
+}
+country_event = { #Horthy is King
+	id = hungary.500
+	title = hungary.500.t
+	desc = hungary.500.d
+	picture = news_event_generic_rally2
+
+	fire_only_once =  yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.500.a
+		create_country_leader = {
+			name = "King Miklós I Horthy"
+			desc = "POLITICS_KING_HORTHY_DESC"
+			picture = "Portrait_HUN_PatAutKing.dds"
+			expire = "1965.1.1"
+			ideology = paternal_autocrat_subtype
+			traits = {
+			}
+		}
+		name = hungary.500.a
+		set_politics = {
+ 			ruling_party = paternal_autocrat
+ 			elections_allowed = no
+ 		}
+ 		add_popularity = { ideology = paternal_autocrat popularity = 0.30 }
+ 		remove_ideas = hun_dead_regency
+ 		add_ideas = hun_false_king
+ 		set_cosmetic_tag = hun_kingdom
+	}
+}
+country_event = { #Karl I is king, chin intensifies
+	id = hungary.600
+	title = hungary.600.t
+	desc = hungary.600.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.600.a
+		set_politics = {
+ 			ruling_party = paternal_autocrat
+ 			elections_allowed = no
+ 		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			name = hun_team_karl
+			long_name = hun_team_karl_long
+		}
+		create_country_leader = {
+			name = "Karl I von Habsburg-Lorraine"
+			desc = "POLITICS_KARL_I_DESC"
+			picture = "Portrait_HUN_karl.dds"
+			expire = "1963.2.17"
+			ideology = paternal_autocrat_subtype
+			traits = {
+
+			}
+		}
+		set_cosmetic_tag = hun_kingdom
+	}
+}
+country_event = { #Transylvanian noble takes Hungarian throne
+	id = hungary.700
+	title = hungary.700.t
+	desc = hungary.700.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.700.a
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "King Jenő Barcsay"
+			desc = "POLITICS_JENO_BARCSAY_DESC"
+			picture = "Portrait_HUN_trans.dds"
+			expire = "1963.2.17"
+			ideology = authoritarian_democrat_subtype
+			traits = {
+
+			}
+		}
+		set_cosmetic_tag = hun_kingdom
+	}
+}
+country_event = { #People's Council wants more power
+	id = hungary.800
+	title = hungary.800.t
+	desc = hungary.800.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		has_country_flag = hun_council1
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	option = {
+		name = hungary.800.a
+		custom_effect_tooltip = hun_council_requests_power
+		hidden_effect = {
+			set_country_flag = hun_council1.5
+			clr_country_flag = hun_council1
+		}
+	}
+}
+country_event = { #peoples council requests army
+	id = hungary.801
+	title = hungary.801.t
+	desc = hungary.801.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		has_country_flag = hun_council2
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	option = {
+		name = hungary.801.a
+		custom_effect_tooltip = hun_council_requests_army
+		hidden_effect = {
+			set_country_flag = hun_council2.5
+			clr_country_flag = hun_council.2
+		}
+	}
+}
+country_event = { #peoples army requests special meeting
+	id = hungary.802
+	title = hungary.802.t
+	desc = hungary.802.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		has_country_flag = hun_council3
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	option = {
+		name = hungary.802.a
+		custom_effect_tooltip = hun_council_classified
+		hidden_effect = {
+			set_country_flag = hun_council3.5
+			clr_country_flag = huncouncil3
+		}
+	}
+}
+country_event = { #people's council issues ultimatum
+	id = hungary.803
+	title = hungary.803.t
+	desc = hungary.803.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #initiate civil war
+		name = hungary.803.a
+		add_political_power = -100
+		hidden_effect = {
+			HSR = {
+				transfer_state = 155
+				transfer_state = 772
+				transfer_state = 767
+				transfer_state = 109
+				add_state_core = 155
+				add_state_core = 772
+				add_state_core = 767
+				add_state_core = 109
+				country_event = { id = hsr.1 days = 7}
+				create_country_leader = {
+					name = "The People's Council"
+					desc = "POLITICS_PEOPLES_COUNCIL_DESC"
+					picture = "Portriat_Saeima.tga"
+					expire = "1965.1.1"
+					ideology = vanguardist_subtype
+					traits = {
+					}
+				}
+				load_oob = hsr_1936
+			}
+		}
+	}
+	option = { #surrender to demands
+		name = hungary.803.b
+		create_country_leader = {
+			name = "The People's Council"
+			desc = "POLITICS_PEOPLES_COUNCIL_DESC"
+			picture = "Portriat_Saeima.dds"
+			expire = "1965.1.1"
+			ideology = vanguardist_subtype
+			traits = {
+			}
+		}
+	}
+}
+country_event = { #Collectivists win the 1st election
+	id = hungary.40
+	title = hungary.40.t
+	desc = hungary.40.d
+	picture = news_event_generic_rally2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.40.a
+		add_political_power = 50
+	}
+	option = {
+		name = hungary.40.b
+		set_politics = {
+			ruling_party = collectivist
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "János Kádár"
+			desc = "POLITICS_JANOS_KADAR_DESC"
+			picture = "Portrait_HUN_janos.dds"
+			expire = "1965.1.1"
+			ideology = collectivist_subtype
+			traits = {
+			}
+		}
+		add_popularity = { ideology = collectivist popularity = 0.15 }
+		add_popularity = { ideology = libertarian_socialist popularity = 0.15 }
+	}
+}
+country_event = { #player chooses between fighters and heavy fighters focus
+	id = hungary.41
+	title = hungary.41.t
+	desc = hungary.41.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #regular fighters
+		name = hungary.41.a
+		set_country_flag = hun_air_fighter
+		air_experience = 5
+		add_tech_bonus = {
+            name = air_techs
+            bonus = 0.25
+            uses = 1
+            category = light_fighter
+       	}
+	}
+	option = { #heavy fighters
+		name = hungary.41.b
+		set_country_flag = hun_air_heavy
+		air_experience = 5
+		add_tech_bonus = {
+            name = air_techs
+            bonus = 0.25
+            uses = 1
+            category = cat_heavy_fighter
+       	}
+	}
+}
+country_event = { #player chooses to focus on either tac or strat bombers.
+	id = hungary.42
+	title = hungary.42.t
+	desc = hungary.42.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #tac bombers
+		name = hungary.42.a
+		set_country_flag = hun_air_tact
+		air_experience = 5
+		add_tech_bonus = {
+			name = air_techs
+			bonus = 0.25
+			uses = 1
+			category = tactical_bomber
+		}
+	}
+	option = { #strat bombers
+		name = hungary.42.b
+		set_country_flag = hun_air_strat
+		air_experience = 5
+		add_tech_bonus = {
+			name = air_techs
+			bonus = 0.25
+			uses = 1
+			category = cat_strategic_bomber
+		}
+	}
+}
+country_event = { #player chooses to focus on either naval bombers or CAS.
+	id = hungary.43
+	title = hungary.43.t
+	desc = hungary.43.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #CAS
+		name = hungary.43.a
+		set_country_flag = hun_air_cas
+		air_experience = 5
+		add_tech_bonus = {
+			name = air_techs
+			bonus = 0.25
+			uses = 1
+			category = cas_bomber
+		}
+	}
+	option = { #naval bombers. Wait why the fuck would anyone choose this over CAS?
+		name = hungary.43.b
+		set_country_flag = hun_air_nav
+		air_experience = 5
+		add_tech_bonus = {
+			name = air_techs
+			bonus = 0.25
+			uses = 1
+			category = naval_air
+		}
+	}
+}
+country_event = { #German event, Hungary requests Slovakia
+	id = hungary.44
+	title = hungary.44.t
+	desc = hungary.44.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Give them Slovakia
+		name = hungary.44.a
+		ai_chance = {
+			base = 10
+		}
+		if = {
+			limit = {
+				797 = {
+					is_owned_by = GER
+				}
+			}
+			SLO = {
+				transfer_state = 797
+			}
+		}
+		if = {
+			limit = {
+				796 = {
+					is_owned_by = GER
+				}
+			}
+			SLO = {
+				transfer_state = 796
+			}
+		}
+		if = {
+			limit = {
+				70 = {
+					is_owned_by = GER
+				}
+			}
+			SLO = {
+				transfer_state = 70
+			}
+		}
+		if = {
+			limit = {
+				71 = {
+					is_owned_by = GER
+				}
+			}
+			SLO = {
+				transfer_state = 71
+			}
+		}
+		if = {
+			limit = {
+				73 = {
+					is_owned_by = GER
+				}
+			}
+			SLO = {
+				transfer_state = 73
+			}
+		}
+		if = {
+			limit = {
+				664 = {
+					is_owned_by = GER
+				}
+			}
+			HUN = {
+				transfer_state = 664
+			}
+		}
+		if = {
+			limit = {
+				664 = {
+					is_owned_by = SLO
+				}
+			}
+			HUN = {
+				transfer_state = 664
+			}
+		}
+		HUN = {
+			puppet = SLO
+		}
+	}
+	option = { #Don't surrender Slovakia
+		name = hungary.44.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+country_event = { #Zap cedes South Nitra
+	id = hungary.45
+	title = hungary.45.t
+	desc = hungary.45.d
+	picture = report_event_generic_conference
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.45.a
+		add_political_power = 20
+	}
+}
+country_event = { #Zap keeps South Nitra
+	id = hungary.46
+	title = hungary.46.t
+	desc = hungary.46.d
+	picture = report_event_generic_conference
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #declare war
+		name = hungary.46.a
+		ai_chance = {
+			base = 1
+		}
+		create_wargoal = { type = annex_everything target = CEN }
+		add_political_power = -10
+	}
+	option = { #grumble grumble
+		name = hungary.46.b
+		ai_chance = {
+			base = 2
+		}
+		add_political_power = -50
+		CEN = {
+			country_event = { id = cen.46 days = 1}
+		}
+	}
+}
+country_event = { #Zap offers peace
+	id = hungary.47
+	title = hungary.47.t
+	desc = hungary.47.d
+	picture = report_event_generic_conference
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #accept
+		name = hungary.47.a
+		ai_chance = {
+			base = 5
+		}
+		HUN = {
+			transfer_state = 797
+		}
+		white_peace = CEN
+	}
+	option = { #decline
+		name = hungary.47.b
+		ai_chance = {
+			base = 1
+		}
+		add_political_power = -20
+		CEN = {
+			country_event = { id = cen.48 days = 1}
+		}
+	}
+}
+country_event = { #send white peace offer to zap
+	id = hungary.48
+	title = hungary.48.t
+	desc = hungary.48.d
+	picture = GFX_report_generic_rally2
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		HUN = {
+			surrender_progress > 0.4
+			has_war_with = CEN
+		}
+	}
+
+	option = {
+		name = hungary.48.a
+		CEN = {
+			country_event = { id = cen.49 days = 1}
+		}
+	}
+}
+country_event = { #zap declines white peace offer
+	id = hungary.49
+	title = hungary.49.t
+	desc = hungary.49.d
+	picture = GFX_report_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = hungary.49.a
+		add_political_power = -10
+	}
+}
+country_event = { #Soviet Event, Hungary asks to join the International
+	id = hungary.50
+	title = hungary.50.t
+	desc = hungary.50.d
+	picture = GFX_report_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #accpet
+		name = hungary.50.a
+		ai_chance = {
+			base = 1
+		}
+		HUN = {
+			country_event = { id = hungary.51 days = 1 }
+		}
+		SOV = {
+			add_to_faction = HUN
+		}
+	}
+	option = { #decline
+		name = hungary.50.b
+		ai_chance = {
+			base = 0
+		}
+		HUN = {
+			country_event = { id = hungary.52 days = 1 }
+		}
+	}
+}
+country_event = { #Soviets let Hungary into faction
+	id = hungary.51
+	title = hungary.51.t
+	desc = hungary.51.d
+	picture = GFX_report_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = hungary.51.a
+	}
+}
+country_event = { #soviets decline offer
+	id = hungary.52
+	title = hungary.52.t
+	desc = hungary.52.d
+	picture = GFX_report_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = hungary.52.a
+	}
+}
+country_event = { #Romanian event, Bulgaria demands Dobrudja
+	id = hungary.54
+	title = hungary.54.t
+	desc = hungary.54.d
+	picture = GFX_report_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #cede the land
+		name = hungary.54.a
+		ai_chance = {
+			base = 10
+		}
+		BUL = {
+			transfer_state = 77
+			add_state_core = 77
+		}
+		add_political_power = -50
+	}
+	option = { #no land given
+		name = hungary.54.b
+		ai_chance = {
+			base = 1
+		}
+		BUL = {
+			create_wargoal = { type = annex_everything target = ROM }
+		}
+	}
+}
+country_event = { #Horthy revokes Annecy
+	id = hungary.55
+	title = hungary.55.t
+	desc = hungary.55.d
+	picture = GFX_report_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = hungary.55.a
+		clr_country_flag = hun_no_annecy_horthy
+		remove_ideas = hun_annecy_treaty
+	}
+}
+country_event = { #Kun revokes Annecy
+	id = hungary.56
+	title = hungary.56.t
+	desc = hungary.56.d
+	picture = GFX_report_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = hungary.56.a
+		clr_country_flag = hun_no_annecy_kun
+		remove_ideas = hun_annecy_treaty
+	}
+}
+country_event = { #flavour 1
+	id = hungary.57
+	title = hungary.57.t
+	desc = hungary.57.d
+	picture = GFX_report_generic_rally2
+
+	trigger = {
+		tag = HUN
+		date > 1936.1.10
+		date < 1936.4.1
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = hungary.57.a
+		add_political_power = -20
+	}
+}
+country_event = { #flavour 1
+	id = hungary.58
+	title = hungary.58.t
+	desc = hungary.58.d
+	picture = GFX_report_event_generic_conference
+
+	trigger = {
+		tag = HUN
+		date > 1936.11.2
+		date < 1936.12.2
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = hungary.58.a
+	}
+}
+
+###############################
+### FRANCO-HUNGARIAN EVENTS ###
+###############################
+
+add_namespace = frahun
+
+country_event = { #ask to buy french Artillery
+	id = frahun.1
+	title = frahun.1.t
+	desc = frahun.1.d
+	picture = GFX_report_event_generic_conference
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #yeet
+		name = frahun.1.a
+		ai_chance = {
+			base = 80
+		}
+		send_equipment = { target = HUN type = artillery_equipment_1 amount = 500 }
+       	HUN = {
+       		country_event = {
+       			id = hun.16 days = 1
+       		}
+       	}
+	}
+	option = { #nah
+		name = frahun.1.b
+		ai_chance = {
+			base = 20
+		}
+		HUN = {
+			country_event = {
+				id = hun.17 days = 1
+			}
+		}
+	}
+}
+country_event = { #Hungary asks to join CE
+	id = frahun.2
+	title = frahun.2.t
+	desc = frahun.2.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #yeet
+		name = frahun.2.a
+		ai_chance = {
+			base = 100
+		}
+		FRA = {
+			add_to_faction = HUN
+		}
+		HUN = {
+			country_event = {
+				id = hungary.18 days = 1
+			}
+		}
+	}
+	option = { #nah
+		name = frahun.2.b
+		ai_chance = {
+			base = 0
+		}
+		HUN = {
+			country_event = {
+				id = hungary.19 days = 1
+			}
+		}
+	}
+}
+
+###############################
+### German-Hungarian events ###
+###############################
+
+add_namespace = gerhun
+
+country_event = { #ask to join the Stahlpakt
+	id = gerhun.1
+	title = gerhun.1.t
+	desc = gerhun.1.d
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #yeet
+		name = gerhun.1.a
+		ai_chance = {
+			base = 100
+		}
+		GER	= {
+			add_to_faction = HUN
+		}
+		HUN = {
+			country_event = {
+				id = hungary.32 days = 1
+			}
+		}
+	}
+	option = { #nah
+		name = gerhun.1.b
+		ai_chance = {
+			base = 0
+		}
+		HUN = {
+			country_event = {
+				id = hungary.33 days = 1
+			}
+		}
+	}
+}
+
+###################################
+### Centroslav-Hungarian events ###
+###################################
+
+add_namespace = cenhun
+
+country_event = { #Slovakia revolts
+	id = cenhun.1
+	title = cenhun.1.t
+	desc = cenhun.1.d
+	picture = GFX_report_event_communists_cheer
+
+	trigger = {
+		tag = CEN
+		has_country_flag = cen_slovak_rebels
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	fire_only_once = yes
+
+	option = { #Fight for Slovakia
+		name = cenhun.1.a
+		ai_chance = {
+			base = 75
+		}
+		SLO = {
+			transfer_state = 796
+			transfer_state = 70
+			transfer_state = 71
+			transfer_state = 73
+		}
+		HUN = {
+			transfer_state = 797
+		}
+		declare_war_on = { target = SLO type = annex_everything }
+		hidden_effect = {
+			POL = {
+				country_event = { id = poland.51 days = 7}
+			}
+		}
+	}
+	option = { #Let Slovakia go
+		name = cenhun.1.b
+		ai_chance = {
+			base = 25
+		}
+		SLO = {
+			transfer_state = 796
+			transfer_state = 70
+			transfer_state = 71
+			transfer_state = 73
+		}
+		HUN = {
+			transfer_state = 797
+		}
+	}
+}
+
+###############################
+### Slovak-Hungarian Events ###
+###############################
+
+add_namespace = slohun
+
+country_event = { #Puppeting Slovakia during independance war
+	id = slohun.1
+	title = slohun.1.t
+	desc = slohun.1.d
+	picture = GFX_report_event_communists_cheer
+
+	trigger = {
+		SLO = {
+			has_war_with = CEN
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = slohun.1.a
+		SLO = {
+			country_event = {id = slohun.1 days = 1}
+		}
+	}
+	option = {
+		name = slohun.1.b
+		SLO = {
+			country_event = {id = slohun.1 days = 1}
+		}
+		HUN = {
+			transfer_state = 73
+		}
+	}
+}
+
+
+#########################
+### OCCUPATION EVENTS ###
+#########################
+
+add_namespace = hunocc
+
+country_event = { #Austria
+	id = hunocc.1
+	title = "The Occupation of Austria"
+	desc = hunocc.1.d
+	picture = GFX_report_event_communists_cheer
+
+	trigger = {
+		tag = HUN
+		HUN = { 
+			has_full_control_of_state = 4
+			has_full_control_of_state = 152
+			has_full_control_of_state = 803
+			has_full_control_of_state = 913
+			has_full_control_of_state = 912
+			has_full_control_of_state = 153
+		}
+		AUS = {
+			exists = no
+		}
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = "We demand their full annexation!"
+		ai_chance = {
+			base = 0
+		}
+		add_political_power = -150
+	}
+	option = {
+		name = "We will install a friendly regime!"
+		ai_chance = {
+			base = 1
+		}
+		AUS = {
+			transfer_state = 4
+			transfer_state = 152
+			transfer_state = 803
+			transfer_state = 913
+			transfer_state = 912
+			transfer_state = 153
+		}
+		HUN = {
+			puppet = AUS
+		}
+	}
+}
+
+country_event = { #Romania
+	id = hunocc.2
+	title = "The Occupation of Romania"
+	desc = hunocc.2.d
+	picture = GFX_report_event_communists_cheer
+
+	trigger = {
+		tag = HUN
+		HUN = { 
+			has_full_control_of_state = 82
+			has_full_control_of_state = 84
+			has_full_control_of_state = 76
+			has_full_control_of_state = 80
+			has_full_control_of_state = 78
+			has_full_control_of_state = 79
+			has_full_control_of_state = 861
+			has_full_control_of_state = 77
+			has_full_control_of_state = 46
+			has_full_control_of_state = 81
+		}
+		ROM = {
+			exists = no
+		}
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = "We demand their full annexation!"
+		ai_chance = {
+			base = 0
+		}
+		add_political_power = -150
+	}
+	option = {
+		name = "We will install a friendly regime!"
+		ai_chance = {
+			base = 1
+		}
+		ROM = {
+			transfer_state = 82
+			transfer_state = 84
+			transfer_state = 76
+			transfer_state = 80
+			transfer_state = 78
+			transfer_state = 79
+			transfer_state = 861
+			transfer_state = 77
+			transfer_state = 46
+			transfer_state = 81
+		}
+		HUN = {
+			puppet = ROM
+		}
+	}
+	option = {
+		name = "Annex Transylvania and puppet the rest!"
+		ai_chance = {
+			base = 10
+		}
+		add_political_power = -50
+		ROM = {
+			transfer_state = 80
+			transfer_state = 78
+			transfer_state = 79
+			transfer_state = 861
+			transfer_state = 77
+			transfer_state = 46
+			transfer_state = 81
+		}
+		if = {
+			limit = {
+				HUN = {
+					NOT = {
+						has_full_control_of_state = 82
+					}
+				}
+			}
+			HUN = {
+				transfer_state = 82
+			}
+		}
+		if = {
+			limit = {
+				HUN = {
+					NOT = {
+						has_full_control_of_state = 84
+					}
+				}
+			}
+			HUN = {
+				transfer_state = 84
+			}
+		}
+		if = {
+			limit = {
+				HUN = {
+					NOT = {
+						has_full_control_of_state = 76
+					}
+				}
+			}
+			HUN = {
+				transfer_state = 76
+			}
+		}
+	}
+}
+
+country_event = { #Serbia
+	id = hunocc.3
+	title = "The Occupation of Serbia"
+	desc = hunocc.3.d
+	picture = GFX_report_event_communists_cheer
+
+	trigger = {
+		tag = HUN
+		HUN = { 
+			has_full_control_of_state = 750
+			has_full_control_of_state = 107
+			has_full_control_of_state = 108
+			has_full_control_of_state = 104
+			has_full_control_of_state = 788
+			has_full_control_of_state = 106
+			has_full_control_of_state = 787
+		}
+		SER = {
+			exists = no
+		}
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = "We demand their full annexation!"
+		ai_chance = {
+			base = 0
+		}
+		add_political_power = -150
+	}
+	option = {
+		name = "We will install a friendly regime!"
+		ai_chance = {
+			base = 1
+		}
+		SER = {
+			transfer_state = 750
+			transfer_state = 107
+			transfer_state = 108
+			transfer_state = 104
+			transfer_state = 788
+			transfer_state = 106
+			transfer_state = 787
+		}
+		HUN = {
+			puppet = SER
+		}
+	}
+	option = {
+		name = "West Banat and Bosnia will be reintegrated, puppet the rest!"
+		ai_chance = {
+			base = 10
+		}
+		HUN = {
+			puppet = SER
+		}
+		SER = {
+			transfer_state = 107
+			transfer_state = 108
+			transfer_state = 106
+			transfer_state = 787
+		}
+		if = {
+			limit = {
+				HUN = {
+					NOT = {
+						has_full_control_of_state = 750
+					}
+				}
+			}
+			HUN = {
+				transfer_state = 750
+			}
+		}
+		if = {
+			limit = {
+				HUN = {
+					NOT = {
+						has_full_control_of_state = 104
+					}
+				}
+			}
+			HUN = {
+				transfer_state = 104
+			}
+		}
+		if = {
+			limit = {
+				HUN = {
+					NOT = {
+						has_full_control_of_state = 788
+					}
+				}
+			}
+			HUN = {
+				transfer_state = 788
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hunocc.4
+	title = "The occupation of Zapadoslavia"
+	desc = hunocc.4.d
+	picture = GFX_report_event_communists_cheer
+
+	trigger = {
+		tag = HUN
+		HUN = {
+			has_full_control_of_state = 797
+			has_full_control_of_state = 796
+			has_full_control_of_state = 70
+			has_full_control_of_state = 71
+			has_full_control_of_state = 73
+			has_full_control_of_state = 801
+			has_full_control_of_state = 800
+			has_full_control_of_state = 72
+			has_full_control_of_state = 74
+			has_full_control_of_state = 75
+			has_full_control_of_state = 853
+			has_full_control_of_state = 775
+			has_full_control_of_state = 798
+			has_full_control_of_state = 69
+			has_full_control_of_state = 9
+			has_full_control_of_state = 794
+			has_full_control_of_state = 795
+		}
+		CEN = {
+			exists = no
+		}
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = "We demand their full annexation!"
+		ai_chance = {
+			base = 0
+		}
+		add_political_power = -150
+	}
+
+	option = {
+		name = "Grant Poland their lost territories, we will take Slovakia."
+		trigger = {
+			HUN = {
+				is_in_faction_with = POL
+			}
+			POL = {
+				exists = yes
+				has_capitulated = no
+			}
+			POL = {
+				NOT = {
+					has_full_control_of_state = 72
+					has_full_control_of_state = 800
+					has_full_control_of_state = 801
+				}
+			}
+		}
+		POL = {
+			transfer_state = 72
+			transfer_state = 800
+			transfer_state = 801
+		}
+		HUN = {
+			transfer_state = 73
+			transfer_state = 71
+			transfer_state = 70
+			transfer_state = 796
+			transfer_state = 797
+			puppet = BOH
+		}
+		BOH = {
+			transfer_state = 853
+			transfer_state = 775
+			transfer_state = 69
+			transfer_state = 798
+			transfer_state = 9
+			transfer_state = 75
+			transfer_state = 74
+			transfer_state = 794
+			transfer_state = 795
+		}
+	}
+	option = {
+		name = "Annex Slovakia and puppet the rest"
+		HUN = {
+			transfer_state = 73
+			transfer_state = 71
+			transfer_state = 70
+			transfer_state = 796
+			transfer_state = 797
+			transfer_state = 800
+			transfer_state = 801
+			transfer_state = 72
+
+			puppet = BOH
+		}
+		BOH = {
+			transfer_state = 853
+			transfer_state = 775
+			transfer_state = 69
+			transfer_state = 798
+			transfer_state = 9
+			transfer_state = 75
+			transfer_state = 74
+			transfer_state = 794
+			transfer_state = 795
+		}
+	}
+	option = {
+		name = "Split the land with our German allies"
+		trigger = {
+			HUN = {
+				is_in_faction_with = GER
+			}
+			GER = {
+				exists = yes
+				has_capitulated = no
+			}
+		}
+		HUN = {
+			transfer_state = 73
+			transfer_state = 71
+			transfer_state = 70
+			transfer_state = 796
+			transfer_state = 797
+			transfer_state = 800
+			transfer_state = 801
+			transfer_state = 72
+
+			puppet = BOH
+		}
+		BOH = {
+			transfer_state = 853
+			transfer_state = 798
+			transfer_state = 9
+			transfer_state = 75
+		}
+		GER = {
+			transfer_state = 775
+			transfer_state = 69
+			transfer_state = 795
+			transfer_state = 794
+			transfer_state = 74
+		}
+	}
+}
+##############################
+### ANGLO-HUNGARIAN EVENTS ###
+##############################
+add_namespace = enghun
+
+country_event = { #hungary wants a research partnership
+	id = enghun.1
+	title = enghun.1.t
+	desc = enghun.1.d
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #yeet
+		name = enghun.1.a
+		ai_chance = {
+			base = 10
+		}
+		add_ideas = hun_oxford_budapest
+		HUN  =	{
+			add_ideas = hun_oxford_budapest
+		}
+	}
+	option = { #nah
+		name = enghun.1.b
+		ai_chance = {
+			base = 1
+		}
+		add_political_power = -5
+	}
+}
+country_event = { #Hungary wants plane licenses
+	id = enghun.2
+	title = enghun.2.t
+	desc = enghun.2.d
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #yeet
+		name = enghun.2.a
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = { #nah
+		name = enghun.2.b
+		ai_chance = {
+			base = 1
+		}
+	}
+}

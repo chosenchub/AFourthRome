@@ -1,0 +1,67 @@
+GER_forceful_takeovers = {
+	border_panfilia = {
+
+        icon = border_war
+		
+		allowed = {
+			original_tag = TUR
+		}
+
+		available = {
+			has_completed_focus = TUR_remil_istanbul
+			has_war = no
+			has_army_manpower = { size > 249999 }
+			ITA = {
+				owns_state = 345
+			}
+		}
+
+        visible = {
+			has_completed_focus = TUR_remil_istanbul
+			ITA = {
+				owns_state = 345
+			}
+		}
+
+		highlight_states = {
+			OR = {
+				state = 345
+				state = 346			
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { 
+				has_war = no
+				factor = 10
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			ITA = {
+				country_event = italy.123
+			}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 346
+					num_provinces = 4
+					on_win = italy.124
+					on_lose = italy.125
+					on_cancel = italy.126
+				}
+				
+				defender = {
+					state = 345
+					num_provinces = 4
+					on_win = italy.125
+					on_lose = italy.124
+					on_cancel = italy.126
+				}
+			}
+		}
+	}
+}

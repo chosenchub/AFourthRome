@@ -1,0 +1,237 @@
+﻿##############################
+#     Kuomintang Events      #
+##############################
+#     Made by Beelzebub      #
+#         And Thymos         #
+##############################
+
+add_namespace = kmt
+
+# Kuomintang seize POR port
+
+country_event = {
+	id = kmt.1
+	title = kmt.1.t
+	desc = kmt.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	trigger = {
+		tag = KMT
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		set_country_flag = kuomintang_seize_por_port_flag
+	}
+	#Seize them!
+	option = {
+	ai_chance = {
+			base = 90
+		}
+		name = kmt.1.a
+		
+		activate_mission = KMT_seize_por_port_mission
+	}
+	#Don't seize the ports
+	Option = {
+	ai_chance = {
+			base = 10
+		}
+		name = kmt.1.b
+		
+	}
+}
+
+# Portugal responds
+country_event = {
+	id = kmt.2
+	title = kmt.2.t
+	desc = kmt.2.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	trigger = {
+		tag = POR
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = portugal_port_seized_flag
+	}
+	#Ask Britain for help
+	option = {
+		ai_chance = {
+			base = 1
+		}
+		name = kmt.2.a
+		ENG = {
+			country_event = { 
+				days = 1 
+				id = kmt.3 
+			}
+		}
+	}
+}
+
+#Britain helps
+country_event = {
+	id = kmt.3
+	title = kmt.3.t
+	desc = kmt.3.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	trigger = {
+		tag = ENG
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		set_country_flag = britain_help_portugal_flag
+	}
+		#Help them
+		option = {
+			ai_chance = {
+				base = 1
+			}
+		name = kmt.3.a
+		KMT = {
+		country_event = {
+			days = 1
+			id = kmt.4
+			}
+		}
+	}
+		#Don't help them
+		option = {
+			name = kmt.3.b
+			POR = {
+			country_event = {
+			id = kmt.5
+			days = 1
+			}
+		}
+	}
+}
+
+#Kuomintang threatened by Britain
+country_event = {
+	id = kmt.4
+	title = kmt.4.t
+	desc = kmt.4.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	trigger = {
+		tag = KMT
+	}
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+		#Refuse to give Macau back
+		option = {
+			ai_chance = {
+				base = 1
+			}
+			name = kmt.4.a
+			add_timed_idea = { idea = KMT_british_embargo days = 365 }
+			}
+		#Give in
+		option = {
+			ai_chance = {
+				base = 1
+			}
+			name = kmt.4.b
+			POR = {
+			set_state_owner = 729 
+			country_event = {
+			id = kmt.6
+			days = 1
+			}
+		}
+	}
+}
+
+#Britain refused to help Portugal
+country_event = {
+	id = kmt.5
+	title = kmt.5.t
+	desc = kmt.5.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	trigger = {
+		tag = POR
+	}
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+		
+		#Damn them!
+		option = {
+			name = kmt.5.a
+		}
+}
+
+#Portugal is given their land back
+country_event = {
+	id = kmt.6
+	title = kmt.6.t
+	desc = kmt.6.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	trigger = {
+		tag = POR
+	}
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = kmt.6.a
+	}
+}
+
+#Hong Kong has been seized by KMT
+country_event = {
+	id = kmt.7
+	title = kmt.7.t
+	desc = kmt.7.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	trigger = {
+		tag = ENG
+	}
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = kmt.7.a
+	}
+}
+
+#Guangzhouwan port has been seized by KMT
+country_event = {
+	id = kmt.8
+	title = kmt.8.t
+	desc = kmt.8.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	trigger = {
+		tag = FRA
+	}
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+		option = {
+		name = kmt.8.a
+	}
+}
+	
+	
+	
+	
+	
+	

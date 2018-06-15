@@ -1,0 +1,29 @@
+state={
+	id=775
+	name="STATE_775"
+
+	history={
+		owner = CEN
+		buildings = {
+			infrastructure = 6
+			5283 = {
+				bunker = 1
+
+			}
+
+
+		}
+		add_core_of = AUS
+		add_core_of = CEN
+		add_core_of = BOH
+		add_core_of = STD
+		add_claim_by = GER
+	}
+
+	provinces={
+		543 557 5283 9541 11525 
+	}
+	manpower=775050
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,39 @@
+﻿##############################
+#       Japan Events       #
+##############################
+#     Started by Drowse      #
+##############################
+#    Written by Marauder M   #
+##############################
+
+add_namespace = jap
+
+### Introduction Event
+
+country_event = { 
+	id = jap.0
+	title = jap.0.t
+	desc = jap.0.d
+	picture = GFX_japan_ultimatum
+	is_triggered_only = no #This means it can only be triggered by something else, like another event or a focus
+
+	fire_only_once = yes
+
+trigger = {
+		tag = JAP
+	}
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	option = {
+		name = jap.0.a
+	}
+}
+
+
+
+
+
+

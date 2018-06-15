@@ -1,0 +1,771 @@
+foreign_politics = {
+
+	bucharest_accord = {
+		visible = {
+			date > 1937.1.1
+			original_tag = GER
+			NOT = {
+				has_war_with = ROM
+			}
+			TRA = { exists = yes }
+			NOT = { ROM = { has_war_with = HUN } }
+			NOT = { ROM = { has_war_with = TRA } }
+			NOT = { HUN = { has_war_with = TRA } }
+		}
+		
+		available = {
+			has_war = no
+		}
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 4000
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			ROM = { country_event = { id = romhun.1 } }
+			set_country_flag = HUN_OCCUPIED
+			set_country_flag = CRO_OCCUPIED
+		}
+	}
+
+	occupy_transylvania = {
+		visible = {
+			original_tag = ROM
+			ROM = { has_country_flag = buch_accord }
+			TRA = { 
+				exists = yes 
+			}
+		}
+		
+		available = {
+			has_war = no
+		}
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 4000
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			TRA = { country_event = { id = romhun.2 } }
+			add_named_threat = { threat = 5 name = transylvania_occupation }
+			add_timed_idea = {
+				idea = ROMHUN_rightful_land
+				days = 150
+			}
+		}
+	}
+	
+	peace_with_hungary = {
+		visible = {
+			original_tag = ROM
+			has_war_with = HUN
+		}
+		
+		available = {
+			OR = {
+				AND = {
+					controls_state = 154
+					controls_state = 45
+					controls_state = 43
+				}
+				HUN = { surrender_progress > 0.75 }
+			}
+		}
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 4000
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			HUN = { country_event = { id = romhun.18 } }
+		}
+	}
+	
+	hungary_occupation = {
+		visible = {
+			original_tag = ROM
+			NOT = { has_war_with = HUN }
+			controls_state = 43
+			has_country_flag = romhun_war
+		}
+		
+		available = {
+		}
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 4000
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			release_puppet = HUN
+			HUN = { 
+				transfer_state = 772
+				transfer_state = 109
+				transfer_state = 45
+				load_focus_tree = generic_focus
+				set_cosmetic_tag = ROM_HUN
+				create_country_leader = {
+					name = "Nicolae Radescu"
+					desc = ""
+					picture = "gfx/leaders/ROM/Nicolae_Radescu.dds"
+					expire = "1965.1.1"
+					ideology = national_populist_subtype
+					traits = { }
+				}
+			}
+			transfer_state = 83
+			transfer_state = 762
+		}
+	}
+	
+	join_stahlpakt_rom = {
+		visible = {
+			original_tag = ROM
+			HUN = { is_puppet_of = ROM }
+			is_puppet = no
+		}
+		
+		available = {
+			has_war = no
+		}
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 4000
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			GER = { country_event = { id = romhun.20 } }
+		}
+	}
+	
+	join_stahlpakt_swe = {
+		visible = {
+			original_tag = SWE
+			NOT = { has_war_with = GER }
+			OR = {
+				has_government = paternal_autocrat
+				has_government = authoritarian_democrat
+				has_government = national_populist
+				has_government = valkist
+			}
+			is_puppet = no
+		}
+		
+		available = {
+			date > 1939.1.1
+		}
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 4000
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			GER = { country_event = { id = romhun.3 } }
+		}
+	}
+	
+	poland_forms_faction = {
+		visible = {
+			original_tag = POL
+			GER = { has_country_flag = m_agreement }
+			CEN = { exists = yes }
+			is_puppet = no
+			is_in_faction = no 
+		}
+		
+		available = {
+			has_war = no
+		}
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 4000
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			IF = {
+				limit = {
+					is_faction_leader = no
+				}
+				create_faction = "Intermarium"
+			}
+			IF = {
+				limit = {
+					LIT = { is_puppet_of = POL }
+				}
+				add_to_faction = LIT
+			}
+			IF = {
+				limit = {
+					LAT = { is_guaranteed_by = POL }
+				}
+				add_to_faction = LAT
+			}
+			CEN = { country_event = { id = romhun.16 } }
+		}
+	}
+	
+	
+	minsk_agreement = {
+		visible = {
+			original_tag = GER 
+			date > 1938.6.1
+		}
+		
+		available = {
+			NOT = { has_war_with = SOV }
+			NOT = { has_war_with = POL }
+			has_war = no 
+			POL = { exists = yes }
+			NOT = { POL = { is_in_faction_with = GER } }
+			NOT = { POL = { is_guaranteed_by = SOV } }
+		}
+		
+		ai_will_do = {
+			factor = 4000
+		}
+		
+		cost = 0
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			SOV = { country_event = { id = romhun.5 } }
+		}
+	}
+	
+	fall_weiss = {
+		visible = {
+			original_tag = GER
+			date > 1938.8.1
+			has_country_flag = m_agreement
+			NOT = { has_war_with = POL }
+			is_puppet = no
+			POL = { exists = yes }
+			NOT = { POL = { is_puppet_of = GER } }
+		}
+		
+		available = {
+			has_army_manpower = { size > 499999 }
+		}
+		
+		ai_will_do = {
+			factor = 4000
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+		
+		cost = 0
+		
+		fire_only_once = yes
+		
+		days_remove = 14
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = prep_pol_invasion
+			}
+		}
+		
+		remove_effect = {
+			declare_war_on = {
+				target = POL
+				type = annex_everything
+			}
+			IF = {
+				limit = {
+					OR = {
+						CEN = { is_in_faction_with = POL }
+						AND = {
+							CEN = { 
+								NOT = { is_in_faction_with = GER }
+								NOT = { is_in_faction_with = FRA }
+								NOT = { is_in_faction_with = SOV }
+								exists = yes
+							}
+						}
+					}
+					NOT = { has_war_with = CEN }
+				}
+				declare_war_on = {
+					target = CEN
+					type = annex_everything
+				}
+			}
+			IF = {
+				limit = {
+					has_country_flag = minsk_scrapped
+				}
+				set_country_flag = no_handovers
+			}
+			set_country_flag = eeurope_partition
+		}
+	}
+	
+	soviets_invade_poland = {
+		visible = {
+			original_tag = SOV
+			FRA = { has_guaranteed = POL }
+			has_country_flag = m_agreement
+			GER = { has_war_with = POL }
+			is_puppet = no
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 4000
+		}
+		
+		cost = 0
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			declare_war_on = {
+				target = POL
+				type = annex_everything
+			}
+		}
+	}
+	
+	puppet_govs_eeurope = {
+		visible = {
+			original_tag = GER
+			has_country_flag = eeurope_partition
+			NOT = { has_war_with = POL }
+			NOT = { has_war_with = LIT }
+			NOT = { has_war_with = CEN }
+			OR = {
+				has_country_flag = accepted_handover
+				has_country_flag = refused_handover
+				has_country_flag = no_handovers
+			}
+		}
+		
+		available = {
+			has_war = no
+		}
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 4000
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			IF = {
+				limit = {
+					POL = { exists = no }
+				}
+				release_puppet = POL
+				transfer_state = 85
+				transfer_state = 807
+				transfer_state = 86
+				transfer_state = 66
+				transfer_state = 752
+				transfer_state = 67
+				POL = { 
+					load_focus_tree = generic_focus
+					create_country_leader = {
+						name = "Waclaw Krzeptowski"
+						desc = ""
+						picture = "gfx/leaders/POL/Portrait_Poland_Waclaw_Krzeptowski.dds"
+						expire = "1965.1.1"
+						ideology = valkist_subtype
+						traits = { }
+					}
+					set_cosmetic_tag = POL_GER
+				}
+			}
+			IF = {
+				limit = {
+					LIT = { exists = no }
+				}
+				release_puppet = LIT
+				LIT = {
+					set_cosmetic_tag = LIT_GER
+				}
+				transfer_state = 188
+			}
+			IF = {
+				limit = {
+					CEN = { exists = no }
+				}
+				release_puppet = BOH
+				BOH = {
+					set_cosmetic_tag = BOH_GER
+					create_country_leader = {
+						name = "Alois Eli?"
+						desc = ""
+						picture = "gfx/leaders/BOH/Portrait_Bohemia_Alois_Elias.dds"
+						expire = "1965.1.1"
+						ideology = valkist_subtype
+						traits = { }
+					}
+					load_focus_tree = generic_focus
+				}
+				transfer_state = 69
+				transfer_state = 775 
+				transfer_state = 74
+				transfer_state = 72
+				release_puppet = SLO
+				SLO = {
+					set_cosmetic_tag = SLO_puppet
+				}
+			}
+			hidden_effect = {
+				add_state_core = 752
+				add_state_core = 86
+				add_state_core = 66
+				add_state_core = 794
+				add_state_core = 188
+				add_state_core = 69
+				add_state_core = 775
+				add_state_core = 74
+				set_country_flag = eeurope_puppets
+				every_state = {
+					limit = {
+						is_core_of = LAT
+						is_controlled_by = GER
+					}	
+				}
+			}
+		}
+	}
+	
+	soviet_attack_germany = {
+		visible = {
+			original_tag = SOV
+			date > 1941.12.1
+			NOT = { has_war_with = GER }
+			GER = { exists = yes }
+			is_puppet = no
+		}
+		
+		available = {
+			NOT = { has_completed_focus = SOV_deadlock }
+		}
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 4000
+			modifier = {
+				AND = {
+					has_war = yes
+					surrender_progress > 0.25
+				}
+				factor = 0
+			}
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			declare_war_on = {
+				target = GER
+				type = annex_everything
+			}
+		}
+	}
+	
+	soviet_attack_entente = {
+		visible = {
+			original_tag = SOV
+			date > 1940.12.1
+			NOT = { has_war_with = FRA }
+			is_puppet = no
+		}
+		
+		available = {
+			NOT = { has_completed_focus = SOV_deadlock }
+		}
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 4000
+			modifier = {
+				AND = {
+					has_war = yes
+					surrender_progress > 0.25
+				}
+				factor = 0
+			}
+			modifier = {
+				GER = { exists = yes }
+				factor = 0
+			}
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			declare_war_on = {
+				target = FRA
+				type = annex_everything
+			}
+		}
+	}
+	
+	uk_join_stahlpakt = {
+		visible = {
+			original_tag = ENG
+			GER = { has_war_with = SOV }
+			NOT = { GER = { has_war_with = FRA } }
+			FRA = { exists = yes }
+			NOT = { is_in_faction_with = GER }
+			is_puppet = no
+		}
+		
+		available = {
+			NOT = { is_in_faction_with = FRA }
+			has_war = no
+			NOT = { has_war_with = GER }
+		}
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_government = libertarian_socialist
+				factor = 0
+			}
+			modifier = {
+				has_government = social_democrat
+				factor = 0
+			}
+			modifier = {
+				has_government = social_conservative
+				factor = 4000
+			}
+			modifier = {
+				has_government = authoritarian_democrat
+				factor = 4000
+			}
+			modifier = {
+				has_government = paternal_autocrat
+				factor = 4000
+			}
+			modifier = {
+				has_country_flag = isoimpfed
+				factor = 0
+			}
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			GER = { country_event = { id = romhun.22 } }
+		}
+	}
+	
+	give_land_to_friendly_puppets = {
+		visible = {
+			is_in_faction_with = GER
+			GER = { has_country_flag = eeurope_puppets }
+			NOT = { original_tag = GER }
+		}
+		
+		available = {
+			any_state = {
+				OR = {
+					is_core_of = POL
+					is_core_of = SLO
+					is_core_of = LIT
+				}
+				is_controlled_by = ROOT
+			}
+		}
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 4000
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			IF = {
+				limit = {
+					POL = { is_puppet_of = GER }
+				}
+				every_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = POL
+					}
+					POL = { transfer_state = PREV }
+				}
+			}
+			IF = {
+				limit = {
+					SLO = { is_puppet_of = GER }
+				}
+				every_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = SLO
+					}
+					SLO = { transfer_state = PREV }
+				}
+			}
+			IF = {
+				limit = {
+					LIT = { is_puppet_of = GER }
+				}
+				every_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = LIT
+					}
+					LIT = { transfer_state = PREV }
+				}
+				every_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = LAT
+					}
+					LIT = { transfer_state = PREV }
+				}
+			}
+		}
+	}
+	
+	greece_join_ipa = {
+		visible = {
+			original_tag = GRE
+			has_war_with = TUR
+			ENG = { has_war_with = TUR }
+			is_puppet = no
+		}
+		
+		available = {
+			ENG = { is_faction_leader = yes }
+		}
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 4000
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			ENG = { add_to_faction = GRE }
+		}
+	}
+	
+	usa_gw2_join_ipa = {
+		visible = {
+			original_tag = USA
+			is_puppet = no
+			ENG = { 
+				has_war_with = SOV 
+				is_faction_leader = yes
+				NOT = { has_war_with = USA }
+				exists = yes
+			}
+			NOT = { is_in_faction_with = SOV }
+			has_completed_focus = USA_foriegn_policy
+		}
+		
+		available = {
+			date > 1941.1.1
+			NOT = { has_war_with = ENG }
+			is_in_faction = no
+		}
+		
+		ai_will_do = {
+			factor = 4000
+			modifier = {
+				AND = {
+					GER = { is_in_faction_with = ENG }
+					GER = { has_capitulated = no }
+				}
+				factor = 0
+			}
+			modifier = {
+				ENG = { has_war_with = FRA }
+				factor = 0
+			}
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			ENG = { country_event = { id = romhun.30 } }
+		}
+	}
+	
+	usa_gw2_join_entente = {
+		visible = {
+			original_tag = USA
+			FRA = { 
+				has_war_with = GER 
+				is_faction_leader = yes
+				NOT = { has_war_with = USA }
+				exists = yes
+			}
+			NOT = { is_in_faction_with = GER }
+			has_completed_focus = USA_foriegn_policy
+			is_puppet = no
+		}
+		
+		available = {
+			date > 1941.1.1
+			NOT = { has_war_with = FRA }
+			is_in_faction = no
+		}
+		
+		ai_will_do = {
+			factor = 4000
+			modifier = {
+				NOT = { ENG = { has_war_with = FRA } }
+				factor = 0
+			}
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			FRA = { country_event = { id = romhun.31 } }
+		}
+	}
+}

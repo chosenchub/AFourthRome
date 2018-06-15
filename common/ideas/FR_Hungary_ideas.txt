@@ -1,0 +1,641 @@
+#################
+# Hungary Ideas #
+#############################
+#   Made by Darknight1342   #
+#############################
+
+ideas = {
+	country = {
+		hun_annecy_treaty = {
+			picture = HUN_treaty_of_triannon
+			modifier = {
+				conscription_factor = -0.75
+				production_factory_max_efficiency_factor = -0.05
+				production_speed_buildings_factor = -0.15
+				production_speed_arms_factory_factor = -0.20
+				production_speed_industrial_complex_factor = -0.20
+				consumer_goods_factor = 0.03
+			}
+		}
+		hun_bw_1 = {
+			picture = the_great_depression
+			modifier = {
+				political_power_gain = -0.10
+				trade_opinion_factor = -0.25
+				license_armor_purchase_cost = 0.5
+				license_air_purchase_cost = 0.5
+				production_speed_buildings_factor = -0.25
+				production_speed_arms_factory_factor = -0.5
+				production_speed_industrial_complex_factor = -0.5
+				consumer_goods_factor = 0.10
+			}
+		}
+		hun_closed_markets = {
+			picture = generic_goods_red_bonus
+			modifier = {
+				min_export = -0.95
+			}
+		}
+		hun_bw_2 = {
+			picture = the_great_depression
+			modifier = {
+				political_power_gain = -0.06
+				trade_opinion_factor = -0.20
+				license_armor_purchase_cost = 0.5
+				license_air_purchase_cost = 0.5
+				production_speed_buildings_factor = -0.20
+				production_speed_arms_factory_factor = -0.4
+				production_speed_industrial_complex_factor = -0.4
+				consumer_goods_factor = 0.08
+			}
+		}
+		hun_bw_3 = {
+			picture = the_great_depression
+			modifier = {
+				political_power_gain = -0.04
+				trade_opinion_factor = -0.15
+				license_armor_purchase_cost = 0.3
+				license_air_purchase_cost = 0.3
+				production_speed_buildings_factor = -0.15
+				production_speed_arms_factory_factor = -0.3
+				production_speed_industrial_complex_factor = -0.3
+				consumer_goods_factor = 0.05
+			}
+		}
+		hun_bw_4 = {
+			picture = the_great_depression
+			modifier = {
+				political_power_gain = -0.03
+				trade_opinion_factor = -0.10
+				license_armor_purchase_cost = 0.3
+				license_air_purchase_cost = 0.3
+				production_speed_buildings_factor = -0.10
+				production_speed_arms_factory_factor = -0.2
+				production_speed_industrial_complex_factor = -0.2
+				consumer_goods_factor = 0.03
+			}
+		}
+		hun_bw_5 = {
+			picture = the_great_depression
+			modifier = {
+				political_power_gain = -0.02
+				trade_opinion_factor = -0.05
+				license_armor_purchase_cost = 0.2
+				license_air_purchase_cost = 0.2
+				production_speed_buildings_factor = -0.05
+				production_speed_arms_factory_factor = -0.2
+				production_speed_industrial_complex_factor = -0.2
+				consumer_goods_factor = 0.03
+			}
+		}
+		hun_nep = {
+			picture = generic_foreign_capital
+			modifier = {
+				consumer_goods_factor = -0.02
+				trade_opinion_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+		hun_tax_reform = {
+			picture = generic_foreign_capital
+			modifier = {
+				consumer_goods_factor = -0.02
+				license_armor_purchase_cost = -0.2
+				license_air_purchase_cost = -0.2
+			}
+		}
+		hun_attack_inflation = {
+			picture = generic_foreign_capital
+			modifier = {
+				consumer_goods_factor = -0.02
+				trade_opinion_factor = 0.25
+			}
+		}
+		hun_mandatory_school = {
+			picture = generic_pp_unity_bonus
+			modifier = {
+				stability_factor = 0.10
+				conscription_factor = 0.05
+			}
+		}
+		hun_reformed_mil_spending = {
+			picture = generic_war_preparation
+			modifier = {
+				license_armor_purchase_cost = -0.4
+				license_air_purchase_cost = -0.4
+			}
+		}
+		hun_war_bonds_ready = {
+			picture = idea_hun_treaty_of_trianon
+			modifier = {
+
+			}
+		}
+		hun_reopen_markets = {
+			picture = GFX_goal_generic_major_alliance
+			modifier = {
+				consumer_goods_factor = -0.2
+			}
+		}
+		hun_social_credit = {
+			picture = GFX_generic_foreign_capital
+			modifier = {
+				consumer_goods_factor = -0.02
+				stability_factor = 0.05
+			}
+		}
+		hun_horthy_resistance = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				stability_factor = -0.10
+			}
+		}
+		hun_kun_resistance = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				stability_factor = -0.10
+			}
+		}
+		hun_unified_people = {
+			picture = generic_intel_bonus
+			modifier = {
+				stability_factor = 0.025
+			}
+		}
+		hun_unified_nation = {
+			picture = FRA_scw_intervention_nationalists_focus
+			modifier = {
+				stability_factor = 0.025
+				political_power_factor = 0.10
+			}
+		}
+		hun_arrow_cross = {
+			picture = air_support_focus
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = 0.25
+			}
+		}
+		hun_arrow_cross_but_better = {
+			picture = air_support_focus
+			modifier = {
+				stability_factor = 0.03
+				political_power_gain = 0.33
+
+			}
+		}
+		hun_democratic_bastion = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				vanguardist_acceptance = -50
+				collectivist_acceptance = -50
+				libertarian_socialist_acceptance = -50
+				paternal_autocrat_acceptance = -50
+				national_populist_acceptance = -50
+				valkist_acceptance = -50
+			}
+		}
+		hun_danube_research = {
+			picture = generic_research_bonus
+			modifier = {
+				research_time_factor = -0.07
+			}
+		}
+		hun_integrated_officers = {
+			picture = Generic_manpower_bonus
+			modifier = {
+				experience_gain_army = 0.05
+				army_org_Factor = 0.05
+				max_planning = 0.10
+			}
+		}
+		hun_interlaced_economy = {
+			picture = idea_generic_flexible_foreign_policy2
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+		hun_gun_buy = {
+			picture = generic_artillery_regiments
+			modifier = {
+				consumer_goods_factor = 0.01
+			}
+		}
+		hun_french_industry = {
+			picture = generic_central_management
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		hun_trianon = {
+			picture = generic_constitutional_guarantee
+			modifier = {
+				conscription_factor = -0.10
+			}
+		}
+		hun_fra_officers = {
+			picture = generic_manpower_bonus
+			modifier = {
+				experience_gain_army = 0.05
+			}
+		}
+		hun_tea_time = {
+			picture = idea_generic_agrarian_reform
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		hun_oxford_budapest = {
+			picture = focus_research
+			modifier = {
+				research_time_factor = -0.02
+			}
+		}
+		hun_annecy_revise = {
+			picture = generic_constitutional_guarantee
+			modifier = {
+				conscription_factor = -0.15
+				stability_factor = 0.05
+			}
+		}
+		hun_british_resources = {
+			picture = goal_generic_construction2
+			modifier = {
+				production_oil_factor = 0.1
+			}
+		}
+		hun_dead_regency = {
+			picture = focus_rom_abdicate
+			modifier = {
+				stability_factor = -0.10
+			}
+		}
+		hun_false_king = {
+			picture = focus_rom_abdicate
+			modifier = {
+				stability_factor = -0.15
+			}
+		}
+		hun_german_officers_idea = {
+			picture = generic_manpower_bonus
+			modifier = {
+				experience_gain_army = 0.05
+				offence = 0.05
+			}
+		}
+		hun_german_rights = {
+			picture = generic_constitutional_guarantee
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		hun_croat_unrest = {
+			picture = generic_democratic_drift_bonus
+			modifier = {
+			}
+		}
+		hun_stoked_nationalism = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				conscription_factor = 0.10
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+				army_morale_factor = 0.1
+				max_dig_in = 0.5
+				stability_factor = 0.20
+			}
+		}
+		hun_war_machine = {
+			picture = FRA_factory_strikes
+			modifier = {
+				industrial_capacity_factory = 0.1
+					min_export = -0.03
+			}
+		}
+		hun_romania_bad = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				war_support_factor = 0.20
+			}
+		}
+		hun_infinite_regency = {
+			picture = focus_rom_abdicate
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		hun_tariff_increase_idea = {
+			picture = generic_goods_red_bonus
+			modifier = {
+				min_export = -0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		hun_peoples_rights = {
+			picture = generic_pp_unity_bonus
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		hun_free_market = {
+			picture = idea_generic_flexible_foreign_policy
+			modifier = {
+				min_export = 0.01
+				consumer_goods_factor = 0.04
+				stability_factor = 0.10
+			}
+		}
+		hun_social_plan_1 = {
+			picture = generic_production_bonus
+			modifier = {
+				stability_factor = 0.01
+				monthly_population = 0.05
+			}
+		}
+		hun_authoritarian_traditions = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				vanguardist_acceptance = -50
+				collectivist_acceptance = -50
+				libertarian_socialist_acceptance = -50
+				social_democrat_acceptance = -50
+				social_liberal_acceptance = -50
+				market_liberal_acceptance = -50
+				social_conservative_acceptance = -50
+			}
+		}
+		hun_socialist_diplomacy = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				authoritarian_democrat_acceptance = -50
+				paternal_autocrat_acceptance = -50
+				national_populist_acceptance = -50
+				valkist_acceptance = -50
+				social_democrat_acceptance = -50
+				social_liberal_acceptance = -50
+				market_liberal_acceptance = -50
+				social_conservative_acceptance = -50
+			}
+		}
+		hun_peoples_council = {
+			picture = home_of_the_Revolution
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		hun_peoples_council2 = {
+			picture = home_of_the_Revolution
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.05
+				conscription_factor = 0.01
+			}
+		}
+		hun_peoples_council3 = {
+			picture = home_of_the_Revolution
+			modifier = {
+				stability_factor = 0.20
+				war_support_factor = 0.10
+				conscription_factor = 0.03
+			}
+		}
+		hun_soviet_coop = {
+			picture = generic_communism_drift_bonus
+			modifier = {
+				max_planning = 0.10
+				experience_gain_army = 0.10
+			}
+		}
+		hun_research_cities = {
+			picture = idea_jap_supremacy_of_technology
+			modifier = {
+				research_time_factor = -0.03
+			}
+		}
+		hun_research_cities2 = {
+			picture = idea_jap_supremacy_of_technology
+			modifier = {
+				research_time_factor = -0.05
+			}
+		}
+		hun_research_cities3 = {
+			picture = idea_jap_supremacy_of_technology
+			modifier = {
+				research_time_factor = -0.07
+			}
+		}
+		hun_reorg_society = {
+			picture = generic_production_bonus
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		hun_reorg_society2 = {
+			picture = generic_production_bonus
+			modifier = {
+				stability_factor = 0.10
+			}
+		}
+		hun_reorg_society3 = {
+			picture = generic_production_bonus
+			modifier = {
+				stability_factor = 0.10
+				conscription_factor = 0.03
+				monthly_population = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		hun_no_class_divide = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+		hun_no_class_divide2 = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				stability_factor = 0.07
+				consumer_goods_factor = -0.04
+			}
+		}
+		hun_no_class_divide3 = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				stability_factor = 0.10
+				consumer_goods_factor = -0.05
+				research_time_factor = -0.02
+			}
+		}
+		hun_decentralize = {
+			picture = generic_central_management
+			modifier = {
+				consumer_goods_factor = 0.03
+				stability_factor = 0.5
+			}
+		}
+		hun_decentralize2 = {
+			picture = generic_central_management
+			modifier = {
+				consumer_goods_factor = 0.03
+				stability_factor = 0.10
+			}
+		}
+		hun_decentralize3 = {
+			picture = generic_central_management
+			modifier = {
+				consumer_goods_factor = 0.02
+				stability_factor = 0.15
+			}
+		}
+		hun_healthcare = {
+			picture = victors_of_the_Great_War
+			modifier = {
+				stability_factor = 0.05
+				MONTHLY_POPULATION = 0.05
+			}
+		}
+		hun_healthcare2 = {
+			picture = victors_of_the_Great_War
+			modifier = {
+				stability_factor = 0.07
+				MONTHLY_POPULATION = 0.07
+			}
+		}
+		hun_healthcare3 = {
+			picture = victors_of_the_Great_War
+			modifier = {
+				stability_factor = 0.10
+				MONTHLY_POPULATION = 0.10
+			}
+		}
+		hun_employee_rights = {
+			picture = generic_production_bonus
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		hun_employee_rights2 = {
+			picture = generic_production_bonus
+			modifier = {
+				production_factory_max_efficiency_factor = 0.07
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		hun_employee_rights3 = {
+			picture = generic_production_bonus
+			modifier = {
+				production_factory_max_efficiency_factor = 0.07
+				production_speed_buildings_factor = 0.05
+				min_export = -0.05
+			}
+		}
+		hun_workers_haven = {
+			picture = generic_exploit_mines
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		hun_workers_haven2 = {
+			picture = generic_exploit_mines
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.07
+				industrial_capacity_factory = 0.07
+			}
+		}
+		hun_workers_haven3 = {
+			picture = generic_exploit_mines
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_factory = 0.05
+				MONTHLY_POPULATION = 0.03
+			}
+		}
+		hun_airforce = {
+			picture = air_support_focus
+			modifier = {
+				consumer_goods_factor = 0.01
+				experience_gain_air = 0.05
+			}
+		}
+		hun_socialism = {
+			picture = generic_communism_drift_bonus
+			modifier = {
+				stability_factor = 0.05
+				vanguardist_acceptance = 20
+				collectivist_acceptance = 20
+				libertarian_socialist_acceptance = 20
+			}
+		}
+		hun_soviet_industry = {	
+			picture = trotskyite_plot_purged?
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				industrial_capacity_factory = 0.10
+			}
+		}
+		hun_expanded_red_army = {
+			picture = idea_generic_communist_army
+			modifier = {
+				conscription_factor = 0.025
+			}
+		}
+		hun_truth = {
+			picture = generic_morale_bonus
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.10
+			}
+		}
+		hun_parliament_opposition = {
+			picture = fra_matignon_agreements
+			modifier = {
+				political_power_gain = -0.30
+			}
+		}
+		hun_purge_army = {
+			picture = fra_scw_intervention_nationalists_focus
+			modifier = {
+				planning_speed = -0.50
+				max_planning = -0.25
+				army_morale_factor = -0.10
+				experience_gain_army = -0.05
+			}
+		}
+		hun_loyal_army = {
+			picture = generic_manpower_bonus
+			modifier = {
+				army_morale_factor = 0.10
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+			}
+		}
+		hun_loyal_officers = {
+			picture = german_advisors
+			modifier = {
+				planning_speed = 0.15
+				max_planning = 0.10
+				experience_gain_army = 0.05
+			}
+		}
+		hun_industry_control = {
+			picture = generic_goods_red_bonus
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+			}
+		}
+		hun_secret_police_idea = {
+			picture = generic_secret_police
+			modifier = {
+				enemy_partisan_effect = -0.15
+			}
+		}
+		hun_militarized_police_idea = {
+			picture = idea_hun_secret_rearmament
+			modifier = {
+				army_org = 3
+			}
+		}

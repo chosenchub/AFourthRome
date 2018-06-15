@@ -1,0 +1,995 @@
+﻿###############################################################
+# Romania, Hungary, Germany and General Eastern Europe events #
+###############################################################
+					    #By SuperMarks#
+				
+add_namespace = romhun
+
+# - Partition of Transylvania
+
+country_event = {
+	id = romhun.1
+	title = "Germany Offers of Mediation"
+	desc = romhun.1.d
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			original_tag = ROM
+		}
+		name = "This will help us bring an end to the failed Transylvanian state."
+		set_country_flag = buch_accord
+	}
+}
+
+country_event = {
+	id = romhun.2
+	title = "Bucharest Accord"
+	desc = "With the signing of an agreement between the Romanian and German nations the Romanian Government has stepped up military maneuvers near our border. This morning it has culminated in an invasion of our territory, so far the Romanians have been greeted by cheering crowds in Romanian populated areas."
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We can do nothing to prevent this"
+		ai_chance = {
+			base = 100
+		}
+		ROM = {
+			annex_country = {
+				target = TRA
+				transfer_troops = yes 
+			}
+		}
+		hidden_effect = {
+			IF = {
+				limit = {
+					HUN = { is_puppet = no }
+				}
+				HUN = { country_event = { id = romhun.19 hours = 8 } }
+			}
+			ROM = {
+				add_state_core = 76
+				add_state_core = 84
+				add_state_core = 82
+			}
+		}
+	}
+	
+	option = {
+		name = "We will defend our borders with force!"
+		ai_chance = {
+			base = 0
+		}
+		ROM = { 
+			declare_war_on = {
+				target = TRA
+				type = annex_everything
+			}
+		}
+	}
+}
+
+country_event = {
+	id = romhun.3
+	title = "Sweden petitions to join the Stahlpakt"
+	desc = "With the new Government in Sweden solidifying their power over their country, they have begun a diplomatic out-reach program with Berlin; today it has culminated in a proposition to join the Stahlpakt."
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Let them in"
+		ai_chance = {
+			base = 100
+		}
+		add_to_faction = SWE
+	}
+	
+	option = {
+		name = "We don't need their help"
+		ai_chance = {
+			base = 0
+		}
+		SWE = { country_event = { id = romhun.4 hours = 8 } }
+	}
+}
+
+country_event = {
+	id = romhun.4
+	title = "Germany refuses our request"
+	desc = "The Germans have refused to allow us to join the Stahlpakt, citing that they don't not need our assistance in further carving up Europe"
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We won't forget this betrayal"
+	}
+}
+
+country_event = {
+	id = romhun.5
+	title = "Germany proposes partition plan for East Europe"
+	desc = romhun.5.d
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "This land will make an excellent buffer state"
+		ai_chance = {
+			base = 100
+			modifier = {
+				has_country_flag = sov_deadlock
+				add = -100
+			}
+		}
+		GER = { country_event = { id = romhun.6 hours = 8 } }
+		set_country_flag = m_agreement
+		GER = { set_country_flag = m_agreement }
+		hidden_effect = {
+			POL = { country_event = { id = romhun.8 days = 1 } }
+			FRA = { country_event = { id = romhun.12 days = 7 } }
+		}
+	}
+	
+	option = {
+		name = "No deals with the Valkists!"
+		ai_chance = {
+			base = 0
+			modifier = {
+				has_country_flag = sov_deadlock
+				add = 100
+			}
+		}
+		GER = { country_event = { id = romhun.7 hours = 8 } }
+	}
+}
+
+country_event = {
+	id = romhun.6
+	title = "The Minsk Agreement is signed"
+	desc = romhun.6.d
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Soon the mistakes of Versailles will be erased."
+		add_named_threat = { threat = 10 name = the_minsk_agreement }
+		set_country_flag = m_agreement
+	}
+}
+
+country_event = {
+	id = romhun.7
+	title = "The Minsk Agreement is scrapped"
+	desc = romhun.7.d
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "They will regret this!"
+		set_country_flag = m_agreement
+		set_country_flag = minsk_scrapped
+	}
+}
+
+country_event = {
+	id = romhun.8
+	title = "The Minsk Agreement"
+	desc = romhun.8.d
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We must prepare ourselves"
+	}
+}
+
+# - East Europe Partition
+
+country_event = {
+	id = romhun.10
+	title = "The Minsk Agreement"
+	desc = romhun.10.d
+	picture = report_event_generic_conference
+	
+	trigger = {
+		original_tag = GER
+		NOT = { has_war_with = POL }
+		POL = { exists = no }
+		SOV = { has_country_flag = m_agreement }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "Let us formalise the partition"
+		ai_chance = {
+			base = 90
+			modifier = {
+				has_war_with = FRA
+				add = 10
+			}
+		}
+		IF = {
+			limit = {
+				EST = { 
+					exists = yes 
+					OR = {
+						is_puppet_of = SOV
+						is_in_faction_with = SOV
+					}
+				}
+			}
+			EST = {
+				transfer_state = 12
+				transfer_state = 757
+				transfer_state = 758
+				transfer_state = 190
+			}
+			else = {
+				SOV = {
+					transfer_state = 12
+					transfer_state = 757
+					transfer_state = 758
+					transfer_state = 190
+				}
+			}
+		}
+		IF = {
+			limit = {
+				BLR = { 
+					exists = yes 
+					OR = {
+						is_puppet_of = SOV
+						is_in_faction_with = SOV
+					}
+				}
+			}
+			BLR = { 
+				transfer_state = 96
+				transfer_state = 95
+				transfer_state = 97
+				transfer_state = 94
+			}
+			else = {
+				SOV = {
+					transfer_state = 96
+					transfer_state = 95
+					transfer_state = 97
+					transfer_state = 94
+				}
+			}
+		}
+		IF = {
+			limit = {
+				UKR = { 
+					exists = yes 
+					OR = {
+						is_puppet_of = SOV
+						is_in_faction_with = SOV
+					}
+				}
+			}
+			UKR = { 
+				transfer_state = 199
+				transfer_state = 93
+			}
+			else = {
+				SOV = {
+					transfer_state = 199
+					transfer_state = 93
+				}
+			}
+		}
+		SOV = { country_event = { id = romhun.11 } }
+		set_country_flag = accepted_handover
+	}
+	
+	option = {
+		name = "We will not uphold this agreement!"
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_war_with = FRA
+				add = -10
+			}
+		}
+		SOV = { country_event = { id = romhun.24 hours = 8 } }
+		set_country_flag = refused_handover
+	}
+}
+
+country_event = {
+	id = romhun.11
+	title = "The Minsk Agreement"
+	desc = romhun.11.d
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "Let us formalise the partition"
+		every_state = {
+			limit = {
+				is_core_of = SLO
+				is_controlled_by = ROOT
+			}
+			HUN = { transfer_state = PREV }
+		}
+		every_state = {
+			limit = {
+				is_core_of = POL
+				AND = {
+					NOT = { is_core_of = BLR }
+					NOT = { is_core_of = UKR }
+					NOT = { is_claimed_by = UKR }
+				}
+				is_controlled_by = ROOT
+			}
+			GER = { transfer_state = PREV }
+		}
+		every_state = {
+			limit = {
+				is_core_of = BOH
+				is_controlled_by = ROOT
+			}
+			GER = { 
+				transfer_state = PREV 
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = LIT
+				is_controlled_by = ROOT
+			}
+			GER = { 
+				transfer_state = PREV 
+			}
+		}
+		GER = {
+			transfer_state = 67
+			set_country_flag = eeurope_partition
+		}
+		hidden_effect = {
+			IF = {
+				limit = {
+					OR = {
+						GER = { controls_state = 96 }
+						AND = {
+							LIT = { 
+								controls_state = 96 
+								is_puppet_of = GER 
+							}
+						}
+						AND = {
+							POL = { 
+								controls_state = 96 
+								is_puppet_of = GER 
+							}
+						}
+					}
+					BLR = { exists = no }
+				}
+				SOV = { transfer_state = 96 }
+			}
+			IF = {
+				limit = {
+					OR = {
+						GER = { controls_state = 96 }
+						AND = {
+							LIT = { 
+								controls_state = 96 
+								is_puppet_of = GER 
+							}
+						}
+						AND = {
+							POL = { 
+								controls_state = 96 
+								is_puppet_of = GER 
+							}
+						}
+					}
+					BLR = { 
+						OR = {
+							is_puppet_of = SOV
+							is_in_faction_with = SOV
+						}
+					}
+				}
+				BLR= { transfer_state = 96 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = romhun.12
+	title = "The Minsk Agreement"
+	desc = romhun.12.d
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "We must reach out to the Poles and offer to guarantee their security."
+		ai_chance = {
+			base = 25
+			modifier = {
+				NOT = { ITA = { is_in_faction_with = FRA } }
+				add = -20
+			}
+			modifier = {
+				has_war = yes
+				add = -20
+			}
+		}
+		POL = { country_event = { id = romhun.13 hours = 8 } }
+	}
+	
+	option = {
+		name = "A worrying development"
+		ai_chance = {
+			base = 75
+			modifier = {
+				NOT = { ITA = { is_in_faction_with = FRA } }
+				add = 20
+			}
+			modifier = {
+				has_war = yes
+				add = 20
+			}
+		}
+	}
+}
+
+country_event = {
+	id = romhun.13
+	title = "France offers us security guarantees"
+	desc = "Following the announcement of the Minsk Agreement between Germany and the Soviets, the French Government has extended a formal guarantee to our nation in face of the threat from our hostile neighbours."
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "We thank them for their support"
+		FRA = { give_guarantee = POL }
+		hidden_effect = {
+			IF = {
+				limit = {
+					ENG = { 
+						exists = yes 
+						is_puppet = no
+						NOT = { has_war_with = FRA }
+					}
+				}
+				ENG = { country_event = { id = romhun.14 days = 7 } }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = romhun.14
+	title = "Franco-Polish Security Arrangements"
+	desc = romhun.14.d
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "We must join with France once more to prevent war in Europe."
+		ai_chance = {
+			base = 100
+			modifier = {
+				has_country_flag = isoimpfed
+				add = -100
+			}
+		}
+		FRA = { country_event = { id = romhun.15 hours = 8 } }
+		set_country_flag = big_problems_in_europe
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = FRA
+				}
+				set_country_flag = fraally
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = ENG
+				}
+				set_country_flag = engally
+			}
+		}
+	}
+	
+	option = {
+		name = "This Soviet-German Pact is a most troubling development."
+		ai_chance = {
+			base = 0
+			modifier = {
+				has_country_flag = isoimpfed
+				add = 100
+			}
+		}
+	}
+}
+
+country_event = {
+	id = romhun.15
+	title = "British Rapprochement"
+	desc = romhun.15.d
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "They will be a most useful ally"
+		ENG = { country_event = { id = ukf.5014 } }
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = FRA
+				}
+				set_country_flag = fraally
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = ENG
+				}
+				set_country_flag = engally
+			}
+		}
+		news_event = { id = uknews.13 }
+	}
+}
+
+# - Polish faction forming
+
+country_event = {
+	id = romhun.16
+	title = "Poland offers us an alliance"
+	desc = "With the threat from Germany now clear Poland has approached our Government with an alliance offer to stand together against this new threat. We would surely be fools to reject it."
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "Together we will stand against the Germans"
+		ai_chance = {
+			base = 100
+		}
+		POL = { add_to_faction = CEN }
+	}
+	
+	option = {
+		name = "No deals with those who claim our land!"
+		ai_chance = {
+			base = 0
+		}
+		POL = { country_event = { id = romhun.17 hours = 8 } }
+	}
+}
+
+country_event = {
+	id = romhun.17
+	title = "Zapadnislavia rejects our proposal"
+	desc = "The foolish Zapadslav nation has rejected our proposal for an alliance."
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "They will regret this when the Germans are marching through the Sudetenland!"
+	}
+}
+
+# - ROMHUN war
+
+country_event = {
+	id = romhun.18
+	title = "Romanian offers us peace"
+	desc = "The Romanian Government has offered us peace in our current war, though their demands are harsh. They wish us to not only cede lands with Romanians in them, but also impose a puppet Government on our nation."
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "We have lost the war, we can only accept."
+		ai_chance = {
+			base = 100
+		}
+		white_peace = ROM
+		ROM = { 
+			puppet = HUN 
+			transfer_state = 83
+			transfer_state = 762
+		}
+		load_focus_tree = generic_focus
+		set_cosmetic_tag = ROM_HUN
+		create_country_leader = {
+			name = "Nicolae Radescu"
+			desc = ""
+			picture = "gfx/leaders/ROM/Nicolae_Radescu.dds"
+			expire = "1965.1.1"
+			ideology = national_populist_subtype
+			traits = { }
+		}
+	}
+	
+	option = {
+		name = "We will fight on to the end!"
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# - Transylvania Annexed
+
+country_event = {
+	id = romhun.19
+	title = "Romanian occupation of Transylvania"
+	desc = "The Romanian Military has this morning moved into Transylvania in an attempt to occupy the country. The Transylvanians have so far offered no resistance, but there are growing calls in our Government to declare war on Romania and defend our ethnic brothers in Transylvania."
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "We must not allow Romania to occupy Transylvania!"
+		ai_chance = {
+			base = 100
+		}
+		declare_war_on = {
+			target = ROM
+			type = annex_everything
+		}
+		hidden_effect = {
+			ROM = { set_country_flag = romhun_war }
+			remove_ideas = hun_annecy_treaty
+		}
+	}
+	
+	option = {
+		name = "There is no need for this"
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# - Romanian joins Stahlpakt
+
+country_event = {
+	id = romhun.20
+	title = "Romania petitions to join the Stahlpakt"
+	desc = "With our backing of Romania's annexation of Transylvania and their subsequent victory over the Hungarians the Romanian Government has applied to join the Stahlpakt."
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Let them in"
+		ai_chance = {
+			base = 100
+		}
+		add_to_faction = ROM
+	}
+	
+	option = {
+		name = "We don't need their help"
+		ai_chance = {
+			base = 0
+		}
+		ROM = { country_event = { id = romhun.21 hours = 8 } }
+	}
+}
+
+country_event = {
+	id = romhun.21
+	title = "Germany refuses our request"
+	desc = "The Germans have refused to allow us to join the Stahlpakt, citing that they don't not need our assistance in further carving up Europe"
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We won't forget this betrayal"
+	}
+}
+
+# - UK joins Stahlpakt (early Sov-Ger war)
+
+country_event = {
+	id = romhun.22
+	title = "Meeting in London"
+	desc = romhun.22.d
+	picture = report_event_generic_conference
+	
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = GER
+				}
+				set_country_flag = gerally
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = ENG
+				}
+				set_country_flag = engally
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Sign the Agreement!"
+		ai_chance = {
+			base = 100
+		}
+		hidden_effect = {
+			dismantle_faction = yes
+			ENG = { 
+				dismantle_faction = yes
+				create_faction = league_of_nations
+			}
+			every_country = {
+				limit = {
+					OR = {
+						has_country_flag = gerally
+						has_country_flag = engally
+					}
+				}
+				ENG = { add_to_faction = PREV }
+			}
+		}
+	}
+	
+	option = {
+		name = "We don't need their help!"
+		ai_chance = {
+			base = 0
+		}
+		ENG = { country_event = { id = romhun.23 hours = 8 } }
+	}
+}
+
+country_event = {
+	id = romhun.23
+	title = "Germany refuses our offer"
+	desc = "The ungrateful German nation has refused our offer for an alliance to aid in their war against the Collectivist menace."
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Then they will soon find themselves under the boot of the Soviets."
+	}
+}
+
+# - Angery Soviets
+
+country_event = {
+	id = romhun.24
+	title = "Germany refuses to honour the Minsk Agreement!"
+	desc = romhun.24.d
+	picture = report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will not be double-crossed like this!"
+		ai_chance = {
+			base = 100
+			modifier = {
+				has_war_with = FRA
+				add = -100
+			}
+		}
+		declare_war_on = {
+			target = GER 
+			type = annex_everything
+		}
+	}
+	
+	option = {
+		name = "Damn those Germans!"
+		ai_chance = {
+			base = 0
+			modifier = {
+				has_war_with = FRA
+				add = 100
+			}
+		}
+	}
+}
+
+# - Romanian Events (Political)
+
+country_event = {
+	id = romhun.25
+	title = "The Political Situation"
+	desc = romhun.25.d
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "Interesting"
+		hidden_effect = {
+			country_event = { id = romhun.26 days = 90 }
+		}
+	}
+}
+
+country_event = {
+	id = romhun.26
+	title = "Falling Popularity"
+	desc = romhun.26.d
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "Worrying"
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+		add_popularity = { ideology = social_conservative popularity = -0.025 }
+	}
+}
+
+country_event = {
+	id = romhun.27
+	title = "Iron Guard meets with Nicholas"
+	desc = romhun.27.d
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "What are they planning?"
+		add_stability = -0.05
+		add_popularity = { ideology = national_populist popularity = 0.05 }
+	}
+}
+
+country_event = {
+	id = romhun.28
+	title = "The March on Bucharest"
+	desc = romhun.28.d
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "Nicholas secures power!"
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.05
+		add_popularity = { ideology = national_populist popularity = 0.1 }
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+	}
+	
+	option = {
+		name = "The Army breaks up the march!"
+		ai_chance = {
+			base = 0
+		}
+		add_stability = 0.1
+	}
+}
+
+country_event = {
+	id = romhun.29
+	title = "Nicholas' Speech"
+	desc = romhun.29.d
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "Romania will be made whole again!"
+		ai_chance = {
+			base = 100
+		}
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = 100
+		add_popularity = { ideology = national_populist popularity = 0.1 }
+	}
+}
+
+#################
+# - USA stuff - #
+#################
+
+country_event = {
+	id = romhun.30
+	title = "USA wants to join the IPA"
+	desc = "With our war with the Soviets continuing we have found an unlikely ally in the United States. It would seem they wish to join our crusade against the Godless collectivists."
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "Their assistance will be greatly appreciated."
+		ai_chance = {
+			base = 100
+		}
+		add_to_faction = USA
+	}
+	
+	option = {
+		name = "We don't need their help!"
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = {
+	id = romhun.31
+	title = "USA wants to join the Entente"
+	desc = "With our war with Germany continuing we have found an unlikely ally in the United States. This morning they have approached our government with the possibility of an alliance to combat the Germans."
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "Their assistance will be greatly appreciated."
+		ai_chance = {
+			base = 100
+		}
+		add_to_faction = USA
+	}
+	
+	option = {
+		name = "We don't need their help!"
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+

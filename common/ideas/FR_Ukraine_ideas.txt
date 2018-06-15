@@ -1,0 +1,16 @@
+#######################
+# Ukraine Union Ideas #
+#########################
+# Made by darknight1342 #
+#########################
+
+ideas = {
+	country = {
+		UKR_corn = {
+			picture = Generic_foreign_capital
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+		}
+	}
+}

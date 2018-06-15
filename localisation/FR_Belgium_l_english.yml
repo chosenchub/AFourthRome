@@ -1,0 +1,35 @@
+﻿l_english:
+
+#### Political Parties ####
+BEL_vanguardist_party:0 "BWP/POB"
+BEL_vanguardist_party_long:0 "Belgische Werkliedenpartij/Parti Ouvrier Belge"
+BEL_collectivist_party:0 "KPB/PCB"
+BEL_collectivist_party_long:0 "Kommunistische Partij van België/Parti Communiste de Belgique"
+BEL_libertarian_socialist_party:0 "KPB/PCB"
+BEL_libertarian_socialist_party_long:0 "Kommunistische Partij van België/Parti Communiste de Belgique"
+BEL_social_democrat_party:0 "BWP/POB"
+BEL_social_democrat_party_long:0 "Belgische Werkliedenpartij/Parti Ouvrier Belge"
+BEL_social_liberal_party:0 "PP"
+BEL_social_liberal_party_long:0 "Progressistische Partij/Parti Progrèssist"
+BEL_market_liberal_party:0 "LP/PL"
+BEL_market_liberal_party_long:0 "Liberale Partij/Parti Libéral"
+BEL_social_conservative_party:0 "KP/PC"
+BEL_social_conservative_party_long:0 "Katholieke Partij/Parti Catholique"
+BEL_authoritarian_democrat_party:0 "MP/PM"
+BEL_authoritarian_democrat_party_long:0 "Monarchistische Partij/Parti Monarchiste"
+BEL_paternal_autocrat_party:0 "Verdinaso"
+BEL_paternal_autocrat_party_long:0 "Verdinaso"
+BEL_national_populist_party:0 "VNV"
+BEL_national_populist_party_long:0 "Vlaams Nationaal Verbond"
+BEL_valkist_party:0 "PB"
+BEL_valkist_party_long:0 "Parti Bourguignon"
+
+#### Political Ministers ####
+
+#####Ideas#####
+
+#####Tooltips#####
+
+#####Focus#####
+
+#####Events#####

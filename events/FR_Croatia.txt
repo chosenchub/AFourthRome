@@ -1,0 +1,143 @@
+﻿##################
+# Croatia Events #
+#########################
+# Made by Darknight1342 #
+#########################
+
+add_namespace = cro
+
+#War with Hungary
+country_event = {
+    id = cro.1
+    title = cro.1.t
+    desc = cro.1.d
+    picture = GFX_event_generic_rally2
+
+    trigger = {
+        tag = CRO
+        date > 1937.3.1
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    fire_only_once = yes
+
+    option = {
+        name = cro.1.a
+        declare_war_on = {
+            type = annex_everything
+            target = HUN
+        }
+    }
+}
+
+#War With Serbia
+country_event = {
+    id = cro.2
+    title = cro.2.t
+    desc = cro.2.d
+    picture = GFX_event_generic_rally2
+
+    trigger = {
+        tag = CRO
+        date > 1937.3.5
+        CRO = { has_capitulated = no }
+        surrender_progress < 0.20
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    fire_only_once = yes
+
+    option = {
+        name = cro.2.a
+        declare_war_on = {
+            type = annex_everything
+            target = SER
+        }
+        CRO = {
+            transfer_state = 104
+            transfer_state = 788
+        load_oob = cro_phase_2
+        }
+    }
+}
+
+#War With Italy
+country_event = {
+    id = cro.3
+    title = cro.3.t
+    desc = cro.3.d
+    picture = GFX_event_generic_rally2
+
+    trigger = {
+        tag = CRO
+        date > 1937.3.15
+        CRO = { has_capitulated = no }
+        surrender_progress < 0.20
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    fire_only_once = yes
+
+    option = {
+        name = cro.3.a
+        declare_war_on = {
+            type = annex_everything
+            target = ITA
+        }
+        CRO = {
+            transfer_state = 103
+            transfer_state = 163
+            transfer_state = 789
+            transfer_state = 790
+        }
+        load_oob = cro_phase_3
+    }
+}
+
+#Independance Treaty
+country_event = {
+    id = cro.4
+    title = cro.4.t
+    desc = cro.4.d
+    picture = GFX_event_generic_rally2
+
+    trigger = {
+        tag = CRO
+        date > 1937.3.
+        surrender_progress < 0.20
+    }
+
+    mean_time_to_happen = {
+        days = 10
+    }
+
+    fire_only_once = yes
+
+    option = {
+        name = cro.4.a
+        remove_ideas = cro_united_revolt
+        white_peace = HUN
+        white_peace = ITA
+        white_peace = SER
+        add_political_power = 100
+        ITA = {
+            country_event = {id = italy.141 days = 1}
+        }
+        HUN = {
+            country_event = {id = hungary.31 days = 1}
+        }
+        SER = {
+            country_event = {id = serbia.6 days = 1}
+        }
+        drop_cosmetic_tag = yes
+    }
+}

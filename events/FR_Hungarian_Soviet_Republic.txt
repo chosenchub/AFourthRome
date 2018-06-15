@@ -1,0 +1,24 @@
+﻿##############
+# HSR Events #
+#########################
+# Made by Darknight1342 #
+#########################
+
+### NOTE: No, I do not know how half these events work. If one of them is broken, your guess is as good as mine. This entire file is held up by a single thread, and all it takes to break it is deleting one single curly boi.
+
+add_namespace = hsr
+
+country_event = {
+	id = hsr.1
+	title = hsr.1.t
+	desc = hsr.1.d
+	picture = GFX_report_event_hungarian_soldiers
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		declare_war_on = { target = HUN type = annex_everything }
+	}
+}

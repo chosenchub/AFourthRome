@@ -1,0 +1,32 @@
+###########################
+# - Statistics Decisions
+# - By jespertjee
+###########################
+
+#nation_ranking_information_decision_group = {
+#	ranking = {
+#
+#		allowed = { always = yes }
+#
+#		available = { always = no }
+#
+#		
+#		target_trigger = {
+#			FROM = { exists = yes }
+#			}
+#
+#		visible = {
+#			always = yes
+#		}
+#
+#		ai_will_do = {
+#			factor = 0
+#		}		
+#
+#		fire_only_once = no
+#
+#		complete_effect = {
+#			}
+#		}
+#	}
+

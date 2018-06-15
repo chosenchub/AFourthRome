@@ -1,0 +1,43 @@
+﻿l_english:
+
+
+#Parties
+
+#Mongolian Revolutionary Party
+MON_vanguardist_party:0 "MKN"
+MON_vanguardist_party_long:0 "Mongolyn Khuvisgalt Nam" 
+#Communist party of Mongolia
+MON_collectivist_party:0 "MZN"
+MON_collectivist_party_long:0 "Mongol Zövlöltiin Nam"
+#Socialist Party
+MON_libertarian_socialist_party:0 "Sotsialist Nam"
+MON_libertarian_socialist_party_long:0 "Sotsialist Nam"
+#Democratic Party
+MON_social_democrat_party:0 "Ardchilsan Nam"
+MON_social_democrat_party_long:0 "Ardchilsan Nam"
+#Social Liberal Party
+MON_social_liberal_party:0 "Niigmiin Libyeri nam"
+MON_social_liberal_party_long:0 "Niigmiin Libyeri Nam"
+#Market Liberal Party
+MON_market_liberal_party:0 "Zakh Zeeliin Libyeral Nam"
+MON_market_liberal_party_long:0 "Zakh Zeeliin Libyeral Nam"
+#Social Conservative Party
+MON_social_conservative_party:0 "Ardchilsan Nam"
+MON_social_conservative_party_long:0 "Ardchilsan Nam"
+#Mongolian Unity Party
+MON_authoritarian_democrat_party:0 "Mongolyn Ev Negdliin Nam"
+MON_authoritarian_democrat_party_long:0 "Mongolyn Ev Negdliin Nam"
+MON_paternal_autocrat_party:0 "Mongolyn Ev Negdliin Nam"
+MON_paternal_autocrat_party_long:0 "Mongolyn Ev Negdliin Nam"
+#Mongol Restoration Party
+MON_national_populist_party:0 "MDSN"
+MON_national_populist_party_long:0 "Mongol Dakhi Sergeeltiin Nam"
+#Mongolian Valkist Party
+MON_valkist_party:0 "MVN"
+MON_valkist_party_long:0 "Mongolyn Valstist Nam"
+
+#Ideas
+MON_without_khan:0 "A Khanate Without a Khan"
+MON_without_khan_desc:0 "Since the death of Bogd Khan, our great nation has been without a leader. This has caused our nation to freeze in its tracks, as the reforms of Bogd Khan were never finished. Still, the spirit of our great leader can be felt throughout the land, giving strength to our population in these harsh times."
+MON_tuva_nationalism:0 "Tuvan Nationalism"
+MON_tuva_nationalism_desc:0 "Tuvan Nationalism"

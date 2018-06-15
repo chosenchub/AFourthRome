@@ -1,0 +1,37 @@
+﻿l_english:
+
+#### Political Parties ####
+
+SWI_vanguardist_party:0 "ESP"
+SWI_vanguardist_party_long:0 "Eidgenössische Sozialistische Partei"
+SWI_collectivist_party:0 "PCA"
+SWI_collectivist_party_long:0 "Bundes Syndikalische Partei der Schweiz"
+SWI_libertarian_socialist_party:0 "FS"
+SWI_libertarian_socialist_party_long:0 "Freie Sozialisten"
+SWI_social_democrat_party:0 "SPS"
+SWI_social_democrat_party_long:0 "Sozialdemokratische Partei der Schweiz"
+SWI_social_liberal_party:0 "NUu"
+SWI_social_liberal_party_long:0 "Nationale Unabhängigkeitsunion"
+SWI_market_liberal_party:0 "LdU"
+SWI_market_liberal_party_long:0 "Liberaldemokratische Union"
+SWI_social_conservative_party:0 "BCDA"
+SWI_social_conservative_party_long:0 "Bundes Christlich-Demokratische Allianz"
+SWI_authoritarian_democrat_party:0 "SDVp"
+SWI_authoritarian_democrat_party_long:0 "Schweizer Demokratisch Volkspartei"
+SWI_paternal_autocrat_party:0 "SNR"
+SWI_paternal_autocrat_party_long:0 "Schweizer National Republikaner"
+SWI_national_populist_party:0 "VL"
+SWI_national_populist_party_long:0 "Vaterländischer Liga"
+SWI_valkist_party:0 "DV"
+SWI_valkist_party_long:0 "Deutsch-schweizerische Valkistenpartei"
+
+#### Ideas ####
+
+SWI_arms_industry:0 "The Swiss Arms Industry"
+SWI_arms_industry_desc:0 ""
+###
+SWI_swiss_armed_forces:0 "Schweizer Armee"
+SWI_swiss_armed_forces_desc:0 "The Schweizer Armee (Swiss Armed Forces) acts as the bulk of Swiss land forces. Volunteers are accepted from people over 18 years of age and service is compulsory for those over 19 years of age. Although it is hardly intended to ever be found in a position that would require offensive maneuvers, it is well armed and thanks to conscription policies; properly manned."
+###
+SWI_bank_act:0 "Swiss Banking Act"
+SWI_bank_act_desc:0 "Signed on December 1st 1933, the Swiss Banking Act was created in an effort to secure the assets of account holders within Switzerland. The act was a reactionary measure against the French intervention in the Rhineland, which saw many foreign assets in the region shut down and their profits siezed. The Banking Act has made it a criminal offense for a bank to reveal the name of an account holder, and proved very effective when both the French and German governments pressed the Swiss to reveal the names of certain accounts which had ties to the industrial Rhine region."

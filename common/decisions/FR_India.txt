@@ -1,0 +1,56 @@
+HYD_princely_relations = {
+	
+	HYD_forming_princely_pact = {
+		
+		icon = generic_monarchism
+
+		available = {
+			tag = HYD
+			OR = {
+				is_neighbor_of = IND
+				is_neighbor_of = INC
+			}
+		}
+
+		visible = {
+			tag = HYD
+			country_exists = IND
+			country_exists = INC
+			OR = {
+				is_neighbor_of = IND
+				is_neighbor_of = INC
+			}
+		}
+
+		fire_only_once = yes
+
+		modifier = {
+			political_power_gain = -0.25
+			war_support_weekly = 0.05
+		}
+
+		days_remove = 30
+
+		cost = 100
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		remove_effect = {
+			#add_ideas = PRN_princely_pact
+			set_country_flag = princely_pact
+			create_faction = "HYD_princely_pact"
+			every_country = {
+				limit = {
+					has_country_flag = ind_revolter
+					NOT = {
+						tag = HYD
+						has_country_flag = princely_pact
+					}
+				}
+				country_event = { id = prince.2 days = 2 }
+			}
+		}
+	}
+}

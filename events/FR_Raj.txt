@@ -1,0 +1,392 @@
+﻿###########################
+# - British Raj Events
+# - By General Melchett
+###########################
+
+add_namespace = raj
+
+###########################
+
+country_event = {
+	id = raj.1
+	title = "A Government in Exile"
+	desc = raj.1.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "We'll be back!"
+		remove_ideas = RAJ_colonial_administration
+		add_ideas = RAJ_exiled_government
+		hidden_effect = {
+			set_politics = {
+				ruling_party = authoritarian_democrat
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.65
+			}
+		}
+	}
+}
+
+country_event = {
+	id = raj.2
+	title = "Britain prepares for an India reconquest"
+	desc = raj.2.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "We told you we'd be back!"
+		add_ideas = RAJ_reconquest_campaign
+		add_war_support = 0.25
+	}
+}
+
+country_event = {
+	id = raj.3
+	title = "The Royal Review"
+	desc = raj.3.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "We are obliged to reform the nation"
+		add_stability = 0.10
+		hidden_effect = {
+			country_event = { id = raj.4 days = 7 }
+		}
+	}
+
+	option = {
+		name = "This nation is in perfect order! Never bring this up again!"
+		add_stability = -0.10
+		add_political_power = 100
+	}
+}
+
+country_event = {
+	id = raj.4
+	title = "Reviewing the Administration"
+	desc = raj.4.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "This administration is outdated and in dire need of reform"
+		hidden_effect = {
+			set_country_flag = RAJ_admin_reforms
+			country_event = { id = raj.5 days = 7 }
+		}
+	}
+	
+	option = {
+		name = "We shall not cede an ounce of power!"
+		add_stability = -0.10
+		add_political_power = 50
+		hidden_effect = {
+			country_event = { id = raj.5 days = 7 }
+		}
+	}
+}
+
+country_event = {
+	id = raj.5
+	title = "Reviewing the Military"
+	desc = raj.5.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "We cannot rely on an army on the other side of the globe"
+		hidden_effect = {
+			set_country_flag = RAJ_mil_reforms
+			country_event = { id = raj.6 days = 7 }
+		}
+	}
+
+	option = {
+		name = "We are a colony, the motherland can defend us"	
+		add_war_support = -0.10
+		hidden_effect = {
+			country_event = { id = raj.6 days = 7 }
+		}
+	}
+}
+
+country_event = {
+	id = raj.6
+	title = "Reviewing the Conditions"
+	desc = raj.6.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "It is our duty to civilise and modernise the people of India!"
+		hidden_effect = {
+			set_country_flag = RAJ_civ_reforms
+			country_event = { id = raj.7 days = 3 }
+		}
+	}
+
+	option = {
+		name = "Don't be ridiculous"
+		hidden_effect = {
+			country_event = { id = raj.7 days = 3 }
+		}
+	}
+}
+
+
+country_event = {
+	id = raj.7
+	title = "Finalising the Review"
+	desc = raj.7.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "We have learnt a lot, now we must begin the reforms"
+		add_political_power = 100
+		hidden_effect = {
+			unlock_decision_category_tooltip = RAJ_national_reforms
+		}
+	}
+}
+
+country_event = {
+	id = raj.8
+	title = "Drafting a new Government of India Act"
+	desc = raj.8.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "We must begin reducing the power of the Viceroy"
+		hidden_effect = { 
+			country_event = { id = raj.9 days = 2 }
+		}
+	}
+
+	option = {
+		name = "The Viceroy shall remain strong, but we must reform to survive"
+		hidden_effect = { 
+			country_event = { id = raj.9 days = 2 }
+		}
+	}
+}
+
+country_event = {
+	id = raj.9
+	title = "Demands for Elections"
+	desc = raj.9.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "Regular, provincial elections will ensure stablity"
+		add_political_power = -50
+		hidden_effect = {
+			set_country_flag = RAJ_regular_elections
+			country_event = { id = raj.10 days = 7 }
+		}
+	}
+
+	option = {
+		name = "We shall allow elections but at the discretion of the Viceroy"
+		add_political_power = -20
+		hidden_effect = {
+			set_country_flag = RAJ_elections_viceroy
+			country_event = { id = raj.10 days = 7 }
+		}
+	}
+
+	option = {
+		name = "Allow elections, but only the Princes can vote!"
+		add_political_power = -10
+		hidden_effect = {
+			set_country_flag = RAJ_princely_votes
+			country_event = { id = raj.11 days = 14 }
+		}
+	}
+
+	option = {
+		name = "Elections? In MY Raj? I think not!"
+		add_political_power = 50
+		hidden_effect = {
+			set_country_flag = RAJ_no_elections
+			country_event = { id = raj.10 days = 7 }
+		}
+	}
+}
+
+country_event = {
+	id = raj.10
+	title = "The Status of the Princes"
+	desc = raj.10.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "The Princely States should be dissolved entirely"
+		add_political_power = -50
+		hidden_effect = {
+			set_country_flag = RAJ_dissolved_princes
+			country_event = { id = raj.11 days = 7 }
+		}
+	}
+
+	option = {
+		name = "The power of the Princes must be curtailed"
+		add_political_power = -10
+		hidden_effect = {
+			set_country_flag = RAJ_restricted_princes
+			country_event = { id = raj.11 days = 7 }
+		}
+	}
+
+	option = {
+		name = "The Princely States shall stay as they are!"
+		add_political_power = 50
+		hidden_effect = {
+			set_country_flag = RAJ_normal_princes
+			country_event = { id = raj.11 days = 7 }
+		}
+	}
+}
+
+country_event = {
+	id = raj.11
+	title = "Political Opposition"
+	desc = raj.11.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "Legalise all opposition"
+		add_political_power = -25
+		hidden_effect = {
+			set_country_flag = RAJ_all_opposition
+		}
+	}
+
+	option = {
+		name = "Allow some parties to operate"
+		add_political_power = -10
+		hidden_effect = {
+			set_country_flag = RAJ_some_opposition
+		}
+	}
+
+	option = {
+		name = "Maintain the ban on opposition"
+		hidden_effect = {
+			set_country_flag = RAJ_banned_opposition
+		}
+	}
+}
+
+country_event = {
+	id = raj.12
+	title = "The New Administration"
+	desc = raj.12.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "The Act passes with full support!"
+		add_stability = 0.20
+		if = {
+			limit = {
+				AND = {
+					has_country_flag = RAJ_all_opposition
+					has_country_flag = RAJ_dissolved_princes
+					has_country_flag = RAJ_regular_elections
+				}
+			}
+			add_ideas = RAJ_full_reform
+		}
+
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = RAJ_elections_viceroy
+					has_country_flag = RAJ_some_opposition
+					has_country_flag = RAJ_restricted_princes
+					has_country_flag = RAJ_princely_votes
+				}
+			}
+			add_ideas = RAJ_partial_reform
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = RAJ_all_opposition
+					has_country_flag = RAJ_dissolved_princes
+					has_country_flag = RAJ_regular_elections
+				}
+			}
+			add_ideas = RAJ_bare_reform
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = RAJ_regular_elections
+				}
+				country_event = { id = raj.13 months = 6 }
+			}
+		}
+	}
+
+	option = {
+		name = "The Act is killed by the British"
+		add_political_power = -100	
+	}
+}
+
+country_event = {
+	id = raj.14
+	title = "The Rebels are defeated!"
+	desc = raj.14.d
+
+	fire_only_once = yes
+
+	trigger = {
+		IND = { has_capitulated = yes }
+	}
+
+	option = {
+		name = "Now we must rebuild"
+		hidden_effect = {
+			ENG = { news_event = { id = uknews.18 } }
+		}
+	}
+}
+			

@@ -1,0 +1,580 @@
+﻿#########################
+# French Foreign Events #
+########################################
+# Made by jespertjee, SuperMarks & CIA #
+########################################
+
+add_namespace = frapol
+
+
+country_event = {
+	id = frapol.1
+	title = frapol.1.t
+	desc = frapol.1.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 1936.2.05
+		tag = FRA
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = frapol.1.a
+	}
+}
+
+
+country_event = {
+	id = frapol.2
+	title = frapol.2.t
+	desc = frapol.2.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 1936.4.26
+		TAG = FRA
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		set_country_flag = FRA_1936_election_finished
+		set_country_flag = { flag = FRA_PR_SFIO_problems value = 0 }
+		set_country_flag = { flag = FRA_FR_ADR_PR_problems value = 0 }
+	}
+
+	option = {
+		name = frapol.2.a
+		ai_chance = {
+			base = 50
+		}
+		set_country_flag = FRA_PR_SFIO_coalition
+		hidden_effect = {
+			set_politics = {
+				parties = {
+					vanguardist = { popularity = 0 }
+					collectivist = { popularity = 0 }
+					libertarian_socialist = { popularity = 15 }
+					social_democrat = { popularity = 18 }
+					social_liberal = { popularity = 17 }
+					market_liberal = { popularity = 11 }
+					social_conservative = { popularity = 22 }
+					authoritarian_democrat = { popularity = 0 }
+					paternal_autocrat = { popularity = 17 }
+					national_populist = { popularity = 0 }
+					valkist = { popularity = 0 }
+				}
+				ruling_party = social_conservative
+				elections_allowed = no
+			}
+		}
+	}
+	option = {
+		name = frapol.2.b
+		ai_chance = {
+			base = 50
+		}
+		set_country_flag = FRA_FR_ADR_PR_coalition
+		hidden_effect = {
+			set_politics = {
+				parties = {
+					vanguardist = { popularity = 0 }
+					collectivist = { popularity = 0 }
+					libertarian_socialist = { popularity = 15 }
+					social_democrat = { popularity = 18 }
+					social_liberal = { popularity = 17 }
+					market_liberal = { popularity = 11 }
+					social_conservative = { popularity = 22 }
+					authoritarian_democrat = { popularity = 0 }
+					paternal_autocrat = { popularity = 17 }
+					national_populist = { popularity = 0 }
+					valkist = { popularity = 0 }
+				}
+				ruling_party = social_conservative
+				elections_allowed = no
+			}
+		}
+	}
+}
+
+country_event = {
+	id = frapol.3
+	title = frapol.3.t
+	desc = frapol.3.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+	ai_chance = {
+			base = 30
+		}
+		name = frapol.3.a
+	}
+	option = {
+		name = frapol.3.b
+		ai_chance = {
+			base = 70
+		}
+		modify_country_flag = { flag = FRA_PR_SFIO_problems value = 1 }
+		add_political_power = -25
+	}
+}
+
+country_event = {
+	id = frapol.4
+	title = frapol.4.t
+	desc = frapol.4.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = frapol.4.a
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		name = frapol.4.b
+		ai_chance = {
+			base = 70
+		}
+		modify_country_flag = { flag = FRA_PR_SFIO_problems value = 1 }
+		add_political_power = -25
+	}
+}
+
+country_event = {
+	id = frapol.5
+	title = frapol.5.t
+	desc = frapol.5.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = frapol.5.a
+		ai_chance = {
+			base = 30
+		}
+		hidden_effect = {
+			country_event = frapol.16
+		}
+	}
+	option = {
+		name = frapol.5.b
+		ai_chance = {
+			base = 70
+		}
+		modify_country_flag = { flag = FRA_PR_SFIO_problems value = 1 }
+		add_political_power = -25
+		hidden_effect = {
+			country_event = frapol.16
+		}
+	}
+}
+
+country_event = {
+	id = frapol.6
+	title = frapol.6.t
+	desc = frapol.6.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = frapol.6.a
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		name = frapol.6.b
+		ai_chance = {
+			base = 70
+		}
+		modify_country_flag = { flag = FRA_FR_ADR_PR_problems value = 1 }
+		add_political_power = -25
+	}
+}
+
+country_event = {
+	id = frapol.7
+	title = frapol.7.t
+	desc = frapol.7.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = frapol.7.a
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		name = frapol.7.b
+		ai_chance = {
+			base = 70
+		}
+		modify_country_flag = { flag = FRA_FR_ADR_PR_problems value = 1 }
+		add_political_power = -25
+	}
+}
+
+country_event = {
+	id = frapol.8
+	title = frapol.8.t
+	desc = frapol.8.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = frapol.8.a
+		ai_chance = {
+			base = 30
+		}
+		hidden_effect = {
+			country_event = frapol.16
+		}
+	}
+	option = {
+		name = frapol.8.b
+		ai_chance = {
+			base = 70
+		}
+		modify_country_flag = { flag = FRA_FR_ADR_PR_problems value = 1 }
+		add_political_power = -25
+		hidden_effect = {
+			country_event = frapol.16
+		}
+	}
+}
+
+country_event = {
+	id = frapol.9
+	title = frapol.9.t
+	desc = frapol.9.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = frapol.9.a
+		set_country_flag = FRA_FR_ADR_PR_coalition
+		add_ideas = FRA_political_instability_1
+	}
+}
+
+country_event = {
+	id = frapol.10
+	title = frapol.10.t
+	desc = frapol.10.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = frapol.10.a
+		set_country_flag = FRA_PR_SFIO_success
+		set_politics = { ruling_party = social_democrat elections_allowed = no }
+		hidden_effect = {
+			remove_ideas_with_trait = head_of_government
+			remove_ideas_with_trait = foreign_minister
+			remove_ideas_with_trait = economy_minister
+			remove_ideas_with_trait = security_minister
+		}
+		if = {
+			limit = {
+				has_idea = FRA_political_instability_1
+			}
+			remove_ideas = FRA_political_instability_1
+		}
+		add_ideas = FRA_Leon_Blum_hog_rso
+		add_ideas = NFA_Albert_Sarraut_for_sli
+		add_ideas = FRA_Andre_Malraux_eco_rso
+		add_ideas = NFA_Edouard_Herriot_sec_sli
+	}
+}
+
+country_event = {
+	id = frapol.11
+	title = frapol.11.t
+	desc = frapol.11.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = frapol.11.a
+		set_country_flag = FRA_PR_SFIO_coalition
+		add_ideas = FRA_political_instability_1
+	}
+}
+
+country_event = {
+	id = frapol.12
+	title = frapol.12.t
+	desc = frapol.12.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = frapol.12.a
+		hidden_effect = {
+			remove_ideas_with_trait = head_of_government
+			remove_ideas_with_trait = foreign_minister
+			remove_ideas_with_trait = economy_minister
+			remove_ideas_with_trait = security_minister
+		}
+		if = {
+			limit = {
+				has_idea = FRA_political_instability_1
+			}
+			remove_ideas = FRA_political_instability_1
+		}
+		set_country_flag = FRA_FR_ADR_PR_success
+		set_politics = { ruling_party = social_conservative elections_allowed = no }
+		add_ideas = NFA_Paul_Reynaud_hog_sco
+		add_ideas = NFA_Robert_Schumann_eco_mli
+		add_ideas = NFA_Pierre_Etienne_Flandin_for_sco
+		add_ideas = FRA_Joseph_Paganon_sec_sco
+	}
+}
+
+country_event = {
+	id = frapol.13
+	title = frapol.13.t
+	desc = frapol.13.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = frapol.13.a
+		custom_effect_tooltip = FRA_new_elections_tooltip
+		swap_ideas = {
+			remove_idea = FRA_political_instability_1
+			add_idea = FRA_political_instability_2
+		}
+		hidden_effect = {
+			country_event = { id = frapol.15 months = 3}
+		}
+	}
+}
+
+country_event = {
+	id = frapol.14
+	title = frapol.14.t
+	desc = frapol.14.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = frapol.14.a
+		hidden_effect = {
+			remove_ideas = {
+				FRA_lsmc
+				FRA_taxes_for_rich
+				FRA_benefits
+				FRA_reformed_tax
+				FRA_reduce_mil_spending
+				FRA_inflation_control
+				FRA_investments
+				FRA_austerity
+				FRA_regulations_reduced
+				FRA_less_benefit
+				FRA_cut_healthcare
+				FRA_encourage_investment
+				FRA_bus_subsidies
+				FRA_seize_factories
+				FRA_power_to_the_union
+				FRA_remove_bourgeois
+				#FRA_stop_inflation
+				FRA_jobs
+				FRA_aid_civie
+				FRA_remove_leftists
+				FRA_cut_immigrant_spending
+			}
+		}
+	}
+}
+
+country_event = {
+	id = frapol.15
+	title = frapol.15.t
+	desc = frapol.15.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = FRA_new_elections
+	}
+
+	option = {
+		name = frapol.15.a
+		ai_chance = {
+			base = 50
+		}
+		hidden_effect = {
+			set_politics = {
+				parties = {
+					vanguardist = { popularity = 0 }
+					collectivist = { popularity = 0 }
+					libertarian_socialist = { popularity = 52 }
+					social_democrat = { popularity = 0 }
+					social_liberal = { popularity = 5 }
+					market_liberal = { popularity = 7 }
+					social_conservative = { popularity = 10 }
+					authoritarian_democrat = { popularity = 0 }
+					paternal_autocrat = { popularity = 26 }
+					national_populist = { popularity = 0 }
+					valkist = { popularity = 0 }
+				}
+				ruling_party = libertarian_socialist
+				elections_allowed = no
+			}
+			set_country_flag = FRA_SFIO_wins
+			remove_ideas_with_trait = head_of_government
+			remove_ideas_with_trait = foreign_minister
+			remove_ideas_with_trait = economy_minister
+			remove_ideas_with_trait = security_minister
+			}
+		add_ideas = FRA_Leon_Blum_hog_rso
+		add_ideas = FRA_Jean_Paul_Sartre_for_rso
+		add_ideas = FRA_Vincent_Auriol_eco_rso
+		add_ideas = FRA_Paul_Ramadier_sec_rso
+	}
+		
+	option = {
+		name = frapol.15.b
+		ai_chance = {
+			base = 20
+		}
+		hidden_effect = {
+			set_politics = {
+				parties = {
+					vanguardist = { popularity = 0 }
+					collectivist = { popularity = 0 }
+					libertarian_socialist = { popularity = 24 }
+					social_democrat = { popularity = 0 }
+					social_liberal = { popularity = 12 }
+					market_liberal = { popularity = 25 }
+					social_conservative = { popularity = 16 }
+					authoritarian_democrat = { popularity = 0 }
+					paternal_autocrat = { popularity = 23 }
+					national_populist = { popularity = 0 }
+					valkist = { popularity = 0 }
+				}
+				ruling_party = market_liberal
+				elections_allowed = no
+			}
+			set_country_flag = FRA_a_grand_coalition_against_extremism
+			remove_ideas_with_trait = head_of_government
+			remove_ideas_with_trait = foreign_minister
+			remove_ideas_with_trait = economy_minister
+			remove_ideas_with_trait = security_minister
+			}
+		add_ideas = NFA_Pierre_Etienne_Flandin_hog_sli
+		add_ideas = NFA_Albert_Sarraut_for_sli
+		add_ideas = NFA_Pierre_Henri_Teitgen_eco_sco
+		add_ideas = NFA_Louis_Georges_Mandel_sec_mli
+	}
+
+	option = {
+		name = frapol.15.c
+		ai_chance = {
+			base = 30
+		}
+		hidden_effect = {
+			set_politics = {
+				parties = {
+					vanguardist = { popularity = 0 }
+					collectivist = { popularity = 0 }
+					libertarian_socialist = { popularity = 20 }
+					social_democrat = { popularity = 0 }
+					social_liberal = { popularity = 2 }
+					market_liberal = { popularity = 14 }
+					social_conservative = { popularity = 13 }
+					authoritarian_democrat = { popularity = 0 }
+					paternal_autocrat = { popularity = 51 }
+					national_populist = { popularity = 0 }
+					valkist = { popularity = 0 }
+				}
+				ruling_party = paternal_autocrat
+				elections_allowed = no
+			}
+			set_country_flag = FRA_AF_wins
+			remove_ideas_with_trait = head_of_government
+			remove_ideas_with_trait = foreign_minister
+			remove_ideas_with_trait = economy_minister
+			remove_ideas_with_trait = security_minister
+			}
+		add_ideas = NFA_Pierre_Costantini_hog_pau
+		add_ideas = NFA_Maurice_Pujo_for_pau
+		add_ideas = NFA_Eugene_Schueller_eco_pau
+		add_ideas = NFA_Eugene_Deloncle_sec_pau
+	}
+}
+
+country_event = {
+	id = frapol.16
+	title = frapol.16.t
+	desc = frapol.16.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	option = {
+		name = frapol.16.a
+			if = {
+				limit = {
+					has_country_flag = { flag = FRA_PR_SFIO_problems value > 2 }
+					NOT = { has_country_flag = FRA_FR_ADR_PR_coalition }
+				}
+				country_event = frapol.9
+			}
+			if = {
+				limit = {
+					has_country_flag = { flag = FRA_PR_SFIO_problems value < 3 }
+					has_country_flag = FRA_PR_SFIO_coalition
+				}
+				country_event = frapol.10
+			}
+
+			if = {
+				limit = {
+					has_country_flag = { flag = FRA_FR_ADR_PR_problems value > 2 }
+					NOT = { has_country_flag = FRA_PR_SFIO_coalition }
+				}
+				country_event = frapol.11
+			}
+			if = {
+				limit = {
+					has_country_flag = { flag = FRA_FR_ADR_PR_problems value < 3 }
+					has_country_flag = FRA_FR_ADR_PR_coalition
+				}
+				country_event = frapol.12
+			}
+			if = {
+				limit = {
+					has_country_flag = { flag = FRA_FR_ADR_PR_problems value > 2 }
+					has_country_flag = { flag = FRA_PR_SFIO_problems value > 2 }
+				}
+				country_event = frapol.13
+			}
+		}
+	}

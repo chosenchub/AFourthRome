@@ -1,0 +1,1159 @@
+﻿###########################
+# World News Events
+###########################
+
+add_namespace = worldnews
+
+# Abdulmecid assassinated
+news_event = {
+	id = worldnews.1
+	title = worldnews.1.t
+	desc = worldnews.1.d
+	picture = GFX_news_event_assassination_of_alexander_kerensky
+
+	major = yes
+
+	is_triggered_only = yes
+
+	show_major = {
+		NOT = { tag = TUR }
+	}
+
+	option = {
+		name = worldnews.1.a
+	}
+}
+
+# Black Wednesday
+news_event = {
+	id = worldnews.2
+	title = "The London Stock Market Crash"
+	desc = uknews.2.d
+	picture = UK_news_parliament
+
+	major = yes
+
+	# fire_only_once = yes
+
+	trigger = {
+		NOT = { has_global_flag = black_wednesday }
+		ENG = { has_country_flag = ENG_stock_crash }
+		OR = {
+			has_global_flag = All_News_Events
+			has_global_flag = Important_News_Events
+		}
+	}
+
+	show_major = {
+		NOT = { tag = ENG }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = { set_global_flag = black_wednesday }
+
+	option = {
+		name = worldnews.2.a
+	}
+}
+
+# Istanbul Remilitarized Worldwide
+news_event = {
+	id = worldnews.3
+	title = worldnews.3.t
+	desc = worldnews.3.d
+	picture = GFX_news_event_fascist_militia
+
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	is_triggered_only = yes
+
+	show_major = {
+		NOT = { tag = TUR }
+	}
+
+	option = {
+		name = worldnews.3.a
+	}
+}
+
+# French Colonial Exposition
+news_event = {
+	id = worldnews.4
+	title = "The Paris Colonial Exposition"
+	desc = worldnews.4.d
+	picture = GFX_news_event_australia_enter_bangkok #GFX_news_event_057
+
+	major = yes
+
+	trigger = {
+		NOT = { has_global_flag = paris_colonial_exposition }
+		FRA = { has_country_flag = FRA_PCE_OPEN }
+		OR = {
+			has_global_flag = All_News_Events
+			has_global_flag = Important_News_Events
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = { set_global_flag = paris_colonial_exposition }
+
+	show_major = {
+		#NOT = { tag = FRA }
+	}
+
+	option = {
+		trigger = {
+			has_country_flag = FRA_Attending_Paris_Colonial_Exposition
+		}
+		name = "Quite the experience!"
+		add_political_power = 50
+	}
+
+	option = {
+		trigger = {
+			NOT = {
+				has_country_flag = FRA_Attending_Paris_Colonial_Exposition
+				tag = FRA
+			}
+		}
+		name = "Seems like they're trying to justify their Imperialism."
+	}
+
+	option = {
+		trigger = {
+			tag = FRA
+		}
+		name = "Vive l'Republique!"
+		add_political_power = 50
+	}
+}
+
+news_event = {
+	id = worldnews.5
+	title = "French Military Coup d'état"
+	desc = worldnews.5.d
+	picture = GFX_news_event_german_volunteers
+
+	major = yes
+
+	trigger = {
+		NOT = { has_global_flag = france_falls_to_junta }
+		FRA = { has_country_flag = FRA_COUPED_BY_JUNTA }
+		OR = {
+			has_global_flag = All_News_Events
+			has_global_flag = Important_News_Events
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = { set_global_flag = france_falls_to_junta }
+
+	show_major = {
+		#NOT = { tag = FRA }
+	}
+
+	option = {
+		trigger = {
+			NOT = { tag = FRA }
+			OR = {
+				tag = SOV
+				has_government = libertarian_socialist
+				has_government = collectivist
+				has_government = vanguardist
+			}
+		}
+		name = "A Decadent Democracy turned into a Decadent Dictatorship."
+	}
+
+	option = {
+		trigger = {
+			NOT = { tag = FRA }
+			OR = {
+				has_government = social_democrat
+				has_government = social_liberal
+				has_government = market_liberal
+				has_government = social_conservative
+			}
+		}
+		name = "Yet another flame of European Democracy has been snuffed out."
+	}
+
+	option = {
+		trigger = {
+			NOT ={
+				tag = GER
+				is_in_faction_with = GER
+			}
+			OR = {
+				tag = FRA
+				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
+				has_government = national_populist
+			}
+		}
+		name = "Death is nothing, but to live defeated and inglorious is to die daily."
+	}
+
+	option = {
+		trigger = {
+			NOT = { tag = FRA }
+			OR = {
+				tag = GER
+				is_in_faction_with = GER
+				has_government = valkist
+			}
+		}
+		name = "The French people knew their place, their Military has yet to learn."
+	}
+}
+
+# Anschluss
+news_event = {
+	id = worldnews.6
+	title = "German Occupation of Austria"
+	desc = worldnews.6.d
+	picture = GFX_news_event_034
+
+	major = yes
+
+	trigger = {
+		NOT = { has_global_flag = ger_occ_aus }
+		GER = { has_country_flag = AUS_OCCUPIED_BY_GER }
+		OR = {
+			has_global_flag = All_News_Events
+			has_global_flag = Important_News_Events
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	immediate = { set_global_flag = ger_occ_aus }
+
+	show_major = {
+		#NOT = { tag = GER }
+	}
+
+	option = {
+		trigger = {
+			is_in_faction_with = FRA
+		}
+		name = "We cannot allow Germany to annex nations left-and-right!"
+		add_war_support = 0.05
+	}
+
+	option = {
+		trigger = {
+			NOT = {
+				tag = GER
+				is_in_faction_with = FRA
+			}
+		}
+		name = "It seems Austria has finally faded into the depths of history books."
+	}
+
+	option = {
+		trigger = {
+			tag = GER
+		}
+		name = "Germans everywhere must stand united!"
+	}
+}
+
+# Nazbol Gang, unite
+news_event = {
+	id = worldnews.7
+	title = "Chaos in Kiel"
+	desc = worldnews.7.d
+	picture = GFX_news_event_063
+
+	major = yes
+
+	trigger = {
+		NOT = { has_global_flag = kiel_zone_more_like_kill_zone }
+		DEN = { has_country_flag = Nazbols_vs_Denmark }
+		OR = {
+			has_global_flag = All_News_Events
+			has_global_flag = Important_News_Events
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	immediate = { set_global_flag = kiel_zone_more_like_kill_zone }
+
+	option = {
+		trigger = {
+			OR = {
+				tag = SHO
+				tag = DEN
+			}
+		}
+		name = "We will be victorious!"
+	}
+
+	option = {
+		trigger = {
+			NOT = {
+				OR = {
+					tag = SHO
+					tag = DEN
+				}
+			}
+		}
+		name = "Yet another leftist revolution in Europe... Wait, they're leftists, right?"
+	}
+}
+
+news_event = {
+	id = worldnews.8
+	title = "Centralization of the Soviet Union"
+	desc = worldnews.8.d
+	picture = GFX_news_event_038
+
+	major = yes
+
+	trigger = {
+		NOT = { has_global_flag = ussr_united }
+		SOV = { has_country_flag = Soviet_Union_Centralized }
+		OR = {
+			has_global_flag = All_News_Events
+			has_global_flag = Important_News_Events
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	immediate = { set_global_flag = ussr_united }
+
+	option = {
+		trigger = {
+			has_war_with = SOV
+		}
+		name = "We'll defeat them nonetheless!"
+	}
+
+	option = {
+		trigger = {
+			NOT = {
+				has_war_with = SOV
+			}
+		}
+		name = "Nothing that lots of Bureaucracy & Duct-tape can't fix."
+	}
+}
+
+###Alternate History###
+
+# Caesarreich
+country_event = {
+	id = worldnews.13
+	title = worldnews.13.t
+	desc = worldnews.13.d
+
+	trigger = {
+		is_ai = no
+		date > 1939.1.1
+		NOT = { has_global_flag = althistory_is_cool }
+		OR = {
+			has_global_flag = All_News_Events
+			has_global_flag = Important_News_Events
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	immediate = { set_global_flag = althistory_is_cool }
+
+	option = {
+		name = worldnews.13.a
+	}
+}
+
+# Tides of Revolution
+country_event = {
+	id = worldnews.14
+	title = worldnews.14.t
+	desc = worldnews.14.d
+
+	trigger = {
+		is_ai = no
+		date > 1939.1.1
+		NOT = { has_global_flag = althistory_is_cool }
+		OR = {
+			has_global_flag = All_News_Events
+			has_global_flag = Important_News_Events
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	immediate = { set_global_flag = althistory_is_cool }
+
+	option = {
+		name = worldnews.14.a
+	}
+}
+# Tides of Revolution
+country_event = {
+	id = worldnews.15
+	title = worldnews.15.t
+	desc = worldnews.15.d
+
+	trigger = {
+		is_ai = no
+		date > 1939.1.1
+		NOT = { has_global_flag = althistory_is_cool }
+		OR = {
+			has_global_flag = All_News_Events
+			has_global_flag = Important_News_Events
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	immediate = { set_global_flag = althistory_is_cool }
+
+	option = {
+		name = worldnews.15.a
+	}
+}
+##################
+### Italy News ###
+##################
+
+# collectivist win
+news_event = {
+	id = worldnews.20
+	title = worldnews.20.t
+	desc = worldnews.20.d
+	picture = GFX_news_event_assassination_of_alexander_kerensky
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	major = yes
+
+	show_major = {
+		NOT = { tag = ITA }
+	}
+
+	option = {
+		name = worldnews.20.a
+	}
+}
+
+# Liberals win
+news_event = {
+	id = worldnews.21
+	title = worldnews.21.t
+	desc = worldnews.21.d
+	picture = GFX_news_event_assassination_of_alexander_kerensky
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	major = yes
+
+	show_major = {
+		NOT = { tag = ITA }
+	}
+
+	option = {
+		name = worldnews.21.a
+	}
+}
+
+# Progressives win
+news_event = {
+	id = worldnews.22
+	title = worldnews.22.t
+	desc = worldnews.22.d
+	picture = GFX_news_event_assassination_of_alexander_kerensky
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	major = yes
+
+	show_major = {
+		NOT = { tag = ITA }
+	}
+
+	option = {
+		name = worldnews.22.a
+	}
+}
+
+# Conservatives win
+news_event = {
+	id = worldnews.23
+	title = worldnews.23.t
+	desc = worldnews.23.d
+	picture = GFX_news_event_assassination_of_alexander_kerensky
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	major = yes
+
+	show_major = {
+		NOT = { tag = ITA }
+	}
+
+	option = {
+		name = worldnews.23.a
+	}
+}
+
+# Military takes over
+news_event = {
+	id = worldnews.24
+	title = worldnews.24.t
+	desc = worldnews.24.d
+	picture = GFX_news_event_assassination_of_alexander_kerensky
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	major = yes
+
+	show_major = {
+		NOT = { tag = ITA }
+	}
+
+	option = {
+		name = worldnews.24.a
+	}
+}
+
+##################
+### UK News ###
+##################
+
+add_namespace = uknews
+
+###########################
+# - Death of KGV
+###########################
+
+news_event = {
+	id = uknews.1
+	title = "A Peaceful Ending at Midnight"
+	desc = uknews.1.d
+	picture = GFX_news_event_generic_funeral
+
+	major = yes
+
+	trigger = {
+		date > 1936.1.20
+		NOT = { has_global_flag = gv_dead }
+		NOT = { tag = ENG }
+		ENG = { has_country_flag = kgv_dead }
+		OR = {
+			has_global_flag = All_News_Events
+			has_global_flag = Important_News_Events
+		}
+	}
+
+	show_major = {
+		NOT = { tag = ENG }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = { set_global_flag = gv_dead }
+
+	option = {
+		trigger = {
+			OR = {
+				tag = CAN
+				tag = AST
+				tag = NZL
+				tag = SAF
+				tag = RAJ
+			}
+		}
+		name = "More than a King, a father of a great family"
+		add_political_power = -50
+	}
+
+	option = {
+		trigger = {
+			NOT = { original_tag = CAN }
+			NOT = { original_tag = AST }
+			NOT = { original_tag = NZL }
+			NOT = { original_tag = SAF }
+			NOT = { original_tag = RAJ }
+			NOT = { original_tag = NFL }
+		}
+		name = "A new King. A new Empire?"
+	}
+
+}
+
+###########################
+# - London Stock Market Crash					# - OLD, KEEPING AS TEMP
+###########################
+
+#news_event = {
+	#id = uknews.2
+	#title = "London Stock Market Crash"
+	#desc = uknews.2.d
+	#picture = GFX_news_event_gathering_protest
+
+	#major = yes
+
+	#trigger = {
+		#ENG = { has_country_flag = black_wednesday }
+		#NOT = { has_global_flag = london_crash }
+		#NOT = { tag = ENG }
+	#}
+
+	#mean_time_to_happen = {
+		#days = 1
+	#}
+
+	#immediate = { set_global_flag = london_crash }
+
+	#option = {
+		#trigger = {
+			#OR = {
+				#tag = CAN
+				#tag = AST
+				#tag = NZL
+				#tag = SAF
+				#tag = RAJ
+			#}
+		#}
+		#name = "This is sure to affect the entire Empire"
+		#add_political_power = -100
+	#}
+
+	#option = {
+		#trigger = {
+			#NOT = {
+				#AND = {
+					#tag = CAN
+					#tag = AST
+					#tag = NZL
+					#tag = SAF
+					#tag = RAJ
+				#}
+			#}
+		#}
+		#name = "Unstable times ahead"
+	#}
+
+#}
+
+####################
+### Germany News ###
+####################
+
+news_event = {
+	id = worldnews.45
+	title = worldnews.45.t
+	desc = worldnews.45.d
+	picture = GFX_news_event_assassination_of_alexander_kerensky
+
+	major = yes
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = worldnews.45.a
+		set_country_flag = NEW_joined_the_game
+	}
+}
+
+# Pan-Germanic Threat
+news_event = {
+	id = worldnews.40
+	title = worldnews.40.t
+	desc = worldnews.40.d
+	picture = GFX_news_event_german_speech
+
+	is_triggered_only = yes
+
+	major = yes
+
+	show_major = {
+		NOT = { tag = GER }
+	}
+
+	option = {
+		name = worldnews.40.a
+	}
+}
+
+# France Backs Austria
+news_event = {
+	id = worldnews.41
+	title = worldnews.41.t
+	desc = worldnews.41.d
+	picture = ausgleich_start
+
+	is_triggered_only = yes
+
+	major = yes
+
+	show_major = {
+		NOT = { tag = FRA }
+	}
+
+	option = {
+		name = worldnews.41.a
+	}
+}
+
+# France Backs Denmark
+news_event = {
+	id = worldnews.42
+	title = worldnews.42.t
+	desc = worldnews.42.d
+	picture = ausgleich_start
+
+	is_triggered_only = yes
+
+	major = yes
+
+	show_major = {
+		NOT = { tag = FRA }
+	}
+
+	option = {
+		name = worldnews.42.a
+	}
+}
+
+# Germany annexes Rhineland
+news_event = {
+	id = worldnews.43
+	title = worldnews.43.t
+	desc = worldnews.43.d
+	picture = news_event_germany_victory
+
+	is_triggered_only = yes
+
+	major = yes
+
+	show_major = {
+		NOT = { tag = GER }
+	}
+
+	option = {
+		name = worldnews.43.a
+	}
+}
+
+# France backs Centroslavia
+news_event = {
+	id = worldnews.44
+	title = worldnews.44.t
+	desc = worldnews.44.d
+	picture = ausgleich_start
+
+	is_triggered_only = yes
+
+	major = yes
+
+	show_major = {
+		NOT = { tag = FRA }
+	}
+
+	option = {
+		name = worldnews.43.a
+	}
+}
+
+####################
+### South Ameirca ###
+####################
+
+news_event = {
+	id = worldnews.50
+	title = "The Bolivian Revolution"
+	desc = worldnews.50.d
+	picture = ausgleich_start
+	trigger = {
+		BOL= {
+			OR = {
+				has_government = libertarian_socialist
+				has_government = collectivist
+				has_government = vanguardist
+				}
+			}
+			OR = {
+				has_global_flag = All_News_Events
+				has_global_flag = Important_News_Events
+			}
+		}
+	fire_only_once = yes
+
+	major = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	show_major = {
+		NOT = { tag = BOL }
+	}
+
+	option = {
+		trigger = {
+			OR = {
+				has_government = libertarian_socialist
+				has_government = collectivist
+				has_government = vanguardist
+			}
+		}
+		name = "The World Revolution continues"
+	}
+
+	option = {
+		trigger = {
+			AND = {
+				NOT = { has_government = libertarian_socialist }
+				NOT = { has_government = collectivist }
+				NOT = { has_government = vanguardist }
+			}
+		}
+		name = "Who cares about Bolivia?"
+	}
+}
+
+# Brazilian Civil War
+news_event = {
+	id = worldnews.51
+	title = worldnews.51.t
+	desc = worldnews.51.d
+	picture = GFX_news_event_spanish_civil_war
+	mean_time_to_happen = {
+		days = 1
+	}
+	major = yes
+	trigger = {
+		NOT = { has_global_flag = BCW_start }
+		NOT = { OR = { tag = BRA
+						tag = UBR
+						tag = BPS } }
+		OR = {
+			BRA = { has_country_flag = brazilian_civil_war }
+			BPS = { has_country_flag = brazilian_civil_war }
+			UBR = { has_country_flag = brazilian_civil_war }
+		}
+		OR = {
+			has_global_flag = All_News_Events
+			has_global_flag = Important_News_Events
+		}
+	}
+
+	show_major = {
+		NOT = {
+			tag = BRA
+			tag = BPS
+			tag = UBR
+		}
+	}
+	immediate = { set_global_flag = BCW_start }
+	option = {
+		name = worldnews.51.a
+	}
+
+}
+# Second Leticia War
+news_event = {
+	id = worldnews.52
+	title = worldnews.52.t
+	desc = worldnews.52.d
+	picture = news_event_056
+
+	major = yes
+	trigger = {
+		NOT = { has_global_flag = PRU_COL_war }
+		NOT = { OR = { tag = COL
+						tag = PRU } }
+		PRU = { has_war_with = COL }
+		OR = {
+			has_global_flag = All_News_Events
+			has_global_flag = Important_News_Events
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	show_major = {
+		NOT = {
+			tag = PRU
+			tag = COL
+		}
+	}
+	immediate = { set_global_flag = PRU_COL_war }
+	option = {
+		name = worldnews.52.a
+	}
+
+}
+##################
+### World News ###
+##################
+
+news_event = {
+	id = worldnews.100
+	title = "The Second Great War"
+	desc = worldnews.100.d
+	picture = news_event_056
+
+	trigger = {
+		FRA = { has_war_with = GER }
+		NOT = { has_global_flag = gw2 }
+		OR = {
+			has_global_flag = All_News_Events
+			has_global_flag = Important_News_Events
+		}
+	}
+
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = { set_global_flag = gw2 }
+
+	option = {
+		trigger = {
+			AND = {
+				NOT = { has_war_with = GER }
+				NOT = { has_war_with = FRA }
+			}
+		}
+		name = "The fate of Europe hangs in the balance"
+	}
+
+	option = {
+		trigger = {
+			OR = {
+				has_war_with = FRA
+				has_war_with = GER
+			}
+		}
+		name = "We will be victorious!"
+		hidden_effect = {
+			IF = {
+				limit = {
+					AND = {
+						original_tag = GER
+						has_offensive_war_with = FRA
+					}
+				}
+				add_named_threat = { threat = 20 name = WORLD_second_gw }
+			}
+			IF = {
+				limit = {
+					AND = {
+						original_tag = FRA
+						has_offensive_war_with = GER
+					}
+				}
+				add_named_threat = { threat = 20 name = WORLD_second_gw }
+			}
+		}
+	}
+}
+
+# Revolt in the Ottoman Empire!
+news_event = {
+	id = worldnews.101
+	title = worldnews.101.t
+	desc = worldnews.101.d
+	picture = GFX_news_event_004
+
+	major = yes
+
+	is_triggered_only = yes
+
+	show_major = {
+		NOT = {
+			tag = TUR
+			tag = TRT
+		}
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = worldnews.101.a
+	}
+}
+
+##################
+# HUNGARY EVENTS #
+##################
+news_event = {
+	id = worldnews.102
+	title = worldnews.102.t
+	desc = worldnews.102.d
+	picture = GFX_news_event_004
+
+	major = yes
+
+	trigger = {
+		HUN = {
+			has_country_flag = hun_junta
+		}
+		OR = {
+			has_global_flag = All_News_Events
+			has_global_flag = Important_News_Events
+		}
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = worldnews.102.a
+	}
+}
+news_event = {
+	id = worldnews.103
+	title = worldnews.103.t
+	desc = worldnews.103.d
+	picture = GFX_news_event_004
+
+	major = yes
+
+	trigger = {
+		HUN = {
+			has_country_flag = cro_revolt
+		}
+		OR = {
+			has_global_flag = All_News_Events
+			has_global_flag = Important_News_Events
+		}
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = worldnews.103.a
+	}
+}
+
+news_event = {
+	id = worldnews.104
+	title = "The Third Mexican-American War"
+	desc = worldnews.104.d
+	picture = GFX_news_event_004
+
+	major = yes
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "So it goes."
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+}
+
+news_event = {
+	id = worldnews.105
+	title = "Long Wins The Presidency of the United States"
+	desc = worldnews.105.d
+	picture = GFX_Long_Wins_the_Presidency
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Let's see how dictatorial he actually is..."
+	}
+
+}
+
+news_event = {
+	id = worldnews.106
+	title = "Roosevelt Wins the Presidency of the United States"
+	desc = worldnews.106.d
+	picture = GFX_Roosevelt_Wins_the_Presidency
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Will he follow his father's legacy?"
+	}
+
+}
+
+news_event = {
+	id = worldnews.107
+	title = "Landon Wins the Presidency of the United States"
+	desc = worldnews.107.d
+	picture = GFX_Landon_Wins_the_Presidency
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Will he just be more of the same?"
+	}
+
+}
+
+news_event = {
+	id = worldnews.108
+	title = "Garner Wins the Presidency of the United States"
+	desc = worldnews.108.d
+	picture = GFX_Garner_Wins_the_Presidency
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Hopefully he can measure corruption, too."
+	}
+
+}

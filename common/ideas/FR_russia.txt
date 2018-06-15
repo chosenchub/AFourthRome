@@ -1,0 +1,30 @@
+######################
+# Soviet Union Ideas #
+######################
+# Made by mop        #
+######################
+
+
+ideas = {
+	country = {
+		RUS_civil_war = {
+			picture = FRA_scw_intervention_nationalists_focus
+			modifier = {
+				conscription = 0.40
+				planning_speed = 0.30
+				army_org_Factor = 0.50
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+			}
+		}
+		RUS_strife = {
+			picture = FRA_scw_intervention_nationalists_focus
+			modifier = {
+				conscription = -0.10
+				army_org_Factor = -0.50
+				political_power_gain = -0.20
+				stability_factor = -0.30
+			}
+		}
+	}
+}

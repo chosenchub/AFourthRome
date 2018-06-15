@@ -1,0 +1,851 @@
+GER_fate_of_bohemia = {
+	annex_bohemia = {
+
+        icon = generic_industry
+
+		available = {
+			AND = {
+				controls_state = 9
+				NOT = {
+					has_war_with = CEN
+				}
+			}
+		}
+
+        visible = {
+			OR = {
+				has_war_with = CEN
+				controls_state = 9
+			}
+			NOT = {
+				has_country_flag = BOH_done
+			}
+        }
+
+        fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = BOH_done
+			74 = {
+				add_core_of = GER
+			}	
+			775 = {
+				add_core_of = GER
+			}
+			803 = {
+				add_core_of = GER
+			}
+			794 = {
+				add_core_of = GER
+			}	
+			795 = {
+				add_core_of = GER
+			}
+			803 = {
+				add_core_of = GER
+			}
+			69 = {
+				add_core_of = GER
+			}	
+			75 = {
+				add_core_of = GER
+			}
+			853 = {
+				add_core_of = GER
+			}
+		}
+
+        cost = 50
+
+        ai_will_do = {
+            base = 100
+            modifier = {
+				CEN = {
+					is_ai = no
+				}
+				add = -100
+            }
+        }
+    }
+
+	puppet_bohemia = {
+
+        icon = generic_industry
+
+		available = {
+			AND = {
+				controls_state = 9
+				NOT = {
+					has_war_with = CEN
+				}
+			}
+		}
+
+        visible = {
+			OR = {
+				has_war_with = CEN
+				controls_state = 9
+			}
+			NOT = {
+				has_country_flag = BOH_done
+			}
+        }
+		
+        cost = 50
+
+        ai_will_do = {
+            base = 25
+            modifier = {
+				CEN = {
+					is_ai = no
+				}
+				add = 75
+            }
+        }
+
+        fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = BOH_done
+			BOH = {
+				load_focus_tree = generic_focus
+				set_cosmetic_tag = BOH_puppet
+				transfer_state = 9
+				transfer_state = 75
+				transfer_state = 853
+				set_politics = {
+					ruling_party = valkist elections_allowed = no
+				}
+				create_country_leader = {
+				name = "Alois Eliáš"
+				desc = ""
+				picture = "gfx/leaders/BOH/Portrait_Bohemia_Alois_Elias.dds"
+				expire = "1965.1.1"
+				ideology = valkist_subtype
+				traits = { }
+				}
+				add_popularity = {
+					ideology = valkist
+					popularity = 0.30
+				}
+			}
+			GER = {
+				puppet = BOH
+			}
+		}
+
+        cost = 30
+
+        ai_will_do = {
+            base = 0
+            modifier = {
+				CEN = {
+					is_ai = no
+				}
+				add = 100
+            }
+        }
+    }
+	
+	puppet_slovakia = {
+
+        icon = generic_industry
+
+		available = {
+			AND = {
+				controls_state = 70
+				controls_state = 796
+				controls_state = 71
+				NOT = {
+					has_war_with = CEN
+					HUN = {
+						has_country_flag = GER_we_accept
+					}
+				}
+			}
+		}
+
+        visible = {
+			AND = {
+				OR = {
+					has_war_with = CEN
+					controls_state = 9
+				}
+				NOT = {
+					OR = {
+						SLO = {
+							is_puppet_of = GER
+						}
+						HUN = {
+							has_country_flag = GER_we_accept
+						}
+					}
+				}
+			}
+		}
+		
+        cost = 25
+
+        ai_will_do = {
+            base = 10
+        }
+
+        fire_only_once = yes
+
+		complete_effect = {
+			SLO = {
+				load_focus_tree = generic_focus
+				set_cosmetic_tag = SLO_puppet
+				transfer_state = 70
+				transfer_state = 796
+				transfer_state = 71
+			}
+			if = {
+				limit = {
+					GER = {
+						controls_state = 73
+						}
+					}
+					SLO = {
+						transfer_state = 73
+					}
+			}
+			if = {
+				limit = {
+					GER = {
+						controls_state = 797
+						}
+					}
+					SLO = {
+						transfer_state = 797
+					}
+			}
+			GER = {
+				puppet = SLO
+			}
+			SLO = {
+				set_politics = { ruling_party = valkist }
+				add_popularity = {
+					ideology = valkist
+					popularity = 0.20
+				}
+			}
+		}
+
+        cost = 25
+
+        ai_will_do = {
+            base = 10
+        }
+    }
+	
+	puppet_lemko = {
+
+        icon = generic_industry
+
+		available = {
+			AND = {
+				controls_state = 800
+				controls_state = 801
+				NOT = {
+					has_war_with = CEN
+					POL = {
+						has_country_flag = GER_we_accept
+					}
+				}
+			}
+		}
+
+        visible = {
+			AND = {
+				OR = {
+					has_war_with = CEN
+					controls_state = 9
+				}
+				NOT = {
+					OR = {
+						LMK = {
+							is_puppet_of = GER
+						}
+						POL = {
+							has_country_flag = GER_we_accept
+						}
+					}
+				}
+			}
+		}
+		
+        cost = 25
+
+        ai_will_do = {
+            base = 10
+        }
+
+        fire_only_once = yes
+
+		complete_effect = {
+			LMK = {
+				set_cosmetic_tag = LMK_puppet
+				transfer_state = 800
+				transfer_state = 801
+				add_state_core = 800
+				add_state_core = 801
+				set_province_name = { id = 417 name = "Florynka"}
+			}
+			if = {
+				limit = {
+					GER = {
+						controls_state = 72
+						}
+					}
+					LMK = {
+						transfer_state = 72
+					}
+			}
+
+			GER = {
+				puppet = LMK
+			}
+			LMK = {
+				set_politics = { ruling_party = valkist }
+				add_popularity = {
+					ideology = valkist
+					popularity = 0.20
+				}
+			}
+		}
+
+        cost = 25
+
+        ai_will_do = {
+            base = 10
+        }
+    }	
+}
+
+GER_fate_of_austria = {
+	annex_austria = {
+
+        icon = generic_industry
+
+		available = {
+			GER = {
+				OR = {
+					has_country_flag = GER_aus_dead
+					owns_state = 4
+				}
+			}
+        }
+
+        visible = {
+			NOT = {
+				OR = {
+					has_country_flag = AUS_done
+					has_country_flag = GER_supported_austria
+					AUS = { exists = no }
+				}
+			}	
+			GER = {
+				OR = {
+					has_country_flag = GER_aus_dead
+					owns_state = 4
+					has_war_with = AUS
+				}
+			}
+        }
+
+        fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = AUS_done
+			transfer_state = 4
+			transfer_state = 152
+			transfer_state = 153
+			4 = {
+				add_core_of = GER
+			}
+			152 = {
+				add_core_of = GER
+			}
+			153 = {
+				add_core_of = GER
+			}
+			39 = {
+				add_core_of = GER
+			}
+			GER = {
+				every_state = {
+					limit = {
+						is_claimed_by = AUS
+					}
+						add_claim_by = GER
+				}
+			}
+			clr_country_flag = GER_aus_coup
+			annex_country = { target = AUS transfer_troops = yes }
+			FRA = {
+			modify_country_flag = { flag = FRA_german_threat value = 1 }	
+			}
+		}
+
+        cost = 30
+
+        ai_will_do = {
+            base = 100
+            modifier = {
+				AUS = {
+					is_ai = no
+				}
+				add = -100
+            }
+        }
+    }
+	
+	puppet_austria = {
+
+        icon = generic_industry
+
+		available = {
+			GER = {
+				OR = {
+					has_country_flag = GER_aus_dead
+					owns_state = 4
+				}
+			}
+        }
+
+        visible = {
+			NOT = {
+				has_country_flag = AUS_done
+				has_country_flag = GER_supported_austria
+			}
+			GER = {
+				OR = {
+					has_country_flag = GER_aus_dead
+					owns_state = 4
+					has_war_with = AUS
+				}
+			}
+        }
+
+        fire_only_once = yes
+		
+        cost = 30
+
+        ai_will_do = {
+            base = 100
+            modifier = {
+				AUS = {
+					is_ai = no
+				}
+				add = 100
+            }
+        }
+
+		complete_effect = {
+			clr_country_flag = GER_aus_coup
+			set_country_flag = AUS_done
+			puppet = AUS
+			AUS = {
+				load_focus_tree = generic_focus
+				set_country_flag = AUS_gameover
+				set_cosmetic_tag = AUS_puppet
+				country_event = { id = ger.10511 }
+			}
+			FRA = {
+				modify_country_flag = { flag = FRA_german_threat value = 1 }	
+			}
+		}
+
+        cost = 30
+    }
+}
+
+GER_fate_of_france = {
+	puppet_france = {
+
+        icon = generic_industry
+
+		available = {
+			GER = {
+				OR = {
+					has_country_flag = GER_french_escapes
+					owns_state = 16
+				}
+			}
+		}
+
+        visible = {
+ 			GER = {
+				OR = {
+					has_war_with = FRA
+					has_country_flag = GER_french_escapes
+					owns_state = 16
+				}
+			}
+        }
+		
+        cost = 50
+
+        fire_only_once = yes
+
+		complete_effect = {
+			country_event = ger.403
+		}
+
+        ai_will_do = {
+            base = 100
+        }
+
+        fire_only_once = yes
+
+        cost = 50
+    }
+}
+
+GER_fate_of_italy = {
+	puppet_italy = {
+
+        icon = generic_industry
+
+		available = {
+			GER = {
+				OR = {
+					has_country_flag = GER_italy_escapes
+					owns_state = 2
+				}
+			}
+		}
+
+        visible = {
+			GER = {
+				OR = {
+					has_war_with = ITA
+					has_country_flag = GER_italy_escapes
+					owns_state = 2
+				}
+			}
+        }
+		
+        cost = 50
+
+        ai_will_do = {
+            base = 10
+        }
+
+        fire_only_once = yes
+
+		complete_effect = {
+			country_event = ger.413
+		}
+    }
+}
+
+GER_fate_of_lithuania = {
+	annex_lithuania = {
+
+        icon = generic_industry
+
+		available = {
+			LIT = {
+				AND = {
+					is_ai = yes
+					is_puppet_of = GER
+				}
+			}
+		}
+
+        visible = {
+			NOT = {
+				has_country_flag = LIT_done
+			}
+			LIT = {
+				AND = {
+					is_ai = yes
+					is_puppet_of = GER
+				}
+			}
+		}
+		
+        cost = 30
+
+        ai_will_do = {
+            base = 100
+        }
+
+        fire_only_once = yes
+
+		complete_effect = {
+			annex_country = {
+				target = LIT
+			}
+		}
+    }
+
+GER_take_memel = {
+	
+	 icon = generic_industry
+
+		available = {
+			LIT = {
+				is_puppet_of = GER
+			}
+		}
+
+        visible = {
+			NOT = {
+				has_country_flag = LIT_done
+			}
+			LIT = {
+				is_puppet_of = GER
+			}
+		}
+		
+        cost = 30
+
+        ai_will_do = {
+            base = 10
+        }
+
+        fire_only_once = yes
+
+		complete_effect = {
+			transfer_state = 188
+			LIT = {
+				set_cosmetic_tag = LIT_puppet
+				add_ideas = GER_lithuanian_puppet
+			}
+			set_country_flag = LIT_done
+		}
+    }
+}
+	
+GER_fate_of_poland = {
+	GER_annex_poland = {
+
+        icon = generic_industry
+
+		available = {
+			AND = {
+				has_completed_focus = GER_polish_war
+				GER = {
+					NOT = {
+						has_war_with = POL
+					}
+				}
+			}
+		}
+
+        visible = {
+			has_completed_focus = GER_polish_war
+			NOT = {
+				has_country_flag = POL_is_done
+			}
+		}
+		
+        cost = 30
+
+        ai_will_do = {
+            base = 100
+        }
+
+        fire_only_once = yes
+
+		complete_effect = {
+		set_country_flag = POL_is_done
+		add_ideas = GER_polish_occupation
+			86 = {
+				add_core_of = GER
+			}
+			66 = {	
+				add_core_of = GER
+			}
+			67 = {	
+				add_core_of = GER
+			}
+			752 = {	
+				add_core_of = GER
+			}
+		}
+    }
+
+GER_polish_puppet = {
+	
+	 icon = generic_industry
+
+		available = {
+			AND = {
+				has_completed_focus = GER_polish_war
+				GER = {
+					NOT = {
+						has_war_with = POL
+					}
+				}
+				POL = { exists = no }
+			}
+		}
+
+        visible = {
+			has_completed_focus = GER_polish_war
+			NOT = {
+				has_country_flag = POL_is_done
+			}
+		}
+		
+        cost = 30
+
+        ai_will_do = {
+            base = 100
+        }
+
+        fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = POL_is_done
+			every_state = {
+				limit = {
+					AND = {
+						is_controlled_by = GER
+						is_core_of = POL
+						NOT = {
+							OR = {
+								is_core_of = GER
+								is_claimed_by = GER 
+								is_controlled_by = LIT
+								is_controlled_by = ZAP
+								is_controlled_by = BLR
+								is_controlled_by = UKR
+								is_controlled_by = SOV
+							}
+						}
+					}
+				}
+				POL = { transfer_state = PREV }
+			}
+			POL = {
+				load_focus_tree = generic_focus
+				set_politics = {
+					ruling_party = valkist elections_allowed = no
+				}
+				create_country_leader = {
+				name = "Wacław Krzeptowski"
+				desc = ""
+				picture = "gfx/leaders/POL/Portrait_Poland_Waclaw_Krzeptowski.dds"
+				expire = "1965.1.1"
+				ideology = valkist_subtype
+				traits = { }
+				}
+				set_cosmetic_tag = POL_puppet
+				load_focus_tree = generic_focus
+			}
+				puppet = POL
+			
+			if = {
+				limit = {
+					LIT = {
+						is_puppet_of = GER
+					}
+				}
+				LIT = {
+					transfer_state = 96
+				}
+			}
+			
+			if = {
+				limit = {
+					NOT = {
+						LIT = {
+							is_puppet_of = GER
+						}
+					}
+				}
+				POL = {
+					transfer_state = 95
+					transfer_state = 96
+					transfer_state = 97
+				}
+			}
+			
+		}
+    }
+}
+
+GER_fate_of_britian = {
+	puppet_britian = {
+
+        icon = generic_industry
+
+		available = {
+			GER = {
+				AND = {
+					has_country_flag = GER_england_escapes
+					controls_state = 126
+				}
+			}
+		}
+
+        visible = {
+			GER = {
+				OR = {
+					has_war_with = ENG
+					has_country_flag = GER_england_escapes
+					controls_state = 126
+				}
+			}
+        }
+		
+        cost = 50
+
+        ai_will_do = {
+            base = 100
+        }
+
+        fire_only_once = yes
+
+		complete_effect = {
+			country_event = ger.423
+		}
+	}
+}
+
+GER_civil_wars = {
+	GER_spain = {
+
+        icon = generic_industry
+
+		available = {
+			SPF = {
+				OR = {
+					has_war_with = SPR
+					has_war_with = SPA
+					has_war_with = SPM
+				}
+			}
+			GER = {
+				has_country_flag = GER_formed_tst
+			}
+        }
+
+        visible = {
+		original_tag = GER
+			SPF = {
+				has_war = yes
+			}
+		}
+
+        fire_only_once = yes
+
+		complete_effect = {
+			SPF = {
+				country_event = ger.220
+			}
+			add_manpower = -10000
+		}
+
+        cost = 50
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+}

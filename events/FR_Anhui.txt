@@ -1,0 +1,260 @@
+﻿##############################
+#        Anhui Events        #
+##############################
+#     Made by Beelzebub      #
+##############################
+
+add_namespace = anh
+
+country_event = {
+	id = anh.1
+	title = "Introduction to the Anhui Clique"
+	desc = anh.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "The Japanese will help us modernize"
+	}
+}
+
+#Zheng Shiqi fucking dies
+country_event = {
+	id = anh.2
+	title = "The Death of Zheng Shiqi"
+	desc = anh.2.d
+	picture = report_event_generic_conference
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ANH
+		date > 1936.3.1
+		date < 1936.3.29
+	}
+
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	option = {
+		name = "Unfortunate. He will be sorely missed."
+		
+		kill_country_leader = yes
+		
+		create_country_leader = {
+			name = "Wang Yitang"
+			desc = ""
+			picture = "Portrait_ANH_Zheng_Shiqi.tga" #can i get uhhhhh wang yitang portrait
+			expire = "1953.3.1"
+			ideology = authoritarian_democrat_subtype
+			traits = {	}
+		}
+		
+		add_popularity = { ideology = authoritarian_democrat popularity = -0.05 }
+		
+		add_political_power = -50
+		
+		hidden_effect = {
+			country_event = { days = 35 id = anh.3 }
+		}
+	}
+}
+
+country_event = {
+	id = anh.3
+	title = "Zhang Zongchang launches a campaign against Wang Yitang!"
+	desc = anh.3.d
+	picture = report_event_generic_conference
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "To arms!"
+		
+		add_political_power = -150
+		increase_conscription = yes
+		increase_mobilisation = yes
+
+		hidden_effect = {
+			country_event = { days = 50 id = anh.4 }
+			set_country_flag = { flag = ANH_JAP_COOP_VICTORIES value = 0 }
+			set_country_flag = { flag = ANH_ZHANG_VICTORIES value = 0 }
+		}
+	}
+}
+
+country_event = {
+	id = anh.4
+	title = "The Status of the Campaign"
+	desc = anh.4.d
+	picture = report_event_generic_conference
+
+	#fire_only_once = yes
+
+	trigger = {
+		tag = ANH
+		NOT = {
+			has_country_flag = AHN_CAMPAIGN_OVER
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 55
+	}
+
+	option = {
+		name = "Pro-Japanese forces are able to achieve a string of victories."
+		
+		modify_country_flag = { flag = ANH_JAP_COOP_VICTORIES value = 1 }
+	}
+	option = {
+		name = "Repeated blunders undermine support for Wang."
+		trigger = {
+			NOT = {
+				has_country_flag = wang_yitang_fucking_died
+			}
+		}
+
+		hidden_effect = {
+			country_event = { days = 35 id = anh.5 }
+		}
+		
+		modify_country_flag = { flag = ANH_ZHANG_VICTORIES value = 1 }	
+	}
+	option = {
+		name = "Liang loses various engagements with Zhang."
+		trigger = {
+			has_country_flag = wang_yitang_fucking_died
+		}
+
+		modify_country_flag = { flag = ANH_ZHANG_VICTORIES value = 1 }
+	}
+}
+
+country_event = {
+	id = anh.5
+	title = "Wang Yitang is assasinated!"
+	desc = anh.5.d
+	picture = report_event_generic_conference
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Blast!"
+
+		set_country_flag = wang_yitang_fucking_died
+
+		kill_country_leader = yes
+		
+		create_country_leader = {
+			name = "Liang Hongzhi"
+			desc = ""
+			picture = "Portrait_ANH_Zheng_Shiqi.tga" #can i get uhhhhh liang hongzhi portrait
+			expire = "1953.3.1"
+			ideology = authoritarian_democrat_subtype
+			traits = {	}
+		}
+
+		add_political_power = -50
+		
+		hidden_effect = {
+			country_event = { days = 35 id = anh.6 }
+		}
+	}
+}
+
+country_event = {
+	id = anh.6
+	title = "Zhang defeats the Pro-Japanese forces!"
+	desc = anh.6.d
+	picture = report_event_generic_conference
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ANH
+		has_country_flag = { flag = ANH_ZHANG_VICTORIES value > 3 }
+	}
+
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	immediate = { set_country_flag = AHN_CAMPAIGN_OVER }
+
+	option = {
+		name = "We will see the Japanese driven out!"
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		add_popularity = { ideology = paternal_autocrat popularity = 0.25 }
+	}
+}
+
+country_event = {
+	id = anh.7
+	title = "Wang defeats Zhang!"
+	desc = anh.7.d
+	picture = report_event_generic_conference
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ANH
+		has_country_flag = { flag = ANH_JAP_COOP_VICTORIES value > 3 }
+		NOT = {
+			has_country_flag = wang_yitang_fucking_died
+		}		
+	}
+
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	immediate = { set_country_flag = AHN_CAMPAIGN_OVER }
+
+	option = {
+		name = "Our ties with the Japanese will be solidified."
+		set_politics = {
+			ruling_party = market_liberal
+			elections_allowed = no
+		}
+		add_popularity = { ideology = market_liberal popularity = 0.25 }
+	}
+}
+
+country_event = {
+	id = anh.8
+	title = "Liang defeats Zhang!"
+	desc = anh.8.d
+	picture = report_event_generic_conference
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ANH
+		has_country_flag = { flag = ANH_JAP_COOP_VICTORIES value > 3 }
+		has_country_flag = wang_yitang_fucking_died
+	}
+
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	immediate = { set_country_flag = AHN_CAMPAIGN_OVER }
+
+	option = {
+		name = "Our ties with the Japanese will be solidified."
+		set_politics = {
+			ruling_party = social_conservative
+			elections_allowed = no
+		}
+		add_popularity = { ideology = social_conservative popularity = 0.30 }
+	}
+}

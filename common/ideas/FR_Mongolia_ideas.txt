@@ -1,0 +1,27 @@
+##################
+# MONGOLIA IDEAS #
+##################
+
+ideas = {
+
+		
+	country = {
+		MON_without_khan = {
+			picture = generic_king_handled
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+	}
+	country = {
+		MON_tuva_nationalism = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				stability_factor = -0.01
+			}
+		}
+	}
+}
+

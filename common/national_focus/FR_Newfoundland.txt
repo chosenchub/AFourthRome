@@ -1,0 +1,539 @@
+﻿focus_tree = {
+	id = newfoundland_focus
+	
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = NFL
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1600 }
+
+	#### THE LSMC ####
+
+	focus = {
+		id = NFL_economic_cave_in
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 7
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_expansionary_fiscal_policy
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = NFL_economic_cave_in }
+		x = 5
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_stabilize_goods_prices 
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = NFL_expansionary_fiscal_policy }
+		x = 4
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_improve_worker_wages
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = NFL_expansionary_fiscal_policy }
+		x = 6
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_initiate_state_capitalism
+		icon = GFX_goal_economic_control
+		prerequisite = { focus = NFL_improve_worker_wages focus = NFL_stabilize_goods_prices }
+		x = 5
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_take_control_of_mines
+		icon = GFX_goal_steel
+		prerequisite = { focus = NFL_improve_worker_wages }
+		prerequisite = { focus = NFL_initiate_state_capitalism }
+		x = 6
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_take_control_of_fisheries
+		icon = GFX_goal_generic_coastal_navy
+		prerequisite = { focus = NFL_stabilize_goods_prices }
+		prerequisite = { focus = NFL_initiate_state_capitalism }
+		x = 4
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_declare_default_on_debts
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		prerequisite = { focus = NFL_take_control_of_fisheries }
+		prerequisite = { focus = NFL_take_control_of_mines }
+		x = 5
+		y = 5
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+
+	focus = {
+		id = NFL_contractionary_fiscal_policy
+		icon = GFX_goal_authoritarian
+		prerequisite = { focus = NFL_economic_cave_in }
+		x = 9
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_levy_additional_taxes
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = NFL_contractionary_fiscal_policy }
+		x = 8
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_revoke_veterans_pensions
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = NFL_contractionary_fiscal_policy }
+		x = 10
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_strong_inflation_control
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = NFL_levy_additional_taxes }
+		prerequisite = { focus = NFL_revoke_veterans_pensions }
+		x = 9
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_reduce_government_involvement
+		icon = GFX_goal_government_icon
+		prerequisite = { focus = NFL_levy_additional_taxes }
+		prerequisite = { focus = NFL_strong_inflation_control }
+		x = 8
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_reduce_government_expenditures
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = NFL_revoke_veterans_pensions }
+		prerequisite = { focus = NFL_strong_inflation_control }
+		x = 10
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_stabilize_debt_crisis
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = NFL_reduce_government_expenditures }
+		prerequisite = { focus = NFL_reduce_government_involvement }
+		x = 9
+		y = 5
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = { #Only for expansionary, SocCon
+		id = NFL_free_hands_once_more
+		icon = GFX_goal_liberty
+		prerequisite = { focus = NFL_declare_default_on_debts focus = NFL_stabilize_debt_crisis }
+		x = 3
+		y = 6
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_inject_funds_into_the_economy
+		icon = GFX_goal_gold_reserve
+		prerequisite = { focus = NFL_free_hands_once_more }
+		x = 1
+		y = 7
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_invite_american_businesses
+		icon = GFX_goal_usa
+		prerequisite = { focus = NFL_free_hands_once_more }
+		x = 3
+		y = 7
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_soup_kitchens
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = NFL_free_hands_once_more }
+		x = 5
+		y = 7
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = NFL_issue_tariffs_on_exports
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = NFL_inject_funds_into_the_economy }
+		x = 2
+		y = 8
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_eliminate_embezzlers
+		icon = GFX_focus_rom_parties_end
+		prerequisite = { focus = NFL_soup_kitchens }
+		x = 4
+		y = 8
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_independent_recovery
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = NFL_invite_american_businesses }
+		prerequisite = { focus = NFL_issue_tariffs_on_exports }
+		prerequisite = { focus = NFL_eliminate_embezzlers }
+		x = 3
+		y = 9
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = { #Only for Contractionary, Libsoc/Collie
+		id = NFL_arrival_of_the_revolution
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = NFL_declare_default_on_debts focus = NFL_stabilize_debt_crisis }
+		x = 7
+		y = 6
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_seize_imperial_industries
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		prerequisite = { focus = NFL_arrival_of_the_revolution }
+		x = 7
+		y = 7
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_proletarian_collectives
+		icon = GFX_goal_ideology_collectivist
+		prerequisite = { focus = NFL_seize_imperial_industries }
+		x = 6
+		y = 8
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_adopt_syndicalism
+		icon = GFX_goal_ideology_syndicalist
+		prerequisite = { focus = NFL_seize_imperial_industries }
+		x = 8
+		y = 8
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_red_recovery
+		icon = GFX_goal_commune_politics
+		prerequisite = { focus = NFL_proletarian_collectives focus = NFL_adopt_syndicalism }
+		x = 7
+		y = 9
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = { #Commissioned Gov't, Authdem/PatAut
+		id = NFL_imperial_commission
+		icon = GFX_goal_SAF_dominion
+		prerequisite = { focus = NFL_declare_default_on_debts focus = NFL_stabilize_debt_crisis }
+		x = 11
+		y = 6
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_cooperate_with_imperial_financiers
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = NFL_imperial_commission }
+		x = 9
+		y = 7
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_give_power_to_the_crown_corporations
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = NFL_imperial_commission }
+		x = 11
+		y = 7
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_draft_import_tariffs
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = NFL_imperial_commission }
+		x = 13
+		y = 7
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_establish_new_mines
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = NFL_cooperate_with_imperial_financiers }
+		x = 10
+		y = 8
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_invest_in_better_railways
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = NFL_draft_import_tariffs }
+		x = 12
+		y = 8
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = NFL_imperial_recovery
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = NFL_give_power_to_the_crown_corporations }
+		prerequisite = { focus = NFL_establish_new_mines }
+		prerequisite = { focus = NFL_invest_in_better_railways }
+		x = 11
+		y = 9
+		cost = 10
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+}

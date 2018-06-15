@@ -1,0 +1,79 @@
+﻿###########################
+# - Statistics Events
+# - By jespertjee
+###########################
+
+add_namespace = statistics
+
+country_event = {
+	id = statistics.1
+	title = statistics.1.t
+	desc = statistics.1.d
+	picture = GFX_report_event_generic_conference
+
+	immediate = {
+		every_country = {
+			limit = {
+				exists = yes
+			}
+			set_temp_variable = { var = global.civfac_@THIS value = 0 }
+			set_temp_variable = { var = global.milfac_@THIS value = 0 }
+			set_temp_variable = { var = global.infra_@THIS value = 0 }
+		}
+	}
+
+	is_triggered_only = yes
+
+	hidden = yes
+	
+	option = {
+		name = statistics.1.a
+		hidden_effect = {
+			every_country = {
+				limit = {
+					exists = yes
+				}
+				every_state = {
+					limit = {
+						is_owned_by = PREV
+					}
+					add_to_temp_variable = { var = global.civfac_@PREV value = industrial_complex_level }
+					add_to_temp_variable = { var = global.milfac_@PREV value = arms_factory_level }
+					add_to_temp_variable = { var = global.infra_@PREV value = infrastructure_level }
+				}
+				set_temp_variable = { var = civfac_@THIS value = global.civfac_@THIS }
+				set_temp_variable = { var = milfac_@THIS value = global.milfac_@THIS }
+				set_temp_variable = { var = infra_@THIS value = global.infra_@THIS }
+				divide_temp_variable = { var = infra_@THIS value = 5 }
+				add_to_temp_variable = { var = civfac_@THIS value = milfac_@THIS }
+				add_to_temp_variable = { var = civfac_@THIS value = infra_@THIS }
+				set_variable = { var = industrial_score_@THIS value = civfac_@THIS }
+				set_variable = { var = global.industrial_score_@THIS value = industrial_score_@THIS }
+			
+				set_temp_variable = { var = max_available_manpower_@THIS value = max_available_manpower }
+				subtract_from_temp_variable = { var = max_available_manpower_@THIS value = manpower }
+				divide_temp_variable = { var = max_available_manpower_@THIS value = 8000 }
+				set_variable = { var = military_score_@THIS value = max_available_manpower_@THIS }
+				set_variable = { var = global.military_score_@THIS value = military_score_@THIS }
+
+				set_variable = { var = prestige_@THIS value = 0 }
+				set_variable = { var = global.prestige_@THIS value = prestige_@THIS }
+
+				set_variable = { var = score_@THIS value = 0 }
+				add_to_variable = { var = score_@THIS value = industrial_score_@THIS }
+				add_to_variable = { var = score_@THIS value = military_score_@THIS }
+				add_to_variable = { var = score_@THIS value = prestige_@THIS }
+				set_variable = { var = global.score_@THIS value = score_@THIS }
+
+				round_variable = industrial_score_@THIS
+				round_variable = military_score_@THIS
+				round_variable = prestige_@THIS
+				round_variable = score_@THIS
+
+				###SPHERING###
+			}
+			country_event = { id = statistics.1 months = 1 }
+		}
+	}
+}
+

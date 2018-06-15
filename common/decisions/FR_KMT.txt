@@ -1,0 +1,132 @@
+###############################
+#     Kuomintang Decisions    #
+#          By Thymos          #
+###############################
+
+KMT_seize_ports = {
+		#Seize Macau
+		KMT_seize_por_port_mission = {
+		
+			icon = generic_prepare_civil_war
+			
+			available = {
+				divisions_in_state = {
+				state = 592 size > 0 
+				}
+			}
+			
+			fire_only_once = yes
+			
+			days_mission_timeout = 20
+			
+			is_good = no
+			
+			activation = {
+				always = no #triggered by seize ports event
+			}
+			
+			complete_effect = {
+				KMT = {
+				set_state_owner = 729 
+				}
+				POR = {
+				country_event = {
+				days = 1
+				id = kmt.2
+					}
+				}
+			}
+			
+			timeout_effect = {
+			
+			}
+		}
+		#Seize Hong Kong
+		KMT_seize_eng_port_decision = {
+		
+			icon = generic_prepare_civil_war
+			
+			available = {
+				tag = KMT
+				divisions_in_state = {
+				state = 593 size > 0 
+				}
+			}
+			
+			fire_only_once = yes
+			
+			visible = {
+				tag = KMT
+				ENG = {
+				has_capitulated = yes 
+				}
+			}
+			
+			cost = 25
+			
+			complete_effect = {
+				KMT = {
+				set_state_owner = 326
+				}
+				ENG = {
+					country_event = {
+					id = kmt.7
+					days = 1
+					}
+				}
+			}
+		}
+		#Seize French port
+		KMT_seize_fra_port_decision = {
+			icon = generic_prepare_civil_war
+			
+			available = {
+				tag = KMT
+				OR = {
+					divisions_in_state = {
+					state = 592 size > 0 
+					}
+					divisions_in_state = {
+					state = 591 size > 0 
+					}
+					divisions_in_state = {
+					state = 893 size > 0 
+					}
+				}
+			}
+			
+			fire_only_once = yes
+			
+			visible = {
+				tag = KMT
+				OR = {
+				has_global_flag = fall_of_mainland_france
+					FRA = {
+						has_capitulated = yes
+					}
+				}
+			
+			}
+			
+			cost = 25
+			
+			complete_effect = {
+				KMT = {
+				set_state_owner = 728
+				}
+				FRA = {
+					country_event = {
+					id = kmt.8
+					days = 1
+					}
+				}
+			}
+		}
+	
+}
+			
+			
+			
+			
+			
+			

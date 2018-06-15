@@ -1,0 +1,334 @@
+###########################
+# Republic of China Focus Tree
+###########################
+# By Marauder M
+###########################
+
+focus_tree = {
+	id = chinarepublic_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = CHI
+		}
+	}
+	
+	#############################
+	# - Military Branch
+	#############################
+
+	focus = {
+		id = CHI_national_revolutionary_army
+		#icon = 
+		x = 8
+		y = 0
+		cost = 10
+		completion_reward = {
+			army_experience = 5
+		}
+	}
+	
+	focus = {
+		id = CHI_hire_foreign_advisors
+		#icon = 
+		prerequisite = { focus = CHI_national_revolutionary_army }
+		x = 6
+		y = 1
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = CHI_soviet
+		#icon = 
+		prerequisite = { focus = CHI_hire_foreign_advisors }
+		mutually_exclusive = { focus = CHI_german }
+		mutually_exclusive = { focus = CHI_american }
+		x = 2
+		y = 2
+		cost = 10
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+	
+	focus = {
+		id = CHI_develop_the_short_attack
+		#icon = 
+		prerequisite = { focus = CHI_soviet }
+		mutually_exclusive = { focus = CHI_soviet_superior_firepower }
+		x = 1
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_mass_assault
+			}
+		}
+	}
+	
+		focus = {
+		id = CHI_soviet_superior_firepower
+		#icon = 
+		prerequisite = { focus = CHI_soviet }
+		mutually_exclusive = { focus = CHI_develop_the_short_attack }
+		x = 3
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_superior_firepower
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_american
+		#icon = 
+		prerequisite = { focus = CHI_hire_foreign_advisors }
+		mutually_exclusive = { focus = CHI_soviet }
+		mutually_exclusive = { focus = CHI_german }
+		x = 6
+		y = 2
+		cost = 10
+		completion_reward = {
+			army_experience = 10
+		}
+	}	
+
+	focus = {
+		id = CHI_seek_army_advisors
+		#icon = 
+		prerequisite = { focus = CHI_american }
+		mutually_exclusive = { focus = CHI_seek_marine_advisors }
+		x = 5
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	
+	focus = {
+		id = CHI_seek_marine_advisors
+		#icon = 
+		prerequisite = { focus = CHI_american }
+		mutually_exclusive = { focus = CHI_seek_army_advisors }
+		x = 7
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_superior_firepower
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = CHI_german
+		#icon = 
+		prerequisite = { focus = CHI_hire_foreign_advisors }
+		mutually_exclusive = { focus = CHI_soviet }
+		mutually_exclusive = { focus = CHI_american }
+		x = 10
+		y = 2
+		cost = 10
+		completion_reward = {
+			army_experience = 10
+		}
+	}	
+	
+	focus = {
+		id = CHI_krupp_steel
+		#icon = 
+		prerequisite = { focus = CHI_german }
+		mutually_exclusive = { focus = CHI_porsche_engines }
+		x = 9
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	
+	focus = {
+		id = CHI_porsche_engines
+		#icon = 
+		prerequisite = { focus = CHI_german }
+		mutually_exclusive = { focus = CHI_krupp_steel }
+		x = 11
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_mobile_warfare
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_modernize_our_army
+		#icon = 
+		prerequisite = { focus = CHI_national_revolutionary_army }
+		x = 15
+		y = 1
+		cost = 10
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+	
+	focus = {
+		id = CHI_expand_the_hanyang_arsenal
+		#icon = 
+		prerequisite = { focus = CHI_modernize_our_army }
+		x = 13
+		y = 2
+		cost = 10
+	}
+	
+	focus = {
+		id = CHI_seize_the_taiyuan_arsenal
+		#icon = 
+		prerequisite = { focus = CHI_expand_the_hanyang_arsenal }
+		x = 13
+		y = 3
+		cost = 10
+	}
+	
+	focus = {
+		id = CHI_a_new_arsenal?
+		#icon = 
+		prerequisite = { focus = CHI_seize_the_taiyuan_arsenal }
+		x = 13
+		y = 4
+		cost = 10
+	}
+	
+	focus = {
+		id = CHI_develop_the_Sun_Yat-sen_rifle
+		#icon = 
+		prerequisite = { focus = CHI_modernize_our_army }
+		x = 15
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+		id = CHI_revive_the_liu_rifle
+		#icon = 
+		prerequisite = { focus = CHI_develop_the_Sun_Yat-sen_rifle }
+		x = 15
+		y = 3
+		cost = 10
+	}
+	
+	focus = {
+		id = CHI_once_more_the_homeland_of_gunpowder
+		#icon = 
+		prerequisite = { focus = CHI_revive_the_liu_rifle }
+		mutually_exclusive = { focus = CHI_hearts_of_oxen }
+		x = 15
+		y = 4
+		cost = 10
+	}
+	
+	focus = {
+		id = CHI_indigenous_artillery_production
+		#icon = 
+		prerequisite = { focus = CHI_modernize_our_army }
+		x = 17
+		y = 2
+		cost = 10
+	}
+	
+#tank production
+	focus = {
+		id = CHI_indigenous_tieniu_production
+		#icon = 
+		prerequisite = { focus = CHI_indigenous_artillery_production }
+		x = 17
+		y = 3
+		cost = 10
+	}
+	
+	focus = {
+		id = CHI_hearts_of_oxen
+		#icon = 
+		prerequisite = { focus = CHI_indigenous_tieniu_production }
+		mutually_exclusive = { focus = CHI_once_more_the_homeland_of_gunpowder }
+		x = 17
+		y = 4
+		cost = 10
+	}
+	
+	focus = {
+		id = CHI_national_emergency
+		#icon = 
+		prerequisite = { focus = CHI_national_revolutionary_army }
+		x = 20
+		y = 1
+		cost = 10
+		completion_reward = {
+			add_manpower = 150000
+		}
+	}
+	
+	focus = {
+		id = CHI_every_man_a_rifle
+		#icon = 
+		prerequisite = { focus = CHI_national_emergency }
+		x = 20
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_manpower = 150000
+		}
+	}
+	
+	focus = {
+		id = CHI_every_woman_a_rifle
+		#icon = 
+		prerequisite = { focus = CHI_every_man_a_rifle }
+		x = 20
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_manpower = 150000
+		}
+	}
+	

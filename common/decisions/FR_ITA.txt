@@ -1,0 +1,81 @@
+ITA_foreign_intervention = {
+	ITA_spain_fashy = {
+
+        icon = generic_industry
+
+		available = {
+			SPF = {
+				OR = {
+					has_war_with = SPR
+					has_war_with = SPA
+					has_war_with = SPM
+				}
+			}
+			ITA = {
+				has_country_flag = italo_chairman
+			}
+        }
+
+        visible = {
+		original_tag = ITA
+			SPF = {
+				has_war = yes
+			}
+		}
+
+        fire_only_once = yes
+
+		complete_effect = {
+			SPF = {
+				country_event = italy.134
+			}
+			add_manpower = -10000
+		}
+
+        cost = 50
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+	
+	ITA_spain_commie = {
+
+        icon = generic_industry
+
+		available = {
+			SPA = {
+				OR = {
+					has_war_with = SPR
+					has_war_with = SPF
+					has_war_with = SPM
+				}
+			}
+			ITA = {
+				has_country_flag = antonio_chairman
+			}
+        }
+
+        visible = {
+		original_tag = ITA
+			SPA = {
+				has_war = yes
+			}
+		}
+
+        fire_only_once = yes
+
+		complete_effect = {
+			SPA = {
+				country_event = italy.134
+			}
+			add_manpower = -10000
+		}
+
+        cost = 50
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+}

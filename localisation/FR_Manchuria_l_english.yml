@@ -1,0 +1,71 @@
+﻿l_english:
+#### Bookmark Description ####
+
+MAN_FUHRERREICH_DESC:0 "With the Anti-Zhili Coaltion being formed in 1924 consisting of the Anhui, Kuomintang, and Fengtian, the war ended disastrously for the Zhili, resulting in a large collapse of the Clique itself. With the Fengtian Clique finally reigning supreme in Beijing, Beiyang had managed to become stable once again with the Zhili remaining a minority in the government. However the relations with the Kuomintang in the south quickly souring, the Northern Expedition against Beiyang began. While the Kuomintang saw initial success, intervention by Shanxi caused their advance to stall, forcing peace between the two biggests governments in China."
+
+#### Political Parties ####
+
+MAN_vanguardist_party:0 "Manchurian Soviets"
+MAN_vanguardist_party_long:0 "Manchurian Soviets"
+MAN_collectivist_party:0 "Manchurian Soviets"
+MAN_collectivist_party_long:0 "Manchurian Soviets"
+MAN_libertarian_socialist_party:0 "Manchurian Soviets"
+MAN_libertarian_socialist_party_long:0 "Manchurian Soviets"
+MAN_social_democrat_party:0 "KMT San-Min"
+MAN_social_democrat_party_long:0 "Manchurian KMT - San-Min Branch"
+MAN_social_liberal_party:0 "KMT Liberals"
+MAN_social_liberal_party_long:0 "Manchurian KMT - Liberal Branch"
+MAN_market_liberal_party:0 "Development Authority"
+MAN_market_liberal_party_long:0 "Manchurian Development Authority"
+MAN_social_conservative_party:0 "KMT Conservatives"
+MAN_social_conservative_party_long:0 "Manchurian KMT - Conservative Branch"
+MAN_authoritarian_democrat_party:0 "Fengtian Clique"
+MAN_authoritarian_democrat_party_long:0 "Fengtian Clique"
+MAN_paternal_autocrat_party:0 "Zhang Clique"
+MAN_paternal_autocrat_party_long:0 "Zhang Xueliang's Clique"
+MAN_national_populist_party:0 "Chinese Restoration League"
+MAN_national_populist_party_long:0 "Chinese Restoration League"
+
+#####Tooltips#####
+
+tooltip_man_crossroads:0 "Zhang Xueliang and the Fengtian Clique must come to a solution first"
+tooltip_man_enough:0 "Zhang and the Fengtian Clique have grown too intolerant and frustrated towards foreign influence in Manchuria to ignore it. Drastic action is needed."
+tooltip_man_matsuoka:0 "Zhang and the Fengtian Clique feel confident in a joint Manchu-Japanese plot to pressure the Europeans in Manchuria."
+tooltip_man_reform:0 "Zhang and the Fengtian Clique decided that putting their full weight behind the Development Authority is the only way that permanent stability can be brought to Manchuria"
+
+### EVENTS ###
+
+### Ideas ###
+part_of_beiyang_council:0 "Part of Beiyang Council"
+part_of_beiyang_council_desc:0 " "
+
+### Introduction ###
+
+man.0.t:0 "Manchuria - The Golden Decade"
+man.0.d:0 "To say that Manchuria is one of the most unique regions in China would not doing it service.\n\nManchuria is highly industrialised by Chinese standards, with mines and factories being built each each year, all connected by a ever-expanding railway system. Unlike the Nanjing Republic that keeps foreign contact to it's cuties on the coast, Manchuria's governemnt allows foreign bussiness ventures to freely invest and expand in operations across the region. Foreign expats are an increasingly common sight, especially in the capital of Shenyang, with up to 600 thousand souls currently residing within Shenyang's international settlement.\n\nThis has led the government to christen the last decade as "Manchuria's Golden Decade", a title which has caught on.  
+man.0.a:0 "We are the role model that all of China looks up to!"
+man.1.t:0 "Manchuria and the Fengtian Clique"
+man.1.d:0 "What may be more relevant to outside observers though, is Manchuria's unique relationship with the Nanjing Republic.\n\nManchuria's current status can be traced to the end of the now legendary Northern Expedition where Sun Yat-Sen and his armies routed the warlords of the north, until they hit a setback near Beijing. The Old Marshal, Zhang Zuolin, had crushed the Zhili clique and now ruled over the Northeast with his Fengtian Clique at his side. The National Revolutionary Army tried to launched an offensive, but the Fengtian posessed modern (by Chinese standards) equipment, and put up a bloody resistence. Unable to fufill a quick victory as promised, the NRA was stuck.\n\nIt was only after the lucky capture and execution of Zhang Zuolin himself, that Sun and the KMT managed to negotiate a peace settlement with his son, Zhang Xueliang. Manchuria would be set up as an autonmous region of China, with Zhang Xueliang and the shattered remants of the Fengtian clique being de facto handed the keys in return for loyalty to the state.\n\nAt the time this was considered a great deal because Xueliang was hopelessly addicted to opium and was seen as easily controllable. Since then, the clique has transistioned from a group of warlords to a legitimate government...in theory."
+man.1.a:0 "May the Old Marshal find peace."
+
+### Pre-Crisis ###
+
+man.7.t:0 "The Rickshaw Man"
+man.7.d:0 "It is a cold midnight in Shenyang. Depending on where you are, you may hear the bustle of night-time street food, or perhaps if you stand near a quiet aley you may only hear the barking of stray dogs.\n\nTonight, there are only the cries of a desperate man screaming for his life.\n\nAfter a heavy night's drinking in the capital, Shenyang, a group of European businessmen has beaten a rickshaw man to death after the latter complained about their rowdiness. Bigotry and violence in the alleyways of Shenyang are common, but this beating is different. Not only was it in front of a sizable crowd of onlookers, it was photographed by an amateur photographer who has since sold the pictures to the local press. Although they were later apprehended by the police, the ricksaw man was declared dead on the spot, his head fractured and bloodied.\n\nIn a time of such unstable relations between the local Manchurian people and the world of foreign business, word of this incident has been spreading like a plague."
+man.7.a:0 "Such a revolting situation."
+man.7.b:0 "...this is the last thing we needed. How will the poeple react?"
+man.8.t:0 "Riots in the streets"
+man.8.d:0 "The governemnt's fears have come true. For years the government has brushed off reports of exploitation and violence inflicted on the workers, but the mounting strikes have showed that this anger has reached a boiling point.\n\nAlthough the ricksaw man was just a single death, it may have been the final straw for the people of Shenyang. The photographic evidence and eye-witness accounts plastered all over the newspapers these past few days have caused mass riots across Shenyang. European expats have reportedly been targeted, and a French clerk was found by the police naked and bloodied in a ditch after having stopped the crowd who performed the deed.\n\nThe Development Authority has already contacted the Clique, demanding us to stop the riots, and private enforcers on the payroll of the foreign ventures are already on alert."
+man.8.a:0 "Our worst fears may be coming true! We must be cautious!"
+man.8.b:0 "Where are the police? Stop them before they spill more blood!"
+man.9.t:0 "The Shenyang Crisis"
+man.9.d:0 "Men and women are throwing furniture onto the streets. They're using them to build barricades. Pouring out of the alleyways, private enforcers brutally smash the kneecaps and skulls of protestors that are in the way.\n\nOur own police are trying their best to protect important landmarks, but vitrol has been pouring in from angry Europeans who are critical of the failure of the police to prevent the ever amounting injuries and deaths being pressed upon them. Three Englishmen, a pair of Italian dockworkers and a French secretary have been among the foreign deaths. Their greiving families are being holded up in police headquaters in the international settlement, a settlement that has seen increasingly tenacious break-ins by the ever growing growing crowds of protestors. Manchu casualties cannot be accurately pinned, but are estimated to be in the hundreds.\n\nZhang Xueliang is watching all of this from Shenhe district, in the home of his late father. Clique members are pouring in one by one on cars and foot. An emergency meeting is about to take place."
+man.9.a:0 "If we don't act now, this city will be reduced to ash."
+man.10.t:0 "The Meeting"
+man.10.d:0 "The air around Zhang is rich in alcoholic fumes. Wines and whiskey is being shared, but the mood is dour. The faces of clique ministers near windows are coated in half by the orange from the fires that burn brightly outside.\n\nThe debate goes on for hours. Some advocate working closely with the Development Authority to crush these initial protests, but then to pursue reforms to economic policy to ensure such rage never infects the workers again. However, the louder voices in the clique are placing the blame on the foreigners for causing this entiure situation the first place. Normally crtiticisms of the Development Authority are spoken with hushed whispers, but with the crisis growing more inflamed by the day, frustration has destroyed any sense of formality. Some rush to warn against this, arguing that actions taken against them will bring retribution upon Manchuria.\n\nZhang was initially only listening, but he is a nationalist at heart and soon he too is arguing for the foreigners to repent for all that has led up to this incident. Only the unannounced arrival of a foreign official, and a high-ranking diplomat no less, pulls Zhang from the dining room."
+man.10.a:0 "If only a solution would present itself!"
+###Focus###
+MAN_manchurias_golden_decade:0 "Manchuria Stronk!"
+MAN_manchurias_golden_decade_desc:0 "Rich as fuck boooiiii"
+MAN_coal_in_fushun:0 "Coal in Fushun"
+

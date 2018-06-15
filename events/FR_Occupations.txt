@@ -1,0 +1,4887 @@
+﻿####################
+# Occupation Events#
+##################################
+# By CIA, Jespertjee & SuperMarks#
+##################################
+
+add_namespace = occupation
+
+country_event = {
+	id = occupation.1
+	title = "Occupation of Poland"
+	desc = occupation.1.d
+	mean_time_to_happen = {
+		days = 5
+	}
+	immediate = { 
+		set_country_flag = POL_OCCUPIED
+	}
+	trigger = {
+		NOT = {
+			OR = {
+				tag = POL
+				tag = GER
+			}
+		}
+		NOT = { has_country_flag = POL_OCCUPIED }
+		POL = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 10 }
+	}
+	option = {
+		name = "Install a collaborationist regime"
+		ai_chance = {
+			factor = 95
+		}
+		every_state = {
+			limit = {
+				is_core_of = POL
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			POL = { transfer_state = PREV }
+		}
+		puppet = POL
+	}
+	option = {
+		name = "Polish sovereignty was a mistake"
+		ai_chance = {
+			factor = 5
+		}
+		set_country_flag = POL_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.2
+	title = "Occupation of Switzerland"
+	desc = occupation.2.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = SWI_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = SWI
+			}
+		}
+		NOT = { has_country_flag = SWI_OCCUPIED }
+		SWI = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 3 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = SWI
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			SWI = { transfer_state = PREV }
+		}
+		puppet = SWI
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = SWI_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.3
+	title = "Occupation of Sweden"
+	desc = occupation.3.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = SWE_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = SWE
+			}
+		}
+		NOT = { has_country_flag = SWE_OCCUPIED }
+		SWE = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 141 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = SWE
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			SWE = { transfer_state = PREV }
+		}
+		puppet = SWE
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = SWE_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.4
+	title = "Occupation of Norway"
+	desc = occupation.4.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = NOR_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = NOR
+			}
+		}
+		NOT = { has_country_flag = NOR_OCCUPIED }
+		NOR = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 110 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = NOR
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			NOR = { transfer_state = PREV }
+		}
+		puppet = NOR
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = NOR_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.5
+	title = "Occupation of Denmark"
+	desc = occupation.5.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = DEN_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = SHO
+				tag = GER
+			}
+		}
+		NOT = { has_country_flag = DEN_OCCUPIED }
+		DEN = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 37 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = DEN
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			DEN = { transfer_state = PREV }
+		}
+		puppet = DEN
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = DEN_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.6
+	title = "Occupation of Austria"
+	desc = occupation.6.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = AUS_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = AUS
+				tag = ASR
+				tag = GER
+			}
+		}
+		NOT = { has_country_flag = AUS_OCCUPIED }
+		AUS = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 803 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = AUS
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			AUS = { transfer_state = PREV }
+		}
+		puppet = AUS
+	}
+	option = {
+		name = "Install a collaborationist Greater Austria"
+		IF = {
+			limit = {
+				controls_state = 153
+			}
+			AUS = { transfer_state = 153 }
+		}
+		IF = {
+			limit = {
+				controls_state = 913
+			}
+			AUS = { transfer_state = 913 }
+		}
+		IF = {
+			limit = {
+				controls_state = 917
+			}
+			AUS = { transfer_state = 912 }
+		}
+		IF = {
+			limit = {
+				controls_state = 4
+			}
+			AUS = { transfer_state = 4 }
+		}
+		IF = {
+			limit = {
+				controls_state = 152
+			}
+			AUS = { transfer_state = 152 }
+		}
+		IF = {
+			limit = {
+				controls_state = 803
+			}
+			AUS = { transfer_state = 803 }
+		}
+		IF = {
+			limit = {
+				controls_state = 39
+			}
+			AUS = { transfer_state = 39 }
+		}
+		IF = {
+			limit = {
+				controls_state = 774
+			}
+			AUS = { transfer_state = 774 }
+		}
+		IF = {
+			limit = {
+				controls_state = 772
+			}
+			AUS = { transfer_state = 772 }
+		}
+		IF = {
+			limit = {
+				controls_state = 102
+			}
+			AUS = { transfer_state = 102 }
+		}
+		IF = {
+			limit = {
+				controls_state = 767
+			}
+			AUS = { transfer_state = 767 }
+		}
+		IF = {
+			limit = {
+				controls_state = 736
+			}
+			AUS = { transfer_state = 736 }
+		}
+		IF = {
+			limit = {
+				controls_state = 770
+			}
+			AUS = { transfer_state = 770 }
+		}
+		IF = {
+			limit = {
+				controls_state = 917
+			}
+			AUS = { transfer_state = 917 }
+		}
+		every_state = {
+			limit = {
+				is_owned_by = AUS
+				NOT = { is_core_of = AUS }
+			}
+			add_core_of = AUS
+		}
+		puppet = AUS
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = AUS_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.7
+	title = "Occupation of Hungary"
+	desc = occupation.7.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = HUN_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = HUN
+				tag = HSR
+			}
+		}
+		NOT = { has_country_flag = HUN_OCCUPIED }
+		HUN = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 43 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		HUN = {
+			add_state_core = 45
+			add_state_core = 24
+		}
+		every_state = {
+			limit = {
+				is_core_of = HUN
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			HUN = { transfer_state = PREV }
+		}
+		puppet = HUN
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = HUN_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.8
+	title = "Occupation of Bohemia"
+	desc = occupation.8.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = BOH_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = CEN
+				tag = BOH
+				tag = GER
+			}
+		}
+		NOT = { has_country_flag = BOH_OCCUPIED }
+		BOH = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 9 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = BOH
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			BOH = { transfer_state = PREV }
+		}
+		puppet = BOH
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = BOH_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.9
+	title = "Occupation of Slovakia"
+	desc = occupation.9.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = SLO_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = SLO
+				tag = CEN
+				tag = HUN
+				tag = GER
+			}
+		}
+		NOT = { has_country_flag = SLO_OCCUPIED }
+		SLO = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 796 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = SLO
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			SLO = { transfer_state = PREV }
+		}
+		puppet = SLO
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = SLO_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.10
+	title = "Occupation of Lithuania"
+	desc = occupation.10.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = LIT_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = LIT
+				tag = POL
+			}
+		}
+		NOT = { has_country_flag = LIT_OCCUPIED }
+		LIT = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 11 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = LIT
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			LIT = { transfer_state = PREV }
+		}
+		puppet = LIT
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = LIT_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.11
+	title = "Occupation of Latvia"
+	desc = occupation.11.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = LAT_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = LAT
+				tag = EST
+			}
+		}
+		NOT = { has_country_flag = LAT_OCCUPIED }
+		LAT = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 757 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = LAT
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			LAT = { transfer_state = PREV }
+		}
+		puppet = LAT
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = LAT_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.12
+	title = "Occupation of Estonia"
+	desc = occupation.12.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = EST_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = EST
+				tag = SOV
+			}
+		}
+		NOT = { has_country_flag = EST_OCCUPIED }
+		EST = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 13 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = EST
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			EST = { transfer_state = PREV }
+		}
+		puppet = EST
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = EST_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.13
+	title = "Occupation of Finland"
+	desc = occupation.13.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = FIN_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = FIN
+				tag = RFN
+				tag = SOV
+			}
+		}
+		NOT = { has_country_flag = FIN_OCCUPIED }
+		RFN = { exists = no }
+		FIN = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 844 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = FIN
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			FIN = { transfer_state = PREV }
+		}
+		puppet = FIN
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = FIN_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.14
+	title = "Occupation of the Netherlands"
+	desc = occupation.14.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = HOL_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = HOL
+			}
+		}
+		NOT = { has_country_flag = HOL_OCCUPIED }
+		HOL = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 7 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = HOL
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			HOL = { transfer_state = PREV }
+		}
+		puppet = HOL
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = HOL_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.15
+	title = "Occupation of Belgium"
+	desc = occupation.15.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = BEL_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = BEL
+			}
+		}
+		NOT = { has_country_flag = BEL_OCCUPIED }
+		BEL = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 6 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = BEL
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			BEL = { transfer_state = PREV }
+		}
+		puppet = BEL
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = BEL_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.16
+	title = "Occupation of Romania"
+	desc = occupation.16.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = ROM_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = ROM
+			}
+		}
+		NOT = { has_country_flag = ROM_OCCUPIED }
+		ROM = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 46 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = ROM
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			ROM = { transfer_state = PREV }
+		}
+		puppet = ROM
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = ROM_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.17
+	title = "Occupation of Serbia"
+	desc = occupation.17.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = SER_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = SER
+			}
+		}
+		NOT = { has_country_flag = SER_OCCUPIED }
+		SER = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 107 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = SER
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			SER = { transfer_state = PREV }
+		}
+		puppet = SER
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = SER_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.18
+	title = "Occupation of Montenegro"
+	desc = occupation.18.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = MNT_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = MNT
+			}
+		}
+		NOT = { has_country_flag = MNT_OCCUPIED }
+		MNT = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 105 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = MNT
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			MNT = { transfer_state = PREV }
+		}
+		puppet = MNT
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = MNT_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.19
+	title = "Occupation of Bulgaria"
+	desc = occupation.19.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = BUL_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = BUL
+				tag = BSR
+			}
+		}
+		NOT = { has_country_flag = BUL_OCCUPIED }
+		BUL = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 48 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = BUL
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			BUL = { transfer_state = PREV }
+		}
+		puppet = BUL
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = BUL_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.20
+	title = "Occupation of Albania"
+	desc = occupation.20.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = ALB_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = ALB
+				tag = ITA
+			}
+		}
+		NOT = { has_country_flag = ALB_OCCUPIED }
+		ALB = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 44 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = ALB
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			ALB = { transfer_state = PREV }
+		}
+		puppet = ALB
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = ALB_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.21
+	title = "Occupation of Greece"
+	desc = occupation.21.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = GRE_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = GRE
+			}
+		}
+		NOT = { has_country_flag = GRE_OCCUPIED }
+		GRE = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 47 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = GRE
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			GRE = { transfer_state = PREV }
+		}
+		puppet = GRE
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = GRE_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.22
+	title = "Occupation of Turkey"
+	desc = occupation.22.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = TUR_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = TUR
+			}
+		}
+		NOT = { has_country_flag = TUR_OCCUPIED }
+		TUR = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 49 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = TUR
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			TUR = { transfer_state = PREV }
+		}
+		puppet = TUR
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = TUR_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.23
+	title = "Occupation of Armenia"
+	desc = occupation.23.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = ARM_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = ARM
+			}
+		}
+		NOT = { has_country_flag = ARM_OCCUPIED }
+		ARM = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 230 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = ARM
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			ARM = { transfer_state = PREV }
+		}
+		puppet = ARM
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = ARM_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.025
+		add_war_support = -0.025
+	}
+}
+
+country_event = {
+	id = occupation.24
+	title = "Occupation of Kurdistan"
+	desc = occupation.24.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = KUR_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = KUR
+				tag = TUR # lol
+			}
+		}
+		NOT = { has_country_flag = KUR_OCCUPIED }
+		KUR = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 352 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = KUR
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			KUR = { transfer_state = PREV }
+		}
+		puppet = KUR
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = KUR_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.025
+		add_war_support = -0.025
+	}
+}
+
+country_event = {
+	id = occupation.25
+	title = "Occupation of Iraq"
+	desc = occupation.25.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = IRQ_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = IRQ
+			}
+		}
+		NOT = { has_country_flag = IRQ_OCCUPIED }
+		IRQ = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 291 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = IRQ
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			IRQ = { transfer_state = PREV }
+		}
+		puppet = IRQ
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = IRQ_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.26
+	title = "Occupation of Arabia"
+	desc = occupation.26.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = ARB_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = ARB
+				tag = ENG
+			}
+		}
+		NOT = { has_country_flag = ARB_OCCUPIED }
+		ARB = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 679 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = ARB
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			ARB = { transfer_state = PREV }
+		}
+		puppet = ARB
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = ARB_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.27
+	title = "Occupation of Phoenicia"
+	desc = occupation.27.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = PHN_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = PHN
+				tag = FRA
+			}
+		}
+		NOT = { has_country_flag = PHN_OCCUPIED }
+		PHN = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 553 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = PHN
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			PHN = { transfer_state = PREV }
+		}
+		puppet = PHN
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = PHN_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.28
+	title = "Occupation of Isreal"
+	desc = occupation.28.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = ISR_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = ISR
+				tag = ENG
+			}
+		}
+		NOT = { has_country_flag = ISR_OCCUPIED }
+		ISR = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 454 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = ISR
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			ISR = { transfer_state = PREV }
+		}
+		puppet = ISR
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = ISR_OCCUPIED
+		add_political_power = -50000
+		add_stability = -1
+		add_war_support = -1
+	}
+}
+
+country_event = {
+	id = occupation.29
+	title = "Occupation of Georgia"
+	desc = occupation.29.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = GEO_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = GEO
+				tag = SOV
+			}
+		}
+		NOT = { has_country_flag = GEO_OCCUPIED }
+		GEO = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 231 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = GEO
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			GEO = { transfer_state = PREV }
+		}
+		puppet = GEO
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = GEO_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.30
+	title = "Occupation of Azerbaijan"
+	desc = occupation.30.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = AZR_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = AZR
+				tag = SOV
+			}
+		}
+		NOT = { has_country_flag = AZR_OCCUPIED }
+		AZR = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 229 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = AZR
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			AZR = { transfer_state = PREV }
+		}
+		puppet = AZR
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = AZR_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.31
+	title = "Occupation of Portugal"
+	desc = occupation.31.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = POR_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = POR
+				tag = PRR
+			}
+		}
+		NOT = { has_country_flag = POR_OCCUPIED }
+		PRR = { exists = no }
+		POR = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 112 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = POR
+					is_core_of = PRR
+				}
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			POR = { transfer_state = PREV }
+		}
+		puppet = POR
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = POR_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.32
+	title = "Occupation of Spain"
+	desc = occupation.32.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = SPM_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = SPR
+				tag = SPA
+				tag = SPM
+				tag = SPF
+				AND = {
+					original_tag = ITA
+					has_government = valkist
+				}
+			}
+		}
+		NOT = { has_country_flag = SPM_OCCUPIED }
+		SPF = { exists = no }
+		SPA = { exists = no }
+		SPM = { exists = no }
+		SPR = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 41 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = SPM
+					is_core_of = SPR
+					is_core_of = SPA
+					is_core_of = SPF
+				}
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			SPM = { transfer_state = PREV }
+		}
+		puppet = SPM
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = SPM_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.33
+	title = "Occupation of Luxembourg"
+	desc = occupation.33.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = LUX_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = LUX
+				tag = FRA
+			}
+		}
+		NOT = { has_country_flag = LUX_OCCUPIED }
+		LUX = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 8 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = LUX
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			LUX = { transfer_state = PREV }
+		}
+		puppet = LUX
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = LUX_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.34
+	title = "Occupation of Belorussia"
+	desc = occupation.34.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = BLR_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = BLR
+				tag = SOV
+			}
+		}
+		NOT = { has_country_flag = BLR_OCCUPIED }
+		BLR = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 206 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		BLR = { drop_cosmetic_tag = yes }
+		every_state = {
+			limit = {
+				is_core_of = BLR
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			BLR = { transfer_state = PREV }
+		}
+		puppet = BLR
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = BLR_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.35
+	title = "Occupation of Ukraine"
+	desc = occupation.35.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = UKR_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = UKR
+				tag = SOV
+			}
+		}
+		NOT = { has_country_flag = UKR_OCCUPIED }
+		UKR = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 202 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		UKR = { drop_cosmetic_tag = yes }
+		every_state = {
+			limit = {
+				is_core_of = UKR
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			UKR = { transfer_state = PREV }
+		}
+		puppet = UKR
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		set_country_flag = UKR_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.36
+	title = "Occupation of Croatia"
+	desc = occupation.36.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = CRO_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = HUN
+				tag = SER
+				tag = ITA
+				tag = CRO
+			}
+		}
+		NOT = { has_country_flag = CRO_OCCUPIED }
+		CRO = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 109 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 10 }
+		every_state = {
+			limit = {
+				is_core_of = CRO
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			CRO = { transfer_state = PREV }
+		}
+		puppet = CRO
+	}
+	option = {
+		name = "Hand it off to Serbia"
+		ai_chance = { factor = 40 }
+		every_state = {
+			limit = {
+				is_core_of = CRO
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			SER = { transfer_state = PREV }
+		}
+	}
+	option = {
+		name = "Hand it off to Hungary"
+		ai_chance = { factor = 40 }
+		every_state = {
+			limit = {
+				is_core_of = CRO
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			HUN = { transfer_state = PREV }
+		}
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 10 }
+		set_country_flag = CRO_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.37
+	title = "Occupation of Ireland"
+	desc = occupation.37.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = IRE_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = IRE
+				tag = ENG
+				tag = ANG
+				tag = SCO
+				tag = WAL
+				tag = ENP
+			}
+		}
+		NOT = { has_country_flag = IRE_OCCUPIED }
+		IRE = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 815 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = IRE
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			IRE = { transfer_state = PREV }
+		}
+		puppet = IRE
+	}
+	option = {
+		name = "Under a foreign boot for over 700 years? Surely they can wait a little longer."
+		ai_chance = { factor = 5 }
+		set_country_flag = IRE_OCCUPIED
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+country_event = { # Fate of Paraguay
+	id = occupation.40
+	title = occupation.40.t
+	desc = occupation.40.d
+
+	trigger = {
+		NOT = {
+			OR = {
+				tag = BOL
+				tag = ARG
+			}
+		}
+		NOT = {
+			country_exists = PAR
+		}
+		controls_state = 301
+		owns_state = 301
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	fire_only_once = yes
+
+	option = { # Establish Puppet
+		name = occupation.40.a
+		ai_chance = {
+			factor = 100
+		}
+		if ={
+			limit = { 
+				controls_state = 301
+				}
+			PAR = { transfer_state = 301 }
+		}
+		if ={
+			limit = { 
+				controls_state = 688
+				}
+			PAR = { transfer_state = 688}
+		}
+		puppet = PAR
+	}
+
+	option = { # Occupy
+		name = occupation.40.b
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = -200
+		}
+	}
+country_event = { # Fate of Chile
+	id = occupation.41
+	title = occupation.41.t
+	desc = occupation.41.d
+
+	trigger = {
+		has_war = no
+		NOT = {
+			OR = {
+				tag = BOL
+			}
+		}
+		NOT = {
+			country_exists = CHL
+		}
+		controls_state = 506
+		controls_state = 507
+		controls_state = 279
+		owns_state = 279
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	fire_only_once = yes
+
+	option = { # Establish Puppet
+		name = occupation.41.a
+		ai_chance = {
+			factor = 100
+		}
+		if ={
+			limit = { 
+				controls_state = 506
+				}
+			CHL = { transfer_state = 506 }
+		}
+		if ={
+			limit = { 
+				controls_state = 507
+				}
+			CHL = { transfer_state = 507 }
+		}
+		if ={
+			limit = { 
+				controls_state = 279
+				}
+			CHL = { transfer_state = 279 }
+		}
+		if ={
+			limit = { 
+				controls_state = 877
+				NOT = {
+					OR = {
+						tag = PRU 
+					}
+				}				
+				}
+			CHL = { transfer_state = 877 }
+		}
+		if ={
+			limit = { 
+				controls_state = 875
+				}
+			CHL = { transfer_state = 875 }
+		}
+		if ={
+			limit = { 
+				controls_state = 878
+				}
+			CHL = { transfer_state = 878 }
+		}
+		puppet = CHL
+		CHL = { load_focus_tree = generic_focus }
+	}
+
+	option = { # Occupy
+		name = occupation.41.b
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = -200
+		}
+	}
+country_event = { # Fate of Argentina
+	id = occupation.42
+	title = occupation.42.t
+	desc = occupation.42.d
+
+	trigger = {
+		NOT = {
+			country_exists = ARG
+		}
+		controls_state = 278
+		controls_state = 761
+		controls_state = 510
+		owns_state = 278
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	fire_only_once = yes
+
+	option = { # Establish Puppet
+		name = occupation.42.a
+		ai_chance = {
+			factor = 100
+		}
+		if ={
+			limit = { 
+				controls_state = 278
+				}
+			ARG = { transfer_state = 278 }
+		}
+		if ={
+			limit = { 
+				controls_state = 760
+				}
+			ARG = { transfer_state = 760 }
+		}
+		if ={
+			limit = { 
+				controls_state = 510
+				}
+			ARG = { transfer_state = 510 }
+		}
+		if ={
+			limit = { 
+				controls_state = 761
+				}
+			ARG = { transfer_state = 761 }
+		}
+		if ={
+			limit = { 
+				controls_state = 512
+				}
+			ARG = { transfer_state = 512 }
+		}
+		if ={
+			limit = { 
+				controls_state = 511
+				}
+			ARG = { transfer_state = 511 }
+		}
+		if ={
+			limit = { 
+				controls_state = 508
+				}
+			ARG = { transfer_state = 508 }
+		}
+		if ={
+			limit = { 
+				controls_state = 509
+				}
+			ARG = { transfer_state = 509 }
+		}
+		if ={
+			limit = { 
+				controls_state = 759
+				}
+			ARG = { transfer_state = 759 }
+		}
+		if ={
+			limit = { 
+				controls_state = 835
+				}
+			BOL = { transfer_state = 835 }
+		}
+		puppet = ARG
+		ARG = { load_focus_tree = generic_focus }
+	}
+
+	option = { # Occupy
+		name = occupation.42.b
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = -200
+		}
+	}
+country_event = { # Fate of Bolivia
+	id = occupation.43
+	title = occupation.43.t
+	desc = occupation.43.d
+
+	trigger = {
+		NOT = {
+			country_exists = BOL
+		}
+		controls_state = 302
+		controls_state = 487
+		owns_state = 302
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	fire_only_once = yes
+
+	option = { # Establish Puppet
+		name = occupation.43.a
+		ai_chance = {
+			factor = 100
+		}
+		if ={
+			limit = { 
+				controls_state = 302
+				}
+			BOL = { transfer_state = 302 }
+		}
+		if ={
+			limit = { 
+				controls_state = 487
+				}
+			BOL = { transfer_state = 487 }
+		}
+		if ={
+			limit = { 
+				controls_state = 835
+				}
+			BOL = { transfer_state = 835 }
+		}
+		puppet = BOL
+		BOL = { load_focus_tree = generic_focus }
+	}
+
+	option = { # Occupy
+		name = occupation.43.b
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = -200
+		}
+	}
+country_event = { # Fate of Peru
+	id = occupation.44
+	title = occupation.44.t
+	desc = occupation.44.d
+
+	trigger = {
+		has_war = no
+		NOT = {
+			country_exists = PRU
+		}
+		controls_state = 492
+		controls_state = 494
+		controls_state = 303
+		owns_state = 303
+	}
+
+	mean_time_to_happen = { 
+		days = 1
+	}
+
+	fire_only_once = yes
+
+	option = { # Establish Puppet
+		name = occupation.44.a
+		ai_chance = {
+			factor = 100
+		}
+		if ={
+			limit = { 
+				controls_state = 492
+				}
+			PRU = { transfer_state = 492 }
+		}
+		if ={
+			limit = { 
+				controls_state = 494
+				}
+			PRU = { transfer_state = 494 }
+		}
+		if ={
+			limit = { 
+				controls_state = 303
+				}
+			PRU = { transfer_state = 303 }
+		}
+		if ={
+			limit = { 
+				controls_state = 876
+				876 = {
+					NOT = {
+						OR = {
+							is_core_of = ROOT
+							is_claimed_by = ROOT
+							}
+						}
+					}
+				}
+			PRU = { transfer_state = 876 }
+		}
+		if ={
+			limit = { 
+				OR = {
+					controls_state = 491
+					owns_state = 491
+					}
+				491 = {
+					NOT = {
+						OR = {
+							is_core_of = ROOT
+							is_claimed_by = ROOT
+							}
+						}
+					}
+				}
+			PRU = { transfer_state = 491 }
+		}
+		if ={
+			limit = { 
+				controls_state = 753
+				753 = {
+					NOT = {
+						OR = {
+							is_core_of = ROOT
+							is_claimed_by = ROOT
+							}
+						}
+					}
+				}
+			PRU = { transfer_state = 753 }
+		}
+		puppet = PRU
+		PRU = { load_focus_tree = generic_focus }
+	}
+
+	option = { # Occupy
+		name = occupation.44.b
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = -200
+		}
+	}
+country_event = { # Fate of Ecuador
+	id = occupation.45
+	title = occupation.45.t
+	desc = occupation.45.d
+
+	trigger = {
+		NOT = {
+			OR = {
+				tag = COL
+			}
+		}
+		NOT = {
+			country_exists = ECU
+		}
+		controls_state = 305
+		owns_state = 305
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	fire_only_once = yes
+
+	option = { # Establish Puppet
+		name = occupation.45.a
+		ai_chance = {
+			factor = 100
+		}
+		if ={
+			limit = { 
+				controls_state = 305
+				}
+			ECU = { transfer_state = 305 }
+		}
+		if ={
+			limit = { 
+				controls_state = 490
+				490 = {
+					NOT = {
+						OR = {
+							is_core_of = ROOT
+							is_claimed_by = ROOT
+							}
+						}
+					}
+				}
+			ECU = { transfer_state = 490 }
+		}
+		puppet = ECU
+
+	}
+
+	option = { # Occupy
+		name = occupation.45.b
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = -200
+		}
+	}
+country_event = { # Fate of Colombia
+	id = occupation.46
+	title = occupation.46.t
+	desc = occupation.46.d
+
+	trigger = {
+		NOT = {
+			OR = {
+				tag = PRU
+			}
+		}
+		NOT = {
+			country_exists = COL
+		}
+		controls_state = 306
+		controls_state = 493
+		owns_state = 306
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	fire_only_once = yes
+
+	option = { # Establish Puppet
+		name = occupation.46.a
+		ai_chance = {
+			factor = 100
+		}
+		if ={
+			limit = { 
+				controls_state = 306
+				}
+			COL = { transfer_state = 306 }
+		}
+		if ={
+			limit = { 
+				controls_state = 493
+				}
+			COL = { transfer_state = 493 }
+		}
+		if ={
+			limit = { 
+				controls_state = 486
+				}
+			COL = { transfer_state = 486 }
+		}
+		if ={
+			limit = { 
+				controls_state = 899
+				}
+			COL = { transfer_state = 899 }
+		}
+		puppet = COL
+		COL = { load_focus_tree = generic_focus }
+	}
+
+	option = { # Occupy
+		name = occupation.46.b
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = -200
+		}
+	}
+country_event = { # Fate of Venezuela
+	id = occupation.47
+	title = occupation.47.t
+	desc = occupation.47.d
+
+	trigger = {
+		NOT = {
+			OR = {
+				tag = COL
+			}
+		}
+		NOT = {
+			country_exists = VEN
+		}
+		controls_state = 307
+		controls_state = 489
+		controls_state = 900
+		owns_state = 307
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	fire_only_once = yes
+
+	option = { # Establish Puppet
+		name = occupation.47.a
+		ai_chance = {
+			factor = 100
+		}
+		if ={
+			limit = { 
+				controls_state = 307
+				}
+			VEN = { transfer_state = 307 }
+		}
+		if ={
+			limit = { 
+				controls_state = 489
+				}
+			VEN = { transfer_state = 489 }
+		}
+		if ={
+			limit = { 
+				controls_state = 488
+				}
+			VEN = { transfer_state = 488 }
+		}
+		if ={
+			limit = { 
+				controls_state = 900
+				}
+			VEN = { transfer_state = 900 }
+		}
+		puppet = VEN
+	}
+
+	option = { # Occupy
+		name = occupation.47.b
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = -200
+		}
+	}
+country_event = { # Fate of Uruguay
+	id = occupation.48
+	title = occupation.48.t
+	desc = occupation.48.d
+
+	trigger = {
+		NOT = {
+			OR = {
+				tag = ARG
+			}
+		}
+		NOT = {
+			country_exists = URG
+		}
+		controls_state = 300
+		owns_state = 300
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	fire_only_once = yes
+
+	option = { # Establish Puppet
+		name = occupation.48.a
+		ai_chance = {
+			factor = 100
+		}
+		if ={
+			limit = { 
+				controls_state = 300
+				}
+			URG = { transfer_state = 300 }
+		}
+		if ={
+			limit = { 
+				controls_state = 836
+				}
+			URG = { transfer_state = 836 }
+		}
+		puppet = URG
+	}
+
+	option = { # Occupy
+		name = occupation.48.b
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = -200
+		}
+	}
+country_event = { # Fate of Brazil
+	id = occupation.49
+	title = occupation.49.t
+	desc = occupation.49.d
+
+	trigger = {
+		NOT = {
+			OR ={
+				tag = BOL
+				tag = BPS
+				tag = UBR
+			}
+		}
+		NOT = {
+			country_exists = BRA
+		}
+		controls_state = 500
+		controls_state = 501
+		owns_state = 500
+		controls_state = 896
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	fire_only_once = yes
+
+	option = { # Establish Puppet
+		name = occupation.49.a
+		ai_chance = {
+			factor = 100
+		}
+		if ={
+			limit = { 
+				controls_state = 500
+				}
+			BRA = { transfer_state = 500 }
+		}
+		if ={
+			limit = { 
+				controls_state = 501
+				}
+			BRA = { transfer_state = 501 }
+		}
+		if ={
+			limit = { 
+				controls_state = 896
+				}
+			BRA = { transfer_state = 896 }
+		}
+		if ={
+			limit = { 
+				controls_state = 502
+				}
+			BRA = { transfer_state = 502 }
+		}
+		if ={
+			limit = { 
+				controls_state = 503
+				}
+			BRA = { transfer_state = 503 }
+		}
+		if ={
+			limit = { 
+				controls_state = 504
+				}
+			BRA = { transfer_state = 504 }
+		}
+		if ={
+			limit = { 
+				controls_state = 505
+				}
+			BRA = { transfer_state = 505 }
+		}
+		if ={
+			limit = { 
+				controls_state = 499
+				}
+			BRA = { transfer_state = 499 }
+		}
+		if ={
+			limit = { 
+				controls_state = 498
+				}
+			BRA = { transfer_state = 498 }
+		}
+		if ={
+			limit = { 
+				controls_state = 497
+				}
+			BRA = { transfer_state = 497 }
+		}
+		if ={
+			limit = { 
+				controls_state = 495
+				}
+			BRA = { transfer_state = 495 }
+		}
+		if ={
+			limit = { 
+				controls_state = 901
+				}
+			BRA = { transfer_state = 901 }
+		}
+		if ={
+			limit = { 
+				controls_state = 280
+				}
+			BRA = { transfer_state = 280 }
+		}
+		if ={
+			limit = { 
+				controls_state = 496
+				}
+			BRA = { transfer_state = 496 }
+		}
+		if ={
+			limit = { 
+				controls_state = 882
+				}
+			BRA = { transfer_state = 882 }
+		}
+		puppet = BRA
+		BRA = { load_focus_tree = generic_focus }
+	}
+
+	option = { # Occupy
+		name = occupation.49.b
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = -300
+		}
+	}
+
+country_event = {
+	id = occupation.50
+	title = "Occupation of Canada"
+	desc = occupation.50.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = CAN_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = CAN
+				tag = ENG
+			}
+		}
+		NOT = { has_country_flag = CAN_OCCUPIED }
+		CAN = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 276 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = CAN
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			CAN = { transfer_state = PREV }
+		}
+		puppet = CAN
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.51
+	title = "Occupation of the USA"
+	desc = occupation.51.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = USA_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = USA
+				tag = CAN
+				tag = ENG
+			}
+		}
+		NOT = { has_country_flag = USA_OCCUPIED }
+		USA = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 361 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = USA
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			USA = { transfer_state = PREV }
+		}
+		puppet = USA
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		add_political_power = -100
+		add_stability = -0.1
+		add_war_support = -0.1
+	}
+}
+
+country_event = {
+	id = occupation.52
+	title = "Occupation of Mexico"
+	desc = occupation.52.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = MEX_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = MEX
+			}
+		}
+		NOT = { has_country_flag = MEX_OCCUPIED }
+		MEX = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 277 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = MEX
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			MEX = { transfer_state = PREV }
+		}
+		puppet = MEX
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		add_political_power = -100
+		add_stability = -0.075
+		add_war_support = -0.075
+	}
+}
+
+country_event = {
+	id = occupation.53
+	title = "Occupation of Guatemala"
+	desc = occupation.53.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = GUA_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = GUA
+			}
+		}
+		NOT = { has_country_flag = GUA_OCCUPIED }
+		GUA = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 313 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = GUA
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			GUA = { transfer_state = PREV }
+		}
+		puppet = GUA
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		add_political_power = -50
+		add_stability = -0.025
+		add_war_support = -0.025
+	}
+}
+
+country_event = {
+	id = occupation.54
+	title = "Occupation of El Salvador"
+	desc = occupation.54.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = ELS_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = ELS
+			}
+		}
+		NOT = { has_country_flag = ELS_OCCUPIED }
+		ELS = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 314 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = ELS
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			ELS = { transfer_state = PREV }
+		}
+		puppet = ELS
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		add_political_power = -50
+		add_stability = -0.025
+		add_war_support = -0.025
+	}
+}
+
+country_event = {
+	id = occupation.55
+	title = "Occupation of Honduras"
+	desc = occupation.55.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = HON_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = HON
+				tag = GUA
+			}
+		}
+		NOT = { has_country_flag = HON_OCCUPIED }
+		HON = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 312 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = HON
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			HON = { transfer_state = PREV }
+		}
+		puppet = HON
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		add_political_power = -50
+		add_stability = -0.025
+		add_war_support = -0.025
+	}
+}
+
+country_event = {
+	id = occupation.56
+	title = "Occupation of Nicaragua"
+	desc = occupation.56.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = NIC_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = NIC
+			}
+		}
+		NOT = { has_country_flag = NIC_OCCUPIED }
+		NIC = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 317 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = NIC
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			NIC = { transfer_state = PREV }
+		}
+		puppet = NIC
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		add_political_power = -50
+		add_stability = -0.025
+		add_war_support = -0.025
+	}
+}
+
+country_event = {
+	id = occupation.57
+	title = "Occupation of Costa Rica"
+	desc = occupation.57.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = COS_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = COS
+			}
+		}
+		NOT = { has_country_flag = COS_OCCUPIED }
+		COS = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 316 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = COS
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			COS = { transfer_state = PREV }
+		}
+		puppet = COS
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		add_political_power = -50
+		add_stability = -0.025
+		add_war_support = -0.025
+	}
+}
+
+country_event = {
+	id = occupation.58
+	title = "Occupation of Panama"
+	desc = occupation.58.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = PAN_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = PAN
+			}
+		}
+		NOT = { has_country_flag = PAN_OCCUPIED }
+		"PAN" = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 304 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = "PAN"
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			"PAN" = { transfer_state = PREV }
+		}
+		puppet = "PAN"
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.59
+	title = "Occupation of Cuba"
+	desc = occupation.59.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = CUB_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = CUB
+			}
+		}
+		NOT = { has_country_flag = CUB_OCCUPIED }
+		CUB = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 315 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = CUB
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			CUB = { transfer_state = PREV }
+		}
+		puppet = CUB
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.60
+	title = "Occupation of Haiti"
+	desc = occupation.60.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = HAI_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = HAI
+			}
+		}
+		NOT = { has_country_flag = HAI_OCCUPIED }
+		HAI = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 318 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = HAI
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			HAI = { transfer_state = PREV }
+		}
+		puppet = HAI
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.61
+	title = "Occupation of Dominica"
+	desc = occupation.61.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = DOM_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = DOM
+			}
+		}
+		NOT = { has_country_flag = DOM_OCCUPIED }
+		DOM = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 319 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = DOM
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			DOM = { transfer_state = PREV }
+		}
+		puppet = DOM
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.62
+	title = "Occupation of Russia"
+	desc = occupation.62.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = SOV_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = SOV
+				tag = RUS
+			}
+		}
+		NOT = { has_country_flag = SOV_OCCUPIED }
+		SOV = { exists = no }
+		RUS = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 219 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = SOV
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			RUS = { transfer_state = PREV }
+		}
+		every_state = {
+			limit = {
+				is_core_of = SOV
+			}
+			add_core_of = RUS
+		}
+		every_state = {
+			limit = {
+				is_claimed_by = SOV
+			}
+			add_claim_by = RUS
+		}
+		puppet = RUS
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		add_political_power = -150
+		add_stability = -0.1
+		add_war_support = -0.1
+	}
+}
+
+country_event = {
+	id = occupation.63
+	title = "Occupation of Persia"
+	desc = occupation.63.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = PER_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = PER
+			}
+		}
+		NOT = { has_country_flag = PER_OCCUPIED }
+		PER = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 266 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = PER
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			PER = { transfer_state = PREV }
+		}
+		puppet = PER
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.64
+	title = "Occupation of Turkestan"
+	desc = occupation.64.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = TRK_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = TRK
+				tag = KAZ
+			}
+		}
+		NOT = { has_country_flag = TRK_OCCUPIED }
+		TRK = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 405 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = TRK
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			TRK = { transfer_state = PREV }
+		}
+		puppet = TRK
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.65
+	title = "Occupation of Kazahkstan"
+	desc = occupation.65.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = KAZ_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = KAZ
+				tag = SOV
+			}
+		}
+		NOT = { has_country_flag = KAZ_OCCUPIED }
+		KAZ = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 586 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = KAZ
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			KAZ = { transfer_state = PREV }
+		}
+		puppet = KAZ
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.66
+	title = "Occupation of Afghanistan"
+	desc = occupation.66.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = AFG_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = AFG
+			}
+		}
+		NOT = { has_country_flag = AFG_OCCUPIED }
+		AFG = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 111 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = AFG
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			AFG = { transfer_state = PREV }
+		}
+		puppet = AFG
+	}
+	option = {
+		name = "Graveyard of Empires? Surely not."
+		ai_chance = { factor = 5 }
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = occupation.67
+	title = "Occupation of Mongolia"
+	desc = occupation.67.d
+	mean_time_to_happen = {	days = 5 }
+	immediate = { set_country_flag = MON_OCCUPIED }
+	trigger = {
+		NOT = {
+			OR = {
+				tag = MON
+			}
+		}
+		NOT = { has_country_flag = MON_OCCUPIED }
+		MON = { exists = no }
+		has_war = no
+		ROOT = { owns_state = 111 }
+	}
+	option = {
+		name = "Install a collaborationist regime."
+		ai_chance = { factor = 95 }
+		every_state = {
+			limit = {
+				is_core_of = MON
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT }
+			}
+			MON = { transfer_state = PREV }
+		}
+		puppet = MON
+	}
+	option = {
+		name = "Maintain Military occupation."
+		ai_chance = { factor = 5 }
+		add_political_power = -50
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+##############################
+###FRENCH OCCUPATION EVENTS###
+##############################
+
+add_namespace = fra.partition
+
+country_event = {			# - Hidden Event which determines who has control over French land after France no longer exists
+	id = fra.partition.1
+	title = ""
+	desc = fra.partition.1.d
+	
+	hidden = yes
+	
+	trigger = {
+		FRA = { exists = no }
+		NOT = { has_country_flag = conquest_FRA }
+		NOT = { has_country_flag = nocontrol_FRA }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		set_country_flag = { flag = fra_state_count value = 0 }
+		every_owned_state = {
+			limit = {
+				is_core_of = FRA
+				is_on_continent = europe
+				NOT = { is_core_of = ROOT }
+            }
+			ROOT = { 
+				modify_country_flag = { flag = fra_state_count value = 1 } 
+				set_country_flag = conquest_FRA
+			}
+        }
+		IF = {
+			limit = {
+				NOT = { has_country_flag = conquest_FRA }
+			}
+			set_country_flag = nocontrol_FRA
+		}
+	}
+	
+	option = {
+		name = "Trigger has fired"
+	}
+}
+
+country_event = {			# - Actual Partition Event
+	id = fra.partition.2
+	title = "The End of France"
+	desc = fra.partition.2.d
+	
+	trigger = {
+		has_country_flag = conquest_FRA
+		NOT = {
+			OR = {
+				has_country_flag = decided_FRA 
+				original_tag = GER
+				original_tag = VFR
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		28 = { set_state_flag = dec_later }
+		1 = { set_state_flag = dec_later }
+	}
+	
+	# - UK Options
+	
+	option = {
+		trigger = {
+			original_tag = ENG
+			controls_state = 14
+			controls_state = 15
+			controls_state = 19
+		}
+		name = "Occupy Normandy, Brittany and Aquitaine. Liberate the rest."
+		IF = {
+			limit = {
+				controls_state = 24
+			}
+			ORL = {
+				add_state_core = 24
+				add_state_core = 23
+				add_state_core = 33
+				add_state_core = 27
+				add_state_core = 18
+				add_state_core = 749
+				add_state_core = 17
+				add_state_core = 747
+				add_state_core = 16
+				add_state_core = 29
+			}
+			release_puppet = ORL
+		}
+		IF = {
+			limit = {
+				controls_state = 21
+			}
+			OCC = {
+				add_state_core = 21
+				add_state_core = 748
+				add_state_core = 735
+				add_state_core = 32
+				add_state_core = 20
+				add_state_core = 22
+				add_state_core = 31
+				add_state_core = 26
+				add_state_core = 25
+			}
+			release_puppet = OCC
+		}
+		set_country_flag = decided_FRA
+	}
+	
+	option = {
+		trigger = {
+			controls_state = 15
+			controls_state = 14
+			controls_state = 30
+			controls_state = 23
+			controls_state = 19
+			original_tag = ENG
+			has_government = paternal_autocrat
+		}
+		name = "Recreate the Angevin Empire"
+		set_cosmetic_tag = ENG_ANG
+		IF = {
+			limit = {
+				controls_state = 21
+			}
+			OCC = {
+				add_state_core = 21
+				add_state_core = 748
+				add_state_core = 735
+				add_state_core = 32
+				add_state_core = 20
+				add_state_core = 22
+				add_state_core = 31
+				add_state_core = 26
+				add_state_core = 25
+			}
+			release_puppet = OCC
+		}
+		IF = {
+			limit = {
+				controls_state = 24
+			}
+			ORL = {
+				add_state_core = 24
+				add_state_core = 33
+				add_state_core = 27
+				add_state_core = 18
+				add_state_core = 749
+				add_state_core = 17
+				add_state_core = 747
+				add_state_core = 16
+				add_state_core = 29
+			}
+			release_puppet = ORL
+		}
+	}
+	
+	# - Generic Options
+	
+	option = {
+		trigger = {
+			has_country_flag = { flag = fra_state_count value > 12 }
+		}
+		name = "Liberate France"
+		ai_chance = {
+			base = 40
+		}
+		every_state = {
+			limit = {
+				is_core_of = FRA
+				is_owned_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					has_state_flag = dec_later
+				}
+			}
+			FRP = {
+				transfer_state = PREV
+				add_state_core = PREV
+			}
+			ROOT = { puppet = FRP }
+		}
+		set_country_flag = decided_FRA
+	}
+	
+	option = {
+		trigger = {
+			OR = {
+				ROOT = { controls_state = 14 } # - BRI
+				ROOT = { controls_state = 21 } # - OCC
+				ROOT = { controls_state = 15 } # - NRM
+			}
+		}
+		name = "Liberate smaller states"
+		ai_chance = {
+			base = 60
+		}
+		IF = {
+			limit = {
+				controls_state = 14
+			}
+			BRI = {
+				add_state_core = 14
+				add_state_core = 30
+			}
+			release_puppet = BRI
+		}
+		IF = {
+			limit = {
+				controls_state = 21
+			}
+			OCC = {
+				add_state_core = 21
+				add_state_core = 748
+				add_state_core = 735
+				add_state_core = 32
+				add_state_core = 20
+				add_state_core = 22
+				add_state_core = 31
+				add_state_core = 26
+				add_state_core = 25
+				add_state_core = 19
+			}
+			release_puppet = OCC
+		}
+		IF = {
+			limit = {
+				controls_state = 15
+			}
+			NRM = {
+				add_state_core = 15
+			}
+			release_puppet = NRM
+		}
+		IF = {
+			limit = {
+				controls_state = 24
+			}
+			ORL = {
+				add_state_core = 24
+				add_state_core = 23
+				add_state_core = 33
+				add_state_core = 27
+				add_state_core = 18
+				add_state_core = 749
+				add_state_core = 17
+				add_state_core = 747
+				add_state_core = 16
+				add_state_core = 29
+			}
+			release_puppet = ORL
+		}
+		set_country_flag = decided_FRA
+	}
+	
+	option = {
+		name = "Maintain military occupation"
+		add_political_power = -100
+		add_stability = -0.1
+		add_war_support = -0.1
+		set_country_flag = decided_FRA
+	}
+}
+
+
+country_event = {			# - A-L Event
+	id = fra.partition.3
+	title = "The Fate of Alsace & Lorraine"
+	desc = fra.partition.3.d
+	
+	trigger = {
+		controls_state = 28
+		NOT = { 28 = { is_core_of = ROOT } }
+		NOT = { has_country_flag = decided_ALR }
+		has_country_flag = decided_FRA
+	}
+	
+	mean_time_to_happen = { days = 7 }
+	
+	# - German Option
+	
+	option = {
+		trigger = {
+			original_tag = GER
+		}
+		name = "Integrate Elsass-Lothringen"
+		set_country_flag = decided_ALR
+	}
+	
+	# - Generic Options
+	
+	option = {
+		name = "Liberate Alsace & Lorraine"
+		ALR = {
+			add_state_core = 28
+		}
+		release_puppet = ALR
+		set_country_flag = decided_ALR
+	}
+	
+	option = {
+		trigger = {
+			GRP = { exists = yes }
+			GRP = { is_puppet_of = ROOT }
+		}
+		name = "Give Alsace & Lorraine to Germany"
+		IF = {
+			limit = {
+				controls_state = 28
+			}
+			GER = { transfer_state = 28 }
+		}
+		set_country_flag = decided_ALR
+	}
+	
+	option = {
+		trigger = {
+			OR = {
+				AND = {
+					FRP = { exists = yes }
+					FRP = { is_puppet_of = ROOT }
+				}
+				AND = {
+					ORL = { exists = yes }
+					ORL = { is_puppet_of = ROOT }
+				}
+			}
+		}
+		name = "Give Alsace & Lorraine to France"
+		IF = {
+			limit = {
+				controls_state = 28
+				FRP = { is_puppet_of = ROOT }
+			}
+			FRP = { transfer_state = 28 }
+		}
+		IF = {
+			limit = {
+				controls_state = 28
+				ORL = { is_puppet_of = ROOT }
+			}
+			ORL = { transfer_state = 28 }
+		}		
+		set_country_flag = decided_ALR
+	}
+	
+	option = {
+		name = "Maintain Occupation"
+		trigger = {
+			NOT = { original_tag = GER }
+		}
+		add_political_power = -50
+		set_country_flag = decided_ALR
+	}
+}
+
+country_event = {			# - Corsica Event
+	id = fra.partition.4
+	title = "The Fate of Corsica"
+	desc = fra.partition.4.d
+	
+	trigger = {
+		controls_state = 1
+		NOT = { has_country_flag = decided_COR }
+		has_country_flag = decided_FRA
+	}
+	
+	mean_time_to_happen = { days = 7 }
+	
+	# - Generic Options
+	
+	option = {
+		name = "Liberate Corsica"
+		COR = { add_state_core = 1 }
+		release_puppet = COR
+		set_country_flag = decided_ALR
+	}
+	
+	option = {
+		trigger = {
+			OCC = { exists = yes }
+			OCC = { is_puppet_of = ROOT }
+		}
+		name = "Give Corsica to Occitania"
+		OCC = { transfer_state = 1 }
+		set_country_flag = decided_COR
+	}
+	
+	option = {
+		trigger = {
+			FRP = { exists = yes }
+			FRP = { is_puppet_of = ROOT }
+		}
+		name = "Give Corsica to France once more"
+		FRP = { transfer_state = 1 }		
+		set_country_flag = decided_COR
+	}
+	
+	option = {
+		trigger = {
+			ITP = { exists = yes }
+			ITP = { is_puppet_of = ROOT }
+		}
+		name = "Give Corsica to our Italian puppet"
+		ITP = { transfer_state = 1 }		
+		set_country_flag = decided_COR
+	}
+	
+	option = {
+		name = "Maintain Occupation"
+		add_political_power = -50
+		set_country_flag = decided_COR
+	}
+}
+
+##############################
+###GERMAN OCCUPATION EVENTS###
+##############################
+
+add_namespace = ger.partition
+
+country_event = {			# - Hidden Event which determines who has control over German land after Germany no longer exists
+	id = ger.partition.1
+	title = ger.partition.1.t
+	desc = ger.partition.1.d
+	
+	hidden = yes
+	
+	trigger = {
+		GER = { exists = no }
+		NOT = { has_country_flag = conquest_GER }
+		NOT = { has_country_flag = nocontrol_GER }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		set_country_flag = { flag = ger_state_count value = 0 }
+		every_owned_state = {
+			limit = {
+				is_core_of = GER
+				is_on_continent = europe
+				NOT = { is_core_of = ROOT }
+            }
+			ROOT = { 
+				modify_country_flag = { flag = ger_state_count value = 1 } 
+				set_country_flag = conquest_GER
+			}
+        }
+		IF = {
+			limit = {
+				NOT = { has_country_flag = conquest_GER }
+			}
+			set_country_flag = nocontrol_GER
+		}
+	}
+	
+	option = {
+		name = "Trigger has fired"
+	}
+}
+
+country_event = {			# - Actual Partition Event
+	id = ger.partition.2
+	title = "The End of Germany"
+	desc = ger.partition.2.d
+	
+	trigger = {
+		has_country_flag = conquest_GER
+		NOT = { has_country_flag = decided_GER }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		58 = { set_state_flag = dec_later }
+		784 = { set_state_flag = dec_later }
+		85 = { set_state_flag = dec_later }
+		807 = { set_state_flag = dec_later }
+		5 = { set_state_flag = dec_later }
+		794 = { set_state_flag = dec_later }
+		66 = { set_state_flag = dec_later }
+		67 = { set_state_flag = dec_later }
+	}
+	
+	# - UK Options
+	
+	option = {
+		trigger = {
+			original_tag = ENG
+			controls_state = 59
+		}
+		name = "Occupy Hannover and liberate the rest"
+		IF = {
+			limit = {
+				controls_state = 52
+			}
+			BAY = {
+				add_state_core = 52
+				add_state_core = 53
+				add_state_core = 54
+				add_state_core = 773
+			}
+			release_puppet = BAY
+		}
+		IF = {
+			limit = {
+				controls_state = 50
+			}
+			BAW = {
+				add_state_core = 50
+				add_state_core = 783
+				add_state_core = 782
+			}
+			release_puppet = BAW
+		}
+		IF = {
+			limit = {
+				controls_state = 65
+			}
+			SAX = {
+				add_state_core = 65
+				add_state_core = 60
+			}
+			release_puppet = SAX
+		}
+		IF = {
+			limit = {
+				controls_state = 62
+			}
+			POM = {
+				add_state_core = 63
+				add_state_core = 785
+				add_state_core = 62
+				add_state_core = 786
+			}
+			release_puppet = POM
+		}
+		IF = {
+			limit = {
+				controls_state = 64
+			}
+			BRW = {
+				add_state_core = 64
+				add_state_core = 61
+				add_state_core = 68
+			}
+			release_puppet = BRW
+		}
+		IF = {
+			limit = {
+				controls_state = 55
+			}
+			HES = {
+				add_state_core = 55
+				add_state_core = 57
+			}
+			release_puppet = HES
+		}
+		set_country_flag = decided_GER
+	}
+	
+	# - Generic Options
+	
+	option = {
+		trigger = {
+			has_country_flag = { flag = ger_state_count value > 12 }
+		}
+		name = "Liberate Germany"
+		every_state = {
+			limit = {
+				is_core_of = GER
+				is_owned_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					has_state_flag = dec_later
+				}
+			}
+			GRP = {
+				transfer_state = PREV
+				add_state_core = PREV
+			}
+			ROOT = { puppet = GRP }
+		}
+		set_country_flag = decided_GER
+	}
+	
+	option = {
+		trigger = {
+			OR = {
+				ROOT = { controls_state = 52 }
+				ROOT = { controls_state = 59 }
+				ROOT = { controls_state = 50 }
+				ROOT = { controls_state = 65 }
+				ROOT = { controls_state = 807 }
+				ROOT = { controls_state = 64 }
+				ROOT = { controls_state = 55 }
+			}
+		}
+		name = "Liberate smaller states"
+		IF = {
+			limit = {
+				controls_state = 52
+			}
+			BAY = {
+				add_state_core = 52
+				add_state_core = 53
+				add_state_core = 54
+				add_state_core = 773
+			}
+			release_puppet = BAY
+		}
+		IF = {
+			limit = {
+				controls_state = 59
+			}
+			HAN = {
+				add_state_core = 59
+				add_state_core = 56
+			}
+			release_puppet = HAN
+		}
+		IF = {
+			limit = {
+				controls_state = 50
+			}
+			BAW = {
+				add_state_core = 50
+				add_state_core = 783
+				add_state_core = 782
+			}
+			release_puppet = BAW
+		}
+		IF = {
+			limit = {
+				controls_state = 65
+			}
+			SAX = {
+				add_state_core = 65
+				add_state_core = 60
+			}
+			release_puppet = SAX
+		}
+		IF = {
+			limit = {
+				controls_state = 62
+			}
+			POM = {
+				add_state_core = 63
+				add_state_core = 785
+				add_state_core = 62
+				add_state_core = 786
+			}
+			release_puppet = POM
+		}
+		IF = {
+			limit = {
+				controls_state = 64
+			}
+			BRW = {
+				add_state_core = 64
+				add_state_core = 61
+				add_state_core = 68
+			}
+			release_puppet = BRW
+		}
+		IF = {
+			limit = {
+				controls_state = 55
+			}
+			HES = {
+				add_state_core = 55
+				add_state_core = 57
+			}
+			release_puppet = HES
+		}
+		set_country_flag = decided_GER
+	}
+	
+	option = {
+		name = "Maintain military occupation"
+		add_political_power = -100
+		set_country_flag = decided_GER
+	}
+}
+
+
+country_event = {			# - Silesia Event
+	id = ger.partition.3
+	title = "The Fate of Silesia"
+	desc = ger.partition.3.d
+	
+	trigger = {
+		OR = {
+			controls_state = 66
+			controls_state = 67
+			controls_state = 794
+		}
+		has_country_flag = decided_GER
+		NOT = { has_country_flag = decided_silesia }
+	}
+	
+	mean_time_to_happen = { days = 14 }
+	
+	option = {
+		name = "Liberate a Silesian Government"
+		SIL = {
+			add_state_core = 66
+			add_state_core = 67
+			add_state_core = 794
+			add_state_core = 795
+		}
+		release_puppet = SIL
+		set_country_flag = decided_silesia
+	}
+	
+	option = {
+		trigger = {
+			GRP = { exists = yes }
+			GRP = { is_puppet_of = ROOT }
+		}
+		name = "Give Silesia to Germany"
+		IF = {
+			limit = {
+				controls_state = 66
+			}
+			GRP = { transfer_state = 66 }
+			
+		}
+		IF = {
+			limit = {
+				controls_state = 67
+			}
+			GRP = { transfer_state = 67 }
+		}
+		IF = {
+			limit = {
+				controls_state = 794
+			}
+			GRP = { transfer_state = 794 }
+		}
+		IF = {
+			limit = {
+				controls_state = 795
+			}
+			GRP = { transfer_state = 795 }
+		}
+		set_country_flag = decided_silesia
+	}
+	
+	option = {
+		trigger = {
+			AND = {
+				POL = { exists = yes }
+				CEN = { exists = yes }
+			}
+		}
+		name = "Return Silesia to pre-1936 borders"	# - This will do something soon
+		IF = {
+			limit = {
+				controls_state = 794
+			}
+			CEN = { transfer_state = 794 }
+		}
+		IF = {
+			limit = {
+				controls_state = 795
+			}
+			CEN = { transfer_state = 795 }
+		}
+		IF = {
+			limit = {
+				controls_state = 66
+			}
+			POL = { transfer_state = 66 }
+		}
+		IF = {
+			limit = {
+				controls_state = 67
+			}
+			POL = { transfer_state = 67 }
+		}
+		set_country_flag = decided_silesia
+	}
+	
+	option = {
+		name = "Maintain Occupation"
+		add_political_power = -50
+		set_country_flag = decided_silesia
+	}
+}
+
+country_event = {			# - Holstein Event
+	id = ger.partition.4
+	title = "The Fate of Schleswig-Holstein"
+	desc = ger.partition.4.d
+	
+	trigger = {
+		OR = {
+			controls_state = 58
+			controls_state = 784
+		}
+		has_country_flag = decided_GER
+		NOT = { has_country_flag = decided_holstein }
+	}
+	
+	mean_time_to_happen = { days = 14 }
+	
+	# - UK Options
+	
+	option = {
+		trigger = {
+			controls_state = 784
+			original_tag = ENG
+		}
+		name = "Occupy the Kiel Canal and liberate the rest"
+		SHO = {
+			add_state_core = 58
+			add_state_core = 915
+		}
+		release_puppet = SHO
+		set_country_flag = decided_holstein
+	}
+	
+	# - Generic Options
+	
+	option = {
+		trigger = {
+			controls_state = 784
+		}
+		name = "Liberate a Schleswig-Holstein Government"
+		SHO = {
+			add_state_core = 58
+			add_state_core = 784
+			add_state_core = 915
+		}
+		release_puppet = SHO
+		set_country_flag = decided_holstein
+	}
+	
+	option = {
+		trigger = {
+			GRP = { exists = yes }
+			GRP = { is_puppet_of = ROOT }
+		}
+		name = "Give Schleswig-Holstein to Germany"
+		IF = {
+			limit = {
+				controls_state = 58
+			}
+			GRP = { transfer_state = 58 }
+		}
+		IF = {
+			limit = {
+				controls_state = 784
+			}
+			GRP = { transfer_state = 784 }
+		}
+		IF = {
+			limit = {
+				controls_state = 915
+			}
+			GRP = { transfer_state = 915 }
+		}
+		set_country_flag = decided_holstein
+	}
+	
+	option = {
+		trigger = {
+			DEN = { exists = yes }
+		}
+		name = "Give Schleswig-Holstein to Denmark"
+		IF = {
+			limit = {
+				controls_state = 58
+			}
+			DEN = { transfer_state = 58 }
+		}
+		IF = {
+			limit = {
+				controls_state = 784
+			}
+			DEN = { transfer_state = 784 }
+		}
+		IF = {
+			limit = {
+				controls_state = 915
+			}
+			DEN = { transfer_state = 915 }
+		}
+		set_country_flag = decided_holstein
+	}
+	
+	option = {
+		name = "Maintain Occupation"
+		add_political_power = -50
+		set_country_flag = decided_holstein
+	}
+}
+
+
+country_event = {			# - E. Prussia Event
+	id = ger.partition.5
+	title = "The Fate of Eastern Prussia"
+	desc = ger.partition.5.d
+	
+	trigger = {
+		OR = {
+			controls_state = 5
+		}
+		has_country_flag = decided_GER
+		NOT = { has_country_flag = decided_EPRU }
+	}
+	
+	mean_time_to_happen = { days = 14 }
+	
+	# - UK Options
+	
+	option = {
+		trigger = {
+			original_tag = ENG
+			controls_state = 5
+			controls_state = 85
+			controls_state = 807
+		}
+		name = "Annex Danzig City, give Poland a Baltic sea connection and liberate Ermland"
+		POL = { transfer_state = 85 }
+		ERM = { add_state_core = 5 }
+		release_puppet = ERM
+	}
+	
+	# - Generic Options
+	
+	option = {
+		trigger = {
+			controls_state = 5
+			controls_state = 85
+			controls_state = 807
+		}
+		name = "Give Poland a Baltic sea connection and liberate Ermland"
+		POL = { transfer_state = 85 }
+		ERM = { 
+			add_state_core = 5
+			add_state_core = 807
+		}
+		release_puppet = ERM
+		set_country_flag = decided_EPRU
+	}
+	
+	option = {
+		trigger = {
+			controls_state = 5
+		}
+		name = "Liberate Ermland"
+		ERM = { 
+			add_state_core = 5 
+			add_state_core = 807
+			add_state_core = 85
+		}
+		release_puppet = ERM
+	}
+	
+	option = {
+		trigger = {
+			GRP = { exists = yes }
+			GRP = { is_puppet_of = ROOT }
+		}
+		name = "Return this territory to our German puppet"
+		IF = {
+			limit = {
+				controls_state = 5
+			}
+			GRP = { transfer_state = 5 }
+		}
+		IF = {
+			limit = {
+				controls_state = 85
+			}
+			GRP = { transfer_state = 85 }
+		}
+		IF = {
+			limit = {
+				controls_state = 807
+			}
+			GRP = { transfer_state = 807 }
+		}
+		set_country_flag = decided_EPRU
+	}
+	
+	option = {
+		name = "Maintain Occupation"
+		add_political_power = -50
+		set_country_flag = decided_EPRU
+	}
+}
+
+###############################
+###ITALIAN OCCUPATION EVENTS###
+###############################
+
+add_namespace = ita.partition
+
+country_event = {			# - Hidden Event which determines who has control over Italian land after Italy no longer exists
+	id = ita.partition.1
+	title = ""
+	desc = ita.partition.1.d
+	
+	hidden = yes
+	
+	trigger = {
+		ITA = { exists = no }
+		NOT = { has_country_flag = conquest_ITA }
+		NOT = { has_country_flag = nocontrol_ITA }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		set_country_flag = { flag = ita_state_count value = 0 }
+		every_owned_state = {
+			limit = {
+				is_core_of = ITA
+				is_on_continent = europe
+				NOT = { is_core_of = ROOT }
+            }
+			ROOT = { 
+				modify_country_flag = { flag = ita_state_count value = 1 } 
+				set_country_flag = conquest_ITA
+			}
+        }
+		IF = {
+			limit = {
+				NOT = { has_country_flag = conquest_ITA }
+			}
+			set_country_flag = nocontrol_ITA
+		}
+	}
+	
+	option = {
+		name = "Trigger has fired"
+	}
+}
+
+country_event = {			# - Actual Partition Event
+	id = ita.partition.2
+	title = "The End of Italy"
+	desc = ita.partition.2.d
+	
+	trigger = {
+		has_country_flag = conquest_ITA
+		NOT = {
+			OR = {
+				has_country_flag = decided_ITA 
+				original_tag = GER
+				original_tag = VIT
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	immediate {
+		774 = { set_state_flag = dec_later }
+		39 = { set_state_flag = dec_later }
+		102 = { set_state_flag = dec_later }
+		103 = { set_state_flag = dec_later }
+		163 = { set_state_flag = dec_later }
+		789 = { set_state_flag = dec_later }
+		790 = { set_state_flag = dec_later }
+	}
+	
+	# - Generic Options
+	
+	option = {
+		trigger = {
+			has_country_flag = { flag = ita_state_count value > 10 }
+		}
+		name = "Liberate Italy"
+		ai_chance = {
+			base = 40
+		}
+		every_state = {
+			limit = {
+				is_core_of = ITA
+				is_owned_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					has_state_flag = dec_later
+				}
+			}
+			ITP = {
+				transfer_state = PREV
+				add_state_core = PREV
+			}
+			ROOT = { puppet = ITP }
+		}
+		set_country_flag = decided_ITA
+	}
+	
+	option = {
+		trigger = {
+			OR = {
+				ROOT = { controls_state = 14 } # - SIC
+				ROOT = { controls_state = 117 } # - NAP
+				ROOT = { controls_state = 2 } # - UPC
+				ROOT = { controls_state = 162 } # - TOS
+				ROOT = { controls_state = 159 } # - LOM
+				ROOT = { controls_state = 158 } # - PIE
+				ROOT = { controls_state = 771 } # - SRV
+			}
+		}
+		name = "Liberate smaller states"
+		ai_chance = {
+			base = 60
+		}
+		IF = {
+			limit = {
+				controls_state = 14
+			}
+			SIC = {
+				add_state_core = 115
+			}
+			release_puppet = SIC
+		}
+		IF = {
+			limit = {
+				controls_state = 117
+			}
+			NAP = {
+				add_state_core = 117
+				add_state_core = 850
+				add_state_core = 849
+				add_state_core = 156
+				add_state_core = 157
+			}
+			release_puppet = NAP
+		}
+		IF = {
+			limit = {
+				controls_state = 2
+			}
+			UPC = {
+				add_state_core = 2
+				add_state_core = 852
+				add_state_core = 851
+				add_state_core = 114
+				add_state_core = 768
+			}
+			release_puppet = UPC
+		}
+		IF = {
+			limit = {
+				controls_state = 162
+			}
+			TOS = {
+				add_state_core = 162
+				add_state_core = 161
+			}
+			release_puppet = TOS
+		}
+		IF = {
+			limit = {
+				controls_state = 159
+			}
+			LOM = {
+				add_state_core = 159
+			}
+			release_puppet = LOM
+		}
+		IF = {
+			limit = {
+				controls_state = 158
+			}
+			PIE = {
+				add_state_core = 158
+			}
+			release_puppet = PIE
+		}
+		IF = {
+			limit = {
+				controls_state = 771
+			}
+			SRV = {
+				add_state_core = 771
+				add_state_core = 160
+				add_state_core = 736
+				add_state_core = 770
+			}
+			release_puppet = SRV
+		}
+		set_country_flag = decided_ITA
+	}
+	
+	option = {
+		name = "Maintain military occupation"
+		add_political_power = -100
+		add_stability = -0.1
+		add_war_support = -0.1
+		set_country_flag = decided_ITA
+	}
+}
+
+
+country_event = {			# - Sud Tirol Event
+	id = ita.partition.3
+	title = "The Fate of Sud-Tirol"
+	desc = ita.partition.3.d
+	
+	trigger = {
+		controls_state = 39
+		NOT = { has_country_flag = decided_STR }
+		has_country_flag = decided_ITA
+	}
+	
+	mean_time_to_happen = { days = 14 }
+	
+	# - Generic Options
+	
+	option = {
+		trigger = {
+			AUS = { exists = yes }
+			NOT = { has_war_with = AUS }
+		}
+		name = "Give Sud-Tirol to Austria"
+		AUS = { transfer_state = 39 }
+		IF = {
+			limit = {
+				controls_state = 774
+			}
+			AUS = { transfer_state = 774 }
+		}
+		set_country_flag = decided_STR
+	}
+	
+	option = {
+		trigger = {
+			SRV = { exists = yes }
+			SRV = { is_puppet_of = ROOT }
+		}
+		name = "Give Alto Adige to Venice"
+		SRV = { transfer_state = 39 }
+		IF = {
+			limit = {
+				controls_state = 774
+			}
+			SRV = { transfer_state = 774 }
+		}
+		set_country_flag = decided_STR
+	}
+	
+	option = {
+		trigger = {
+			ITP = { exists = yes }
+			ITP = { is_puppet_of = ROOT }
+		}
+		name = "Give Alto Adige to Italy"
+		ITP = { transfer_state = 39 }
+		IF = {
+			limit = {
+				controls_state = 774
+			}
+			ITP = { transfer_state = 774 }
+		}		
+		set_country_flag = decided_STR
+	}
+	
+	option = {
+		name = "Maintain Occupation"
+		add_political_power = -50
+		set_country_flag = decided_STR
+	}
+}
+
+country_event = {			# - Slovenia Event
+	id = ita.partition.4
+	title = "The Fate of Slovenia"
+	desc = ita.partition.4.d
+	
+	trigger = {
+		controls_state = 102
+		NOT = { has_country_flag = decided_SLO }
+		has_country_flag = decided_ITA
+	}
+	
+	mean_time_to_happen = { days = 14 }
+	
+	option = {
+		name = "Liberate Slovenia"
+		# - Add stuff here soon
+		set_country_flag = decided_SLO
+	}
+
+	option = {
+		name = "Give it to Austria"
+		IF = {
+			limit = {
+				controls_state = 767
+			}
+			AUS = { transfer_state = 767 }
+		}
+		IF = {
+			limit = {
+				controls_state = 102
+			}
+			AUS = { transfer_state = 102 }
+		}
+		IF = {
+			limit = {
+				controls_state = 917
+			}
+			AUS = { transfer_state = 917 }
+		}
+		set_country_flag = decided_SLO
+	}
+	
+	option = {
+		name = "Maintain Occupation"
+		add_political_power = -50
+		set_country_flag = decided_SLO
+	}
+}
+
+country_event = {			# - Dalmatia Event
+	id = ita.partition.5
+	title = "The Fate of Dalmatia"
+	desc = ita.partition.5.d
+	
+	trigger = {
+		controls_state = 789
+		NOT = { has_country_flag = decided_DAL }
+		has_country_flag = decided_ITA
+	}
+	
+	mean_time_to_happen = { days = 14 }
+	
+	# - Generic Options
+	
+	option = {
+		trigger = {
+			CRO = { exists = yes }
+		}
+		name = "Give Dalmatia to Croatia"
+		CRO = { transfer_state = 789 }
+		IF = {
+			limit = {
+				controls_state = 163
+			}
+			CRO = { transfer_state = 163 }
+		}
+		IF = {
+			limit = {
+				controls_state = 103
+			}
+			CRO = { transfer_state = 103 }
+		}
+		IF = {
+			limit = {
+				controls_state = 790
+			}
+			CRO = { transfer_state = 790 }
+		}
+		set_country_flag = decided_DAL
+	}
+	
+	option = {
+		trigger = {
+			SRV = { exists = yes }
+			SRV = { is_puppet_of = ROOT }
+		}
+		name = "Give Dalmatia to Venice"
+		SRV = { transfer_state = 789 }
+		IF = {
+			limit = {
+				controls_state = 163
+			}
+			SRV = { transfer_state = 163 }
+		}
+		IF = {
+			limit = {
+				controls_state = 103
+			}
+			SRV = { transfer_state = 103 }
+		}
+		IF = {
+			limit = {
+				controls_state = 790
+			}
+			SRV = { transfer_state = 790 }
+		}
+		set_country_flag = decided_DAL
+	}
+	
+	option = {
+		trigger = {
+			ITP = { exists = yes }
+			ITP = { is_puppet_of = ROOT }
+		}
+		name = "Return Dalmatia to Italy"
+		ITP = { transfer_state = 789 }
+		IF = {
+			limit = {
+				controls_state = 163
+			}
+			ITP = { transfer_state = 163 }
+		}
+		IF = {
+			limit = {
+				controls_state = 103
+			}
+			ITP = { transfer_state = 103 }
+		}
+		IF = {
+			limit = {
+				controls_state = 790
+			}
+			ITP = { transfer_state = 790 }
+		}
+		set_country_flag = decided_DAL
+	}
+	
+	option = {
+		name = "Maintain Occupation"
+		add_political_power = -50
+		set_country_flag = decided_DAL
+	}
+}
+
+###############################
+###BRITISH OCCUPATION EVENTS###
+###############################
+
+add_namespace = uk.partition
+
+country_event = {			# - Hidden Event which determines who has control over British land after Britain no longer exists
+	id = uk.partition.1
+	title = ""
+	desc = uk.partition.1.d
+	
+	hidden = yes
+	
+	trigger = {
+		ENG = { exists = no }
+		NOT = { has_country_flag = conquest_UK }
+		NOT = { has_country_flag = nocontrol_UK }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		set_country_flag = { flag = uk_state_count value = 0 }
+		every_owned_state = {
+			limit = {
+				is_core_of = ENG
+				is_on_continent = europe
+				NOT = { is_core_of = ROOT }
+            }
+			ROOT = { 
+				modify_country_flag = { flag = uk_state_count value = 1 } 
+				set_country_flag = conquest_UK
+			}
+        }
+		IF = {
+			limit = {
+				NOT = { has_country_flag = conquest_UK }
+			}
+			set_country_flag = nocontrol_UK
+		}
+	}
+	
+	option = {
+		name = "Trigger has fired"
+	}
+}
+
+country_event = {			# - Actual Partition Event
+	id = uk.partition.2
+	title = "The End of the United Kingdom"
+	desc = uk.partition.2.d
+	
+	trigger = {
+		has_country_flag = conquest_UK
+		NOT = { 
+			OR = {
+				has_country_flag = decided_UK 
+				original_tag = GER
+				original_tag = EGL
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		119 = { set_state_flag = dec_later }
+	}
+	
+	# - Generic Options
+	
+	option = {
+		trigger = {
+			has_country_flag = { flag = uk_state_count value > 7 }
+		}
+		name = "Liberate Great Britain"
+		every_state = {
+			limit = {
+				is_core_of = ENG
+				is_owned_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					has_state_flag = dec_later
+				}
+			}
+			ENP = {
+				transfer_state = PREV
+				add_state_core = PREV
+			}
+			ROOT = { puppet = ENP }
+		}
+		set_country_flag = decided_UK
+	}
+	
+	option = {
+		trigger = {
+			OR = {
+				controls_state = 126
+				controls_state = 121
+				controls_state = 122
+				controls_state = 815
+			}
+		}
+		name = "Break up the United Kingdom"
+		IF = {
+			limit = {
+				controls_state = 126
+			}
+			ENG = { 
+				add_state_core = 126
+				add_state_core = 127
+				add_state_core = 123
+				add_state_core = 338
+				add_state_core = 125
+				add_state_core = 129
+				add_state_core = 128
+				add_state_core = 132
+				add_state_core = 130
+				add_state_core = 131
+			}
+			release_puppet = EGL
+		}
+		IF = {
+			limit = {
+				controls_state = 122
+			}
+			WAL = { 
+				add_state_core = 122
+			}
+			release_puppet = WAL
+		}
+		IF = {
+			limit = {
+				controls_state = 121
+			}
+			SCO = { 
+				add_state_core = 121
+				add_state_core = 133
+				add_state_core = 136
+				add_state_core = 120
+			}
+			release_puppet = SCO
+		}
+		#IF = {
+		#	limit = {
+		#		controls_state = 815
+		#	}
+		#	release_puppet = IRE
+		#	transfer_state = 119
+		#}
+		set_country_flag = decided_UK
+	}
+	
+	option = {
+		name = "Maintain military occupation"
+		add_political_power = -100
+		add_stability = -0.15
+		add_war_support = -0.15
+		set_country_flag = decided_UK
+	}
+}
+
+
+country_event = {			# - Northern Ireland Event
+	id = uk.partition.3
+	title = "The Fate of Northern Ireland"
+	desc = uk.partition.3.d
+	
+	trigger = {
+		controls_state = 119
+		NOT = { has_country_flag = decided_NIR }
+		has_country_flag = decided_UK
+	}
+	
+	mean_time_to_happen = { days = 14 }
+	
+	# - Generic Options
+	
+	option = {
+		trigger = {
+			IRE = { exists = yes }
+		}
+		name = "Reunite the North with Ireland"
+		IRE = { transfer_state = 119 }
+		set_country_flag = decided_NIR
+	}
+	
+	option = {
+		trigger = {
+			EGL = { exists = yes }
+			EGL = { is_puppet_of = ROOT }
+		}
+		name = "Put Northern Ireland under English administration"
+		EGL = { transfer_state = 119 }
+		set_country_flag = decided_NIR
+	}
+	
+	option = {
+		trigger = {
+			SCO = { exists = yes }
+			SCO = { is_puppet_of = ROOT }
+		}
+		name = "Put Northern Ireland under Scottish administration"
+		SCO = { transfer_state = 119 }
+		set_country_flag = decided_NIR
+	}
+
+	option = {
+		trigger = {
+			ENP = { exists = yes }
+			ENP = { is_puppet_of = ROOT }
+		}
+		name = "Put Northern Ireland under British administration"
+		ENP = { transfer_state = 119 }
+		set_country_flag = decided_NIR
+	}
+	
+	option = {
+		name = "Maintain Occupation"
+		add_political_power = -50
+		set_country_flag = decided_NIR
+	}
+}
